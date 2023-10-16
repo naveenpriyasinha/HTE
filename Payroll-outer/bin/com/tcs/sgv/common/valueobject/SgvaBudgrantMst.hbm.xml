@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 15, 2007 1:28:02 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.SgvaBudgrantMst" table="sgva_budgrant_mst" catalog="developer_ifms">
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.common.valueobject.SgvaBudgrantMstId">
+            <key-property name="budbpnCode" type="string">
+                <column name="BUDBPN_CODE" length="15" />
+            </key-property>
+            <key-property name="buddemandCode" type="string">
+                <column name="BUDDEMAND_CODE" length="15" />
+            </key-property>
+            <key-property name="budmjrhdCode" type="string">
+                <column name="BUDMJRHD_CODE" length="15" />
+            </key-property>
+            <key-property name="budsubmjrhdCode" type="string">
+                <column name="BUDSUBMJRHD_CODE" length="15" />
+            </key-property>
+            <key-property name="budminhdCode" type="string">
+                <column name="BUDMINHD_CODE" length="15" />
+            </key-property>
+            <key-property name="budsubhdCode" type="string">
+                <column name="BUDSUBHD_CODE" length="15" />
+            </key-property>
+            <key-property name="planAmount" type="java.lang.Long">
+                <column name="PLAN_AMOUNT" />
+            </key-property>
+            <key-property name="nonplanAmount" type="java.lang.Long">
+                <column name="NONPLAN_AMOUNT" />
+            </key-property>
+            <key-property name="cssAmount" type="java.lang.Long">
+                <column name="CSS_AMOUNT" />
+            </key-property>
+            <key-property name="finYrId" type="java.lang.Long">
+                <column name="FIN_YR_ID" />
+            </key-property>
+            <key-property name="langId" type="string">
+                <column name="LANG_ID" length="5" />
+            </key-property>
+            <key-property name="locId" type="java.lang.Long">
+                <column name="LOC_ID" />
+            </key-property>
+            <key-property name="crtDt" type="date">
+                <column name="CRT_DT" length="10" />
+            </key-property>
+            <key-property name="crtUsrId" type="java.lang.Long">
+                <column name="CRT_USR_ID" />
+            </key-property>
+            <key-property name="crtPostId" type="java.lang.Long">
+                <column name="CRT_POST_ID" />
+            </key-property>
+            <key-property name="lstUpdDate" type="date">
+                <column name="LST_UPD_DATE" length="10" />
+            </key-property>
+            <key-property name="lstUpdUsrId" type="java.lang.Long">
+                <column name="LST_UPD_USR_ID" />
+            </key-property>
+            <key-property name="lstUpdPostId" type="java.lang.Long">
+                <column name="LST_UPD_POST_ID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.common.valueobject">
+
+<class name="com.tcs.sgv.common.valueobject.OrgTicketMstHistory"
+	table="org_ticket_mst_History">
+	
+		<id name="ticketId" type="long">
+			<column name="TICKET_ID" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="ticketTitle" type="java.lang.String">
+			<column name="TICKET_TITLE" />
+		</property>
+
+		<property name="ticketDesc" type="java.lang.String">
+			<column name="TICKET_DESC" />
+		</property>
+
+		<property name="screenId" type="long">
+			<column name="SCREEN_ID" />
+		</property>
+
+		<property name="credentials" type="java.lang.String">
+			<column name="CREDENTIALS" />
+		</property>
+		
+		<property name="contactNo" type="long">
+			<column name="CONTACT_NO" />
+		</property>
+
+		<property name="emailId" type="java.lang.String">
+			<column name="EMAIL_ID" />
+		</property>
+
+		<property name="userName" type="java.lang.String">
+			<column name="USER_NAME" />
+		</property>
+		
+		<property name="ddoCode" type="java.lang.String">
+			<column name="DDO_CODE" />
+		</property>
+
+		
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" />
+		</property>
+
+
+		<property name="status" type="long">
+			<column name="STATUS" />
+		</property>
+		
+		<property name="remarks" type="java.sql.Clob">
+			<column name="REMARKS" />
+		</property>
+
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE" />
+		</property>
+
+		<property name="updatedBy" type="java.lang.String">
+			<column name="UPDATED_BY" />
+		</property>
+
+
+		<property name="resolvedDate" type="timestamp">
+			<column name="RESOLVED_DATE" />
+		</property>
+
+		<property name="resolvedBy" type="java.lang.String">
+			<column name="RESOLVED_BY" />
+		</property>
+
+		<property name="priority" type="long">
+			<column name="PRIORITY" />
+		</property>
+		
+		<property name="severity" type="long">
+			<column name="SEVERITY" />
+		</property>
+		
+		<property name="rootCause" type="long">
+			<column name="ROOT_CAUSE" />
+		</property>
+		
+			<property name="closedDate" type="timestamp">
+			<column name="CLOSED_DATE" />
+		</property>
+		
+			<property name="acknowledgementDate" type="timestamp">
+			<column name="ACKNOWLEDGEMENT_DATE" />
+		</property>
+		
+		<property name="fileId" type="long">
+			<column name="FILE_ID" />
+		</property>
+	
+  
+  </class>
+</hibernate-mapping>

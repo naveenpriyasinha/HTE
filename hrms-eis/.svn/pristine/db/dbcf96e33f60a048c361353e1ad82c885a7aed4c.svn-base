@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 10, 2007 12:19:07 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisQtrMst" table="hr_eis_qtr_emp_mpg" >
+        <comment></comment>
+        <id name="quarterId" type="long">
+            <column name="quarter_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByAllocatedTo" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="allocated_to">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMst" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="address_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select" >
+            <column name="created_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <!--  <many-to-one name="cmnLookupMst" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="quartertype_lookupid">
+                <comment></comment>
+            </column>
+        </many-to-one>-->
+        <many-to-one name="cmnLocationMstByLocId" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+         <many-to-one name="rateTypeLookup" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="rate_type">
+                <comment></comment>
+            </column>
+        </many-to-one>
+         <many-to-one name="hrQuaterTypeMst" class="com.tcs.sgv.eis.valueobject.HrEisQuaterTypeMst" fetch="select">
+            <column name="QUARTERTYPE_LOOKUPID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="quarterName" type="string">
+            <column name="quarter_name" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="allocationStartDate" type="timestamp">
+            <column name="allocation_start_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="possessionDate" type="timestamp">
+            <column name="possession_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="allocationEndDate" type="timestamp">
+            <column name="allocation_end_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="isDeleted" type="java.lang.Character">
+            <column name="is_deleted" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="trnCounter" type="long">
+            <column name="trn_counter" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <!-- Added by Ankit Bhatt for Maha -->
+         <many-to-one name="quarterGovtType" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="quarter_govt_type">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="quarterAllocatedToType" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="quarter_allocated_to_type">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <property name="serviceCharge" type="long">
+            <column name="service_charge" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="garageCharge" type="long">
+            <column name="garage_charge" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="quarterRent" type="long">
+            <column name="quarter_rent" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="vacantLetterNo" type="string">
+            <column name="vacant_letter_no " length="20">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="vacantOrderDate" type="timestamp">
+            <column name="vacant_letter_date  " length="19">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <many-to-one name="hrCustodianTypeMst" class="com.tcs.sgv.eis.valueobject.HrCustodianTypeMst" fetch="select">
+            <column name="custodian_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+        <!-- Ended -->
+    </class>
+</hibernate-mapping>

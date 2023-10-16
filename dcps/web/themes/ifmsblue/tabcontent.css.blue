@@ -1,0 +1,127 @@
+.tabcontentstyle { /*style of tab content container*/
+	position: relative;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	background-color: #6b73ac;
+	border-left: 2px outset #6b73ac;
+	border-bottom: outset 2px #6b73ac;
+	border-right: outset 2px #6b73ac;
+	margin-bottom: 1px;
+	padding: 4px;
+	height: 100%;
+}
+
+.tabcontent {
+	z-index: 1;
+	display: none;
+	min-height: 380px;
+	height:auto !important;
+	height: 380px;
+	border-top: outset 2px #6b73ac;
+	border-left: outset 2px #6b73ac;
+	border-right: inset 2px #6b73ac;
+	border-bottom: inset 2px #6b73ac;
+	/*	border-top: solid 1px #a9cbec;
+	border-left: solid 1px #a9cbec;
+	border-right: solid 1px #daebfe;
+	border-bottom: solid 1px #daebfe;*/
+	background: #f4f7f1;
+	padding: 3px;
+}
+
+.tabNavigationBar {
+	width: 100%;
+}
+
+.tabnavtd {
+	padding: 5px 0 0 0;
+	text-align: right;
+}
+
+.tabnavtd input {
+	border-top: solid 1px #FFFFFF;
+	border-left: solid 1px #FFFFFF;
+	border-right: solid 1px gray;
+	border-bottom: solid 1px gray;
+	background: #d7d5d5 url(images/btn-bg-01.gif);
+	width: 80px;
+	font-weight: normal;
+	font-color: #666666;
+}
+
+.tabnavtd input:FOCUS {
+	background: #AAAAAA;
+}
+
+@media print {
+	.tabcontent {
+		display: block !important;
+	}
+}
+
+#tabmenu ul,#tabmenu li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#tabmenu {
+	border-left: 1px solid #9a9a9a;
+	z-index: 2;
+	width: 100%;
+}
+
+#tabmenu li {
+	float: left;
+	border-right: 1px solid #777777;
+	border-top: 1px solid #898989;
+}
+
+#tabmenu a {
+	font-weight: bold;
+	display: block;
+	cursor: pointer;
+	padding: 5px 5px;
+}
+
+#tabmenu a.unselected:hover {
+	font-weight: bold;
+	background: #bbbbbb url("images/1tab-top-bg-02.gif") repeat-x top;
+	color: #666666;
+}
+
+#tabmenu li a.selected {
+	border-bottom: 1px solid #6b73ac;
+	border-right: 1px solid #7474a3;
+	border-left: 1px solid #a7a7d6;
+	border-top: 1px solid #a7a7d6;
+	background: #6b73ac url("images/tab-top-bg-04.gif") repeat-x top;
+	color: #232323;
+}
+
+#tabmenu li a.unselected {
+	font-weight: bold;
+	color: gray;
+	border-bottom: 1px solid #909090;
+	border-left: solid 1px #dddddd;
+	border-top: 1px solid #dddddd;
+	background: #cdcdcd url("images/tab-top-bg-02.gif") repeat-x top;
+}
+
+#tabmenu a:link,#tabmenu a:visited,#tabmenu a:active {
+	color: black;
+	text-decoration: none;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-table;
+}

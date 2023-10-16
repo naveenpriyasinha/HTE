@@ -1,0 +1,251 @@
+<html><head>
+<style type="text/css">
+	td .headers{color: #CC6342;
+	}
+
+   td .headerCont {
+   		
+   		background-color:#FBF4EB;
+   		font-family:calibri;
+   		color: #CC6342;
+   		text-decoration : underline; 
+   }
+ </style>
+
+
+<script type="text/javascript">
+function digitFormat(formfield)
+{	var val;
+	if(window.event.keyCode>47 && window.event.keyCode<58)
+	{
+		val=formfield.value;
+		if(val[1]!=null)
+		{
+			if(val[1].length>1)
+			{
+				window.event.keyCode=0;
+			}
+		}
+	}
+	else
+	{
+		window.event.keyCode=0;
+	}
+}
+
+function GetData()
+{
+	var location = self.location.href;
+	var lastIndex = location.lastIndexOf("/");
+	
+	var parentLoc = location.substring(0,lastIndex+1);
+	
+	
+	var Excel, Book;	// Declare the variables
+	Excel = new ActiveXObject("Excel.Application");	// Create the Excel application object.
+	Excel.Visible = false;	// Make Excel invisible.
+	ExcelPath = parentLoc+"ArrearData.xls";
+	Excel.Workbooks.Open(ExcelPath);
+	ActiveSheet = Excel.ActiveSheet;
+
+		
+
+	TotalEmp = ActiveSheet.UsedRange.Rows.Count;	
+	
+	var table = document.getElementById("ArrearsTable");
+
+	for(var i=1;i<TotalEmp;i++)
+	{
+		RowNumber = 1+i;
+	
+		var newRow = table.insertRow(-1);
+
+		var Cell1 = newRow.insertCell(-1);
+		var Cell2 = newRow.insertCell(-1);
+		var Cell3 = newRow.insertCell(-1);
+		var Cell4 = newRow.insertCell(-1);
+		var Cell5 = newRow.insertCell(-1); 
+		var Cell6 = newRow.insertCell(-1); 
+		var Cell7 = newRow.insertCell(-1); 
+		var Cell8 = newRow.insertCell(-1); 
+		var Cell9 = newRow.insertCell(-1); 
+
+		
+	   	Cell1.align="center";
+	   	Cell2.align="center";
+	   	Cell3.align="center";
+	   	Cell4.align="center";
+		Cell5.align="center";
+	   	Cell6.align="center";
+		Cell7.align="center";
+	   	Cell8.align="center";
+		Cell9.align="center";
+
+
+		Curr_Row = i + 1;
+	
+		Jan="";Feb="";Mar="";Apr="";May="";June="";July="";Aug="";Sep="";Oct="";Nov="";Dec="";
+		Year_2008="";Year_2009="";Year_2010="";Year_2011="";Year_2012="";Year_2013="";Year_2014="";Year_2015="";
+		Selected = "Selected = true";
+		
+		Month = ActiveSheet.Cells(RowNumber,9).Value;
+		Year = ActiveSheet.Cells(RowNumber,8).Value;
+		
+	
+		if(Month == "January"){
+			Jan = Selected;
+		}else if(Month == "February"){
+			Feb = Selected;
+		}else if(Month == "March"){
+			Mar = Selected;
+		}else if(Month == "April"){
+			Apr = Selected;
+		}else if(Month == "May"){
+			May = Selected;
+		}else if(Month == "June"){
+			June = Selected;
+		}else if(Month == "July"){
+			July = Selected;
+		}else if(Month == "August"){
+			Aug = Selected;
+		}else if(Month == "September"){
+			Sep = Selected;
+		}else if(Month == "October"){
+			Oct = Selected;
+		}else if(Month == "November"){
+			Nov = Selected;
+		}else if(Month == "December"){
+			Dec = Selected;
+		}
+		
+		if(Year == "2008"){
+			Year_2008 = Selected;
+		}else if(Month == "2009"){
+			Year_2009 = Selected;
+		}else if(Month == "2010"){
+			Year_2010 = Selected;
+		}else if(Month == "2011"){
+			Year_2011 = Selected;
+		}else if(Month == "2012"){
+			Year_2012 = Selected;
+		}else if(Month == "2013"){
+			Year_2013 = Selected;
+		}else if(Month == "2014"){
+			Year_2014 = Selected;
+		}else if(Month == "2015"){
+			Year_2015 = Selected;
+		}
+		
+		
+		Cell1.innerHTML = '<label id="SrNO'+Curr_Row+'">'+ ActiveSheet.Cells(RowNumber,1).Value+'</label>' ;
+		Cell2.innerHTML = '<label id="EmpCode'+Curr_Row+'">'+ ActiveSheet.Cells(RowNumber,2).Value+'</label>' ;
+		Cell3.innerHTML = '<label id="EmpName'+Curr_Row+'">'+ ActiveSheet.Cells(RowNumber,3).Value+'</label>' ;
+		Cell4.innerHTML = '<label id="GpfAccNo'+Curr_Row+'">'+ ActiveSheet.Cells(RowNumber,4).Value+'</label>' ;
+		Cell5.innerHTML = '<input type="text" size="10" id="InstNo'+Curr_Row+'" name="InstNo" value="'+ActiveSheet.Cells(RowNumber,5).Value+'" onkeypress="digitFormat(this);"/>' ;
+		Cell6.innerHTML = '<input type="text" size="10" id="TotalAmount'+Curr_Row+'" name="TotalAmount" value="'+ActiveSheet.Cells(RowNumber,6).Value+'" onkeypress="digitFormat(this);"/>' ;
+		Cell7.innerHTML = '<input type="text" size="10" id="InstAmount'+Curr_Row+'" name="InstAmount" value="'+ActiveSheet.Cells(RowNumber,7).Value+'" onkeypress="digitFormat(this);"/>' ;
+		Cell8.innerHTML = ' <select name="cmbYear" id="cmbYear'+Curr_Row+'" style="width: 107">'
+		+ '<option value="2008"'+Year_2008+' >2008</option> <option value="2009"'+Year_2009+' >2009</option> <option value="2010"'+Year_2010+' >2010</option>'
+		+ '<option value="2011"'+Year_2011+' >2011</option> <option value="2012"'+Year_2012+' >2012</option> <option value="2013"'+Year_2013+' >2013</option>'
+		+ '<option value="2014"'+Year_2014+' >2014</option> <option value="2015"'+Year_2015+' >2015</option> </select>';
+		Cell9.innerHTML = ' <select name="cmbMonth" id="cmbMonth'+Curr_Row+'"  style="width: 107">'
+		+ ' <option value="January"'+Jan+' >January</option> <option value="February"'+Feb+' >February</option> <option value="March"'+Mar+' >March</option>'
+		+ ' <option value="April"'+Apr+' >April</option> <option value="May"'+May+' >May</option> <option value="June"'+June+' >June</option>'
+		+ ' <option value="July"'+July+' >July</option> <option value="August"'+Aug+' >August</option> <option value="September"'+Sep+' >September</option>'
+		+ ' <option value="October"'+Oct+' >October</option> <option value="November"'+Nov+' >November</option> <option value="December"'+Dec+' >December</option></select>'; 
+	}
+	Excel.Quit();
+}
+
+
+
+
+function SubmitData()
+{
+	
+	var Excel, Book;	// Declare the variables
+	Excel = new ActiveXObject("Excel.Application");	// Create the Excel application object.
+	Excel.Visible = true;	// Make Excel invisible.
+	var location = self.location.href;
+	var lastIndex = location.lastIndexOf("/");
+	
+	var parentLoc = location.substring(0,lastIndex+1);
+	
+	path = parentLoc+"ArrearData.xls";
+	Book = Excel.Workbooks.Open(path);	// Create a new work book.
+	
+     
+	
+	ActiveSheet = Excel.ActiveSheet;
+	var oRows = document.getElementById('ArrearsTable').getElementsByTagName('tr');
+	TotalRows = oRows.length-1;
+	
+	var initRows = 1;
+
+	var TableRow = 2;
+	for(i=1;i<=TotalRows;i++)
+	{
+		var Curr_row = initRows + i;
+		
+		ActiveSheet.Cells(Curr_row,1).Value = document.getElementById("SrNO"+TableRow).innerHTML;
+		ActiveSheet.Cells(Curr_row,2).Value = document.getElementById("EmpCode"+TableRow).innerHTML;
+		ActiveSheet.Cells(Curr_row,3).Value = document.getElementById("EmpName"+TableRow).innerHTML;
+		ActiveSheet.Cells(Curr_row,4).Value = document.getElementById("GpfAccNo"+TableRow).innerHTML;
+		ActiveSheet.Cells(Curr_row,5).Value = document.getElementById("InstNo"+TableRow).value;
+		ActiveSheet.Cells(Curr_row,6).Value = document.getElementById("TotalAmount"+TableRow).value;
+		ActiveSheet.Cells(Curr_row,7).Value = document.getElementById("InstAmount"+TableRow).value;
+		ActiveSheet.Cells(Curr_row,8).Value = document.getElementById("cmbYear"+TableRow).value;
+		ActiveSheet.Cells(Curr_row,9).Value = document.getElementById("cmbMonth"+TableRow).value;		
+		TableRow++;
+	}
+	
+	Book.SaveAs(path);		
+	Excel.Quit();	// Close Excel with the Quit method on the Application 
+}
+
+
+</script>
+
+
+</head>
+<body onLoad="GetData();" style="font-family:calibri">
+<table border = "0" style="width:100%;border-color=#000;border-width:1;border-style:solid" cellpadding="0" cellspacing="0">
+<tr>
+	<td style="background-image: url(images/top.jpg);height=141; align="center">
+		<img src="images/HomeBanner.jpg"/>
+	</td>
+	</tr>
+	<tr>
+	<td style="background-image: url(images/wintop.jpg);color:#fff;font-weight:bold" align="center">
+	Offline Arrears for GPF
+	</td>
+</tr>	
+
+<tr>
+<td style="border-color=#000;border-width:1;border-style:solid;height:400" valign="top">
+
+
+<br/>
+<table  id = "ArrearsTable" border = "1" width="80%" align = "center" cellpadding="0" cellspacing="0">
+	<tr>
+		<th class="headerCont">Sr No</th>
+		<th class="headerCont">Employee Code</th>
+		<th class="headerCont">Employee Name</th>
+		<th class="headerCont">GPF Account No</th>
+		<th class="headerCont">Installment No</th>
+		<th class="headerCont">Total Amount</th>
+		<th class="headerCont">Installment Amount</th>
+		<th class="headerCont">Year</th>
+		<th class="headerCont">Month</th>		
+	</tr>
+</table>
+</td></tr>
+</table>
+<br/>
+<table border = "0" align = "center" width = "20%">
+	<tr>
+		<td align = "center"><input style="background-image: url(images/btn.jpg);color:#fff;font-weight:bold;font-family:calibri;border-color:#fff" type = "submit" id = "submit" value = "Save Data" onClick="SubmitData();"/></td>
+	</tr>
+</table>
+</body>
+</html>

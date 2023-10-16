@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 20, 2007 8:49:33 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisLangPrfcncyDtl" table="hr_eis_langprfcncy_dtl">
+        <id name="langProfPkId" type="long">
+            <column name="LANG_PROF_PK_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="orgUserMstByUserId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="USER_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="cmnLookupMst" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="PROFICIENCY_ID" precision="22" scale="0" />
+        </many-to-one>
+        
+        <many-to-one name="cmnLookupMstReadProf" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="READ_PROFICIENCY_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="cmnLookupMstWriteProf" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="WRITE_PROFICIENCY_ID" precision="22" scale="0" />
+        </many-to-one>
+        
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY_POST" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </many-to-one>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true"/>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <many-to-one name="cmnLanguageMstByLanguageId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="LANGUAGE_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="hrms_emp_id" precision="22" scale="0" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

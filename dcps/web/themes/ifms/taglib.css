@@ -1,0 +1,72 @@
+.anchortag {
+}
+
+.checkboxtag {
+	padding: 2px;
+}
+
+.filetag {
+	border: inset 1px #bbbbbb;
+	padding: 2px;
+}
+
+.radiobuttontag {
+	padding: 2px;
+}
+
+.resetbuttontag {
+	border: outset 1px #888888;
+	background: #efefef;
+}
+
+.selecttag {
+	border: inset 1px #bbbbbb;
+	padding: 2px;
+}
+
+.texttag, .textareatag, .passwordtag {
+	border: inset 1px #bbbbbb;
+	padding: 2px;
+}
+
+.textareatag, .selecttag{
+scrollbar-3dlight-color:#eeeeee; 
+scrollbar-arrow-color:#000000; 
+scrollbar-base-color:#ababab; 
+scrollbar-darkshadow-color:#444444; 
+scrollbar-face-color:#bbbbbb; 
+scrollbar-highlight-color:#bbbbbb; 
+scrollbar-shadow-color:#999999;
+}
+
+.buttontag{
+	border: outset 1px #bbbbbb;
+	background: #dedede;
+}
+
+.savebutton{
+	margin: 4px;
+	padding: 2px 5px 2px 2px;
+	width: 100px;
+	height: 28px;
+	border: outset 1px #888888;
+	background: #efefef url(images/save.png) no-repeat 5% center;
+	text-align: right;
+}
+
+.mandatorycontrol{
+	background: #FFFFF0;
+}
+
+.disabledcontrol{
+	background: #dedede;
+}
+.textareatag{
+	font-family:  Arial, Verdana, Helvetica, sans;
+	font: inherit;
+}
+.mandatoryindicator{
+	font-size: 10pt;
+	font-weight: bold;
+	color :#F80000;
+}

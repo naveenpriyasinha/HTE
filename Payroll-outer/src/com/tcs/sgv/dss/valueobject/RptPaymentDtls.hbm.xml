@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 18, 2007 9:13:11 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.dss.valueobject.RptPaymentDtls" table="RPT_PAYMENT_DTLS"  >
+        <id name="paymentId" type="big_decimal">
+            <column name="PAYMENT_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="deptCode" type="string">
+            <column name="DEPT_CODE" length="15" />
+        </property>
+        <property name="officeCode" type="string">
+            <column name="OFFICE_CODE" length="15" />
+        </property>
+        <property name="tsryCode" type="string">
+            <column name="TSRY_CODE" length="15" />
+        </property>
+        <property name="ddoCode" type="string">
+            <column name="DDO_CODE" length="15" />
+        </property>
+        <property name="partyCode" type="string">
+            <column name="PARTY_CODE" length="20" />
+        </property>
+        <property name="chqTypeCode" type="string">
+            <column name="CHQ_TYPE_CODE" length="30" />
+        </property>
+        <property name="chqNo" type="big_decimal">
+            <column name="CHQ_NO" precision="20" scale="0" />
+        </property>
+        <property name="chqClrDt" type="date">
+            <column name="CHQ_CLR_DT" length="7" />
+        </property>
+        <property name="finYrId" type="big_decimal">
+            <column name="FIN_YR_ID" precision="22" scale="0" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="20" />
+        </property>
+        <property name="bankCode" type="string">
+            <column name="BANK_CODE" length="20" />
+        </property>
+        <property name="chqStatusCode" type="string">
+            <column name="CHQ_STATUS_CODE" length="45" />
+        </property>
+        <property name="chqStatusDt" type="date">
+            <column name="CHQ_STATUS_DT" length="7" />
+        </property>
+        <property name="partyName" type="string">
+            <column name="PARTY_NAME" length="45"/>
+        </property>
+        <property name="clientData" type="java.lang.Character">
+            <column name="CLIENT_DATA" length="1" />
+        </property>
+        <property name="active" type="java.lang.Character">
+            <column name="ACTIVE" length="1" />
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="30" />
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="7" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

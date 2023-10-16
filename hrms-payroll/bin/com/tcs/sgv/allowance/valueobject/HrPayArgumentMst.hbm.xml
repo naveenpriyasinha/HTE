@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 22, 2007 3:26:22 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.allowance.valueobject.HrPayArgumentMst" table="HR_PAY_ARGUMENT_MST" >
+        <id name="argumentId" type="long">
+            <column name="ARGUMENT_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="tableName" type="string">
+            <column name="TABLE_NAME" length="100" />
+        </property>
+        <property name="selcolName" type="string">
+            <column name="SELCOL_NAME" length="100" />
+        </property>
+        <property name="condcolName" type="string">
+            <column name="CONDCOL_NAME" length="500" />
+        </property>
+        <property name="parentArgueId" type="long">
+            <column name="PARENT_ARGUE_ID" precision="22" scale="0" />
+        </property>
+        <property name="locId" type="long">
+            <column name="LOC_ID" precision="22" scale="0" />
+        </property>
+        <property name="dbId" type="long">
+            <column name="DB_ID" precision="22" scale="0" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" precision="22" scale="0" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedBy" type="long">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="createdByPost" type="long">
+            <column name="CREATED_BY_POST" precision="22" scale="0" />
+        </property>
+        <property name="updatedByPost" type="long">
+            <column name="UPDATED_BY_POST" precision="22" scale="0" />
+        </property>
+        <property name="elementCode" type="long">
+            <column name="ELEMENT_CODE" precision="22" scale="0" />
+        </property>
+        <set name="hrAllowArgumentMpgsForMainArgueId" inverse="true">
+            <key>
+                <column name="MAIN_ARGUE_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.tcs.sgv.allowance.valueobject.HrAllowArgumentMpg" />
+        </set>
+        <set name="hrAllowArgumentMpgsForCondArgueId" inverse="true">
+            <key>
+                <column name="COND_ARGUE_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.tcs.sgv.allowance.valueobject.HrAllowArgumentMpg" />
+        </set>
+    </class>
+</hibernate-mapping>

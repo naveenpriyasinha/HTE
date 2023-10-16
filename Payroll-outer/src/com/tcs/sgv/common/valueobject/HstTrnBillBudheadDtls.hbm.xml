@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 20, 2007 2:54:38 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.HstTrnBillBudheadDtls" table="hst_trn_bill_budhead_dtls" dynamic-update="true">
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.common.valueobject.HstTrnBillBudheadDtlsId">
+            <key-property name="billBudId" type="long">
+                <column name="BILL_BUD_ID" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" />
+            </key-property>
+        </composite-id>
+        <property name="billNo" type="long">
+            <column name="BILL_NO" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dmndNo" type="string">
+            <column name="DMND_NO" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="bpnNo" type="string">
+            <column name="BPN_NO" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budMjrHd" type="string">
+            <column name="BUD_MJR_HD" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budSubmjrHd" type="string">
+            <column name="BUD_SUBMJR_HD" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budMinHd" type="string">
+            <column name="BUD_MIN_HD" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budSubHd" type="string">
+            <column name="BUD_SUB_HD" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budDtlHd" type="string">
+            <column name="BUD_DTL_HD" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="versionId" type="java.lang.Long">
+            <column name="VERSION_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>       
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="budType" type="string">
+            <column name="BUD_TYPE" length="32">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="clsExp" type="string">
+            <column name="CLS_EXP" length="32">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="schemeNo" type="string">
+            <column name="SCHEME_NO" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="headChrg" type="string">
+            <column name="HEAD_CHRG" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYearId" type="string">
+            <column name="FIN_YEAR_ID" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="drawing" type="string">
+            <column name="DRAWING" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fund" type="string">
+            <column name="FUND" length="32">
+                <comment></comment>
+            </column>
+        </property>       
+		<property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

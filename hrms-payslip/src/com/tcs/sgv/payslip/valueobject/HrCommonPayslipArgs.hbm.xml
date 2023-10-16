@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 31, 2007 6:38:30 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.payslip.valueobject.HrCommonPayslipArgs" table="HR_COMMON_PAY_PAYSLIP_ARGS">
+        <id name="argsId" type="long">
+            <column name="ARGS_ID"   />
+            <generator class="assigned" />
+        </id>
+        <property name="dispOrder" type="long">
+            <column name="DISP_ORDER"   />
+        </property>
+        <property name="edpCode" type="long">
+            <column name="EDP_CODE"   />
+        </property>
+        <property name="propertyName" type="string">
+            <column name="PROPERTY_NAME" length="40" />
+        </property>
+        <property name="displayName" type="string">
+            <column name="DISPLAY_NAME" length="40" />
+        </property>
+        <property name="locId" type="long">
+            <column name="LOC_ID"   />
+        </property>
+        <property name="dbId" type="long">
+            <column name="DB_ID"   />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY"   />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedBy" type="long">
+            <column name="UPDATED_BY"   />
+        </property>
+        <property name="createdByPost" type="long">
+            <column name="CREATED_BY_POST"   />
+        </property>
+        <property name="argsType" type="string">
+            <column name="ARGS_TYPE" length="5" />
+        </property>
+    </class>
+</hibernate-mapping>

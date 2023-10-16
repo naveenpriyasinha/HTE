@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2007 10:37:47 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping auto-import="false">
+    <class name="com.tcs.sgv.eis.valueobject.RltBillTypeEdp" table="RLT_BILL_TYPE_EDP">
+        <id name="typeEdpId" type="long">
+            <column name="TYPE_EDP_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="subjectId" type="long">
+            <column name="SUBJECT_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="objHdCode" type="string">
+            <column name="OBJ_HD_CODE" />
+        </property>
+        <property name="edpCode" type="string">
+            <column name="EDP_CODE" not-null="true" />
+        </property>
+        <property name="edpDesc" type="string">
+            <column name="EDP_DESC" />
+        </property>
+        <property name="addDedFlag" type="string">
+            <column name="ADD_DED_FLAG" not-null="true" />
+        </property>
+        <property name="edpCategory" type="string">
+            <column name="EDP_CATEGORY" />
+        </property>
+        <property name="activateFlag" type="long">
+            <column name="ACTIVATE_FLAG" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="START_DATE" length="7" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="edpMethodName" type="string">
+            <column name="edp_method_name"  />
+        </property>
+        
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_post_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_post_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_user_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_user_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" />
+        </property>
+        
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19" />
+        </property>
+        <property name="expRcpRev" type="string">
+            <column name="EXP_RCP_REV" />
+        </property>
+        <property name="edpShortName" type="string">
+            <column name="EDP_SHORT_NAME" length="25" />
+        </property>
+        <property name="expRcpRec" type="string">
+            <column name="exp_rcp_rec" length="3">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <set name="hrPayEdpCompoMpgs" inverse="true">
+            <key>
+                <column name="TYPE_EDP_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.tcs.sgv.eis.valueobject.HrPayEdpCompoMpg" />
+        </set>
+    </class>
+</hibernate-mapping>

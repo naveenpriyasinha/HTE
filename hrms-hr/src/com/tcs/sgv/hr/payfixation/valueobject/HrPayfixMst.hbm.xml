@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 5, 2007 5:48:42 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping  auto-import="false">
+    <class name="com.tcs.sgv.hr.payfixation.valueobject.HrPayfixMst" table="HR_PAYFIX_MST" >
+        <id name="payfixId" type="java.lang.Long">
+            <column name="payfix_pk_id" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="userId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="user_id" precision="22" scale="0" />
+        </many-to-one>
+        <property name="payFixDate" type="date">
+            <column name="pay_fix_date" length="7" />
+        </property>
+       
+        <property name="nxtIncrDate" type="date">
+            <column name="nxt_incr_date" length="7" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="remarks" length="200" />
+        </property>
+        
+        <property name="status" type="string" unique="false" optimistic-lock="true" lazy="false" generated="never">
+ 			 <column name="status" length="200" /> 
+	   </property>
+        
+        	
+       <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+         <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+         <many-to-one name="orgUserMstCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+         <many-to-one name="orgPostMstCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <property name="createdDate" type="date">
+            <column name="created_date" length="7" not-null="true"/>
+        </property>
+        <many-to-one name="orgUserMstUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by" precision="22" scale="0" />
+        </many-to-one>
+         <many-to-one name="orgPostMstUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post" precision="22" scale="0" />
+        </many-to-one>
+        <property name="updatedDate" type="date">
+            <column name="updated_date" length="7" />
+        </property>
+        
+        
+        <property name="newBasic" type="java.lang.Long" >
+            <column name="new_basic" precision="22" scale="0"/> 
+        </property>
+
+		<property name="incrementOrderNo" type="string" >
+  		    <column name="incr_certi_order_no" length="60" /> 
+  		</property>
+  		
+  		<property name="incrementOrderDate" type="date" >
+  			<column name="incr_order_date" length="7" not-null="true" /> 
+  		</property>
+  		
+		 <property name="oldBasic" type="java.lang.Long" >
+            <column name="old_basic" precision="22" scale="0"/> 
+        </property>
+        
+        <property name="activateFlag" type="java.lang.Integer" >
+            <column name="activate_flag" precision="22" scale="0"/> 
+        </property>
+        
+    </class>
+</hibernate-mapping>

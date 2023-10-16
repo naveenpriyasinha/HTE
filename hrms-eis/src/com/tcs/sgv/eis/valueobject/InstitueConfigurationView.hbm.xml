@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.eis.valueobject">
+  <class name="InstitueConfigurationViewVO" table="INSTITUTE_CONFIGURATION">
+  
+  <id name="sno" type="long">
+            <column name="SNO" length="19"/>
+            <generator class="assigned" />
+        </id>
+   <property name="schoolConfiguredbyMDC" type="long">
+            <column name="NO_OF_SCHOOLS_CONFIGUREDBYMDC" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="schoolsPendingwithlvl2DDO" type="long">
+            <column name="TOTAL_NO_OF_SCHOOLS_PENDINGWITHLVL2DDO" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="schoolsApprovedwithlvl2DDO" type="long">
+            <column name="TOTAL_NO_OF_SCHOOLS_APPROVEDBYLVL2DDO" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="schoolsRejectedwithlvl2DDO" type="long">
+            <column name="TOTAL_NO_OF_SCHOOLS_REJECTEDBYLVL2DDO" length="19">
+                <comment></comment>
+            </column>
+        </property>
+       
+  
+  
+  </class>
+</hibernate-mapping>

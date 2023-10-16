@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 29, 2007 12:41:44 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayPayslipHst" table="HR_PAY_PAYSLIP_HST">
+        <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrPayPayslipHstId">
+            <key-property name="paySlipId" type="long">
+                <column name="PAYSLIP_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+       
+        <many-to-one name="hrPayPaybill" class="com.tcs.sgv.eis.valueobject.HrPayPaybill" fetch="select">
+            <column name="PAYBILL_ID" precision="22" scale="0" />
+        </many-to-one>
+
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID" precision="22" scale="0" />
+        </many-to-one>
+       
+       
+       <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+       
+       
+       
+       
+       
+        <!-- <property name="paybillId" type="long">
+            <column name="PAYBILL_ID" precision="22" scale="0" />
+        </property>
+        <property name="empId" type="long">
+            <column name="EMP_ID" precision="22" scale="0" />
+        </property>  -->
+        <property name="month" type="long">
+            <column name="PAYSLIP_MONTH" precision="22" scale="0" />
+        </property>
+        <property name="year" type="long">
+            <column name="PAYSLIP_YEAR" precision="22" scale="0" />
+        </property>
+        <property name="billNo" type="string">
+            <column name="BILL_NO" length="20" />
+        </property>
+        <many-to-one name="hrQuaterTypeMst" class="com.tcs.sgv.eis.valueobject.HrEisQuaterTypeMst" fetch="select">
+            <column name="QUATER_NO" precision="22" scale="0" />
+        </many-to-one>
+        <property name="incrementAmt" type="long">
+            <column name="INCREMENT_AMT" precision="22" scale="0" />
+        </property>
+        <property name="itAccNo" type="string">
+            <column name="IT_ACC_NO" length="20" />
+        </property>
+        <property name="gpfAccNo" type="string">
+            <column name="GPF_ACC_NO" length="20" />
+        </property>
+        <property name="tokenNo" type="string">
+            <column name="TOKEN_NO" length="20" />
+        </property>
+        <property name="billAmt" type="long">
+            <column name="BILL_AMT" precision="22" scale="0" />
+        </property>
+        <property name="budgetHead" type="string">
+            <column name="BUDGET_HEAD" length="30" />
+        </property>
+        <property name="paySlipDate" type="date">
+            <column name="PAY_SLIP_DATE" length="7" />
+        </property>
+        <property name="basicPay" type="long">
+            <column name="BASIC_PAY" precision="22" scale="0" />
+        </property>
+        <property name="leavePay" type="long">
+            <column name="LEAVE_PAY" precision="22" scale="0" />
+        </property>
+        <property name="splPay" type="long">
+            <column name="SPL_PAY" precision="22" scale="0" />
+        </property>
+        <property name="perPay" type="long">
+            <column name="PER_PAY" precision="22" scale="0" />
+        </property>
+        
+         <!-- added by manoj -->
+        <property name="bonus" type="long">
+            <column name="bonus" precision="22" scale="0" />
+        </property>
+        <property name="DAGPF" type="long">
+            <column name="DAGPF" precision="22" scale="0" />
+        </property>
+        
+        <property name="da" type="long">
+            <column name="DA" precision="22" scale="0" />
+        </property>
+        <property name="cla" type="long">
+            <column name="CLA" precision="22" scale="0" />
+        </property>
+        <property name="hra" type="long">
+            <column name="HRA" precision="22" scale="0" />
+        </property>
+        <property name="wa" type="long">
+            <column name="WA" precision="22" scale="0" />
+        </property>
+        <property name="ma" type="long">
+            <column name="MA" precision="22" scale="0" />
+        </property>
+        <property name="ir" type="long">
+            <column name="IR" precision="22" scale="0" />
+        </property>
+        <property name="trAllow" type="long">
+            <column name="TR_ALLOW" precision="22" scale="0" />
+        </property>
+        <property name="ITax" type="long">
+            <column name="I_TAX" precision="22" scale="0" />
+        </property>
+        <property name="hrr" type="long">
+            <column name="HRR" precision="22" scale="0" />
+        </property>
+        <property name="PTax" type="long">
+            <column name="P_TAX" precision="22" scale="0" />
+        </property>
+        <!-- By Urvin Shah 
+        <property name="sis" type="long">
+            <column name="SIS" precision="22" scale="0" />
+        </property>
+         -->
+        <property name="gpf" type="long">
+            <column name="GPF" precision="22" scale="0" />
+        </property>
+        <property name="gpfAdv" type="long">
+            <column name="GPF_ADV" precision="22" scale="0" />
+        </property>
+        <property name="fesAdv" type="long">
+            <column name="FES_ADV" precision="22" scale="0" />
+        </property>
+        <property name="foodAdv" type="long">
+            <column name="FOOD_ADV" precision="22" scale="0" />
+        </property>
+         <!--  Added By Urvin Shah -->
+        <property name="payRecovery" type="long">
+            <column name="pay_recover" precision="22" scale="0" />
+        </property>
+        
+        <property name="fanAdv" type="long">
+            <column name="FAN_ADV" precision="22" scale="0" />
+        </property>
+        <property name="hba" type="long">
+            <column name="HBA" precision="22" scale="0" />
+        </property>
+        <property name="vehAdv" type="long">
+            <column name="VEH_ADV" precision="22" scale="0" />
+        </property>
+        <property name="miscRec" type="long">
+            <column name="MISC_REC" precision="22" scale="0" />
+        </property>
+        <property name="dp" type="long">
+            <column name="DP" precision="22" scale="0" />
+        </property>
+        <!--  By Urvin Shah.
+        <property name="cpf" type="long">
+            <column name="CPF" precision="22" scale="0" />
+        </property>
+        
+        <property name="carRent" type="long">
+            <column name="CAR_RENT" precision="22" scale="0" />
+        </property>
+         -->
+        <property name="netTotal" type="long">
+            <column name="NET_TOTAL" precision="22" scale="0" />
+        </property>
+        
+                <!-- Added By Urvin shah -->
+        
+        <property name="jeepRent" type="int">
+            <column name="JEEP_R" length="10"/>
+        </property>
+        
+        <property name="mcaInt" type="int">
+            <column name="CAR_SCT_MOPED_INT" length="10" />
+        </property>
+        
+        <property name="hbaInt" type="int">
+            <column name="HBA_INT" length="10" />
+        </property>
+        
+        <property name="fanInt" type="int">
+            <column name="FAN_INT" length="10" />
+        </property>
+        
+        <property name="ocaCycleAdv" type="int">
+            <column name="OCA_CYCLE_ADV" length="10" />
+        </property>
+        
+        <property name="ocaCycleInt" type="int">
+            <column name="OCA_CYCLE_INT" length="10" />
+        </property>
+        
+        <property name="gis1979" type="int">
+            <column name="GIS_1979" length="10" />
+        </property>
+        
+        <property name="gisIf" type="int">
+            <column name="GIS_IF_1980" length="10" />
+        </property>
+        
+        <property name="gisSf" type="int">
+            <column name="GIS_SF_1980" length="10" />
+        </property>
+        
+        
+      <!-- Ended By Urvin shah -->
+        
+        
+        
+        
+        
+        
+        
+        <!-- <property name="langId" type="long">
+            <column name="LANG_ID" precision="22" scale="0" />
+        </property>
+        <property name="locId" type="long">
+            <column name="LOC_ID" precision="22" scale="0" />
+        </property>  -->
+        <!-- <property name="dbId" type="long">
+            <column name="DB_ID" precision="22" scale="0" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" precision="22" scale="0" />
+        </property> -->
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <!-- <property name="updatedBy" type="long">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </property>  -->
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+       <!--  <property name="createdByPost" type="long">
+            <column name="CREATED_BY_POST" precision="22" scale="0" />
+        </property>
+        <property name="updatedByPost" type="long">
+            <column name="UPDATED_BY_POST" precision="22" scale="0" />
+        </property>  -->
+    </class>
+</hibernate-mapping>

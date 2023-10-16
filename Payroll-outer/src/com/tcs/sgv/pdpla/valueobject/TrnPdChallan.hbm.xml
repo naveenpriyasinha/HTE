@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 5, 2007 7:56:06 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pdpla.valueobject.TrnPdChallan" table="TRN_PD_CHALLAN"  >
+        <id name="challanId" type="long">
+            <column name="CHALLAN_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="pdMjrhd" type="string">
+            <column name="PD_MJRHD" length="10" not-null="true" />
+        </property>
+        <property name="challanNo" type="int">
+            <column name="CHALLAN_NO" precision="6" scale="0" not-null="true" />
+        </property>
+        <property name="challanDate" type="date">
+            <column name="CHALLAN_DATE" length="7" not-null="true" />
+        </property>
+        <property name="payeeNm" type="string">
+            <column name="PAYEE_NM" length="300" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="status" type="boolean">
+            <column name="STATUS" precision="1" scale="0" not-null="true" />
+        </property>
+        <property name="locCode" type="string">
+            <column name="LOC_CODE" length="10" not-null="true" />
+        </property>
+        <property name="challanReceiptDate" type="date">
+            <column name="CHALLAN_RECEIPT_DATE" length="7" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,175 @@
+body {
+  background-color:rgb(255,255,255);
+  font-family: verdana, helvetica, arial, sans-serif;
+  font-size: 78%;
+  margin: 0;
+  padding: 0;
+}
+
+html > body {
+  font-size: 9.5pt;
+}
+/* ###### template CSS #### */
+.main {
+	width:984px;
+	margin-left:13px;
+}
+
+/* ##### Header ### */
+.mhlogo {
+	width:100px;
+	float:left; 
+	margin:6px 0px 0px 40px;
+    border-style: none;
+}
+.firsttext {
+    margin:6px 0px 0px 90px; 
+    font-size:24px;
+	float:left;
+	color:#5B508F;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+.secondtext {
+    margin:5px 0px 0px 154px; 
+    font-size:20px;
+	float:left;
+	color:#5B508F;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+.ifmstext {
+   float:right;
+   margin:25px 0px 0px 175px;
+   font-size:22px;
+}
+/* ##### Side Bar ##### */
+
+#side-bar {
+  font-size: 95%;
+  text-align: left;
+  width: 14em;
+  float: left;
+  clear: left;
+  border: 1px black solid;
+  border-width: 5px 5px 5px 5px;
+  border-color:#968ECF;
+}
+.sideBarTitle {
+  color: rgb(255,255,255); 
+  background-color:#968ECF;
+  font-size: 100%;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.5ex 1em 0.5ex 0.5ex;
+  border-top: 1px solid rgb(34,70,79);
+}
+sideBarTitle a:hover{
+background-color: black;
+color: white;
+}
+
+#side-bar ul {	 
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0;
+}
+
+#side-bar li {
+  margin: 0;
+  padding: 1ex 1em 1ex 0.5ex;
+  border-top: 1px solid rgb(34,70,79);
+}
+
+#side-bar a {
+  color: rgb(34,70,79);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#side-bar a:hover {
+  color: white;
+  background-color: #FFBE6B;
+  text-decoration: none;
+}
+
+p {
+  margin: 1em 0 1.5em 0;
+  padding: 0 0em 0 0em;/*0;*/
+} 
+
+.lighterBox {
+  margin: 1em 1im 1em 1em;
+  padding: 2ex 2em 0.25em 2em;
+}
+
+.lighterBox .firstchap {
+  margin-left:5px;
+}
+
+.lighterBox .bullet {
+  margin:0px 0px 0px 20px;
+  padding:0px;
+}
+
+.lighterBox .secondchap {
+  margin: 35px 0px 0px 5px;
+}
+
+.dislink {
+ text-decoration:underline;
+}
+.dislink:hover {
+ /* color: white; */
+  text-decoration:none;
+}
+/* ##### Footer ##### */
+
+.footer {
+  margin:55px 0px 0px 0px;
+}
+
+/* #### Right Side bar #### */
+.rightbar {
+  margin: 10px 0px 0px 15px;
+  width:150px;
+} 
+.bigbutton {
+	padding: 2px;
+	border: 1px solid black;
+	background-color:#c06f20;
+	color: white;
+	cursor:pointer;
+	font-family: 'verdana';
+	font-weight: bold;
+	font-size: 12px;
+}
+.tabstyle {
+	border-width: 5px 1px 1px 1px; 
+	border-color: #c06f20;	/*change*/
+	border-style: solid ;
+	padding:0px; /*added by shripal */
+	}
+.sideBarNotice {
+  color: rgb(255,255,255); 
+  background-color:#c06f20;
+  font-size: 100%;
+  font-weight: bold;
+  margin: 0;
+  border-top: 1px solid rgb(34,70,79);
+}
+sideBarNotice a:hover{
+background-color: black;
+color: white;
+}
+
+.boxClass{
+border: 2px solid #c06f20;
+height:200px;
+
+}	
+.noticeClass
+{
+border: 2px solid #c06f20;
+height:430px;
+
+}

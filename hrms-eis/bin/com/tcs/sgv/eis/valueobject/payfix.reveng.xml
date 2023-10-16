@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+<table-filter match-schema="HR" match-name="HR_ADDPAY_DTL"/>
+  <table-filter match-schema="HR" match-name="HR_LEAVE_INCHRG_DTL"/>
+  <table-filter match-schema="HR" match-name="CMN_ATTACHMENT_MST"/>
+  <table-filter match-schema="HR" match-name="ORG_USER_MST"/>
+  <table-filter match-schema="HR" match-name="ORG_POST_MST"/>
+</hibernate-reverse-engineering>

@@ -1,0 +1,20 @@
+.delbutton
+{
+
+border:thin;border-width:1px;
+background-image:url(images/delete_img.JPG);
+height: 33px;
+width: 28px;
+
+}
+
+.printButton
+{
+
+border:thin;border-width:1px;
+background-image:url(images/printer.JPG);
+height: 33px;
+width: 28px;
+
+
+}

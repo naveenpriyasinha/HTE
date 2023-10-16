@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app id="WebApp_ID" version="2.4" 
+    xmlns="http://java.sun.com/xml/ns/j2ee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+    http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>IFMS</display-name>
+	<!--
+	  - Loads the root application context of this web app at startup,
+	  - by default from "/WEB-INF/applicationContext.xml".
+		- Note that you need to fall back to Spring's ContextLoaderServlet for
+		- J2EE servers that do not follow the Servlet 2.4 initialization order.
+		-
+	  - Use WebApplicationContextUtils.getWebApplicationContext(servletContext)
+	  - to access it anywhere in the web application, outside of the framework.
+	  -
+	  - The root context is the parent of all servlet-specific contexts.
+	  - This means that its beans are automatically available in these child contexts,
+	  - both for getBean(name) calls and (external) bean references.
+	  -->
+
+	 <context-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>
+		/WEB-INF/spring-security.xml
+		/WEB-INF/applicationContext.xml
+	</param-value>
+	</context-param>
+
+	<!-- Filter for channel processing functionality start -->
+	<!-- Perhaps this filter does not require if application deploy other that tomcat server -->
+	<!-- 
+	<filter>
+		<filter-name>httpsCookieFilter</filter-name>
+		<filter-class>com.tcs.sgv.acl.acegilogin.filter.HttpsCookieFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>httpsCookieFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	-->
+	<!-- Filter for channel processing functionality end -->
+	
+	<filter>
+		<filter-name>Spring Security Filter Chain Proxy</filter-name>
+		<filter-class>org.springframework.security.util.FilterToBeanProxy</filter-class>
+		<init-param>
+			<param-name>targetClass</param-name>
+			<param-value>org.springframework.security.util.FilterChainProxy</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Spring Security Filter Chain Proxy</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+    	<filter-name>ResponseOverrideFilter</filter-name>
+    	<filter-class>
+    		org.displaytag.filter.ResponseOverrideFilter
+    	</filter-class>
+  	</filter>
+  	<filter-mapping>
+    	<filter-name>ResponseOverrideFilter</filter-name>
+    	<url-pattern>*.htm</url-pattern>
+  	</filter-mapping>
+	<filter>
+        <filter-name>requestContextFilter</filter-name>
+        <filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+    </filter>
+	 <filter-mapping>
+        <filter-name>requestContextFilter</filter-name>
+        <url-pattern>/dwr/*</url-pattern>
+    </filter-mapping>	    
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>	
+	<listener>
+	 	<listener-class>
+	 		com.tcs.sgv.core.dao.AuditListener
+	 	</listener-class>
+    </listener>
+    
+    <listener>
+    	<listener-class>
+      		org.apache.commons.fileupload.servlet.FileCleanerCleanup
+    	</listener-class>
+  	</listener>  
+    
+    <listener>
+		<listener-class>
+			com.tcs.sgv.acl.LoginAuditSessionListener
+		</listener-class>
+	</listener>
+   <listener>
+		<listener-class>
+			com.tcs.sgv.ftsearch.listener.FullTextIndexCreationListener
+		</listener-class>
+	</listener>	
+	<listener>
+        	<listener-class>
+        	      org.springframework.security.ui.session.HttpSessionEventPublisher
+        	</listener-class>
+   </listener>
+
+	<servlet>
+        <servlet-name>dwr</servlet-name>
+        <servlet-class>org.directwebremoting.spring.DwrSpringServlet</servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>allowScriptTagRemoting</param-name>
+            <param-value>true</param-value>
+        </init-param>
+		<init-param>
+			<param-name>activeReverseAjaxEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+    </servlet>
+    
+    <!-- Added by Brijesh to get current request object in AuthenticationEventManager start... -->	
+	<listener>
+		<listener-class>
+			org.springframework.web.context.request.RequestContextListener
+		</listener-class>
+	</listener>  
+	<!-- Added by Brijesh end... -->	
+	
+	<listener>
+		<listener-class>
+			com.tcs.sgv.common.service.IFMSSessionListener
+		</listener-class>
+	</listener>
+	 <servlet>
+  	<description>
+  	</description>
+  	<display-name>
+  	CaptchaServlet</display-name>
+  	<servlet-name>CaptchaServlet</servlet-name>
+  	<servlet-class>
+  	com.tcs.sgv.servlet.CaptchaServlet</servlet-class>
+  </servlet>
+
+<servlet-mapping>
+  	<servlet-name>CaptchaServlet</servlet-name>
+  	<url-pattern>/CaptchaServlet</url-pattern>
+</servlet-mapping>
+	<servlet>
+		<description>ifms servlet</description>
+		<display-name>ifms</display-name>
+		<servlet-name>ifms</servlet-name>
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+			<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/ifms-servlet.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ifms</servlet-name>
+		<url-pattern>*.htm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Upload</servlet-name>
+		<servlet-class>
+			com.tcs.sgv.common.utils.fileupload.servlet.UploadServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>Upload</servlet-name>
+	    <url-pattern>/Upload</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>CommonSchedulerServlet</servlet-name>
+	    <servlet-class>com.tcs.sgv.eis.service.CommonSchedulerServlet</servlet-class>
+	    <load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>CommonSchedulerServlet</servlet-name>
+	    <url-pattern>/startSchServlet</url-pattern>
+	</servlet-mapping>
+
+
+	
+	
+	<servlet>
+   		<servlet-name>DisplayChart</servlet-name>
+   		<servlet-class>org.jfree.chart.servlet.DisplayChart</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+    	 <servlet-name>DisplayChart</servlet-name>
+	     <url-pattern>/servlet/DisplayChart</url-pattern>
+	</servlet-mapping>
+	<!-- <servlet-mapping>
+		<servlet-name>Upload</servlet-name>
+		<url-pattern>/Upload</url-pattern>
+	</servlet-mapping> -->
+  	<servlet>
+		<servlet-name>DraftOpenServlet</servlet-name>
+  		<servlet-class>com.tcs.sgv.fms.pkgServlet.OpenServletForDraft</servlet-class>
+	 </servlet>
+	<servlet>
+		<servlet-name>FileOpenServlet</servlet-name>
+		<servlet-class>
+			com.tcs.sgv.fms.pkgServlet.FileOpenServlet
+		</servlet-class>
+	</servlet>
+  	<servlet-mapping>
+  		<servlet-name>DraftOpenServlet</servlet-name>
+  		<url-pattern>/servlet/DraftOpenServlet</url-pattern>
+	 </servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>FileOpenServlet</servlet-name>
+		<url-pattern>/servlet/FileOpenServlet</url-pattern>
+	</servlet-mapping>
+	
+	 <security-constraint>
+	    <web-resource-collection> 
+	        <web-resource-name>DisabledMethods</web-resource-name>
+	          <url-pattern>/*</url-pattern>
+	          <http-method>DELETE</http-method>
+	     	  <http-method>PUT</http-method>
+	           <http-method>OPTIONS</http-method>
+	          <http-method>TRACE</http-method>
+	    </web-resource-collection>
+	    <auth-constraint>
+          <role-name>empty_role</role-name>
+     	</auth-constraint>
+    </security-constraint> 
+	
+  	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/jsp/core/webErrorPage.jsp</location>
+	</error-page>
+	<!-- 500 (internal server error) -->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/jsp/core/webErrorPage.jsp</location>
+	</error-page>
+	<!-- 408 (request time-out) -->
+	<error-page>
+		<error-code>408</error-code>
+		<location>/WEB-INF/jsp/core/webErrorPage.jsp</location>
+	</error-page>
+	<!-- 503 (service unavailable) -->
+	<error-page>
+		<error-code>503</error-code>
+		<location>/WEB-INF/jsp/core/webErrorPage.jsp</location>
+	</error-page>
+	<!-- Hibernate Exceptions -->
+	<error-page>
+		<exception-type>org.hibernate.exception.JDBCConnectionException</exception-type>
+		<location>/WEB-INF/jsp/core/webErrorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>org.hibernate.exception.NestableException</exception-type>
+		<location>/WEB-INF/jsp/core/webErrorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>org.hibernate.exception.NestableRuntimeException</exception-type>
+		<location>/WEB-INF/jsp/core/webErrorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>org.hibernate.exception.SQLGrammarException</exception-type>
+		<location>/WEB-INF/jsp/core/webErrorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>org.hibernate.exception.ConstraintViolationException</exception-type>
+		<location>/WEB-INF/jsp/core/webErrorPage.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>org.hibernate.QueryParameterException</exception-type>
+		<location>/WEB-INF/jsp/core/webErrorPage.jsp</location>
+	</error-page>
+	<mime-mapping>
+	<extension>xls</extension>
+		<mime-type>application/vnd.ms-excel</mime-type>
+	</mime-mapping>	
+</web-app>

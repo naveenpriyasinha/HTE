@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 15, 2007 12:20:23 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.stamp.valueobject.TrnStampIndentHdr" table="TRN_STAMP_INDENT_HDR"  >
+        <id name="indHdrId" type="big_decimal">
+            <column name="IND_HDR_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="indNo" type="big_decimal">
+            <column name="IND_NO" precision="20" scale="0" not-null="true" unique="true" />
+        </property>
+        <property name="locCode" type="long">
+            <column name="LOC_CODE" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="fromDate" type="date">
+            <column name="FROM_DATE" length="7" not-null="true" />
+        </property>
+        <property name="toDate" type="date">
+            <column name="TO_DATE" length="7" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="20" not-null="true" />
+        </property>
+        <property name="typeCode" type="string">
+            <column name="TYPE_CODE" length="20" not-null="true" />
+        </property>
+        <property name="grossAmnt" type="big_decimal">
+            <column name="GROSS_AMNT" precision="12" not-null="true" />
+        </property>
+        <property name="consolidatedIndNo" type="big_decimal">
+            <column name="CONSOLIDATED_IND_NO" precision="20" scale="0" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

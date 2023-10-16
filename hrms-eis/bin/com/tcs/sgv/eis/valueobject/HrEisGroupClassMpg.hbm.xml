@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.tcs.sgv.eis.valueobject.HrEisGroupClassMpg" table="HR_EIS_GROUP_CLASS_MPG">
+
+ <id name="Id" type="long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        
+           <many-to-one name="hrEisGroupMst" class="com.tcs.sgv.eis.valueobject.HrEisGroupMst" fetch="select">
+            <column name="GROUP_ID"  scale="0" />
+        </many-to-one> 
+        
+             <many-to-one name="orgGradeMst" class="com.tcs.sgv.ess.valueobject.OrgGradeMst" fetch="select">
+            <column name="GRADE_ID"  scale="0" />
+        </many-to-one> 
+        
+         <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID"  scale="0" />
+        </many-to-one> 
+</class>
+</hibernate-mapping>

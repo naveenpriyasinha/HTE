@@ -1,0 +1,281 @@
+/*table styles*/
+
+/*this is the css for the horizontal version of header popup menu*/
+.horizontalOther ul {
+	background: #ffffff;
+/*	border: 1px solid #6688aa;*/
+	list-style-type: none;
+
+	display: block;
+	height: 22px;
+	margin: 0px 0px 0px 0px;
+}
+
+.horizontalOther li {
+	float: left;
+	display: inline;
+}
+.horizontalOther ul li ul li{
+	width: 100%;
+}
+
+.horizontalOther li a {
+	text-decoration: none;
+	height: 16px;
+	float: left;
+	display: block;
+	padding: 3px 2px 5px 10px;
+	width: 88px;
+	/*border-right : none;
+	border-left: 1px solid #1e1e1e;	*/
+	-space: nowrap;
+}
+
+.horizontalOther li li a {
+	/*border-top: none;*/
+	-space: normal;
+}
+
+.horizontalOther li ul {
+	position: absolute;
+	margin-top: 1em;
+	/*margin-left: -130px;
+	left: 130px;*/
+	width: 150px;
+	display: block;
+	/*height: auto;
+	border: 1px solid #232323;*/
+	background: #323030;
+}
+
+.horizontalOther li li ul {
+	position: absolute;
+	margin-top: 2px;
+	margin-left: 156px;
+}
+
+.horizontalOther li ul li a {
+	width: 100%;
+	border-top: 1px solid #565656;
+	border-bottom: 1px solid #232323;
+	border-left: 1px solid #565656;
+	border-right: 1px solid #232323;
+}
+
+.themeclrHorizontalOther a.horz {
+	background: #b2815c url(images/downarrow-white.gif) 98% no-repeat;	
+}
+
+.themeclrHorizontalOther a.horz:hover {
+	background: #7a2900 url(images/downarrow-white.gif) 98% no-repeat; 		
+}
+
+.themeclrHorizontalOther a.vert {
+	background: #b2815c url(images/next-white.gif) 98% no-repeat;
+		
+}
+
+.themeclrHorizontalOther a.vert:hover {
+	background: #7a2900 url(images/next-white.gif) 98% no-repeat;
+}
+
+.themeclrHorizontalOther li a {
+	color: #FFFFE6;
+	/* border-right: 1px groove #565656; */
+}
+
+.themeclrHorizontalOther li a:hover {
+	color: #FFFFE6;
+	background: #7a2900;	
+}
+
+.themeclrHorizontalOther li ul li a {
+	background: #b2815c;
+	color: #FFFFE6;
+}
+
+.themeclrHorizontalOther ul {
+/*	background: #323030  url(images/menu-bg-09.gif) top repeat-x;*/
+	background:  ;
+}
+
+.themeclrSearchControl a.horz {
+	background:#e2e2e7 url(images/downarrow-hover.gif) 98% no-repeat;	
+}
+
+.themeclrSearchControl a.horz:hover {
+	background: #626262 url(images/downarrow-white.gif) 98% no-repeat;
+	/*background : #777777 url(images/toolbar-bg-04.gif);*/
+}
+
+.themeclrSearchControl a.vert {
+	background: #e2e2e7 url(images/next-hover.gif) 98% no-repeat;
+		
+}
+
+.themeclrSearchControl a.vert:hover {
+	background:#626262 url(images/next-white.gif) 98% no-repeat;
+}
+
+.themeclrSearchControl li a {
+	color: black;
+	background: #e2e2e2;	
+		/*border-right: 1px groove #565656;*/
+}
+
+.themeclrSearchControl li a:hover {
+	color: white;
+	background: #626262;	
+}
+
+.themeclrSearchControl li ul li a {
+	background:  #e2e2e7;
+	color: #323030;
+}
+
+.themeclrSearchControl ul {
+/*	background: #323030  url(images/menu-bg-09.gif) top repeat-x;*/
+}
+
+#ftSearchTbl .vertical ul {
+	list-style-type: none;
+	padding: 0px;
+	border-top: 1px solid;
+	width: 100px;
+	margin-left:0px;
+}
+
+#ftSearchTbl .vertical li a {
+	display: block;
+	width: 100px;
+	text-decoration: none;
+	height: auto;
+	padding: .2em 2px;
+	border: 1px solid;
+	border-top: 0px;
+}
+
+#ftSearchTbl .vertical li {
+	/*Needed for IE. Don't ask me why, It was a lucky guess.*/
+	display: inline;
+}
+
+#ftSearchTbl .vertical li ul {
+	position: absolute;
+	margin-top: -1.3em;
+	margin-left: 100px;
+}
+
+a.ftSearchOpt:link
+{
+	color: black;
+	text-decoration: none
+}
+
+a.ftSearchOpt:hover
+{
+	background: #999999;
+	text-decoration: none			
+}
+
+
+/*this is the css for the toolbar...*/
+.horizontalToolbar ul {
+	list-style-type: none;
+	display: block;
+	height: 19px;
+	width: 50px;
+	margin: 0px 0px 0px 0px;	
+}
+
+.horizontalToolbar li {
+	float: left;
+	display: inline;
+}
+.horizontalToolbar ul li ul li{
+	width: 100%;
+}
+
+.horizontalToolbar li a {
+	text-decoration: none;
+	height: auto;
+	float: left;
+	display: block;
+	padding: 3px 2px;
+	width: 50px;
+	white-space: nowrap;
+}
+
+.horizontalToolbar li li a {
+	white-space: normal;
+}
+
+.horizontalToolbar li ul {
+	position: absolute;
+	margin-top: 1.7em;
+	margin-left: -4.5em;
+	width: 150px;
+	background: #343434;
+	text-decoration: none; 
+	font-size: 9pt;
+	color: black;
+}
+
+.horizontalToolbar li li ul {
+	position: absolute;
+	margin-top: 2.5px;
+}
+
+.horizontalToolbar li ul li a {
+	width: 100%;
+	color: black;
+	font-size: 9pt;
+	border-bottom: 1px solid #1e436c;
+	border-left: 1px solid #1e436c;
+	border-right: 1px solid #1e436c;
+}
+
+
+.themeclrHorizontalToolbar a.horz {
+	background: no-repeat;
+}
+
+.themeclrHorizontalToolbar a.horz:hover {
+	background: no-repeat;
+}
+
+.themeclrHorizontalToolbar a.vert {
+	background: #FFFFFF url(images/next-white.gif) 98% no-repeat;
+}
+
+.themeclrHorizontalToolbar a.vert:hover {
+	background: #eee0d5 url(images/next-hover.gif) 98% no-repeat;
+}
+
+.themeclrHorizontalToolbar li a {
+	color: black;
+}
+
+.themeclrHorizontalToolbar li a:hover {
+	text-decoration : none;
+	background: #ffe8bb;
+	color: #000033;
+	border: 1px solid #1e436c;
+	border-top: 1px solid #1e436c;
+	border-left: 1px solid #1e436c;
+}
+
+.themeclrHorizontalToolbar li ul li a {
+/*	background: #737573; */
+	background: #FFFFFF;
+	color: black;
+	border: 1px solid #1e436c;
+	border-top: 1px solid #1e436c;
+	border-left: 1px solid #1e436c;
+}
+
+.themeclrHorizontalToolbar ul {
+	background: none;
+	margin-top: -0.2em;
+}
+

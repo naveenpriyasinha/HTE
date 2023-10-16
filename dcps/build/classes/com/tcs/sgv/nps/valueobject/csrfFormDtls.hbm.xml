@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22 Jul, 2022 5:47:44 PM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.nps.valueobject.csrfFormDtls" table="FRM_FORM_S1_DTLS_1">
+        <id name="FORM_S1_ID" type="java.lang.Long" access="field">
+            <column name="FORM_S1_ID" precision="20" scale="0"  />
+            <generator class="assigned" />
+        </id>
+        <property name="DCPS_ID" type="java.lang.String" access="field">
+            <column name="DCPS_ID" />
+        </property>
+        <property name="SEVARTH_ID" type="java.lang.String" access="field">
+            <column name="SEVARTH_ID" />
+        </property>
+        <property name="DESIGNATION" type="java.lang.String" access="field">
+            <column name="DESIGNATION" />
+        </property>
+        <property name="TITLE" type="java.lang.String" access="field">
+            <column name="TITLE" />
+        </property>
+        <property name="EMP_NAME" type="java.lang.String" access="field">
+            <column name="EMP_NAME" />
+        </property>
+        <property name="EMP_FIRST_NAME" type="java.lang.String" access="field">
+            <column name="EMP_FIRST_NAME" />
+        </property>
+        <property name="EMP_MIDDLE_NAME" type="java.lang.String" access="field">
+            <column name="EMP_MIDDLE_NAME" />
+        </property>
+        <property name="EMP_LAST_NAME" type="java.lang.String" access="field">
+            <column name="EMP_LAST_NAME" />
+        </property>
+        <property name="FATHER_NAME_FIRST" type="java.lang.String" access="field">
+            <column name="FATHER_NAME_FIRST" />
+        </property>
+        <property name="FATHER_NAME_MIDDLE" type="java.lang.String" access="field">
+            <column name="FATHER_NAME_MIDDLE" />
+        </property>
+        <property name="FATHER_NAME_LAST" type="java.lang.String" access="field">
+            <column name="FATHER_NAME_LAST" />
+        </property>
+        <property name="MOTHER_NAME_FIRST" type="java.lang.String" access="field">
+            <column name="MOTHER_NAME_FIRST" />
+        </property>
+        <property name="EMP_DOB" type="java.lang.String" access="field">
+            <column name="EMP_DOB" />
+        </property>
+        <property name="GENDER" type="java.lang.String" access="field">
+            <column name="GENDER" />
+        </property>
+        <property name="DTO_CODE" type="java.lang.String" access="field">
+            <column name="DTO_CODE" />
+        </property>
+        <property name="DDO_CODE" type="java.lang.String" access="field">
+            <column name="DDO_CODE" />
+        </property>
+        <property name="PAN_NO" type="java.lang.String" access="field">
+            <column name="PAN_NO" />
+        </property>
+        <property name="AADHAR_NO" type="java.lang.String" access="field">
+            <column name="AADHAR_NO" />
+        </property>
+        <property name="PRESENT_ADDRESS_FLATNO" type="java.lang.String" length="30"  access="field">
+            <column name="PRESENT_ADDRESS_FLATNO" />
+        </property>
+        <property name="PRESENT_ADDRESS_BUILDING" type="java.lang.String" length="30" access="field">
+            <column name="PRESENT_ADDRESS_BUILDING" />
+        </property>
+        <property name="PRESENT_ADDRESS_TALUKA" type="java.lang.String" length="30" access="field">
+            <column name="PRESENT_ADDRESS_TALUKA" />
+        </property>
+        <property name="PRESENT_ADDRESS_LANDMARK" type="java.lang.String" length="30" access="field">
+            <column name="PRESENT_ADDRESS_LANDMARK" />
+        </property>
+        <property name="PRESENT_ADDRESS_DISTRICT" type="java.lang.String" length="30" access="field">
+            <column name="PRESENT_ADDRESS_DISTRICT" />
+        </property>
+        <property name="PRESENT_ADDRESS_STATE" type="java.lang.String" length="2" access="field">
+            <column name="PRESENT_ADDRESS_STATE" />
+        </property>
+        <property name="PRESENT_ADDRESS_COUNTRY" type="java.lang.String" length="2" access="field">
+            <column name="PRESENT_ADDRESS_COUNTRY" />
+        </property>
+        <property name="PRESENT_ADDRESS_PINCODE" type="java.lang.String" length="6" access="field">
+            <column name="PRESENT_ADDRESS_PINCODE" />
+        </property>
+        <property name="PERMANENT_ADDRESS_FLATNO" type="java.lang.String" length="30" access="field">
+            <column name="PERMANENT_ADDRESS_FLATNO" />
+        </property>
+        <property name="PERMANENT_ADDRESS_BUILDING" type="java.lang.String" length="30" access="field">
+            <column name="PERMANENT_ADDRESS_BUILDING" />
+        </property>
+        <property name="PERMANENT_ADDRESS_TALUKA" type="java.lang.String" length="30" access="field">
+            <column name="PERMANENT_ADDRESS_TALUKA" />
+        </property>
+        <property name="PERMANENT_ADDRESS_LANDMARK" type="java.lang.String" length="30" access="field">
+            <column name="PERMANENT_ADDRESS_LANDMARK" />
+        </property>
+        <property name="PERMANENT_ADDRESS_DISTRICT" type="java.lang.String" length="30" access="field">
+            <column name="PERMANENT_ADDRESS_DISTRICT" />
+        </property>
+        <property name="PERMANENT_ADDRESS_STATE" type="java.lang.String" length="2" access="field">
+            <column name="PERMANENT_ADDRESS_STATE" />
+        </property>
+        <property name="PERMANENT_ADDRESS_COUNTRY" type="java.lang.String" length="2" access="field">
+            <column name="PERMANENT_ADDRESS_COUNTRY" />
+        </property>
+        <property name="PERMANENT_ADDRESS_PINCODE" type="java.lang.String" length="6" access="field">
+            <column name="PERMANENT_ADDRESS_PINCODE" />
+        </property>
+        <property name="PHONE_NO" type="java.lang.String" length="14" access="field">
+            <column name="PHONE_NO" />
+        </property>
+        <property name="MOBILE_NO" type="java.lang.String" length="14" access="field">
+            <column name="MOBILE_NO" />
+        </property>
+        <property name="EMAIL_ID" type="java.lang.String" length="90" access="field">
+            <column name="EMAIL_ID" />
+        </property>
+        <property name="SMS_SUB_FLAG" type="java.lang.String" length="1"  access="field">
+            <column name="SMS_SUB_FLAG" />
+        </property>
+        <property name="EMAIL_SUB_FLAG" type="java.lang.String"  length="1" access="field">
+            <column name="EMAIL_SUB_FLAG" />
+        </property>
+        <property name="HINDI_SUB_FLAG" type="java.lang.String" length="1" access="field">
+            <column name="HINDI_SUB_FLAG" />
+        </property>
+        <property name="EMP_DOJ" type="java.lang.String" length="10" access="field">
+            <column name="EMP_DOJ" />
+        </property>
+        <property name="EMP_DOR" type="java.lang.String" length="10" access="field">
+            <column name="EMP_DOR" />
+        </property>
+        <property name="EMP_CLASS" type="java.lang.String"  length="1" access="field">
+            <column name="EMP_CLASS" />
+        </property>
+        <property name="EMP_DEPT" type="java.lang.String" length="40" access="field">
+            <column name="EMP_DEPT" />
+        </property>
+        <property name="EMP_MINISTRY" type="java.lang.String" length="40" access="field">
+            <column name="EMP_MINISTRY" />
+        </property>
+        <property name="EMP_DDO" type="java.lang.String" length="75" access="field">
+            <column name="EMP_DDO" />
+        </property>
+        <property name="PAY_SCALE" type="java.lang.String" length="50" access="field">
+            <column name="PAY_SCALE" />
+        </property>
+        <property name="BASIC_SALARY" type="java.lang.String" length="10" access="field">
+            <column name="BASIC_SALARY" />
+        </property>
+        <property name="PPAN" type="java.lang.String" length="16" access="field">
+            <column name="PPAN" />
+        </property>
+        <property name="BANK_DETAILS_FLAG" type="java.lang.String" length="1" access="field">
+            <column name="BANK_DETAILS_FLAG" />
+        </property>
+        <property name="BANK_DETAILS_TYPE" type="java.lang.String" length="20" access="field">
+            <column name="BANK_DETAILS_TYPE" />
+        </property>
+        <property name="BANK_ACCOUNT_NO" type="java.lang.String" length="30" access="field">
+            <column name="BANK_ACCOUNT_NO" />
+        </property>
+        <property name="BANK_NAME" type="java.lang.String"  length="30"  access="field">
+            <column name="BANK_NAME" />
+        </property>
+        <property name="BANK_BRANCH" type="java.lang.String"  length="30"  access="field">
+            <column name="BANK_BRANCH" />
+        </property>
+        <property name="BANK_ADDRESS" type="java.lang.String"  length="50"  access="field">
+            <column name="BANK_ADDRESS" />
+        </property>
+        <property name="BANK_STATE" type="java.lang.String"  length="2"  access="field">
+            <column name="BANK_STATE" />
+        </property>
+        <property name="BANK_COUNTRY" type="java.lang.String"  length="2"  access="field">
+            <column name="BANK_COUNTRY" />
+        </property>
+        <property name="BANK_PIN" type="java.lang.String"  length="6"  access="field">
+            <column name="BANK_PIN" />
+        </property>
+        <property name="EMP_NUMBER_NOMINEE" type="java.lang.String"  length="1"  access="field">
+            <column name="EMP_NUMBER_NOMINEE" />
+        </property>
+        <property name="NOMINEE_NAME_1" type="java.lang.String"  length="30"  access="field">
+            <column name="NOMINEE_NAME_1" />
+        </property>
+        <property name="NOMINEE_DOB_1" type="java.lang.String"  length="10"  access="field">
+            <column name="NOMINEE_DOB_1" />
+        </property>
+        <property name="NOMINEE_REALTION_1" type="java.lang.String"  length="30"   access="field">
+            <column name="NOMINEE_REALTION_1" />
+        </property>
+        <property name="NOMINEE_PERCENT_SHARE_1" type="java.lang.String"  length="3"  access="field">
+            <column name="NOMINEE_PERCENT_SHARE_1" />
+        </property>
+        <property name="NOMINEE_GARDIAN_NAME_1" type="java.lang.String"  length="30"  access="field">
+            <column name="NOMINEE_GARDIAN_NAME_1" />
+        </property>
+        <property name="NOMINEE_RENDER_CONDITION_1" type="java.lang.String" length="50"  access="field">
+            <column name="NOMINEE_RENDER_CONDITION_1" />
+        </property>
+        <property name="NOMINEE_NAME_2" type="java.lang.String"  length="30"  access="field">
+            <column name="NOMINEE_NAME_2" />
+        </property>
+        <property name="NOMINEE_DOB_2" type="java.lang.String"  length="10"  access="field">
+            <column name="NOMINEE_DOB_2" />
+        </property>
+        <property name="NOMINEE_REALTION_2" type="java.lang.String"  length="30"  access="field">
+            <column name="NOMINEE_REALTION_2" />
+        </property>
+        <property name="NOMINEE_PERCENT_SHARE_2" type="java.lang.String"  length="3"  access="field">
+            <column name="NOMINEE_PERCENT_SHARE_2" />
+        </property>
+        <property name="NOMINEE_GARDIAN_NAME_2" type="java.lang.String"  length="30"  access="field">
+            <column name="NOMINEE_GARDIAN_NAME_2" />
+        </property>
+        <property name="NOMINEE_RENDER_CONDITION_2" type="java.lang.String" length="50" access="field">
+            <column name="NOMINEE_RENDER_CONDITION_2" />
+        </property>
+        <property name="NOMINEE_NAME_3" type="java.lang.String"  length="30"   access="field">
+            <column name="NOMINEE_NAME_3" />
+        </property>
+        <property name="NOMINEE_DOB_3" type="java.lang.String"  length="10" access="field">
+            <column name="NOMINEE_DOB_3" />
+        </property>
+        <property name="NOMINEE_REALTION_3" type="java.lang.String"  length="30" access="field">
+            <column name="NOMINEE_REALTION_3" />
+        </property>
+        <property name="NOMINEE_PERCENT_SHARE_3" type="java.lang.String" length="3" access="field">
+            <column name="NOMINEE_PERCENT_SHARE_3" />
+        </property>
+        <property name="NOMINEE_GARDIAN_NAME_3" type="java.lang.String" length="30" access="field">
+            <column name="NOMINEE_GARDIAN_NAME_3" />
+        </property>
+        <property name="NOMINEE_RENDER_CONDITION_3" type="java.lang.String" length="50" access="field">
+            <column name="NOMINEE_RENDER_CONDITION_3" />
+        </property>
+        <property name="PRAN_NO" type="java.lang.String" length="50" access="field">
+            <column name="PRAN_NO" />
+        </property>
+        <property name="CREATED_DATE" type="java.lang.String" length="25" access="field">
+            <column name="CREATED_DATE" />
+        </property>
+        <property name="BANKIFSCCODE" type="java.lang.String" length="11" access="field">
+            <column name="BANKIFSCCODE" />
+        </property>
+        <property name="EMPMARITALSTATUS" type="java.lang.String" length="1" access="field">
+            <column name="EMPMARITALSTATUS" />
+        </property>
+        <property name="DDO_REG_NO" type="java.lang.String" length="10" access="field">
+            <column name="DDO_REG_NO" />
+        </property>
+        <property name="ACKNO" type="java.lang.String" length="17" access="field">
+            <column name="ACKNO" />
+        </property>
+        <property name="FILE_VERIFY_STATUS" type="java.lang.String" length="1" access="field">
+            <column name="FILE_VERIFY_STATUS" />
+        </property>
+        <property name="NSDL_STATUS" type="java.lang.Integer" access="field">
+            <column name="NSDL_STATUS" />
+        </property>
+        <property name="BATCH_ID" type="java.lang.String" length="27" access="field">
+            <column name="BATCH_ID" />
+        </property>
+        <property name="PHOTO_ATTACHMENT_NAME" type="java.lang.String" length="50" access="field">
+            <column name="PHOTO_ATTACHMENT_NAME" />
+        </property>
+        <property name="SIGN_ATTACHMENT_NAME" type="java.lang.String"  length="50" access="field">
+            <column name="SIGN_ATTACHMENT_NAME" />
+        </property>
+        <property name="IMAGES_LOCATION_PATH" type="java.lang.String" length="200" access="field">
+            <column name="IMAGES_LOCATION_PATH" />
+        </property>
+        <property name="PRAN_STATUS" type="java.lang.Integer"  access="field">
+            <column name="PRAN_STATUS" />
+        </property>
+    </class>
+</hibernate-mapping>

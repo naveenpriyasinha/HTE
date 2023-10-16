@@ -1,0 +1,235 @@
+/*table styles*/
+.homepagemenutable{
+	background: #ffffff;
+	cellspacing: 0;
+	cellpadding: 0;	
+}
+
+
+.homepagemaintabletd{
+	border-top: outset 2px #dddddd;
+	border-left: outset 2px #dddddd;
+	border-right: ridge 2px #ffffff;
+	border-bottom: ridge 2px #ffffff;
+	background: #bbbbbb; 
+	padding: 0px;
+}
+.homepagemenutable thead{
+	background: #dddddd url(images/win-top-bg-03.gif) top repeat-x;
+	color: #ffffff;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+}
+
+.homepagemenutable thead td{
+	padding: 3px;
+	border: solid 0px #dddddd;
+}
+
+.homepagemenutable tbody{
+	background: #334455;
+	margin: 0px;
+	padding: 0px;
+}
+
+.homepagemenutable tbody tr{
+	background: #223355;
+}
+.homepagemenutable tbody tr td{
+	background: #bbbbbb;
+	margin: 0px;
+	border: solid 0px black;
+}
+
+.homepagemenutable tfoot{
+	background: #cccccc;
+	display: none;
+}
+
+
+/*this is the css for the vertical version*/
+.vertical ul {
+	list-style-type: none;
+	padding: 0px;
+	border-top: 1px solid;
+	width: 204px;
+	margin-left:0px;
+}
+
+.vertical li a {
+	display: block;
+	width: 200px;
+	text-decoration: none;
+	height: 1.2em;
+	padding: .2em 2px;
+	border: 1px solid;
+	border-top: 0px;
+}
+
+.vertical li {
+	/*Needed for IE. Don't ask me why, It was a lucky guess.*/
+	display: inline;
+}
+
+.vertical li ul {
+	position: absolute;
+	margin-top: -1.3em;
+	margin-left: 200px;
+}
+
+/*this is the css for the horizontal version*/
+.horizontal ul {
+	list-style-type: none;
+	padding: 0px;
+	border-left: 1px solid;
+	display: block;
+	height: 1.4em;
+	margin: 0px 0px 0px 0px;
+}
+
+.horizontal li {
+	float: left;
+	display: inline;
+}
+
+.horizontal li a {
+	text-decoration: none;
+	height: 1.2em;
+	float: left;
+	display: block;
+	width: 125px;
+	padding: .1em 1px;
+	border: 1px solid;
+	border-right : none;
+	border-left: 2px solid;	
+	white-space: nowrap;
+}
+
+.horizontal li li a {
+	border-top: none;
+	border-left: 1px solid;
+}
+
+.horizontal li ul {
+	position: absolute;
+	margin-top: 1.3em;
+	margin-left: -1px;
+	width: 125px;
+	display: block;
+	height: auto;
+	border: 1px solid;
+	background: #504444;
+}
+
+.horizontal li li ul {
+	position: absolute;
+	margin-top: .1em;
+	margin-left: 125px;
+}
+
+.horizontal li ul li a {
+	width: 125px;
+}
+
+/*This section makes the menu not work in non-javascript enabled browsers by not showing the menu by default-This can be worked around by making top level links point to a sitemap*/
+	/*Not sure if I recommend this or not*/
+.inaccesible li ul {
+	display: none;
+}
+
+/*Arrow code - looks like <a class="haschild" href="#">Text <span>Arrow</span></a> can be turned on/off with arrow class*/
+.arrow a span {
+	padding-left: 1em;
+	font-size: 85%;	
+}
+
+.arrow a:hover span {
+	padding-left: 2em;	
+}
+
+.arrow a span.noshow {
+	visibility: hidden;
+}
+
+/*Plus code*/
+.plus a span {
+	padding-left: .5em;
+}
+
+/*colors for menu*/
+.blackwhite li a {
+	background-color: white;
+	color: black;
+	border-color: black;
+}
+
+.blackwhite li a:hover {
+	background-color: black;
+	color: white;
+	border-color: black;
+}
+
+.blackwhite ul {
+	border-color: black;
+}
+
+.bluewhite li a {
+	background-color: white;
+	color: #000033;
+	border-color: #000033;
+}
+
+.bluewhite li a:hover {
+	background-color: #000033;
+	color: white;
+	border-color: #000033;
+}
+
+.bluewhite ul {
+	border-color: #000033;
+}
+
+.themeclr li a {
+	background-color: #dedede;
+	color: #000033;
+	border-color: #333333;
+}
+
+.themeclr li a:hover {
+	background-color: #666666;
+	color: white;
+	border-color: #333333;
+}
+
+.themeclr ul {
+	border-color: #333333;
+}
+
+.themeclrHorizontal li a {
+	background: #666666 url(images/menu-bg-02.gif) top repeat-x;
+	color: white;
+	border-color: #333333;
+}
+
+.themeclrHorizontal li ul li a {
+	background: #504444;
+	color: white;
+	border-color: #333333;
+}
+
+.themeclrHorizontal li a:hover {
+	background: #dedede;
+	color: #000033;
+	border-color: #333333;
+		
+}
+
+.themeclrHorizontal ul {
+	border-color: #333333;
+}
+
+#currentApplication
+{
+	display: none;
+}

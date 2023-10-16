@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 5, 2007 11:09:49 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayGpfBalanceDtls" table="hr_pay_gpf_details">
+        <comment></comment>
+         <id name="userId" type="long">
+            <column name="USER_ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="orgUserMstByUpdatedByUser" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY_USER">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY_POST">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedByUser" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY_USER">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgGradeMst" class="com.tcs.sgv.ess.valueobject.OrgGradeMst" fetch="select">
+            <column name="GRADE_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="gpfAccNo" type="java.lang.String">
+            <column name="GPF_ACC_NO" length="40" >
+                <comment></comment>
+            </column>
+        </property>
+         <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="pfSeries" type="string">
+            <column name="pf_series" length="200" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+		 </class>
+</hibernate-mapping>

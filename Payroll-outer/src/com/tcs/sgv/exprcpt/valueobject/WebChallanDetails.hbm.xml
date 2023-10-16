@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 23, 2007 4:21:27 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.exprcpt.valueobject.WebChallanDetails" table="WEB_CHALLAN_DETAILS" >
+        <id name="wcdChallanId" type="string">
+            <column name="WCD_CHALLAN_ID" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="wcdRegNo" type="string">
+            <column name="WCD_REG_NO" length="15" />
+        </property>
+        <property name="wcdDealerMailId" type="string">
+            <column name="WCD_DEALER_MAIL_ID" length="30" />
+        </property>
+        <property name="wcdTaxType" type="string">
+            <column name="WCD_TAX_TYPE" length="25" />
+        </property>
+        <property name="wcdDlrName" type="string">
+            <column name="WCD_DLR_NAME" length="100" />
+        </property>
+        <property name="wcdAssmntPeriod" type="big_decimal">
+            <column name="WCD_ASSMNT_PERIOD" precision="22" scale="0" />
+        </property>
+        <property name="wcdAssmntYear" type="string">
+            <column name="WCD_ASSMNT_YEAR" length="15" />
+        </property>
+        <property name="wcdBankCode" type="string">
+            <column name="WCD_BANK_CODE" length="30" />
+        </property>
+        <property name="wcdDepartmntCd" type="string">
+            <column name="WCD_DEPARTMNT_CD" length="3" />
+        </property>
+        <property name="wcdPhoneNo" type="string">
+            <column name="WCD_PHONE_NO" length="60" />
+        </property>
+        <property name="wcdTotalAmount" type="string">
+            <column name="WCD_TOTAL_AMOUNT" length="15" />
+        </property>
+        <property name="wcdBankRef" type="string">
+            <column name="WCD_BANK_REF" length="30" />
+        </property>
+        <property name="wcdStatusDesc" type="string">
+            <column name="WCD_STATUS_DESC" length="200" />
+        </property>
+        <property name="wcdStatus" type="string">
+            <column name="WCD_STATUS" length="20" />
+        </property>
+        <property name="wcdCinNo" type="string">
+            <column name="WCD_CIN_NO" length="30" />
+        </property>
+        <property name="wcdCreatedBy" type="string">
+            <column name="WCD_CREATED_BY" length="8" not-null="true" />
+        </property>
+        <property name="wcdCreatedDt" type="date">
+            <column name="WCD_CREATED_DT" length="7" not-null="true" />
+        </property>
+        <property name="wcdUpdatedBy" type="string">
+            <column name="WCD_UPDATED_BY" length="8" />
+        </property>
+        <property name="wcdUpdatedDt" type="date">
+            <column name="WCD_UPDATED_DT" length="7" />
+        </property>
+        <property name="wcdApproved" type="java.lang.Boolean">
+            <column name="WCD_APPROVED" precision="1" scale="0" />
+        </property>
+        <property name="wcdVerified" type="java.lang.Boolean">
+            <column name="WCD_VERIFIED" precision="1" scale="0" />
+        </property>
+        <property name="pmtEffctDate" type="date">
+            <column name="PMT_EFFCT_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

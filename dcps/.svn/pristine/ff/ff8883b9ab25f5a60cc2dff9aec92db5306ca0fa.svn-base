@@ -1,0 +1,362 @@
+/*table styles*/
+
+.homepagemenutable{
+	border-top: groove 2px #ddccbb;	/*change*/
+	border-left: groove 2px #ddccbb;
+	border-right: ridge 2px #7f654d; /*change*/
+	border-bottom: ridge 2px #7f654d;
+	padding: 0px;
+	background: #7f654d url(images/win-top-bg-03.gif) top repeat-x;
+	cellspacing: 0;
+	cellpadding: 0;	
+}
+
+/*
+.homepagemenutable{
+	background: #ffffff;
+	cellspacing: 0;
+	cellpadding: 0;	
+}
+*/
+
+.homepagemaintabletd{	
+	padding: 0px;
+}
+
+/*
+.homepagemaintabletd{
+	border-top: outset 2px #dddddd;
+	border-left: outset 2px #dddddd;
+	border-right: ridge 2px #ffffff;
+	border-bottom: ridge 2px #ffffff;
+	comment this when you uncomment this whole class ---> background: #bbbbbb;
+	padding: 0px;
+}
+*/
+
+.homepagemenutable thead{
+	color: #ffffff;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	width:100%;/*added*/
+}
+
+
+/* Modified this class */
+.homepagemenutable thead td{		
+	padding: 0px;
+	border: solid 0px #dddddd;	
+	width: 203px;/*added*/		
+}
+
+/* Added this new class to support expand and shrink menu background images*/
+.homepagemenutable thead td a{	
+	background: url(images/win-tool-expand-01.png) 95% no-repeat;	
+	cursor: pointer;
+}
+
+.homepagemenutable tbody{
+	background: #633901;	/*change*/
+	margin: 0px;
+	padding: 0px;
+}
+
+.homepagemenutable tbody tr{
+	background: #553c22; /*change*/
+}
+.homepagemenutable tbody tr td{
+	background: #bbbbbb;
+	margin: 0px;
+	border-top: ridge 2px #7f654d;
+	border-left: ridge 2px #7f654d;
+	border-right: groove 2px #9999bb;
+	border-bottom: groove 2px #9999bb;
+}
+
+.homepagemenutable tfoot{
+	background: #cccccc;
+	display: none;
+}
+
+.homepagestatisticstable{
+	width:100%;
+	background: #7f654d url(images/win-top-bg-03.gif) top repeat-x;
+	border-top: groove 2px #ddccbb;
+	border-left: groove 2px #ddccbb;
+	border-right: ridge 2px #7f654d;
+	border-bottom: ridge 2px #7f654d;
+}
+
+.homepagestatisticstable thead{
+	color: #ffffff;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+		
+}
+
+.homepagestatisticstable thead td{	
+	padding: 3px;
+	border: solid 0px #dddddd;	
+}
+
+
+
+.homepagestatisticstable tbody{
+	background: #dddddd;	
+	margin: 0px;	
+	padding: 0px;
+}
+
+.homepagestatisticstabletd{
+	border-top: ridge 2px #7f654d;
+	border-left: ridge 2px #7f654d;
+	border-right: groove 2px #9999bb;
+	border-bottom: groove 2px #9999bb;
+}
+
+
+
+/*this is the css for the vertical version*/
+.vertical ul {
+	list-style-type: none;
+	padding: 0px;
+	border-top: 1px solid;
+	width: 190px;
+	margin-left:0px;
+}
+
+.vertical li a {
+	display: block;
+	width: 190px;
+	text-decoration: none;
+	height: auto;
+	padding: .2em 2px;
+	border: 1px solid;
+	border-top: 0px;
+	
+}
+
+.vertical li {
+	/*Needed for IE. Don't ask me why, It was a lucky guess.*/
+	display: inline;
+	
+	
+}
+
+.vertical li ul {
+	position: absolute;
+	margin-top: -1.3em;
+	margin-left: 190px;
+}
+
+/*this is the css for the horizontal version*/
+.horizontal ul {
+	background: #ffffff;
+/*	border: 1px solid #6688aa;*/
+	list-style-type: none;
+	display: inline;
+	height: 22px;
+	margin: 0px 0px 0px 0px;
+	
+	
+}
+
+.horizontal li {
+	float: left;
+	display: inline;
+	
+	/*Filter: Alpha(Opacity=100, FinishOpacity=90, Style=2, StartX=10, StartY=10, FinishX=0, FinishY=0); */
+}
+.horizontal ul li ul li{
+	width: 100%;
+}
+
+.horizontal li a {
+	text-decoration: none;
+	height: auto;
+	float: left;
+	display: block;
+	padding: 3px 2px;
+	width: 150px;
+	/*border-right : none;
+	border-left: 1px solid #1e1e1e;	*/
+	white-space: nowrap;
+	font-family:verdana ;
+	font-size: 13px;
+	
+	
+}
+
+.horizontal li li a {
+	/*border-top: none;*/
+	white-space: normal;
+	
+}
+
+.horizontal li ul {
+	position: absolute;
+	margin-top: 5px;
+	/*margin-left: -130px;
+	left: 130px;*/
+	width: 200px;
+	display: block;
+	
+	/*height: auto;
+	border: 1px solid #232323;*/
+	background-color: transparent;  /*changed from  #343434 to transparent : shripal */
+}
+.horizontal li li ul {
+	position: absolute;
+	margin-top: 2px;
+	margin-left: 206px;
+}
+
+.horizontal li ul li a {
+	width: 100%;
+	border-top: 1px solid #565656;
+	border-bottom: 1px solid #232323;
+	border-left: 1px solid #565656;
+	border-right: 1px solid #232323;
+}
+
+/*This section makes the menu not work in non-javascript enabled browsers by not showing the menu by default-This can be worked around by making top level links point to a sitemap*/
+	/*Not sure if I recommend this or not*/
+.inaccesible li ul {
+	display: none;
+	
+}
+
+/*Arrow code - looks like <a class="haschild" href="#">Text <span>Arrow</span></a> can be turned on/off with arrow class*/
+.arrow a span {
+	padding-left: 1em;
+	font-size: 85%;	
+	width: 100%;
+}
+
+.arrow a:hover span {
+	padding-left: 1em;	
+}
+
+.arrow a span.noshow {
+	visibility: hidden;
+}
+
+/*Plus code*/
+.plus a span {
+	padding-left: .5em;
+}
+
+/*colors for menu*/
+.blackwhite li a {
+	background-color: white;
+	color: black;
+	border-color: black;
+}
+
+.blackwhite li a:hover {
+	background-color: black;
+	color: white;
+	border-color: black;
+}
+
+.blackwhite ul {
+	border-color: black;
+}
+
+.bluewhite li a {
+	background-color: white;
+	color: #000033;
+	border-color: #000033;
+}
+
+.bluewhite li a:hover {
+	background-color: #000033;
+	color: white;
+	border-color: #000033;
+}
+
+.bluewhite ul {
+	border-color: #000033;
+}
+
+.themeclr li a {
+	background-color: #dedede;
+	color: #000033;
+	border-color: #333333;
+}
+
+.themeclr li a:hover {
+	background-color: #666666;
+	color: white;
+	border-color: #333333;
+}
+
+.themeclr ul {
+	border-color: #d1aa80;	/*change*/
+}
+
+
+.themeclrHorizontal a.horz {
+	background: url(images/next-white.gif) 98% no-repeat;
+}
+/*
+.themeclrHorizontal a.horzHover {
+	background: #ffe8bb url(images/downarrow-hover.gif) 98% no-repeat;
+	color: #000033;
+}
+
+.themeclrHorizontal a.horz:hover {
+	background: #ffe8bb url(images/downarrow-hover.gif) 98% no-repeat;
+}
+*/
+
+/*
+.themeclrHorizontal a.vert:hover {
+	background: #ffe8bb url(images/next-hover.gif) 98% no-repeat;
+}*/
+
+.themeclrHorizontal a.vert {
+	background: #c7996c;	/*change*/
+}
+
+.themeclrHorizontal a.vertNext {
+	background: #c7996c url(images/next-white.gif) 98% no-repeat;
+}
+
+.themeclrHorizontal a.vertHover {
+	
+	background: #ffe8bb;
+	color: #000033;
+}
+
+.themeclrHorizontal a.hoverNext {
+	background: #ffe8bb url(images/next-hover.gif) 98% no-repeat;
+	color: #000033;
+}
+
+.themeclrHorizontal li a {
+	color: white;
+	border-right: 1px solid #6c3a1e; /*change*/
+}
+/*
+.themeclrHorizontal li a:hover {
+	background: #ffe8bb;
+	color: #000033;
+}*/
+
+/*for changin the drop down box*/
+
+.themeclrHorizontal li ul li a {
+	background: #c7996c;
+	color: white;
+}
+
+.themeclrHorizontal parentMenu {
+	background: #984206  url(images/main-menu-bg.png) top repeat-x;	/*change*/
+}
+
+.themeclrHorizontal ul {
+	background: #984206  url(images/main-menu-bg.png) top repeat-x;
+}

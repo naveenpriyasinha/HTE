@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayLeaveSalaryDtl" table="hr_pay_leavesalary_dtl">
+        <comment></comment>
+        <id name="lsId" type="long">
+            <column name="ls_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="orgUserMstByUserId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+       <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>           
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="dutyType" type="java.lang.Integer">
+            <column name="duty_type" length="1" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="leaveDate" type="timestamp">
+            <column name="leave_date" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status" length="1" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="LSAmount" type="double">
+            <column name="ls_amt" precision="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+      </class>
+</hibernate-mapping>

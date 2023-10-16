@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- Generated Jul 23, 2012 4:42:54 PM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+	<class
+		name="com.tcs.sgv.eis.zp.ReportingDDO.valueobject.ConsolidatedBillMst"
+		table="CONSOLIDATED_BILL_MST">
+		<id name="consBillId" type="java.lang.Long">
+			<column name="CONS_BILL_ID" />
+
+			<generator class="assigned" />
+		</id>
+		<property name="schemeCode" type="string">
+			<column name="SCHEME_CODE" length="10" />
+		</property>
+
+		<property name="month" type="java.lang.Long">
+			<column name="MONTH" />
+		</property>
+
+		<property name="year" type="java.lang.Long">
+			<column name="YEAR" />
+		</property>
+
+		<property name="postId" type="java.lang.Long">
+			<column name="POST_ID" />
+		</property>
+
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" />
+		</property>
+		<property name="updatedDate" type="timestamp">
+			<column name="UPDATED_DATE" />
+		</property>
+		<property name="grossAmt" type="java.lang.Long">
+			<column name="GROSS_AMT" />
+		</property>
+		<property name="netAmt" type="java.lang.Long">
+			<column name="NET_AMT" />
+		</property>
+		<property name="pf" type="java.lang.Long">
+			<column name="PF" />
+		</property>
+		<property name="pt" type="java.lang.Long">
+			<column name="PT" />
+		</property>
+			<property name="status" type="java.lang.Integer">
+			<column name="status" />
+		</property>
+		<property name="dcps" type="java.lang.Long">
+			<column name="DCPS" />
+	 </property>
+	 <property name="gis" type="java.lang.Long">
+			<column name="GIS" />
+	 </property>
+	 <property name="hrr" type="java.lang.Long">
+			<column name="HRR" />
+	 </property>
+	 <property name="accPolicy" type="java.lang.Long">
+			<column name="ACC_POLICY" />
+	 </property>
+	 
+	 <property name="revenueStamp" type="java.lang.Long">
+			<column name="REVENUE_STAMP" length="25" />
+		</property>
+	 
+				<!-- <property name="authNumber" type="string">
+			<column name="AUTH_NUMBER" length="25" />
+		</property>-->
+		
+			<property name="subSchemeCode" type="string">
+			<column name="SUB_SCHEME_CODE" length="10" />
+		</property>
+		<!--  		added By Naveen Priya   -->
+<property name="npsEmplrDed" type="java.lang.Long">
+<column name="NPS_EMPLR_CONTRI_DED"/>
+</property>
+<!--  		ended By Naveen Priya    -->
+	</class>
+</hibernate-mapping>
+

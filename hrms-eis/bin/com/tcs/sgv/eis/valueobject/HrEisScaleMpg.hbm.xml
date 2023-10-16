@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+  <class name="com.tcs.sgv.eis.valueobject.HrEisScaleMpg" table="hr_eis_scale_mpg">
+  	 <id name="id" type="long">
+            <column name="mpg_id" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+ 	    <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="cmnLookupMst" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="reason_for_change" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="hrEisSgdMpg" class="com.tcs.sgv.eis.valueobject.HrEisSgdMpg" fetch="select">
+            <column name="sgd_id" precision="15" scale="0" />
+        </many-to-one>
+        <many-to-one name="hrPayRemarksMst" class="com.tcs.sgv.eis.valueobject.HrPayRemarksMst" fetch="select">
+            <column name="remarks" precision="10" scale="0" />
+        </many-to-one>
+         <property name="wefDate" type="timestamp">
+            <column name="wef_Date" length="10" />
+        </property>
+         <property name="order" type="string">
+            <column name="order_no" length="50" />
+        </property>
+        
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 30, 2007 1:48:55 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping >
+    <class name="com.tcs.sgv.eis.valueobject.HrCustodianTypeMst" table="HR_CUSTODIAN_TYPE_MST">
+    
+        <id name="custodianId" type="long">
+            <column name="CUSTODIAN_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        
+         <property name="custodianDesc" type="string">
+            <column name="CUSTODIAN_DESC" length="200" />
+        </property>
+        
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" precision="22" scale="0" />
+        </many-to-one>
+        
+          <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" not-null="true"/>
+        </many-to-one>
+        
+        
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID" precision="22" scale="0" />
+        </many-to-one>
+        
+        
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" precision="22" scale="0" />
+        </many-to-one>
+        
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </many-to-one>
+        
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+         
+         <property name="divisionCode" type="string">
+            <column name="DIVISION_CODE" length="100" />
+        </property>
+        
+        	 
+		<property name="ddoCode" type="string">
+			<column name="DDO_CODE" />
+		</property>
+		 
+		<property name="regCode" type="long">
+			<column name="REG_CD" />
+		</property>
+		
+			 
+		<property name="distictCode" type="long">
+			<column name="DIST_CD" />
+		</property>
+		
+			 
+		<property name="treaCode" type="long">
+			<column name="TREA_CD" />
+		</property>
+        
+        <property name="ddoDept" type="string">
+			<column name="DDO_DEPT" />
+		</property>
+        
+        
+    </class>
+</hibernate-mapping>

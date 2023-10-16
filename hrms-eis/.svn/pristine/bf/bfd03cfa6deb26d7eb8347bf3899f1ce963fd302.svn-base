@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2007 3:44:20 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayNonGovDeductionHst" table="HR_PAY_NON_GOV_DEDUCTION_HST" >
+        <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrPayNonGovDeductionHstId">
+            <key-property name="nonGovDeducId" type="long">
+                <column name="NON_GOV_DEDUC_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="long">
+                <column name="TRN_COUNTER" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>        
+        
+        <many-to-one name="hrPayDeducTypeMst" class="com.tcs.sgv.deduction.valueobject.HrPayDeducTypeMst" fetch="select">
+            <column name="NON_GOV_DEDUC_TYPE" precision="22" scale="0" />
+        </many-to-one>
+        <property name="nonGovDeducAmount" type="long">
+            <column name="NON_GOV_DEDUC_AMOUNT" precision="22" scale="0" />
+        </property>
+        <property name="nonGovDeducEfftStartDt" type="date">
+            <column name="NON_GOV_DEDUC_EFFT_START_DT" length="7" />
+        </property>
+        <property name="nonGovDeducEfftEndDt" type="date">
+            <column name="NON_GOV_DEDUC_EFFT_END_DT" length="7" />
+        </property>
+       <property name="nonGovDeducAccNo" type="string">
+            <column name="Non_Gov_Acc_NO" length="50" />
+        </property>
+       <!--  <property name="nonGovDeducPeriod" type="long">
+            <column name="NON_GOV_DEDUC_PERIOD" precision="22" scale="0" />
+        </property>-->
+        <many-to-one name="cmnLookupMst" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="NON_GOV_DEDUC_PERIOD">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+          <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>  
+        </many-to-one>          
+        <!-- <property name="locId" type="long">
+            <column name="LOC_ID" precision="22" scale="0" />
+        </property>
+        <property name="dbId" type="long">
+            <column name="DB_ID" precision="22" scale="0" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" precision="22" scale="0" />
+        </property>
+        <property name="updatedBy" type="long">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </property>-->
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+         <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+<!--        <property name="createdByPost" type="long">
+            <column name="CREATED_BY_POST" precision="22" scale="0" />
+        </property>
+        <property name="updatedByPost" type="long">
+            <column name="UPDATED_BY_POST" precision="22" scale="0" />
+        </property> -->
+    </class>
+</hibernate-mapping>

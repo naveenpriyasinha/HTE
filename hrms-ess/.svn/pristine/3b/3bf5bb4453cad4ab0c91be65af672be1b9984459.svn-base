@@ -1,0 +1,39 @@
+BUNDLE_BASE_NAME=resources/ess/noc/AlertMessages
+#NOCforPassport
+NOC.VDate 'End date' must be greater than 'Start date'
+NOC.VnocDate 'To date' must be greater than 'From date'
+NOC.VAddress Please select address 
+NOC.AjaxAlert Your browser does not support AJAX \!
+NOC.LessThanTodaysDate Entered date must be less than today's date
+NOC.GreaterThanTodaysDate Entered date must be greater than today's date
+NOC.AddOneJourney Add atleast one journey detail
+NOC.RestrictSamePlaces 'From Place' cannot be same as 'To Place'
+NOC.PlzSaveExp Please save expenditure bearer details first.
+
+NOC.AddFvisitFirst	Please add past foreign visit details first.
+NOC.AddPrevNocFirst	Please add previous passport NOC details first.
+NOC.OrgExists Organization Already Exists \!
+NOC.WithinTrip Journey Start and End dates must lie within Trip Start and End dates.
+
+# for search country
+CTRY.AtleastOne Select atleast one record
+CTRY.OnlyOne Only one record can be selected
+
+#NOCforPassport
+NOC.CheckWithTodaysDate Entered date must be less than today's date.
+FVISIT.SaveAgency Please save agency details first.
+FVISIT.CantDelete You can't delete record,Because you have open one record for update.
+FVISIT.CantEdit	You can not edit this record, Because you have open one record for update.
+
+
+# added for NOC CR (in nocForForeignVisitForm.jsp)
+FVISIT.StartDtFirst Please enter 'Trip Start Date' first
+FVISIT.EndDtFirst Please enter 'Trip End Date' first
+FVISIT.JournyStrtWithinTrip Journey Start Date must lie within trip Start and End dates
+FVISIT.JournyEndWithinTrip Journey End Date must lie within trip Start and End dates
+FVISIT.StartDateOverlap Please check that entered 'Journey start date' should not lie within already entered Journey start and end dates
+FVISIT.EndDateOverlap Please check that entered 'Journey end date' should not lie within already entered Journey start and end dates
+
+# added for NOC CR (in visitReport.jsp)
+FVISIT.Confirm You haven't entered 'Details of Expenditure'. Do you want to enter it?
+FVISIT.OverLap Entered journey dates should not overlap with already entered journey dates.

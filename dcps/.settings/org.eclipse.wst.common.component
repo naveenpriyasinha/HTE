@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="dcps">
+		<wb-resource deploy-path="/" source-path="/web"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/Payroll-outer/Payroll-outer">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/hrms-hr/hrms-hr">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/hrms-eis/hrms-eis">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/hrms-payslip/hrms-payslip">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/hrms-ess/hrms-ess">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/hrms-payroll/hrms-payroll">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/hrms-payroll-common/hrms-payroll-common">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+        <dependent-module deploy-path="/WEB-INF/lib" handle="module:/resource/hrms-nps/hrms-nps">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hdiits-core.war" deploy-path="/WEB-INF/lib" handle="module:/resource/hdiits-core/hdiits-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+		<property name="context-root" value="dcps"/>
+		<property name="java-output-path"/>
+	</wb-module>
+</project-modules>

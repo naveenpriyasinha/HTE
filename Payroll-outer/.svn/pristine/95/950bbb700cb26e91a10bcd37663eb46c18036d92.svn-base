@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 7, 2007 2:50:34 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.onlinebillprep.valueobject.TrnMedblHdr" table="TRN_MEDBL_HDR" dynamic-update="true">
+        <id name="trnMedblHdrId" type="long">
+            <column name="TRN_MEDBL_HDR_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="billNo" type="long">
+            <column name="BILL_NO" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="empName" type="string">
+            <column name="EMP_NAME" />
+        </property>
+        <property name="empDesgn" type="string">
+            <column name="EMP_DESGN" />
+        </property>
+        <property name="monthCode" type="string">
+            <column name="MONTH_CODE" length="5" not-null="true" />
+        </property>
+        <property name="billPassedDate" type="date">
+            <column name="BILL_PASSED_DATE" length="7" />
+        </property>
+        <property name="billPassedAmt" type="big_decimal">
+            <column name="BILL_PASSED_AMT" precision="17" />
+        </property>
+        <property name="attachmentId" type="long">
+            <column name="ATTACHMENT_ID" precision="20" scale="0" />
+        </property>
+        <property name="deptName" type="string">
+            <column name="DEPT_NAME" not-null="true" />
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="long">
+            <column name="DB_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

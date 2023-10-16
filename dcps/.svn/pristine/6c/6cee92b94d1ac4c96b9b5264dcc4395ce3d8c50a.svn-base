@@ -1,0 +1,15 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script type="text/javascript" language="javascript" src="../script/common/xp_progress.js">
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>IFMS</title>
+</head>
+<BODY onBlur="window.focus()">
+Sign In.. please wait..
+<script type="text/javascript">
+var bar1= createBar(250,15,'white',1,'black','blue',85,7,3,"");
+</script>
+</body>
+</html>

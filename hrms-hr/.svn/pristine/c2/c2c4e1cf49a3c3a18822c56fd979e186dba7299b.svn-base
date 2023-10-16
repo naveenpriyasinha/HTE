@@ -1,0 +1,27 @@
+employeeEntry.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/allocation/EmployeeEntry.jsp]
+employeeEntryView.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/allocation/employeeEntryView.jsp]
+
+EmpPayfixation.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/hr/payfixation/EmpPayfixation.jsp]
+PayFixCalculation.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/hr/payfixation/PayFixCalculation.jsp]\t
+getEmployeeSearchView.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/payfixation/PayFixation.jsp]
+
+#----------Pay Increment BY Amish - Starts--------
+EmpPayIncrList.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/payincrement/EmpPayIncrement.jsp]
+EmpNextPayIncr.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/hr/payincrement/EmpNextPayIncr.jsp]
+incrementPrintReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/payincrement/incrementPrintReport.jsp]
+successfulMessage.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/allocation/successfulMessage.jsp]
+
+
+#-----------------------------Added by Jigna Raval on 4-7-2009 for pay increment------------------------
+employeeEntry.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/allocation/EmployeeEntry.jsp]
+employeeEntryView.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/allocation/employeeEntryView.jsp]
+getEmployeeSearchView.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/payfixation/PayFixation.jsp]
+
+#----------Pay Increment BY SANDIP - Starts--------
+EmpPayIncrList.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/payincrement/EmpPayIncrement.jsp]
+IncrementsuccessfulMessage.attributesCSV=content\=[/WEB-INF/jsp/hrms/hr/allocation/IncrementsuccessfulMessage.jsp]
+#-----------------------------End by Jigna Raval on 4-7-2009 for pay increment------------------------
+
+
+
+

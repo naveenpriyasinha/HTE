@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.eis.valueobject.HrEmpTraMpgHst" table="HR_EMP_TRA_MPG_HST">
+   	    <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrEmpTraMpgHstId">
+            <key-property name="id" type="long">
+                <column name="ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" precision="10" scale="0" />
+            </key-property>
+        </composite-id>   
+  
+  		<many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID" precision="22"/>
+        </many-to-one>
+  
+  		<property name="distance" type="long">
+            <column name="distance">
+                <comment></comment>
+            </column>
+        </property>
+  		<property name="vehicalAvailed" type="string">
+            <column name="VEHICAL_AVAILED" length="5">
+                <comment></comment>
+            </column>
+        </property>
+		<property name="vehicalAvailDate" type="timestamp">
+            <column name="VEHICAL_AVAIL_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="vehicalLeaveDate" type="timestamp">
+            <column name="VEHICAL_LEAVE_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>  
+  
+  		<many-to-one name="vehicalType" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="VEHICAL_TYPE" precision="22"/>
+        </many-to-one>
+        
+  		<property name="vehicalNo" type="string">
+            <column name="VEHICAL_NO" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        
+  		<property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        
+  		<many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY_POST">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+   </class>
+</hibernate-mapping>

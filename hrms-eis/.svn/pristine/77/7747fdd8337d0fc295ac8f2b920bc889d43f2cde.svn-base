@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 25, 2007 12:43:11 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayVpfDtlsHst" table="HR_PAY_VPF_DTLS_HST">
+        <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrPayVpfDtlsHstId">
+            <key-property name="payVpfId" type="long">
+                <column name="PAY_VPF_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        
+        
+        
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID"  >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+         <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+       
+        
+        
+        
+       <!--  <property name="empId" type="long">
+            <column name="EMP_ID" precision="22" scale="0" />
+        </property>  -->
+        <property name="vpfAmt" type="long">
+            <column name="VPF_AMT" precision="22" scale="0" />
+        </property>
+       <!--  <property name="dbId" type="long">
+            <column name="DB_ID" precision="22" scale="0" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" precision="22" scale="0" />
+        </property>
+        <property name="createdByPost" type="long">
+            <column name="CREATED_BY_POST" precision="22" scale="0" />
+        </property>  -->
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+       <!--  <property name="updatedBy" type="long">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </property>
+        <property name="updatedByPost" type="long">
+            <column name="UPDATED_BY_POST" precision="22" scale="0" />
+        </property>  -->
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+      <!--   <property name="locId" type="long">
+            <column name="LOC_ID" precision="22" scale="0" />
+        </property>  -->
+            <property name="zerovpfMonths" type="java.lang.Integer">
+                <column name="zerovpf_months"  />
+            </property>
+            
+            <many-to-one name="cmnAttachmentMst" class="com.tcs.sgv.common.valueobject.CmnAttachmentMst" fetch="select">
+            <column name="ATTACHMENT_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+                </class>
+                
+</hibernate-mapping>

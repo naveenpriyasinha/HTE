@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 29, 2008 4:38:11 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pension.valueobject.TrnCaseRevalidationDtls" table="TRN_CASE_REVALIDATION_DTLS">
+        <id name="caseRevalidId" type="long">
+            <column name="CASE_REVALID_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="revalidatonDate" type="date">
+            <column name="REVALIDATON_DATE" length="7" />
+        </property>
+        <property name="revalidationAuth" type="long">
+            <column name="REVALIDATION_AUTH" precision="20" scale="0" />
+        </property>
+        <property name="revalidatorName" type="string">
+            <column name="REVALIDATOR_NAME" length="50" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="pensionRequestId" type="long">
+            <column name="PENSION_REQUEST_ID" length="20" />
+        </property>
+        <property name="trnCounter" type="integer">
+            <column name="TRN_COUNTER" precision="20" scale="0" />
+        </property>
+         <property name="revalidCount" type="integer">
+            <column name="REVALID_COUNT" precision="20" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

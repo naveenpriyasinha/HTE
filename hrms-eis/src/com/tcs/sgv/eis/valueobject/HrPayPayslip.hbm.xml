@@ -1,0 +1,677 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 18, 2007 3:00:38 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayPayslip" table="HR_PAY_PAYSLIP">
+        <id name="paySlipId" type="long">
+            <column name="PAYSLIP_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+
+        <many-to-one name="hrPayPaybill" class="com.tcs.sgv.eis.valueobject.HrPayPaybill" fetch="select">
+            <column name="PAYBILL_ID" precision="22" scale="0" />
+        </many-to-one>
+
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select" lazy="false">
+            <column name="EMP_ID" precision="22" scale="0" />
+        </many-to-one>
+        
+        <many-to-one name="hrQuaterTypeMst" class="com.tcs.sgv.eis.valueobject.HrEisQuaterTypeMst" fetch="select" lazy="false">
+            <column name="QUATER_NO" precision="22" scale="0" />
+        </many-to-one>
+
+        <property name="month" type="long">
+            <column name="PAYSLIP_MONTH" precision="22" scale="0" />
+        </property>
+        <property name="year" type="long">
+            <column name="PAYSLIP_YEAR" precision="22" scale="0" />
+        </property>
+        
+        <many-to-one name="mstDcpsBillGroup" class="com.tcs.sgv.dcps.valueobject.MstDcpsBillGroup" fetch="select">
+            <column name="BILL_NO" length="20" />
+        </many-to-one>
+        
+        <property name="incrementAmt" type="long">
+            <column name="INCREMENT_AMT" precision="22" scale="0" />
+        </property>
+        <property name="itAccNo" type="string">
+            <column name="IT_ACC_NO" length="20" />
+        </property>
+        <property name="gpfAccNo" type="string">
+            <column name="GPF_ACC_NO" length="20" />
+        </property>
+        <property name="tokenNo" type="string">
+            <column name="TOKEN_NO" length="20" />
+        </property>
+        <property name="grossAmt" type="long">
+            <column name="BILL_AMT" precision="22" scale="0" />
+        </property>
+       
+        <property name="paySlipDate" type="date">
+            <column name="PAY_SLIP_DATE" length="7" />
+        </property>
+        
+
+        <property name="basicPay" type="long">
+            <column name="BASIC_PAY" precision="22" scale="0" />
+        </property>
+        
+         <property name="netTotal" type="long">
+            <column name="NET_TOTAL" precision="22" scale="0" />
+        </property>
+        
+        
+        <!--
+All Allowances Deductions Loans and Advances will Come here 
+        -->
+      
+        <property name="splPay" type="long">
+            <column name="SPL_PAY" precision="22" scale="0" />
+        </property>
+        <property name="perPay" type="long">
+            <column name="PER_PAY" precision="22" scale="0" />
+        </property>
+        <property name="da" type="long">
+            <column name="DA" precision="22" scale="0" />
+        </property>
+        <property name="cla" type="long">
+            <column name="CLA" precision="22" scale="0" />
+        </property>
+        <property name="hra" type="long">
+            <column name="HRA" precision="22" scale="0" />
+        </property>
+        <property name="ma" type="long">
+            <column name="MA" precision="22" scale="0" />
+        </property>
+        <property name="ITax" type="long">
+            <column name="I_TAX" precision="22" scale="0" />
+        </property>
+        <property name="hrr" type="long">
+            <column name="HRR" precision="22" scale="0" />
+        </property>
+        <property name="PTax" type="long">
+            <column name="P_TAX" precision="22" scale="0" />
+        </property>
+        <property name="dp" type="long">
+            <column name="DP" precision="22" scale="0" />
+        </property>
+          <property name="ap" type="long">
+            <column name="AP" precision="22" scale="0" />
+        </property>
+          <!--      ends here     -->   
+         
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+      <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER"  >
+                <comment></comment>
+            </column>
+        </property>
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+               <property name="ta" type="long">
+            <column name="TA" precision="22" scale="0" />
+        </property>
+        
+        
+         <property name="arma" type="long">
+            <column name="ARM" precision="22" scale="0" />
+        </property>
+        
+         <property name="armouera" type="long">
+            <column name="ARMOUER" precision="22" scale="0" />
+        </property>
+             <property name="bmia" type="long">
+            <column name="BMI" precision="22" scale="0" />
+        </property>
+        
+        <property name="casha" type="long">
+            <column name="CASH" precision="22" scale="0" />
+        </property>
+        <property name="conva" type="long">
+            <column name="CONVEYANCE" precision="22" scale="0" />
+        </property>
+          <property name="cida" type="long">
+            <column name="CID" precision="22" scale="0" />
+        </property>
+          <property name="ea" type="long">
+            <column name="EA" precision="22" scale="0" />
+        </property>
+        <property name="esisa" type="long">
+            <column name="ESIS" precision="22" scale="0" />
+        </property>
+        
+        <property name="ela" type="long">
+            <column name="ELA" precision="22" scale="0" />
+        </property>
+        <property name="fita" type="long">
+            <column name="FITNESS" precision="22" scale="0" />
+        </property>
+        <property name="gaa" type="long">
+            <column name="GALLNTRY" precision="22" scale="0" />
+        </property>
+        <property name="kma" type="long">
+            <column name="KMA" precision="22" scale="0" />
+        </property>
+        
+        
+        <property name="lfa" type="long">
+            <column name="LFA" precision="22" scale="0" />
+        </property>
+        
+        <property name="mecha" type="long">
+            <column name="MECH" precision="22" scale="0" />
+        </property>
+        
+        <property name="mea" type="long">
+            <column name="MEA" precision="22" scale="0" />
+        </property>
+        
+        <property name="naa" type="long">
+            <column name="NAA" precision="22" scale="0" />
+        </property>
+        
+        <property name="mesha" type="long">
+            <column name="MESH" precision="22" scale="0" />
+        </property>
+        
+        <property name="npa" type="long">
+            <column name="NPA" precision="22" scale="0" />
+        </property>
+        
+        <property name="suma" type="long">
+            <column name="SUMA" precision="22" scale="0" />
+        </property>
+        
+        <property name="pa" type="long">
+            <column name="PA" precision="22" scale="0" />
+        </property>
+           <property name="sda" type="long">
+            <column name="SDA" precision="22" scale="0" />
+        </property>
+        
+           <property name="oa" type="long">
+            <column name="OA" precision="22" scale="0" />
+        </property>
+        
+        
+           <property name="ua" type="long">
+            <column name="UA" precision="22" scale="0" />
+        </property>
+        
+           <property name="techa" type="long">
+            <column name="TECH" precision="22" scale="0" />
+        </property>
+           <property name="taa" type="long">
+            <column name="TAA" precision="22" scale="0" />
+        </property>
+        
+            <property name="ha" type="long">
+            <column name="HA" precision="22" scale="0" />
+        </property>
+        
+            <property name="pg" type="long">
+            <column name="PG" precision="22" scale="0" />
+        </property>
+        
+            <property name="ats30" type="long">
+            <column name="ATS30" precision="22" scale="0" />
+        </property>
+        
+            <property name="ats50" type="long">
+            <column name="ATS50" precision="22" scale="0" />
+        </property>
+        
+             <property name="force100" type="long">
+            <column name="FORCE100" precision="22" scale="0" />
+        </property>
+             <property name="force25" type="long">
+            <column name="FORCE25" precision="22" scale="0" />
+        </property>
+        <property name="fpa" type="long">
+            <column name="FPA" precision="22" scale="0" />
+        </property>
+        <property name="taforsixth" type="long">
+            <column name="TASIXTH" precision="22" scale="0" />
+        </property>
+        
+         <property name="refAllow" type="long">
+            <column name="REFRESHMENT_ALLOW" precision="22" scale="0" />
+        </property>
+        <property name="peonAllow" type="long">
+            <column name="PEON_ALLOWANCE" precision="22" scale="0" />
+        </property>
+        
+        
+           <property name="addDa" type="long">
+            <column name="ADD_DA" precision="22" scale="0" />
+        </property>
+           <property name="addHra" type="long">
+            <column name="ADD_HRA" precision="22" scale="0" />
+        </property>
+           <property name="daArr" type="long">
+            <column name="DA_ARR" precision="22" scale="0" />
+        </property>
+           <property name="tempHra" type="long">
+            <column name="TEMP_HRA" precision="22" scale="0" />
+        </property>
+           <property name="tempCla" type="long">
+            <column name="TEMP_CLA" precision="22" scale="0" />
+        </property>
+           <property name="frana" type="long">
+            <column name="FRA" precision="22" scale="0" />
+        </property>
+           <property name="lta" type="long">
+            <column name="LTA" precision="22" scale="0" />
+        </property>
+           <property name="medstu" type="long">
+            <column name="MED_STU" precision="22" scale="0" />
+        </property>
+           <property name="perTra" type="long">
+            <column name="PER_TRA" precision="22" scale="0" />
+        </property>
+           <property name="tempTa" type="long">
+            <column name="TEMP_TA" precision="22" scale="0" />
+        </property>
+           <property name="wa" type="long">
+            <column name="WA" precision="22" scale="0" />
+        </property>
+           <property name="oas" type="long">
+            <column name="OTHER_ALLS" precision="22" scale="0" />
+        </property>
+        
+        <property name="wriPay" type="long">
+            <column name="WRI_PAY" precision="22" scale="0" />
+        </property>
+        
+        <property name="gpfgrpd" type="long">
+            <column name="GPFGRPD" precision="22" scale="0" />
+        </property>
+        
+        <property name="pli" type="long">
+            <column name="PLI" precision="22" scale="0" />
+        </property>
+        
+        <property name="dcps" type="long">
+            <column name="DCPS" precision="22" scale="0" />
+        </property>
+        
+        <property name="dcpsDelay" type="long">
+            <column name="DCPS_DELAY" precision="22" scale="0" />
+        </property>
+        
+        <property name="dcpsPay" type="long">
+            <column name="DCPS_PAY" precision="22" scale="0" />
+        </property>
+        
+        <property name="dcpsDA" type="long">
+            <column name="DCPS_DA" precision="22" scale="0" />
+        </property>
+        
+        
+        <property name="gpfgrpbac" type="long">
+            <column name="GPFGRPABC" precision="22" scale="0" />
+        </property>
+        
+        <property name="gpfiasos" type="long">
+            <column name="GPFIASOS" precision="22" scale="0" />
+        </property>
+        
+        <property name="gpfias" type="long">
+            <column name="GPFIAS" precision="22" scale="0" />
+        </property>
+        
+        <property name="gpfips" type="long">
+            <column name="GPFIPS" precision="22" scale="0" />
+        </property>
+        
+        <property name="gpfifs" type="long">
+            <column name="GPFIFS" precision="22" scale="0" />
+        </property>
+        
+        <property name="servc" type="long">
+            <column name="SERV" precision="22" scale="0" />
+        </property>
+        
+        <property name="otherd" type="long">
+            <column name="OTHERDED" precision="22" scale="0" />
+        </property>
+        
+        <property name="gisias" type="long">
+            <column name="GISIAS" precision="22" scale="0" />
+        </property>
+        
+        <property name="gisips" type="long">
+            <column name="GISIPS" precision="22" scale="0" />
+        </property>
+        
+        <property name="gisifs" type="long">
+            <column name="GISIFS" precision="22" scale="0" />
+        </property>
+        
+        <property name="gis" type="long">
+            <column name="GIS" precision="22" scale="0" />
+        </property>
+        
+        
+        <property name="cgegis" type="long">
+            <column name="CGEGIS" precision="22" scale="0" />
+        </property>
+        
+        <property name="giszp" type="long">
+            <column name="GISZP" precision="22" scale="0" />
+        </property>
+        
+        <property name="gpfabcmr" type="long">
+            <column name="GPFABCMR" precision="22" scale="0" />
+        </property>
+        <property name="gpfdmr" type="long">
+            <column name="GPFDMR" precision="22" scale="0" />
+        </property>
+        
+        <property name="gpfiasmr" type="long">
+            <column name="GPFIASMR" precision="22" scale="0" />
+        </property>
+        
+        <property name="gpfipsmr" type="long">
+            <column name="GPFIPSMR" precision="22" scale="0" />
+        </property>
+        
+        <property name="gpfifsmr" type="long">
+            <column name="GPFIFSMR" precision="22" scale="0" />
+        </property>
+        
+        <property name="hrrarr" type="long">
+            <column name="HRRARR" precision="22" scale="0" />
+        </property>
+        
+        <property name="janjulgisa" type="long">
+            <column name="JANJULGISA" precision="22" scale="0" />
+        </property>
+        
+        <property name="janjulgis" type="long">
+            <column name="JanJulGIS " precision="22" scale="0" />
+        </property>
+        
+        <property name="msli" type="long">
+            <column name="MSLI" precision="22" scale="0" />
+        </property>
+        
+        <property name="or" type="long">
+            <column name="ORR" precision="22" scale="0" />
+        </property>
+        
+        <property name="ptarr" type="long">
+            <column name="PTARR" precision="22" scale="0" />
+        </property>
+        
+        <property name="odtr" type="long">
+            <column name="ODTR" precision="22" scale="0" />
+        </property>
+        
+        
+        <property name="otherVehical" type="long">
+            <column name="OTHER_VEHI" precision="22" scale="0" />
+        </property>
+        
+        <property name="hbaLand" type="long">
+            <column name="HBA_LAND" precision="22" scale="0" />
+        </property>
+        
+        <property name="mcaLand" type="long">
+            <column name="MCA_LAND" precision="22" scale="0" />
+        </property>
+        
+        <property name="coHsgSoc" type="long">
+            <column name="CO_HSG_SOC" precision="22" scale="0" />
+        </property>
+        
+        <property name="compAdvance" type="long">
+            <column name="COMP_ADV" precision="22" scale="0" />
+        </property>
+        
+        <property name="hbaAis" type="long">
+            <column name="HBA_AIS" precision="22" scale="0" />
+        </property>
+        
+        <property name="mcaAis" type="long">
+            <column name="MCA_AIS" precision="22" scale="0" />
+        </property>
+        
+        <property name="compAis" type="long">
+            <column name="COMP_AIS" precision="22" scale="0" />
+        </property>
+        
+        <property name="otherAdv" type="long">
+            <column name="OHTER_ADV" precision="22" scale="0" />
+        </property>
+        
+        <property name="hbaHouse" type="long">
+            <column name="HBA_HOUSE" precision="22" scale="0" />
+        </property>
+        
+        <!--  For Interests of loans -->
+             <property name="otherVehicalInt" type="long">
+            <column name="OTHER_VEHI_INT" precision="22" scale="0" />
+        </property>
+        <property name="hbaLandInt" type="long">
+            <column name="HBA_LAND_INT" precision="22" scale="0" />
+        </property>
+        <property name="mcaLandInt" type="long">
+            <column name="MCA_LAND_INT" precision="22" scale="0" />
+        </property>
+        <property name="coHsgSocInt" type="long">
+            <column name="CO_HSG_SOC_INT" precision="22" scale="0" />
+        </property>
+        <property name="compAdvanceInt" type="long">
+            <column name="COMP_ADV_INT" precision="22" scale="0" />
+        </property>
+        <property name="hbaAisInt" type="long">
+            <column name="HBA_AIS_INT" precision="22" scale="0" />
+        </property>
+        <property name="mcaAisInt" type="long">
+            <column name="MCA_AIS_INT" precision="22" scale="0" />
+        </property>
+        <property name="compAisInt" type="long">
+            <column name="COMP_AIS_INT" precision="22" scale="0" />
+        </property>
+        <property name="otherAdvInt" type="long">
+            <column name="OHTER_ADV_INT" precision="22" scale="0" />
+        </property>
+        <property name="hbaHouseInt" type="long">
+            <column name="HBA_HOUSE_INT" precision="22" scale="0" />
+        </property>
+        
+        <!--  Interest ends here  -->
+        
+        
+        
+        <property name="payAdv" type="long">
+            <column name="PAY_ADV" precision="22" scale="0" />
+        </property>
+        
+        <property name="FA" type="long">
+            <column name="FESTIVAL_ADV" precision="22" scale="0" />
+        </property>
+        
+        <property name="TA" type="long">
+            <column name="T_ADV" precision="22" scale="0" />
+        </property>
+        
+        <property name="GPFADVABC" type="long">
+            <column name="GPF_ABC_ADV" precision="22" scale="0" />
+        </property>
+        
+        <property name="GPFADVD" type="long">
+            <column name="GPF_D_ADV" precision="22" scale="0" />
+        </property>
+        
+        <property name="GPFIASAdv" type="long">
+            <column name="GPF_IAS_ADV" precision="22" scale="0" />
+        </property>
+        
+        <property name="GPFOSAdv" type="long">
+            <column name="GPF_OS_ADV" precision="22" scale="0" />
+        </property>
+        
+        <property name="ExcPayRcAdv" type="long">
+            <column name="EXC_PAY_RC" precision="22" scale="0" />
+        </property>
+        
+         <property name="cta" type="long">
+            <column name="CTA" precision="22" scale="0" />
+        </property>
+        
+         <property name="centralDA" type="long">
+            <column name="CDA" precision="22" scale="0" />
+        </property>
+        
+         <property name="specialPayPilot" type="long">
+            <column name="SPECIAL_PAY_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="militeryPilot" type="long">
+            <column name="MILITERY_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="outfirPilot" type="long">
+            <column name="OUTFIT_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="flyingAllowPilot" type="long">
+            <column name="FLYING_ALLOW_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="inspectionPilot" type="long">
+            <column name="INSPECTION_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="qualificationPilot" type="long">
+            <column name="QUALIFICATION_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="instructionalPilot" type="long">
+            <column name="INSTRUCTIONAL_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="flyingPayPilot" type="long">
+            <column name="FLYING_PAY_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="kitPilot" type="long">
+            <column name="KIT_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="chplPilot" type="long">
+            <column name="CHPL_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="rltPilot" type="long">
+            <column name="RT_PILOT" precision="22" scale="0" />
+        </property>
+         <property name="incentiveBdds" type="long">
+            <column name="INCENTIVE_BDDS" precision="22" scale="0" />
+        </property>
+         <property name="cpf" type="long">
+            <column name="CPF" precision="22" scale="0" />
+        </property>
+         <property name="basicArr" type="long">
+            <column name="basic_Arr" precision="22" scale="0" />
+        </property>
+        <property name="daOnTa" type="long">
+            <column name="DA_ON_TA" precision="22" scale="0" />
+        </property>
+        
+        	<property name="groupAcciPolicy" type="long">
+            <column name="ACC_POLICY" precision="22" scale="0" />
+        </property>
+       <!--   <property name="revenueStamp" type="long">
+            <column name="REVENUE_STAMP" precision="22" scale="0" />
+        </property> -->         
+         <property name="cpfContribution" type="long">
+            <column name="CPF_CONTRIBUTION" precision="22" scale="0" />
+        </property>
+        
+        <property name="cpfEmployee" type="long">
+            <column name="CPF_EMPLOYEE" precision="22" scale="0" />
+        </property>
+        
+        <property name="cpfEmployer" type="long">
+            <column name="CPF_EMPLOYER" precision="22" scale="0" />
+        </property>
+        
+     <!--  <property name="gisArrear" type="long">
+            <column name="GIS_Arrear" precision="22" scale="0" />
+        </property> -->  
+        
+        <!--Addede by sunitha for TA Arrears : Start -->
+		<property name="transAllowArr" type="long"><!-- DP -->
+			<column name="Trans_Arrear" precision="22" scale="0" />
+		</property>
+		<!--Addede by sunitha for TA Arrears : End-->
+		<property name="overtimeAllow" type="long">
+            <column name="Overtime_Allow" precision="22" scale="0" />
+        </property>
+        
+          <property name="DA_7PC" type="long">
+            <column name="DA_7PC" precision="22" scale="0" />
+        </property> 
+          <property name="SVNPC_TA" type="long">
+            <column name="SVNPC_TA" precision="22" scale="0" />
+        </property> 
+         <property name="SVNPC_GPF_ARR" type="long">
+            <column name="SVNPC_GPF_ARR" precision="22" scale="0" />
+        </property> 
+         <property name="SVNPC_DCPS_ARR" type="long">
+            <column name="SVNPC_DCPS_ARR" precision="22" scale="0" />
+        </property> 
+         <property name="SVNPC_TA_ARR" type="long">
+            <column name="SVNPC_TA_ARR" precision="22" scale="0" />
+        </property> 
+         <property name="SVNPC_GPF_ARR_DEDU" type="long">
+            <column name="SVNPC_GPF_ARR_DEDU" precision="22" scale="0" />
+        </property> 
+         <property name="SVNPC_GPF_RECO" type="long">
+            <column name="SVNPC_GPF_RECO" precision="22" scale="0" />
+        </property> 
+         <property name="SVNPC_DCPS_RECO" type="long">
+            <column name="SVNPC_DCPS_RECO" precision="22" scale="0" />
+        </property> 
+         <property name="npsNpsAllowance" type="long">
+            <column name="NPS_EMPLR" precision="22" scale="0" />
+        </property> 
+         <property name="npsDeduction" type="long">
+            <column name="NPS_EMPLR_CONTRI_DED" precision="22" scale="0" />
+        </property> 
+    </class>
+</hibernate-mapping>

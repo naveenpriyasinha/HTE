@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.tcs.sgv.eis.valueobject.HrEisGISDtls" table="HR_EIS_GIS_DTLS">
+        <comment></comment>
+        <id name="empGISId" type="long">
+            <column name="emp_GIS_Id" />
+            <generator class="assigned" />
+        </id>
+        
+         <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="emp_Id" >
+                <comment></comment>
+            </column>
+         </many-to-one>
+        
+        <many-to-one name="hrPayDeducTypeMst" class="com.tcs.sgv.deduction.valueobject.HrPayDeducTypeMst" fetch="select">
+            <column name="GIS_deduc_type_Id" >
+                <comment></comment>
+            </column>
+         </many-to-one>
+         
+         <many-to-one name="orgGradeMst" class="com.tcs.sgv.ess.valueobject.OrgGradeMst" fetch="select">
+            <column name="GIS_Group_Grade_Id" >
+                <comment></comment>
+            </column>
+         </many-to-one>
+         
+         <property name="membershipDate" type="timestamp">
+            <column name="membership_Date" length="19" >
+                <comment></comment>
+            </column>
+         </property>
+         
+         <property name="hrPayOrderMst" type="string">
+            <column name="GIS_Order_Id" >
+                <comment></comment>
+            </column>
+         </property>
+        
+        <property name="GISOrderDate" type="timestamp">
+            <column name="GIS_Order_Date" length="19" >
+                <comment></comment>
+            </column>
+         </property>
+         
+         <property name="remarks" type="string">
+            <column name="Remarks" length="100" >
+                <comment></comment>
+            </column>
+        </property>
+         
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one> 
+        
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY_POST">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="orgUserMstByUpdatedByUser" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY_USER">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="orgUserMstByCreatedByUser" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by_user" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <property name="createdByDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" >
+                <comment></comment>
+            </column>
+         </property>
+         
+         <property name="updatedByDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19" >
+                <comment></comment>
+            </column>
+         </property>
+        
+         
+        
+</class>        
+</hibernate-mapping>

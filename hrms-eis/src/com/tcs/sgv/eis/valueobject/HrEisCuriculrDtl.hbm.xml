@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 30, 2007 8:57:06 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisCuriculrDtl" table="hr_eis_curiculr_dtl">
+        <id name="srNo" type="long">
+            <column name="SR_NO" precision="12" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="orgUserMstByUserId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="USER_ID" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+         <property name="yearId" type="long">
+            <column name="YEAR_ID"  precision="10" scale="0"/>
+        </property>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="cmnAttachmentMst" class="com.tcs.sgv.common.valueobject.CmnAttachmentMst" fetch="select">
+            <column name="ATTACHMENTID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY_POST" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByCompetedAtId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="COMPETED_AT_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="cmnLookupMstBySubCocurricularId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="SUB_COCURRICULAR_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByCocurricularId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="COCURRICULAR_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </many-to-one>
+        <property name="specialAchievement" type="string">
+            <column name="SPECIAL_ACHIEVEMENT" length="1000"/>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true"/>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated 29 Aug, 2023 5:52:31 PM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.tcs.sgv.nps.valueobject.NsdlDhDtls" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="NSDL_DH_DTLS">
+        <id name="dhPk" type="long">
+            <column name="DH_PK"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="srNo" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="SR_NO"/>
+        </property>
+        <property generated="never" lazy="false" name="headerName" optimistic-lock="true" type="string" unique="false">
+            <column length="4" name="HEADER_NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="dhNo" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="DH_NO"/>
+        </property>
+        <property generated="never" lazy="false" name="dhCol2" optimistic-lock="true" type="string" unique="false">
+            <column length="5" name="DH_COL2"/>
+        </property>
+        <property generated="never" lazy="false" name="dhDdoRegNo" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="DH_DDO_REG_NO"/>
+        </property>
+        <property generated="never" lazy="false" name="bhSdCount" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="BH_SD_COUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="dhEmpAmount" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="DH_EMP_AMOUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="dhEmplrAmount" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="DH_EMPLR_AMOUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="fileName" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="FILE_NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="dhStatus" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="DH_STATUS"/>
+        </property>
+        <property generated="never" lazy="false" name="isLegacyData" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="IS_LEGACY_DATA"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,851 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="hdiits" uri="http://hdiits.tcs.com"%>
+
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib uri="http://ajaxtags.org/tags/ajax" prefix="ajax"%>
+<%@ taglib uri="http://displaytag.sf.net" prefix="display"%>
+
+<c:set var="resultObj" value="${result}"></c:set>
+<c:set var="resValue" value="${resultObj.resultValue}"></c:set>
+<c:set var="talukaList" value="${resValue.talukaList}"></c:set>
+<c:set var="officeList" value="${resValue.officeList}"></c:set>
+
+
+<c:set var="sanctionLeaveType" value="${resValue.sanctionLeaveType}"></c:set>
+
+<c:set var="currYear" value="${resValue.currYear}"></c:set>
+
+
+<spring:htmlEscape defaultHtmlEscape="true" />
+<script type="text/javascript" src="script/common/tabcontent.js"></script>
+<script language="JavaScript" src="script/dcps/dcpsvalidation.js"></script>
+
+
+<script type="text/javascript" src="script/common/common.js"></script>
+<script type="text/javascript" src="script/common/common.js"></script>
+<script type="text/javascript" src="script/common/tabcontent.js"></script>
+<script language="JavaScript" src="script/dcps/dcpsvalidation.js"></script>
+<script type="text/javascript"
+	src="script/dcps/NewRegistrationFormZP.js"></script>
+<script type="text/javascript" src="script/common/tagLibValidation.js"></script>
+
+<script language="JavaScript" src="script/dcps/dcpsChanges.js"></script>
+
+
+<script language="JavaScript" src="script/dcps/dcpsvalidation.js"></script>
+
+<script type="text/javascript" src="script/common/tagLibValidation.js"></script>
+<script type="text/javascript">
+
+function updateDetails(){
+	var selectedLeaveType=document.getElementById("cmbLeaveType").value;
+	var finalSelectedSchool = 0;
+	var totalSch = document.getElementById("hdnCounter").value ;
+	//alert("hii"+totalEmp);
+	var totalSelectedSchool = 0;
+	var locIds = "";
+	var frmdts="";
+	var todts="";
+
+	var k;
+	for(k=1;k<=totalSch;k++)
+	{
+		if(document.getElementById("checkbox"+k).checked)
+		{
+			finalSelectedSchool = k ;	
+			totalSelectedSchool++ ;
+		}
+	}
+	
+	if(finalSelectedSchool == 0)
+		{
+			alert('Please select at least one Employee');
+			return false; 
+		}
+	
+	for(k=1;k<=totalSch;k++)
+	{
+		if(document.getElementById("checkbox"+k).checked)
+		{
+			locIds = locIds + document.getElementById("locId"+k).value.trim() + "~" ;
+			frmdts = frmdts + document.getElementById("frmdt"+k).value.trim() + "~" ;
+			todts = todts + document.getElementById("todt"+k).value.trim() + "~" ;
+		
+				var fromDateLeave=document.getElementById("frmdt"+k).value.trim();
+				//alert(fromDateLeave);
+				var todateLeave=document.getElementById("todt"+k).value.trim();
+				//alert(todateLeave);
+				if(fromDateLeave==''){
+					alert("From Date and To date are Mandatory fields.");
+					return false;
+				}
+				if(todateLeave==''){
+					alert("From Date and To date are Mandatory fields.");
+					return false;
+				}
+		}
+	}
+	
+	document.getElementById("locIds").value=locIds;
+	document.getElementById("frmdts").value=frmdts;
+	document.getElementById("todts").value=todts;
+	document.getElementById("flag").value=1;
+	document.getElementById("hdnLeaveType").value=selectedLeaveType;
+	document.getElementById("actionFlag").value='SanctionLeave';
+	
+	
+	var answer = confirm("Are you sure, you want to update the details?");
+	if(answer){
+	var url;
+	url="./hrms.htm";
+	document.DCPSForwardedFormsList.action= url;
+	document.DCPSForwardedFormsList.submit();
+	showProgressbar("Please wait<br>While Your Request is in Progress ...");
+	}
+}
+
+
+
+
+function filterInstitute(){
+	var taluka= document.getElementById("cmbTaluka").value;
+
+	document.getElementById("flag").value=0;
+
+	document.getElementById("taluka").value=taluka;
+	document.getElementById("actionFlag").value='SanctionLeave';
+
+		var url;
+		url="./hrms.htm";
+		document.DCPSForwardedFormsList.action= url;
+		document.DCPSForwardedFormsList.submit();
+		showProgressbar("Please wait<br>While Your Request is in Progress ...");
+}
+
+function validateThedate(leaveDate,num){
+	var selectedLeaveType=document.getElementById("cmbLeaveType").value;
+	var date= leaveDate.value;
+	
+	var dateArr=date.split("/");
+	var year=document.getElementById("currYear").value;
+	//alert("year from db is"+year);
+	//alert(dateArr[0]);
+	//alert(dateArr[1]);
+	//alert(dateArr[2]);
+	if(num==1){
+
+		document.getElementById("txtToDate").value='';
+	}
+	if(dateArr[2]!= year){
+		alert("Please enter the date of curent year only.");
+		leaveDate.value="";
+		//leaveDate.focus();
+		return false;
+	}
+
+	//for summer
+	if(selectedLeaveType == 'Summer')
+	{
+		if(dateArr[1]!= 05 && dateArr[1] !=06 ){
+			alert("Please enter the date of Summer vacation period only.");
+			leaveDate.value="";
+			//leaveDate.focus();
+			return false;
+		}
+		if(dateArr[1]== 05){
+			if (Number(dateArr[0])>31 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				leaveDate.value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+
+		if(dateArr[1]== 06){
+			if (Number(dateArr[0])>30 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				leaveDate.value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+	}
+
+	//for Rainy
+	if(selectedLeaveType == 'Rainy')
+	{
+		if(dateArr[1]!= 07 && dateArr[1] !=08 ){
+			alert("Please enter the date of Rainy vacation period only.");
+			leaveDate.value="";
+			//leaveDate.focus();
+			return false;
+		}
+		if(dateArr[1]== 07){
+			if (Number(dateArr[0])>31 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				leaveDate.value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+
+		if(dateArr[1]== 08){
+			if (Number(dateArr[0])>31 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				leaveDate.value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+	}
+	
+	
+	return true;
+}
+
+function validateFromDate(count){
+	//alert(count);
+	var date= document.getElementById("frmdt"+count).value;
+	document.getElementById("todt"+count).value='';
+	var dateArr=date.split("/");
+
+
+	var selectedLeaveType=document.getElementById("cmbLeaveType").value;
+	
+	var year=document.getElementById("currYear").value;
+	//alert("year from db is"+year);
+//	//alert(dateArr[0]);
+	//alert(dateArr[1]);
+	//alert(dateArr[2]);
+	if(dateArr[2]!= year){
+		alert("Please enter the date of curent year only.");
+		document.getElementById("frmdt"+count).value="";
+		//document.getElementById("frmdt"+count).focus();
+		return false;
+	}
+
+
+	//for summer
+	if(selectedLeaveType == 'Summer')
+	{
+		//alert('summer');
+		if(dateArr[1]!= 05 && dateArr[1] !=06 ){
+			alert("Please enter the date of Summer vacation period only.");
+			document.getElementById("frmdt"+count).value="";
+			//document.getElementById("frmdt"+count).focus();
+			return false;
+		}
+
+		if(dateArr[1]== 05){
+			if (Number(dateArr[0])>31 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				document.getElementById("frmdt"+count).value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+
+		if(dateArr[1]== 06){
+			if (Number(dateArr[0])>30 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				document.getElementById("frmdt"+count).value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+	}
+	
+
+	//for rainy
+	if(selectedLeaveType == 'Rainy')
+	{
+		//alert('rainy');
+		if(dateArr[1]!= 07 && dateArr[1] !=08 ){
+			alert("Please enter the date of Rainy vacation period only.");
+			document.getElementById("frmdt"+count).value="";
+			//document.getElementById("frmdt"+count).focus();
+			return false;
+		}
+
+		if(dateArr[1]== 07){
+			if (Number(dateArr[0])>31 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				document.getElementById("frmdt"+count).value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+
+		if(dateArr[1]== 08){
+			if (Number(dateArr[0])>31 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				document.getElementById("frmdt"+count).value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+	}
+	
+	
+	
+	
+	return true;
+}
+
+
+function validateToDate(count){
+	//alert(count);
+	var date= document.getElementById("todt"+count).value;
+	var dateArr=date.split("/");
+	var year=document.getElementById("currYear").value;
+
+
+	var selectedLeaveType=document.getElementById("cmbLeaveType").value;
+
+	
+	//alert("year from db is"+year);
+	//alert(dateArr[0]);
+	//alert(dateArr[1]);
+	//alert(dateArr[2]);
+	if(dateArr[2]!= year){
+		alert("Please enter the date of curent year only.");
+		document.getElementById("todt"+count).value="";
+		//document.getElementById("todt"+count).focus();
+		return false;
+	}
+
+
+	//for summer
+	if(selectedLeaveType == 'Summer')
+	{
+		if(dateArr[1]!= 05 && dateArr[1] !=06 ){
+			alert("Please enter the date of Summer vacation period only.");
+			document.getElementById("todt"+count).value="";
+			//document.getElementById("todt"+count).focus();
+			return false;
+		}
+
+		if(dateArr[1]== 05){
+			
+			if (Number(dateArr[0])>31 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				document.getElementById("todt"+count).value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+
+		if(dateArr[1]== 06){
+			if (Number(dateArr[0])>30 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				document.getElementById("todt"+count).value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+	}
+
+	//for rainy
+	if(selectedLeaveType == 'Summer')
+	{
+		if(dateArr[1]!= 07 && dateArr[1] !=08 ){
+			alert("Please enter the date of Rainy vacation period only.");
+			document.getElementById("todt"+count).value="";
+			//document.getElementById("todt"+count).focus();
+			return false;
+		}
+
+		if(dateArr[1]== 07){
+			
+			if (Number(dateArr[0])>31 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				document.getElementById("todt"+count).value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+
+		if(dateArr[1]== 08){
+			if (Number(dateArr[0])>31 || Number(dateArr[0])<1){
+				alert("Please enter valid date");
+				document.getElementById("todt"+count).value="";
+				//leaveDate.focus();
+				return false;
+				}
+			}
+	}
+	
+
+	return true;
+}
+
+
+function compareDate(fieldName1,fieldName2,alrtStr,flag)
+{
+	//alert("hii");
+	var Date1 = fieldName1.value;
+	var Date2 = fieldName2.value;
+    var la_Date1 = new Array();
+    la_Date1 = Date1.split("/");
+    var day1=parseFloat(la_Date1[0]);
+    var month1=parseFloat(la_Date1[1]);
+    var year1=parseFloat(la_Date1[2]);
+
+    var la_Date2 = new Array();
+    la_Date2 = Date2.split("/");
+    var day2=parseFloat(la_Date2[0]);
+    var month2=parseFloat(la_Date2[1]);
+    var year2=parseFloat(la_Date2[2]);
+
+    if (year2 == year1 && month2 == month1 && day2 == day1)
+    {
+    	if(flag == '=')
+    	{
+    		alert(alrtStr);
+    	    fieldName2.focus();
+    	    fieldName2.value="";
+    	}
+    	else
+    	{
+	        return true;
+	    }
+    }
+    else if( year2 > year1 )
+    {
+        return true;
+    }
+    else if( year2 < year1 && flag != '=')
+    {
+        alert(alrtStr);
+        if(flag == '<')
+        {
+    	    fieldName2.focus();
+    	    fieldName2.value="";
+    	}
+    	else if(flag == '>')
+    	{
+    	    fieldName2.focus();
+    	    fieldName2.value="";
+    	}
+    }
+    else if (flag != '=')
+    {
+        if( month2 > month1 )
+        {
+            return true;
+        }
+        else if( month2 < month1 )
+        {     
+             alert(alrtStr);
+             if(flag == '<')
+	        {
+    		    fieldName2.focus();
+    		    fieldName2.value="";
+	    	}
+    		else if(flag == '>')
+    		{
+	    	    fieldName2.focus();
+	    	    fieldName2.value="";
+    		}
+        }
+        else
+        {
+            if( day2 > day1 )
+            {
+                return true;
+            }
+            else if( day2 < day1 )
+            {
+                 alert(alrtStr);
+                 if(flag == '<')
+			     {
+    			    fieldName2.focus();
+    			    fieldName2.value="";
+			   	}
+		    	else if(flag == '>')
+    			{
+    			    fieldName2.focus();
+    			    fieldName2.value="";
+		    	}
+            }
+        }
+    }
+    return true ;
+}
+
+function compareDateField(count,alrtStr,flag)
+{
+	//alert("hii");
+	var Date1 = document.getElementById("frmdt"+count).value;
+	var Date2 = document.getElementById("todt"+count).value;
+    var la_Date1 = new Array();
+    la_Date1 = Date1.split("/");
+    var day1=parseFloat(la_Date1[0]);
+    var month1=parseFloat(la_Date1[1]);
+    var year1=parseFloat(la_Date1[2]);
+
+    var la_Date2 = new Array();
+    la_Date2 = Date2.split("/");
+    var day2=parseFloat(la_Date2[0]);
+    var month2=parseFloat(la_Date2[1]);
+    var year2=parseFloat(la_Date2[2]);
+
+    if (year2 == year1 && month2 == month1 && day2 == day1)
+    {
+    	if(flag == '=')
+    	{
+    		alert(alrtStr);
+    		document.getElementById("todt"+count).focus();
+    		document.getElementById("todt"+count).value="";
+    	}
+    	else
+    	{
+	        return true;
+	    }
+    }
+    else if( year2 > year1 )
+    {
+        return true;
+    }
+    else if( year2 < year1 && flag != '=')
+    {
+        alert(alrtStr);
+        if(flag == '<')
+        {
+        	document.getElementById("todt"+count).focus();
+    	    fieldName2.value="";
+    	}
+    	else if(flag == '>')
+    	{
+    		document.getElementById("todt"+count).focus();
+    		document.getElementById("todt"+count).value="";
+    	}
+    }
+    else if (flag != '=')
+    {
+        if( month2 > month1 )
+        {
+            return true;
+        }
+        else if( month2 < month1 )
+        {     
+             alert(alrtStr);
+             if(flag == '<')
+	        {
+            	 document.getElementById("todt"+count).focus();
+            	 document.getElementById("todt"+count).value="";
+	    	}
+    		else if(flag == '>')
+    		{
+    			document.getElementById("todt"+count).focus();
+    			document.getElementById("todt"+count).value="";
+    		}
+        }
+        else
+        {
+            if( day2 > day1 )
+            {
+                return true;
+            }
+            else if( day2 < day1 )
+            {
+                 alert(alrtStr);
+                 if(flag == '<')
+			     {
+                	 document.getElementById("todt"+count).focus();
+    			    document.getElementById("todt"+count).value="";
+			   	}
+		    	else if(flag == '>')
+    			{
+		    		document.getElementById("todt"+count).focus();
+		    		document.getElementById("todt"+count).value="";
+		    	}
+            }
+        }
+    }
+    return true ;
+}
+
+
+
+function massMapping(){
+	//alert('hellooooooo');
+		var fromDate=document.getElementById("txtFromDate").value;
+		//alert(fromDate);
+
+		var todate=document.getElementById("txtToDate").value;
+		//alert(todate);
+
+		var totalSchool = document.getElementById("hdnCounter").value ;
+
+		//alert(totalSchool);
+		
+		var k;
+		var j='0';
+		for(k=1;k<=totalSchool;k++)
+		{
+			if(document.getElementById("checkbox"+k).checked)
+			{
+				//alert("hiiii");
+				if(fromDate!='')
+				document.getElementById("frmdt"+k).value=fromDate;
+				if(todate!='-1')
+				document.getElementById("todt"+k).value=todate;
+				j=j+1;
+			}
+		}
+		//alert(j);
+		if(Number(j)==0){
+			alert('Please select atleast one school.');
+			}
+	}
+
+
+function displayOfficeList()
+{
+	//alert('inside displayOfficeList()');
+	var cmbLeaveType=document.getElementById("cmbLeaveType").value;
+
+
+	//var url="./hrms.htm?actionFlag=SanctionLeave&selectedLeaveType="+selectedLeaveType;
+	//document.DCPSForwardedFormsList.action= url;
+	//document.DCPSForwardedFormsList.submit();
+	//showProgressbar("Please wait...");
+
+
+	document.getElementById("hdnLeaveType").value=cmbLeaveType;
+	document.getElementById("actionFlag").value='SanctionLeave';
+	
+	
+
+	var url;
+	url="./hrms.htm";
+	document.DCPSForwardedFormsList.action= url;
+	document.DCPSForwardedFormsList.submit();
+	showProgressbar("Please wait<br>While Your Request is in Progress ...");
+
+}
+
+
+</script>
+
+
+<fmt:setBundle basename="resources.dcps.dcpsLabels" var="dcpsLables"
+	scope="request" />
+
+
+
+<body onload="chckType();">
+<hdiits:form name="DCPSForwardedFormsList" id="DCPSForwardedFormsList"
+	encType="multipart/form-data" validate="true" method="post">
+	
+	<fieldset class="tabstyle"><legend> <b>Filter Institute</b> </legend>
+<table align="center">
+<tr>
+<td><c:out value="Taluka"></c:out></td>
+
+<td><select name="cmbTaluka"
+			id="cmbTaluka" style="width: 85%,display: inline;">
+			<option title="Select" value="-1"><c:out value="Select"></c:out></option>
+
+			<c:forEach var="talukaList" items="${talukaList}">
+			<c:choose> 
+			<c:when test="${talukaId==talukaList[0]}">
+							<option value="${talukaList[0]}" title="${talukaList[1]}" selected="selected">
+						<c:out value="${talukaList[1]}"/></option>
+			</c:when>
+			<c:otherwise>
+						<option value="<c:out value="${talukaList[0]}"/>" title="${talukaList[1]}">
+						<c:out value="${talukaList[1]}"/></option>
+						</c:otherwise>
+						</c:choose>
+					</c:forEach>	
+		</select></td>
+<td colspan="4" align="center"><input id="btnFilter" class="buttontag" type="button" size="5" maxlength="5"
+		value="Filter" onclick="filterInstitute();"
+		name="btnFilter" style="width: 120px;" /></td>
+</tr>
+</table>
+</fieldset>
+
+
+		<table width="100%" align="center">
+		<tr>
+			<td colspan="4">
+				<font style="color: green;" ><i>Note 1: Please select the type of vacation before entering Leave details.</i></font>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="4">
+				<font style="color: green;" ><i>Note 2: You can enter Summer/Rainy vactaion leave details of current year only.</i></font>
+			</td>
+		</tr>
+		
+		<tr>
+			<td colspan="4">
+				<font style="color: green;" ><i>Note 3: Please check the School and put the common from date and to date in below field. Same from date and to date will be copied in all the selected school.</i></font>
+			</td>
+		</tr>
+		
+		
+		
+		
+		
+		<tr align="center">					
+		<td align="right" colspan="">From Date</td>
+			<td  align="left"><input type="text"
+			name="txtFromDate" id="txtFromDate" maxlength="10" 
+			onkeypress="digitFormat(this);dateFormat(this);" onblur="validateThedate(this,1);" value=""
+			/>
+			<img
+			src='images/CalendarImages/ico-calendar.gif' width='20'
+			onClick='window_open("txtFromDate",375,570)'
+			style="cursor: pointer;" ${varImageDisabled} /><label class="mandatoryindicator" ${varLabelDisabled}> *</label></td>
+			
+			<td  align="right">To Date</td>
+				<td align="left"><input type="text"
+			name="txtTodate" id="txtTodate" maxlength="10" 
+			onkeypress="digitFormat(this);dateFormat(this);" onblur="validateThedate(this,2); compareDate(document.getElementById('txtFromDate'),this,'To date can not be less than from date.','>')"
+			/><img
+			src='images/CalendarImages/ico-calendar.gif' width='20'
+			onClick='window_open("txtTodate",375,570)'
+			style="cursor: pointer;" ${varImageDisabled} /><label class="mandatoryindicator" ${varLabelDisabled}> *</label></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center" colspan="4"><input id="btnMap" class="buttontag" type="button" size="5" maxlength="5"
+		value="Bulk Mapping" onclick="massMapping();"
+		name="btnMap" style="width: 180px;" /></td>
+			</tr>
+			
+			<tr>
+		<td colspan="2" align="right"><b>Type Of Leave:</b></td>
+		<td colspan="2" align="left">
+			<select name="cmbLeaveType" id="cmbLeaveType" onchange="displayOfficeList();">
+			<option value="-1">----Select----</option>
+			<option value="Summer">Summer</option>
+			<option value="Rainy">Rainy</option>
+			</select>
+		</td>
+		</tr>
+			
+		</table>
+	
+	<div align="center">
+	
+	
+	
+	<div class="scrollablediv" id="vacationDiv"  style="display: none">
+	
+	<fieldset class="tabstyle"><legend> <b><fmt:message
+		key="CMN.ALLDDODETAILS" bundle="${dcpsLables}"></fmt:message></b> </legend> <br />
+	<c:set var="hdnCounter" value="0" />
+	<div class="scrollablediv">
+	<display:table list="${officeList}" id="vo" requestURI=""	export="" pagesize="50000">
+
+		<display:setProperty name="paging.banner.placement" value="bottom" />
+
+		<display:column titleKey="CMN.CHKBXEMPSELECT"
+			title="<input name='chkSelect'  type='checkbox' onclick='checkUncheckAll(this)'/>"
+			headerClass="datatableheader" style="text-align:center;width:5%"
+			class="oddcentre" sortable="true">
+			<input type="checkbox" align="left" name="checkbox"
+				id="checkbox${vo_rowNum}" value="${vo[0]}" />
+				<input type="hidden" id="locId${vo_rowNum}" value="${vo[0]}"/>
+				<c:set var="hdnCounter" value="${hdnCounter+1 }"/>
+		</display:column>
+
+		<fmt:formatDate dateStyle="full" pattern="dd/MM/yyyy" value="${vo[3]}"
+			var="fromDate" />
+
+		<fmt:formatDate dateStyle="full" pattern="dd/MM/yyyy" value="${vo[4]}"
+			var="toDate" />
+
+		<display:column headerClass="datatableheader"
+			style="text-align:center;width:10%" class="oddcentre" sortable="true"
+			titleKey="CMN.DDOCODE">
+			<c:out value="${vo[2]}"></c:out>
+		</display:column>
+
+		<display:column headerClass="datatableheader"
+			style="text-align:center;width:30%" class="oddcentre" sortable="true"
+			titleKey="CMN.DDOOFFICE">
+			<c:out value="${vo[1]}"></c:out>
+		</display:column>
+
+
+
+		<display:column headerClass="datatableheader"
+			style="text-align:center;width:18%" class="oddcentre" sortable="true"
+			titleKey="CMN.LEAVEFROMDATE">
+			<input type="text" id="frmdt${vo_rowNum}" onkeypress="digitFormat(this);dateFormat(this);" onblur="validateFromDate('${vo_rowNum}'); " maxlength=10 value="${fromDate}" />
+			<img
+			src='images/CalendarImages/ico-calendar.gif' width='20'
+			onClick='window_open("frmdt${vo_rowNum}",375,570)'
+			style="cursor: pointer;" ${varImageDisabled} />
+	<label class="mandatoryindicator"${varLabelDisabled} >*</label>
+		</display:column>
+
+		<display:column headerClass="datatableheader"
+			style="text-align:center;width:18%" class="oddcentre" sortable="true"
+			titleKey="CMN.LEAVETODATE">
+			<input type="text" id="todt${vo_rowNum}" onkeypress="digitFormat(this);dateFormat(this);" onblur="validateToDate('${vo_rowNum}');compareDateField('${vo_rowNum}','To date can not be less than from date.','>');"  maxlength=10 value="${toDate}" />
+			<img
+			src='images/CalendarImages/ico-calendar.gif' width='20'
+			onClick='window_open("todt${vo_rowNum}",375,570)'
+			style="cursor: pointer;" ${varImageDisabled} />
+			<label class="mandatoryindicator"${varLabelDisabled} >*</label>
+		</display:column>
+	</display:table></div>
+	</fieldset>
+	
+	<div align="center"><hdiits:button name="btnUpdate" style="width: 15%"
+		id="btnUpdate" type="button" captionid="BTN.UPDATEDEATILS"
+		bundle="${dcpsLables}" onclick="updateDetails();" /></div>
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<input type="hidden" id="hdnCounter" name="hdnCounter"
+		value="${ hdnCounter}" /></div>
+	
+	<input type="hidden" name="currYear" id="currYear" value="${currYear}"/>
+
+	<input type="hidden" name="locIds" id="locIds" />
+	<input type="hidden" name="frmdts" id="frmdts" />
+	<input type="hidden" name="todts" id="todts" />
+	<input type="hidden" name="flag" id="flag" />
+	<input type="hidden" name="taluka" id="taluka" />
+	<input type="hidden" name="hdnLeaveType" id="hdnLeaveType">
+	<input type="hidden" name="actionFlag" id="actionFlag">
+</hdiits:form>
+<script>
+//alert('${sanctionLeaveType}');
+var displayType='${sanctionLeaveType}';
+if(displayType=='Summer'){
+	document.getElementById("cmbLeaveType").value="Summer";
+	
+	//alert('I am in sumer.');
+	document.getElementById("vacationDiv").style.display='';	
+}
+else if(displayType=='Rainy'){
+	document.getElementById("cmbLeaveType").value="Rainy";
+
+	
+	//alert('I am in rainy.');
+	document.getElementById("vacationDiv").style.display='';	
+}
+else {
+	//alert('I am out.');
+}
+</script>
+</body>

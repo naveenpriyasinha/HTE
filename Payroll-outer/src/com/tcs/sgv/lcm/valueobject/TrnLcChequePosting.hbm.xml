@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 21, 2007 4:36:48 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.lcm.valueobject.TrnLcChequePosting" table="TRN_LC_CHEQUE_POSTING"  >
+        <id name="lcChqId" type="big_decimal">
+            <column name="LC_CHQ_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="lcExpId" type="big_decimal">
+            <column name="LC_EXP_ID" precision="20" scale="0" />
+        </property>
+        <property name="chequeNo" type="big_decimal">
+            <column name="CHEQUE_NO" precision="20" scale="0" />
+        </property>
+        <property name="chequeDt" type="date">
+            <column name="CHEQUE_DT" length="7" />
+        </property>
+        <property name="chequeAmt" type="big_decimal">
+            <column name="CHEQUE_AMT" precision="20" />
+        </property>
+        <property name="partyName" type="string">
+            <column name="PARTY_NAME" length="50" />
+        </property>
+        <property name="chqClrDt" type="date">
+            <column name="CHQ_CLR_DT" length="7" />
+        </property>
+        <property name="lcAccNo" type="big_decimal">
+            <column name="LC_ACC_NO" precision="20" scale="0" />
+        </property>
+        <property name="chqCancelDt" type="date">
+            <column name="CHQ_CANCEL_DT" length="7" />
+        </property>
+        <property name="chqCancelReason" type="string">
+            <column name="CHQ_CANCEL_REASON" length="200" />
+        </property>
+        <property name="ltstCntr" type="java.lang.Byte">
+            <column name="LTST_CNTR" precision="2" scale="0" />
+        </property>
+        <property name="active" type="java.lang.Character">
+            <column name="ACTIVE" length="1" />
+        </property>
+        <property name="finYearId" type="java.lang.Long">
+            <column name="FIN_YEAR_ID" precision="12" scale="0" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="locCode" type="string">
+            <column name="LOC_CODE" length="15" />
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

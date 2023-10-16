@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sun-web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Application Server 9.0 Servlet 2.5//EN" "http://www.sun.com/software/appserver/dtds/sun-web-app_2_5-0.dtd">
+<sun-web-app>
+  <context-root>IFMS</context-root>
+  <session-config>
+    <session-manager persistence-type="replicated">
+      <manager-properties>
+        <property name="relaxCacheVersionSemantics" value="true"/>
+      </manager-properties>
+    </session-manager>
+    <session-properties/>
+    <cookie-properties/>
+  </session-config>
+</sun-web-app>

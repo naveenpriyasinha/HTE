@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2007 12:05:14 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisBranchMst" table="hr_eis_branch_mst">
+        <comment></comment>
+        <id name="branchId" type="long">
+            <column name="BRANCH_ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrEisBankMst" class="com.tcs.sgv.eis.valueobject.HrEisBankMst" fetch="select">
+            <column name="BRANCH_BANK_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+         <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+        <property name="branchName" type="string">
+            <column name="BRANCH_NAME" length="200" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="40" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchAddr" type="string">
+            <column name="BRANCH_ADDR" length="400" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchVlgeId" type="long">
+            <column name="BRANCH_VLGE_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchTalId" type="long">
+            <column name="BRANCH_TAL_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchDistId" type="long">
+            <column name="BRANCH_DIST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchStateId" type="long">
+            <column name="BRANCH_STATE_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchCntryId" type="long">
+            <column name="BRANCH_CNTRY_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+        
+        
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <set name="hrEisBankDtlses" inverse="true">
+            <key>
+                <column name="BANK_BRANCH_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.tcs.sgv.eis.valueobject.HrEisBankDtls" />
+        </set>              
+        
+        <property name="branchTypeCode" type="long">
+            <column name="branch_type_code">
+                <comment></comment>
+            </column>
+        </property>
+
+        <property name="micrCode" type="string">
+            <column name="micr_code" length="50" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="ifscCode" type="string">
+            <column name="IFSC_CODE" length="50" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+               
+    </class>
+</hibernate-mapping>

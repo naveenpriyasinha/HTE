@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 1, 2008 10:35:40 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pension.valueobject.TrnPensionRqstHdr" table="TRN_PENSION_RQST_HDR">
+        <id name="pensionRequestId" type="long">
+            <column name="PENSION_REQUEST_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" />
+        </property>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" not-null="true" />
+        </property>
+        <property name="ppoDate" type="date">
+            <column name="PPO_DATE" length="7" />
+        </property>
+        <property name="ppoInwardDate" type="date">
+            <column name="PPO_INWARD_DATE" length="7" />
+        </property>
+        <property name="inwardMode" type="string">
+            <column name="INWARD_MODE" length="30" />
+        </property>
+        <property name="pensionType" type="string">
+            <column name="PENSION_TYPE" length="30" />
+        </property>
+        <property name="schemeType" type="string">
+            <column name="SCHEME_TYPE" length="30" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="30" />
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK" length="100" />
+        </property>
+        <property name="headCode" type="big_decimal">
+            <column name="HEAD_CODE" precision="20" scale="0" />
+        </property>
+        <property name="commensionDate" type="date">
+            <column name="COMMENSION_DATE" length="7" />
+        </property>
+        <property name="cvpOrderNo" type="string">
+            <column name="CVP_ORDER_NO" length="35" />
+        </property>
+        <property name="cvpAmount" type="big_decimal">
+            <column name="CVP_AMOUNT" precision="12" />
+        </property>
+        <property name="cvpDate" type="date">
+            <column name="CVP_DATE" length="7" />
+        </property>
+        <property name="dcrgOrderNo" type="string">
+            <column name="DCRG_ORDER_NO" length="35" />
+        </property>
+        <property name="dcrgAmount" type="big_decimal">
+            <column name="DCRG_AMOUNT" precision="12" />
+        </property>
+        <property name="dcrgDate" type="date">
+            <column name="DCRG_DATE" length="7" />
+        </property>
+        <property name="paidDate" type="date">
+            <column name="PAID_DATE" length="7" />
+        </property>
+        <property name="pensionableAmount" type="big_decimal">
+            <column name="PENSIONABLE_AMOUNT" precision="12" />
+        </property>
+        <property name="dppfAmount" type="big_decimal">
+            <column name="DPPF_AMOUNT" precision="12" />
+        </property>
+        <property name="basicPensionAmount" type="big_decimal">
+            <column name="BASIC_PENSION_AMOUNT" precision="10" />
+        </property>
+        <property name="dpPercent" type="big_decimal">
+            <column name="DP_PERCENT" precision="5" />
+        </property>
+        <property name="tiPercent" type="big_decimal">
+            <column name="TI_PERCENT" precision="5" />
+        </property>
+        <property name="cvpMonthlyAmount" type="big_decimal">
+            <column name="CVP_MONTHLY_AMOUNT" precision="8" />
+        </property>
+        <property name="medicalAllowenceAmount" type="big_decimal">
+            <column name="MEDICAL_ALLOWENCE_AMOUNT" precision="6" />
+        </property>
+        <property name="fp1Date" type="date">
+            <column name="FP1_DATE" length="7" />
+        </property>
+        <property name="fp1Amount" type="big_decimal">
+            <column name="FP1_AMOUNT" precision="10" />
+        </property>
+        <property name="fp2Date" type="date">
+            <column name="FP2_DATE" length="7" />
+        </property>
+        <property name="fp2Amount" type="big_decimal">
+            <column name="FP2_AMOUNT" precision="10" />
+        </property>
+        <property name="typeFlag" type="string">
+            <column name="TYPE_FLAG" length="1" />
+        </property>
+        <property name="cvpRestorationDate" type="date">
+            <column name="CVP_RESTORATION_DATE" length="7" />
+        </property>
+        <property name="approveStatus" type="string">
+            <column name="APPROVE_STATUS" length="10" />
+        </property>
+        <property name="caseStatus" type="string">
+            <column name="CASE_STATUS" length="10" />
+        </property>
+        <property name="totalRecovery" type="big_decimal">
+            <column name="TOTAL_RECOVERY" precision="12" />
+        </property>
+        <property name="pendingRecovery" type="big_decimal">
+            <column name="PENDING_RECOVERY" precision="12" />
+        </property>
+        <property name="trnCounter" type="integer">
+            <column name="TRN_COUNTER" precision="11" scale="0" />
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="caseOwner" type="big_decimal">
+            <column name="CASE_OWNER" precision="20" scale="0" />
+        </property>
+        <property name="auditorFlag" type="string">
+            <column name="AUDITOR_FLAG" length="1" />
+        </property>
+        <property name="totalSrvc" type="string">
+            <column name="TOTAL_SRVC" length="10" />
+        </property>
+        <property name="dcrgPaidFlag" type="string">
+            <column name="DCRG_PAID_FLAG" length="2" />
+        </property>
+        <property name="cvpPaidFlag" type="string">
+            <column name="CVP_PAID_FLAG" length="2" />
+        </property>
+        <property name="deptOrdNo" type="string">
+            <column name="DEPT_ORD_NO" length="15" />
+        </property>
+        <property name="orgBf11156" type="big_decimal">
+            <column name="ORG_BF_1_11_56" precision="10" />
+        </property>
+        <property name="redBf11156" type="big_decimal">
+            <column name="RED_BF_1_11_56" precision="10" />
+        </property>
+        <property name="orgAf11156" type="big_decimal">
+            <column name="ORG_AF_1_11_56" precision="10" />
+        </property>
+        <property name="redAf11156" type="big_decimal">
+            <column name="RED_AF_1_11_56" precision="10" />
+        </property>
+        <property name="orgAf10560" type="big_decimal">
+            <column name="ORG_AF_1_05_60" precision="10" />
+        </property>
+        <property name="redAf10560" type="big_decimal">
+            <column name="RED_AF_1_05_60" precision="10" />
+        </property>
+        <property name="authority" type="string">
+            <column name="AUTHORITY" length="50" />
+        </property>
+        <property name="sanctionLetterNo" type="string">
+            <column name="SANCTION_LETTER_NO" length="50" />
+        </property>
+        <property name="personalPension" type="big_decimal">
+            <column name="PERSONAL_PENSION" precision="10" />
+        </property>
+        <property name="ir" type="big_decimal">
+            <column name="IR" precision="10" />
+        </property>
+        <property name="closedDate" type="date">
+            <column name="CLOSED_DATE" length="7" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="specialCase" type="string">
+            <column name="SPECIAL_CASE" length="1" />
+        </property>
+        <property name="secondPpoNo" type="string">
+            <column name="SECOND_PPO_NO" length="50" />
+        </property>
+        
+        <property name="form22Issued" type="string">
+            <column name="FORM22_ISSUED" length="1" />
+        </property>
+        <property name="form22IssuedAuth" type="string">
+            <column name="FORM22_ISSUED_AUTH" length="50" />
+        </property>
+        
+        <property name="lpcIssued" type="string">
+            <column name="LPC_ISSUED" length="1" />
+        </property>
+        <property name="lpcIssuedAuth" type="string">
+            <column name="LPC_ISSUED_AUTH" length="50" />
+        </property>
+        <property name="lpcIssuedDate" type="date">
+			<column name="LPC_ISSUED_DATE" length="7" />
+        </property>
+     	<property name="form22IssuedDate" type="date">
+			<column name="FORM22_ISSUED_DATE" length="7" />
+		</property>
+		<property name="daPercent" type="big_decimal">
+			<column name="DA_PERCENT" length="10" />
+		</property>
+		<property name="caseRegisterNo" type="string">
+			<column name="CASE_REGISTER_NO" length="20" />
+		</property>
+		<property name="currCaseStatus" type="integer">
+			<column name="CURR_CASE_STATUS" length="10" />
+		</property>
+		<property name="isRop" type="string">
+			<column name="IS_ROP" length="5" />
+		</property>
+		<property name="calcType" type="string">
+			<column name="CALC_TYPE" length="5" />
+		</property>
+		<property name="caseRegDate" type="date">
+			<column name="CASE_REGDATE" length="7" />
+		</property>
+    </class>
+</hibernate-mapping>

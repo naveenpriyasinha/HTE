@@ -1,0 +1,173 @@
+/*this is the css for the vertical version*/
+.spvertical ul {
+	list-style-type: none;
+	padding: 0px;
+	border: 1px solid;
+	margin-left: 0px;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px; 
+	width: 171px;
+}
+
+.spvertical li a {
+	display: block;
+	text-decoration: none;
+	height: auto;
+	padding: .2em 2px;
+	border: 1px solid;
+	width: 165px;
+}
+
+.spvertical li {
+	/*Needed for IE. Don't ask me why, It was a lucky guess.*/
+	display: inline;
+	
+}
+
+.spvertical li ul {
+	position: absolute;
+	margin-top: -1.8em;
+	margin-left: 170px;
+	width: 171px;
+}
+
+/*This section makes the menu not work in non-javascript enabled browsers by not showing the menu by default-This can be worked around by making top level links point to a sitemap*/
+	/*Not sure if I recommend this or not*/
+.inaccesible li ul {
+	display: none;
+}
+
+/*Arrow code - looks like <a class="haschild" href="#">Text <span>Arrow</span></a> can be turned on/off with arrow class*/
+.arrow a span {
+	padding-left: 1em;
+	font-size: 85%;
+	width: 100%;
+}
+
+.arrow a:hover span {
+	padding-left: 1em;
+}
+
+.arrow a span.noshow {
+	visibility: hidden;
+}
+
+/*Plus code*/
+.plus a span {
+	padding-left: .5em;
+}
+
+/* For ftsearch */
+
+#ftSearchTbl .spvertical ul {
+	list-style-type: none;
+	padding: 0px 0px 0px 0px;
+	border-top: 1px solid;
+	width: 100%;
+	margin:0px 0px 0px 0px;
+}
+
+#ftSearchTbl .spvertical li a {
+	display: block;
+	width: 100px;
+	text-decoration: none;
+	height: auto;
+	padding: 2px 2px;
+	border-top: 0px;
+}
+
+#ftSearchTbl li a:hover {
+	display: block;
+	width: 100px;
+	text-decoration: none;
+	height: auto;
+	padding: 2px 2px;
+	border: 1px solid black;
+	border-top: 0px;
+}
+
+a.ftSearchOpt:link
+{
+	color: black;
+	text-decoration: none
+}
+
+a.ftSearchOpt:hover
+{
+	background: #999999;
+	color: black;
+	text-decoration: none			
+}
+
+/* End of ftsearch related css */
+
+/*this is the css for the horizontal version*/
+.sphorizontal ul {
+	/*background: #ffffff;*/
+/*	border: 1px solid #6688aa;*/
+	list-style-type: none;
+	display: block;
+	height: auto;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.sphorizontal li {
+	float: right;
+	display: inline;
+}
+
+.extrahorizontal li {
+	float: left;
+}
+
+.sphorizontal ul li ul li{
+	width: 100%;
+}
+
+.sphorizontal li a {
+	text-decoration: none;
+	height: auto;
+	float: right;
+	display: block;
+	padding: 3px 2px;
+	width: 95px;
+	/*border-right : none;
+	border-left: 1px solid #1e1e1e;	*/
+	white-space: nowrap;
+}
+
+.extrahorizontal li a {
+	float: left;
+	width: 150px;
+}
+
+.sphorizontal li li a {
+	/*border-top: none;*/
+	white-space: normal;
+}
+
+.sphorizontal li ul {
+	position: absolute;
+	margin : 27px 0px 0px -50px;
+	width: 150px;
+	padding : 0px 0px 0px 0px;
+	display: block;
+	/*height: auto;
+	border: 1px solid #232323;*/
+	background: #343434;
+}
+
+.sphorizontal li li ul {
+	position: absolute;
+	margin-top: 2px;
+	margin-left: 156px;
+}
+
+.sphorizontal li ul li a {
+	width: 100%;
+	border-bottom: 1px solid #373575;
+	border-left: 1px solid #373575;
+	border-right: 1px solid #373575;
+	border-top: 1px solid #aeafdd;
+}

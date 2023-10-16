@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 10, 2007 2:13:09 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pdpla.valueobject.MstPdChqInventory" table="MST_PD_CHQ_INVENTORY"  >
+        <id name="invChqId" type="long">
+            <column name="INV_CHQ_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="accountNo" type="string">
+            <column name="ACCOUNT_NO" length="20" not-null="true" />
+        </property>
+        <property name="issueDate" type="date">
+            <column name="ISSUE_DATE" length="7" not-null="true" />
+        </property>
+        <property name="startNo" type="int">
+            <column name="START_NO" precision="6" scale="0" not-null="true" />
+        </property>
+        <property name="endNo" type="int">
+            <column name="END_NO" precision="6" scale="0" not-null="true" />
+        </property>
+        <property name="noOfChq" type="short">
+            <column name="NO_OF_CHQ" precision="4" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

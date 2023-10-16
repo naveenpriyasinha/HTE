@@ -1,0 +1,65 @@
+BUNDLE_BASE_NAME=resources/ess/noc/FVISIT
+#ForeignVisitReport
+FVISIT.SelForeignTrip Select Foreign Trip
+
+FVISIT.VisitReportHeader Foreign Visit Report 
+FVISIT.SecVisitDetails Foreign Visit Related Details
+FVISIT.SecTripDetails Journey Details
+FVISIT.StartDate Start Date
+FVISIT.EndDate End Date
+FVISIT.Duration Duration
+FVISIT.NocPurposeVisit Purpose of visit
+FVISIT.FromPlace From Place
+FVISIT.ToPlace To Place
+FVISIT.TicketAttachment Attachment
+FVISIT.Agency Agency
+FVISIT.NewAgent Agent Details
+FVISIT.AgencyName Agency Name
+FVISIT.AgentName Agent Name
+FVISIT.AgentDetails Agent Details
+FVISIT.SecExpenditureDetails Details of Expenditure
+FVISIT.HowBearExpense Expenses borne by
+FVISIT.SecBearerDetails Details of Expenditure Bearer
+FVISIT.Payment Payment Details
+FVISIT.Mode Mode of payment
+FVISIT.Cash Cash
+FVISIT.Cheque Cheque
+FVISIT.Bank Bank Name
+FVISIT.Acct Account Number
+FVISIT.ChequeNo Cheque Number
+FVISIT.Detail Details
+FVISIT.Amount Amount (INR)
+FVISIT.Category Category
+FVISIT.Food Food
+FVISIT.Stay Stay
+FVISIT.Miscellaneous Miscellaneous 
+FVISIT.Total Total
+FVISIT.Add Add
+FVISIT.Reset Reset
+FVISIT.Update Update
+FVISIT.AddJourney Add Journey
+FVISIT.ResetJourney Reset Journey
+FVISIT.UpdateJourney Update Journey
+FVISIT.Type Type of Bearer
+FVISIT.JStartDate Journey Start Date
+FVISIT.JEndDate Journey End Date
+FVISIT.ExpOccured Expense Occured (INR)
+FVISIT.AddNew Add New
+FVISIT.Close Close
+FVISIT.Submit Submit
+FVISIT.SaveNewAgent Add Agent Details
+
+FVISIT.Dropdown.Select --Select--
+
+#Fvisit Report Submit Pg
+FVISIT.SubmitFvisitReportMsg Your foreign visit report has been submitted as Request No.
+FVISIT.FvisitReportApprovalMsg Foreign visit report with request no.
+
+FVISIT.TripStart Trip Start Date
+FVISIT.TripEnd Trip End Date
+FVISIT.JourneyStart Journey Start Date
+FVISIT.JourneyEnd Journey End Date
+
+# visitReport.jsp added on 30th May
+FVISIT.LeaveDetail Leave Details
+FVISIT.LeaveType Type of Leave

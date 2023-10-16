@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2008 7:42:30 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrLoanRecoveryChallan" table="HR_LOAN_RECOVERY_CHALLAN">
+        <comment></comment>
+
+        <id name="id" type="long">
+            <column name="SEQ_NO" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+
+		<many-to-one name="hrLoanEmpIntRecoverDtls" class="com.tcs.sgv.eis.valueobject.HrLoanEmpIntRecoverDtls" fetch="select">
+            <column name="INT_RECOVERY">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        	<many-to-one name="hrLoanEmpPrinRecoverDtls" class="com.tcs.sgv.eis.valueobject.HrLoanEmpPrinRecoverDtls" fetch="select">
+            <column name="PRI_RECOVERY">
+                <comment></comment>
+            </column>
+        </many-to-one>
+       
+         <property name="challanNo" type="string">
+            <column name="CHALLAN_NO" precision="10" scale="0" />
+        </property>
+		
+		<property name="challanDate" type="date">
+            <column name="CHALLAN_DATE" length="7"/>
+        </property>
+		
+		<property name="recoveryOrderNo" type="string">
+            <column name="REC_ORDER_NO" precision="10" scale="0" />
+        </property>
+		<property name="recoveryOrderDate" type="date">
+            <column name="REC_ORDER_DATE" length="7" />
+        </property>
+        <property name="amountPaid" type="long">
+            <column name="AMOUNT_PAID" length="7" />
+        </property>
+        
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 18, 2008 6:25:28 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.vacancy.valueobject.HrEisVacancyAdminMst" table="hr_eis_vacancy_admin_mst">
+        <comment></comment>
+        <id name="srno" type="long">
+            <column name="srno" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_Id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_Id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+		<many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>        
+        <property name="locCode" type="string">
+            <column name="loc_code" length="70">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dsgnCode" type="string">
+            <column name="dsgn_code" length="70">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="branchCode" type="string">
+            <column name="branch_code" length="70">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="sanctionedStrength" type="java.lang.Long">
+            <column name="sanctioned_strength">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

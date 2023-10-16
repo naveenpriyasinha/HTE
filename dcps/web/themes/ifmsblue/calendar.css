@@ -1,0 +1,199 @@
+#legendTable{
+	border: solid 0px #ccc;
+	width: 100%;
+	}
+
+.LegendGenHldy {
+	background-color: #ffbbbb;
+	border: solid 1px #dda0a9;
+	padding: 1px;
+}
+
+.LegendOptHldy {
+	background-color: #bbffff;
+	border: solid 1px #a6c1dd;
+	padding: 1px;
+}
+
+.LegendSatHldy {
+	background-color: #ffbbff;
+	border: solid 1px #aaaaaa;
+	padding: 1px;
+}
+
+#calendar {
+	position: relative;
+	border: solid 3px #666666;
+}
+
+#calendarTollbar {
+	margin: 0;
+	padding: 0;
+	border: solid 1px #a0a0a0;
+	font-family: arial;
+	font-size: 11px;
+	background: white;
+}
+
+#toolbarTR {
+	background: #0000aa;
+}
+
+#toolbarTD {
+	padding: 2px;
+	font-family: arial;
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+	background: #0000aa;
+}
+
+#contentTD {
+	padding: 0px;
+	background: white;
+}
+
+#todayTR {
+	background: #f0f0f0;
+}
+
+#todayTD {
+	padding: 2px;
+	text-align: center;
+	border-bottom: solid 1px #d0d0d0;
+}
+
+#lblToday {
+	font-family: arial;
+	font-size: 11px;
+}
+
+#legendTR {
+	background: #f0f0f0;
+}
+
+#legendTD {
+	padding: 2px;
+	text-align: center;
+}
+
+#selectMonth {
+	position: absolute;
+	visibility: hidden;
+}
+
+#selectYear {
+	position: absolute;
+	visibility: hidden;
+}
+
+#lblToday a {
+	text-decoration: none;
+	color: black;
+	background: #f0f0f0;
+	padding: 1px;
+}
+
+#lblToday a:hover {
+	border: solid 1px #bcbcbc;
+	padding: 1px;
+}
+
+#calendarTable {
+	width: 100%;
+	border-left: solid 1 #cdcdcd;
+	border-top: solid 1 #cdcdcd;
+	border-bottom: solid 1 #ffffff;
+	font-family: verdana;
+	font-size: 10px;
+	background: #9a9a9a;
+}
+
+#calendarTable th {
+	background: #dedede;
+	border-right: solid 1px #cccccc;
+	border-bottom: solid 1px #9a9a9a;
+}
+
+#calendarTable td {
+	text-align: right;
+	border: solid 0px #dedede;
+	background: #ffffff;;
+	border-right: solid 1px #eeeeee;
+	border-bottom: solid 1px #eeeeee;
+}
+
+#calendarTable td.weekNumber {
+	text-align: right;
+	background: #eeeebb;
+	border-right: solid 1px #cccccc;
+	border-bottom: solid 1px #dddddd;
+}
+
+#calendarTable td.weekHeader {
+	text-align: right;
+	background: #cccc99;
+	font-weight: bold;
+	border-right: solid 1px #aaaa77;
+	border-bottom: solid 1px #999966;
+}
+
+#calendarTable td a {
+	text-decoration: none;
+	color: black;
+	width: 100%;
+	padding: 1px;
+	border: solid 0px #898989;
+}
+
+#calendarTable td.extraCells {
+	padding: 1px;
+	background-color: #dddddd;
+}
+
+#calendarTable td a:hover {
+	padding: 0px;
+	border: solid 1px #565656;
+	color: blue;
+	background-color: #ffddbb;
+}
+
+#calendarTable td a.todaysDate {
+	padding: 0px;
+	border: solid 1px #aa1122;
+	font-weight: bold;
+	color: red;
+	background: #4477ff;
+}
+
+#calendarTable td a.todaysDate:hover {
+	padding: 0px;
+	border: solid 1px #aa1122;
+	font-weight: bold;
+	background: #5588ff;
+	color: red;
+}
+
+#calendarTable td a.sunday {
+	color: #808080;
+	background: #f0f0f0;
+	width: 100%;
+}
+
+#calendarTable td a.sunday:hover {
+	padding: 0px;
+	border: solid 1px #ccaa88;
+	color: black;
+	background-color: #ffddbb;
+}
+
+#calendarTable td a.normalDay {
+	color: black;
+	width: 100%;
+}
+
+#innerLegendTR {
+	font-family: Verdana;
+	font-size: 6pt;
+	font-weight: bold;
+}

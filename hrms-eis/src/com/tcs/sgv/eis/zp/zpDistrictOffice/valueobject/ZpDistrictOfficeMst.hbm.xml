@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 23, 2012 4:42:54 PM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.zp.zpDistrictOffice.valueobject.ZpDistrictOfficeMst" table="ZP_ADMIN_OFFICE_DISTRICT_MPG">
+        <id name="distId" type="long">
+            <column name="DIST_ID" precision="10" scale="0" />
+
+            <generator class="assigned" />
+        </id>
+        
+        <property name="ofcId" type="long">
+            <column name="OFC_ID" length="10" />
+        </property>
+        
+        <property name="distCode" type="string">
+            <column name="DIST_CODE" length="10" />
+        </property>
+        
+         <property name="adminOfficeCode" type="string">
+            <column name="ADMIN_OFFICE_CODE" length="10" />
+        </property>
+        
+
+        <property name="distMstOfficeName" type="string">
+            <column name="DIST_MST_OFC_NAME" precision="150" />
+        </property>
+
+        <property name="langId" type="java.lang.Long">
+            <column name="LANG_ID" precision="10" scale="0" />
+        </property>
+
+        <property name="createdBy" type="java.lang.Long">
+            <column name="CREATED_BY" precision="10" scale="0" />
+        </property>
+
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="20" />
+        </property>
+
+        <property name="updatedBy" type="java.lang.Long">
+            <column name="UPDATED_BY" precision="10" scale="0" />
+        </property>
+
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="20" />
+        </property>
+
+        <property name="createdByPost" type="java.lang.Long">
+            <column name="CREATED_BY_POST" precision="10" scale="0" />
+        </property>
+
+        <property name="updatedByPost" type="java.lang.Long">
+            <column name="UPDATED_BY_POST" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
+

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.tcs.sgv.eis.valueobject.HrForm16Dtls" table="HR_FORM16_DTLS">
+  		<id name="form16DtlId" type="long">
+            <column name="FORM16_DTL_ID"  />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID" />
+        </many-to-one>
+       
+         <property name="finYrId" type="string">
+            <column name="FIN_YR_ID" />
+        </property>
+        
+        <property name="otherAllow" type="double">
+            <column name="OTHER_ALLOW"  precision="10"/>
+        </property>
+        <property name="foreignAllow" type="double">
+            <column name="FOREIGN_ALLOW" precision="10"/>
+        </property>
+        <property name="challanTax" type="double">
+            <column name="CHALLAN_TAX"  precision="10"/>
+        </property>
+        <property name="challanNumber" type="string">
+            <column name="CHALLANNUMBER" />
+        </property>
+        <property name="arrearTax" type="double">
+            <column name="ARREAR_TAX"  precision="10"/>
+        </property>
+        
+        <property name="travelAllow" type="double">
+            <column name="travel_allow"  precision="10"/>
+        </property>
+        <property name="profTax" type="double">
+            <column name="pro_tax" precision="10"/>
+        </property>
+        <property name="hbaIntrest" type="double">
+            <column name="HBA_interest"  precision="10"/>
+        </property>
+        <property name="gpfCpf" type="double">
+            <column name="GPF_CPF"  precision="10"/>
+        </property>
+        <property name="govtInsurance" type="double">
+            <column name="govt_insurance"  precision="10"/>
+        </property>
+        <property name="repayHba" type="double">
+            <column name="repay_HBA"  precision="10"/>
+        </property>
+        
+        <property name="hbaInterestClaimed" type="int">
+            <column name="HBA_INT_CLAIMED" />
+        </property>
+        <property name="hbaRepayClaimed" type="int">
+            <column name="hba_Repay_Claimed"  />
+        </property>
+        
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" />
+        </property>
+        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <many-to-one name="updatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="createdBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+        <!--<set name="set" inverse="true" cascade="save-update">
+            <key>
+                <column name="FORM16_DTL_ID">
+                    <comment></comment>
+                </column>
+            </key>
+            <one-to-many class="com.tcs.sgv.eis.valueobject.HrForm16TaxDeducDtls" />
+        </set>-->
+       
+       </class>
+</hibernate-mapping>

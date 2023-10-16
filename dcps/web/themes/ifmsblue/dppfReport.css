@@ -1,0 +1,46 @@
+.reportFont {
+	FONT-SIZE: 8pt;   
+    FONT-FAMILY: Arial;
+}
+.reportFont1 {
+	FONT-SIZE: 7pt;   
+    FONT-FAMILY: Arial;
+}
+.reportFont2 {
+	FONT-SIZE: 10pt;   
+	FONT-WEIGHT:BOLD;
+    FONT-FAMILY: Arial;
+    COLOR:BLUE;
+}
+.reportFont3 {
+	FONT-SIZE: 10pt;   
+	FONT-WEIGHT:BOLD;
+    FONT-FAMILY: Arial;
+    COLOR:RED;
+}
+.form10Font {
+	FONT-SIZE: 9pt;   
+    FONT-FAMILY: Arial;
+}
+.form10Font1 {
+	FONT-SIZE: 12pt;   
+	FONT-WEIGHT:BOLD;
+    FONT-FAMILY: Arial;
+    COLOR:BLUE;
+}
+.form52Font1 {
+	FONT-SIZE: 12pt;   
+    FONT-FAMILY: Arial;    
+}
+.form52Font2 {
+	FONT-SIZE: 10pt;   
+	FONT-FAMILY: Arial;    
+}
+.srFontPt8 {
+	FONT-SIZE: 8pt;   
+    FONT-FAMILY: Verdana;
+}
+.srFontPt7 {
+	FONT-SIZE: 7pt;   
+    FONT-FAMILY: Verdana;
+}

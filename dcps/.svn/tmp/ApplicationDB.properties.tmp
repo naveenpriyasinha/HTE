@@ -1,0 +1,152 @@
+#DB2 DB Created of Maha-IFMS at GNR 3rd Floor.
+#connectionUrl=jdbc:db2://172.17.92.116:33333/HTE:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+#connectionUrlSlave=jdbc:db2://172.17.92.116:33333/HTE:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+#driverClass=com.ibm.db2.jcc.DB2Driver
+#username=ifmsdev
+#password=ifms123
+#dialect=org.hibernate.dialect.DB2Dialect
+#DBTYPE=oracle
+ 
+#HTE LIVE DB
+#connectionUrl=jdbc:db2://10.187.201.236:50001/SALAARTH:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+#connectionUrlSlave=jdbc:db2://10.187.201.236:50001/SALAARTH:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+
+#HTE NEW Local DB 
+connectionUrl=jdbc:db2://3.6.98.156:55000/HTE:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+connectionUrlSlave=jdbc:db2://3.6.98.156:55000/HTE:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+driverClass=com.ibm.db2.jcc.DB2Driver
+username=ifms
+<<<<<<< .mine
+password=CMahait@4561
+#password=ifms@123 
+||||||| .r80
+=======
+#password=Sundaes@623
+password=ifms@123
+>>>>>>> .r89
+#7101002205  mumbaijd*0123
+dialect=org.hibernate.dialect.DB2Dialect
+#dialect=org.hibernate.dialect.DB2400Dialect
+DBTYPE=oracle
+
+#HTE local DB
+
+
+#driverClass=com.ibm.db2.jcc.DB2Driver
+#username=ifms
+#password=ifms1234
+#dialect=org.hibernate.dialect.DB2Dialect
+#DBTYPE=oracle
+
+
+
+
+#SOJ local DB
+#connectionUrl=jdbc:db2://172.17.88.112:33333/Soj_neww:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+#connectionUrlSlave=jdbc:db2://172.17.88.112:33333/Soj_neww:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+#driverClass=com.ibm.db2.jcc.DB2Driver
+#username=ifms
+#password=ifms123
+#dialect=org.hibernate.dialect.DB2Dialect
+#DBTYPE=oracle
+
+
+#RDD Local Db
+#connectionUrl=jdbc:db2://172.17.92.116:33333/RDD:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+#connectionUrlSlave=jdbc:db2://172.17.92.116:33333/RDD:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+#driverClass=com.ibm.db2.jcc.DB2Driver
+#username=ifms
+#password=ifms123
+#dialect=org.hibernate.dialect.DB2Dialect
+#DBTYPE=oracle
+
+
+#Shalarth Local Db
+#connectionUrl=jdbc:db2://172.17.88.112:33333/Shalarth:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+#connectionUrlSlave=jdbc:db2://172.17.88.112:33333/Shalarth:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2;
+#driverClass=com.ibm.db2.jcc.DB2Driver
+#username=ifms
+#password=ifms123
+#dialect=org.hibernate.dialect.DB2Dialect
+#DBTYPE=oracle
+
+#Feb 2012 DEV DB2
+#connectionUrl=jdbc:db2://172.17.88.112:33333/SOJ:currentSchema=IFMS;
+#connectionUrlSlave=jdbc:db2://172.17.88.112:33333/SOJ:currentSchema=IFMS;
+#driverClass=com.ibm.db2.jcc.DB2Driver
+#username=ifms
+#password=ifms123
+#dialect=org.hibernate.dialect.DB2Dialect
+#DBTYPE=oracle
+
+
+#maintenance
+#connectionUrl=jdbc:db2://172.26.129.81:50001/MNTN_DDO
+#connectionUrlSlave=jdbc:db2://172.26.129.81:50001/MNTN_DDO
+#driverClass=com.ibm.db2.jcc.DB2Driver
+#username=ifms_ddo
+#password=ifms123
+#dialect=org.hibernate.dialect.DB2Dialect
+#DBTYPE=oracle
+#Staging RW
+#DB2 MAHA-IFMS DEV STAGING
+#connectionUrl=jdbc:log4jdbc:db2://172.26.134.235:50001/IFMSMIGR
+#connectionUrlSlave=jdbc:log4jdbc:db2://172.26.134.235:50001/IFMSMIGR
+#driverClass=net.sf.log4jdbc.DriverSpy
+#username=ifms
+#password=ifmsstag
+#dialect=org.hibernate.dialect.DB2Dialect
+#DBTYPE=oracle
+
+#Maintanance Server 
+#connectionUrl=jdbc:log4jdbc:db2://172.26.129.81:50001/STAGING
+#connectionUrlSlave=jdbc:log4jdbc:db2://172.26.129.81:50001/STAGING
+#driverClass=net.sf.log4jdbc.DriverSpy
+#username=ifms
+#password=ifms@123
+#dialect=org.hibernate.dialect.DB2Dialect
+#DBTYPE=oracle
+
+#DEV DB2
+#connectionUrl=jdbc:db2://172.26.134.235:45825/stag_new:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2; 
+#connectionUrlSlave=jdbc:db2://172.26.134.235:45825/stag_new:currentSchema=IFMS;fullyMaterializeLobData=true;fullyMaterializeInputStreams=true;progressiveStreaming=2;progresssiveLocators=2; 
+#driverClass=com.ibm.db2.jcc.DB2Driver 
+#username=staging 
+#password=ENC(I6yxGUwhJHyyc0lpEI7WdSp4csk8C5+6) 
+#dialect=org.hibernate.dialect.DB2Dialect 
+#DBTYPE=oracle
+
+#connectionUrl=jdbc:db2://172.26.134.235:45825/STAG_NEW
+#connectionUrlSlave=jdbc:db2://172.26.134.235:45825/STAG_NEW
+#driverClass=com.ibm.db2.jcc.DB2Driver
+#username=ifmsstag
+#password=ifmsstag
+#dialect=org.hibernate.dialect.DB2Dialect
+#DBTYPE=oracle
+
+#For Application (Master)
+
+indexBaseDir=D\:/hdiits_index
+
+#MOVED FROM WFCONSTANTS.PROPERTY BY NIRAV BUMIA
+#FOR ORACLE DB USE THE FOLLOWING
+DBHelperClassName=com.tcs.sgv.wf.util.ORACLEDBHelper
+#FOR MYSQL DB USE THE FOLLOWING
+#DBHelperClassName=com.tcs.sgv.wf.util.SQLDBHelper
+DBHelperMethodName=getDBDate
+
+#ORACLE.DBDATE_QUERY=select sysdate as system_datetime from dual
+ORACLE.DBDATE_QUERY=select current_date as system_datetime from sysibm.sysdummy1
+
+MYSQL.DBDATE_QUERY=select sysdate() as system_datetime from dual
+#MYSQL.DBDATE_QUERY=select current_date as system_datetime from sysibm.sysdummy1
+WF_LOGFILE_PATH=d\://ifmslog//wflog.txt
+
+CMN.LOGPATH=d\://JbosLog//
+
+#FOR TEXTFILE GENERATION - START
+#CMN.TEXTFILE=//apps//tcs//TEXTFILE//
+CMN.TEXTFILE=d\://JbosLog/TEXTFILE/
+CMN.NICFILE=D\:\\nic_files\\ 
+#CMN.NICFILE=//apps//tcs//nic_files//s
+#FOR TEXTFILE GENERATION -END

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2008 4:17:17 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisPreEmplDtl" table="hr_eis_preempl_dtl">
+        <comment></comment>
+        <id name="empPreemplPk" type="long">
+            <column name="emp_preempl_pk" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cmnOrganizationMst" class="com.tcs.sgv.hod.common.valueobject.CmnOrganizationMst" fetch="select">
+            <column name="organization_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByIsContinue" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="isContinue">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUserId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="dateOfJoining" type="date">
+            <column name="date_of_joining" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dateOfReleving" type="date">
+            <column name="date_of_releving" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="designation" type="string">
+            <column name="designation" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="jobProfile" type="string">
+            <column name="job_profile" length="1000">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="remarks" length="1000">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="durationYears" type="java.lang.Long">
+            <column name="duration_year">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="durationMonths" type="java.lang.Long">
+            <column name="duration_month">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="durationDays" type="java.lang.Long">
+            <column name="duration_days">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

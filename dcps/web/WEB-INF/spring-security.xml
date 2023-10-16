@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+  <!-- 
+      Author:nishant.vaidya@tcs.com
+      version:1.0
+      Created date:13/07/2008
+      Description:Configuration file used to implement authentication and authorization for hdiits framework
+                  using spring security.  
+   -->
+<beans>
+	<bean id="filterChainProxy" class="org.springframework.security.util.FilterChainProxy">
+		<property name="stripQueryStringFromUrls"><value>false</value></property>
+		<property name="filterInvocationDefinitionSource">
+			<value><![CDATA[
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				/index.jsp=anonymousProcessingFilter,ROBORequestFilter,blackListedIPFilter
+				/webinfopage.jsp.*=anonymousProcessingFilter
+				/login.jsp.*=anonymousProcessingFilter,ROBORequestFilter,blackListedIPFilter
+				
+				/CaptchaServlet=anonymousProcessingFilter,ROBORequestFilter,blackListedIPFilter
+				
+				
+				/common/calendar.jsp\?.*=anonymousProcessingFilter
+				/dwr/.*=anonymousProcessingFilter
+				/tcssigner/.*=anonymousProcessingFilter
+				/images/.*=anonymousProcessingFilter
+				/themes/.*=anonymousProcessingFilter
+				/script/.*=anonymousProcessingFilter
+				/dtds/.*=anonymousProcessingFilter
+				/vehicledetailsservlet.*=anonymousProcessingFilter
+				
+				/facesearch.*=anonymousProcessingFilter
+				/upload.*=anonymousProcessingFilter
+				/viewphotosignature.*=anonymousProcessingFilter
+				/servlet/fileopenservlet.*=anonymousProcessingFilter
+				/servlet/draftopenservlet.*=anonymousProcessingFilter
+				/servlet/displaychart.*=anonymousProcessingFilter
+				
+				
+				
+				/biometricxmlrpc.*=anonymousProcessingFilter
+				/services.*=anonymousProcessingFilter
+				/[a-zA-Z]*.htm\?actionflag=getrandomno.*=anonymousProcessingFilter
+				
+				/[a-zA-Z]*.htm\?actionflag=dashBoard.*=anonymousProcessingFilter
+				/[a-zA-Z]*.htm\?viewname=acl-dashBoard.*=anonymousProcessingFilter
+				
+				/[a-zA-Z]*.htm\?actionflag=captchaValidate.*=anonymousProcessingFilter
+				/[a-zA-Z]*.htm\?viewname=acl-captchaValidate.*=anonymousProcessingFilter
+				
+				
+				/[a-zA-Z]*.htm\?.*actionflag=getdisplaymessage.*=anonymousProcessingFilter
+				/[a-zA-Z]*.htm\?actionflag=getuserfromusername.*=anonymousProcessingFilter
+				/.*=reAuthenticationProcessingFilter,ROBORequestFilter,dashBoard,captchaValidate,concurrentSessionFilter,sessionFixationProtectionFilter,httpSessionContextIntegrationFilter,authenticationProcessingFilter,x509ProcessingFilter,blackListedIPFilter,applicationContextIntegrationFilter,logoutFilter,securityContextHolderAwareRequestFilter
+				
+                ]]></value>
+		</property>		
+	</bean>
+	
+	<bean id="applicationContextIntegrationFilter" class="com.tcs.sgv.acl.acegilogin.filter.ApplicationContextIntegrationFilter" ></bean>
+
+	<bean id="blackListedIPFilter" class="com.tcs.sgv.acl.acegilogin.filter.BlackListedIPFilter" >
+		<property name="loginFormUrl" value="${errorPage_blackList}"></property>
+		<property name="userCache"><ref local="userCache" /></property>
+		<property name="requestRegistry"><ref local="requestRegistry" /></property>
+	</bean>
+	
+	<bean id="ROBORequestFilter" class="com.tcs.sgv.acl.acegilogin.filter.ROBORequestFilter" >
+		<property name="requestRegistry"><ref local="requestRegistry" /></property>
+	</bean>
+	
+	<bean id="metaCharFilter" class="com.tcs.sgv.acl.acegilogin.filter.MetaCharFilter">
+	  <property name="multipartResolver"><ref local="multipartResolver"/></property>
+	 <property name="errorPage" value="/${ErrorPage}"/>
+	 </bean>
+	 
+	
+ <bean id="dashBoard" class="com.tcs.sgv.filter.DashBoard">
+   		<property name="multipartResolver"><ref local="multipartResolver"/></property>
+        <property name="errorPage" value="/${ErrorPage}"/>
+    </bean>
+    
+    
+
+	
+	<bean id="requestRegistry" name="requestRegistry" class="com.tcs.sgv.acl.acegilogin.service.RequestRegistryImpl">
+		<property name="maxReqPerSec" value="${maxReqPerSec}"></property>
+		<property name="reqIntervalInSec" value="${reqIntervalInSec}"></property>
+	</bean>
+	<bean id="httpSessionContextIntegrationFilter" class="org.springframework.security.context.HttpSessionContextIntegrationFilter">
+		<property name="forceEagerSessionCreation" value="true"></property>
+	</bean>
+	<bean id="securityContextHolderAwareRequestFilter" class="org.springframework.security.wrapper.SecurityContextHolderAwareRequestFilter"/>
+	<bean id="authEventManager" class="com.tcs.sgv.acl.acegilogin.service.AuthenticationEventManager" >
+		<property name="requestRegistry"><ref local="requestRegistry" /></property>
+		<property name="invalidLoginAttempts" value="${invalidLoginAttempts}"></property>
+		<property name="invalidLoginAttemptsInDB" value="${invalidLoginAttemptsInDB}"></property>
+		<property name="accountUnlockTime" value="${accountUnlockTime}" />
+		<property name="accountLockCnt" value="${accountLockCnt}" />
+		<property name="accountLockTimeInterval" value="${accountLockTimeInterval}" />		
+	</bean> 
+	
+	<bean id="anonymousProcessingFilter" class="org.springframework.security.providers.anonymous.AnonymousProcessingFilter">
+		<property name="key" value="changeThis"/>
+		<property name="userAttribute" value="anonymousUser,ANONYMOUS"/>
+	</bean>
+	
+	<bean id="authenticationManager" class="org.springframework.security.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref local="anonymousAuthenticationProvider" />
+				<ref local="daoAuthenticationProvider"/>
+				<ref local="x509AuthenticationProvider"/>
+			</list>
+		</property>
+		<property name="sessionController"><ref bean="concurrentSessionController"/></property>
+		<property name="additionalExceptionMappings">
+			<props>
+					<prop key="com.tcs.sgv.acl.acegilogin.exception.IPLoginFailedException"> com.tcs.sgv.acl.acegilogin.event.IPLoginFailedEvent </prop>
+					<prop key="com.tcs.sgv.acl.acegilogin.exception.UserDepartmentDisableException"> com.tcs.sgv.acl.acegilogin.event.UserDepartmentDisableEvent </prop>
+					<prop key="com.tcs.sgv.acl.acegilogin.exception.UserLocationDisableException"> com.tcs.sgv.acl.acegilogin.event.UserLocationDisableEvent </prop>
+					<prop key="com.tcs.sgv.acl.acegilogin.exception.DBConcurrentLoginException">org.springframework.security.event.authentication.AuthenticationFailureConcurrentLoginEvent</prop>					
+			</props>
+        </property>		
+	</bean>
+	
+	
+	
+	
+	<bean id="anonymousAuthenticationProvider" class="org.springframework.security.providers.anonymous.AnonymousAuthenticationProvider">
+        <property name="key" value="changeThis"/>
+      </bean>
+	
+	<bean id="authenticationProcessingFilter" class="com.tcs.sgv.acl.acegilogin.service.ProjectAuthenticationProcessingFilter">
+		<property name="authenticationManager" ref="authenticationManager"/>
+		<property name="authenticationFailureUrl" value="/${AuthenticationFailureUrl}"/>
+		<property name="defaultTargetUrl" value="/${DefaultTargetUrl}"/>
+		<property name="alwaysUseDefaultTargetUrl" value="true"/>
+		<property name="filterProcessesUrl" value="/j_spring_security_check"/>
+		<property name="invalidateSessionOnSuccessfulAuthentication" value="true" />
+        <property name="migrateInvalidatedSessionAttributes" value="true" />
+        <property name="sessionRegistry"  ref="sessionRegistry"/>	 	 
+	</bean>
+
+	<bean id="reAuthenticationProcessingFilter" class="com.tcs.sgv.acl.acegilogin.service.ReAuthenticationProcessingFilter">
+		<property name="filterProcessesUrl" value="/j_reauthentication_check"/>
+		<property name="reAuthenticationFailureUrl" value="${ReAuthenticationFailureUrl}"/>
+		<property name="passwordEncoder">
+			<ref local="passwordEncoder" />			
+		</property>	
+	</bean>
+	
+	
+	<!--<bean id="securePasswordAuthenticatonFilter" class="com.tcs.sgv.filter.SecurePasswordAuthenticationImpl">
+		<property name="filterProcessesUrl" value="/j_reauthentication_check"/>
+		<property name="reAuthenticationFailureUrl" value="${ReAuthenticationFailureUrl}"/>
+		<property name="passwordEncoder">
+			<ref local="passwordEncoder" />			
+		</property>	
+	</bean>
+	
+	--><!-- Added for Digital Certificate Login start -->	
+	<bean id="x509ProcessingFilter" class="org.springframework.security.ui.x509.X509ProcessingFilter">
+		<property name="authenticationManager"><ref local="authenticationManager"/></property>
+	</bean>
+	
+	<bean id="x509AuthenticationProvider" class="com.tcs.sgv.acl.acegilogin.x509.X509AuthenticationProvider">
+		<property name="x509AuthoritiesPopulator"><ref local="x509AuthoritiesPopulator"/></property>
+	</bean>
+	
+	<bean id="x509AuthoritiesPopulator" class="com.tcs.sgv.acl.acegilogin.x509.DaoX509AuthoritiesPopulator">
+		<property name="userDetailsService"><ref local="userDetailsService"/></property>
+	</bean>
+	
+	
+	  <bean id="captchaValidate" class="com.tcs.sgv.filter.CaptchaValidate">
+   		
+		<property name="multipartResolver"><ref local="multipartResolver"/></property>
+        <property name="errorPage" value="/${ErrorPage}"/>
+    </bean>
+    
+    
+	<!-- Added for Digital Certificate Login end -->	
+   
+	<bean id="exceptionTranslationFilter" class="com.tcs.sgv.acl.acegilogin.service.ProjectExceptionTranslationFilter"> 
+		<property name="authenticationEntryPoint">
+			<bean class="org.springframework.security.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+				<property name="loginFormUrl" value="/${LoginFormUrl}"/>
+				<property name="forceHttps" value="false"/>
+				<property name="serverSideRedirect" value="false"/>
+			</bean>
+		</property>
+		<property name="reAuthenticationEntryPoint">
+			<bean class="org.springframework.security.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+				<property name="loginFormUrl" value="/${ReLoginFormUrl}"/>
+				<property name="forceHttps" value="false"/>
+			</bean>
+		</property>
+		<property name="accessDeniedHandler">
+			<bean class="org.springframework.security.ui.AccessDeniedHandlerImpl">
+				<property name="errorPage" value="/${AccessDeniedPage}"/>
+			</bean>
+		</property>
+		<property name="alwaysReAuthRequired" value="${alwaysReAuthRequired}">
+		</property>
+		<!--<property name="rememberMeServices">		
+			<ref bean="rememberMeServices" />	
+		</property>
+-->
+	</bean>
+
+    <bean id="roleVoter" class="com.tcs.sgv.acl.acegilogin.service.ProjectRoleVoter">
+        <property name="rolePrefix" value=""/>
+    </bean>
+        
+	<bean id="daoAuthenticationProvider" class="org.springframework.security.providers.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService"/>
+		<property name="passwordEncoder">
+			<ref local="passwordEncoder" />			
+		</property>
+		<!-- <property name="userCache"><ref local="userCache" /></property> -->
+		<property name="hideUserNotFoundExceptions" value="true"  />
+	</bean>
+	
+	<bean id="passwordEncoder" class="org.springframework.security.providers.encoding.Md5PasswordEncoder"></bean>
+
+	
+	<!--<bean id="jasyptStringDigester" class="org.jasypt.digest.StandardStringDigester" >
+	    <property name="algorithm" value="${algorithm}" />
+	    <property name="iterations" value="${iterations}" />
+	     <property name="saltSizeBytes" value="${saltSizeBytes}" />
+	</bean>-->
+	
+	<bean id="userDetailsService" class="com.tcs.sgv.acl.acegilogin.dao.AuthenticationDaoImpl">
+		<property name="accountExpireDays" value="${accountExpireDays}" />
+	</bean>
+	
+	<bean id="userCache" class="org.springframework.security.providers.dao.cache.EhCacheBasedUserCache">	 
+		<property name="cache" ref="userCacheBackend"/>
+	</bean>     
+    <bean id="userCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+    	<property name="cacheManager" ref="cacheManager"/>
+        <property name="cacheName" value="userCache"/>
+	</bean>     
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"></bean> 
+
+	<bean id="filterInvocationInterceptor" class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager"/>
+		<property name="accessDecisionManager">
+			<!-- <bean class="org.springframework.security.vote.AffirmativeBased">  -->
+			<bean class="com.tcs.sgv.acl.acegilogin.service.ProjectAffirmativeBased">	
+				<property name="allowIfAllAbstainDecisions" value="false"/>
+				<property name="decisionVoters">
+					<list>
+						<ref local="roleVoter"/>
+				    </list>
+				</property>
+			</bean>
+		</property>
+		<property name="objectDefinitionSource" >					
+			      <value><![CDATA[
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				/.*=HOMEROLE				
+				]]>
+			</value>		 
+			 <!--  <ref local="dbdrivenFilterInvocationDefinitionSource" />-->
+			 <!-- Added by Brijesh Prajapati to generate object defination source ( url-role mapping configuration ) using databse
+-->
+			 <!-- <ref local="daoBasedFilterInvocationDefinitionSource" />--> 
+			    
+         </property>         
+	</bean>									
+	<!-- Added by Brijesh Prajapati to generate object defination source ( url-role mapping configuration ) using databse
+-->						
+	<bean id="daoBasedFilterInvocationDefinitionSource"  class="com.tcs.sgv.acl.acegilogin.service.DaoBasedFilterInvocationDefinitionSource" />
+								
+	<!--  <bean id="dbdrivenFilterInvocationDefinitionSource"  class="com.tcs.sgv.acl.acegilogin.service.DatabaseDrivenFilterInvocationDefinitionSource"  init-method="init" />
+-->		
+	<!-- Added for Session Faxiation start -->
+	<bean id="sessionFixationProtectionFilter" class="org.springframework.security.ui.SessionFixationProtectionFilter">
+    	<property name="sessionRegistry" ref="sessionRegistry"/>
+        <property name="migrateSessionAttributes" value="true"/>                      
+    </bean> 
+    <!-- Added for Session Faxiation end -->
+	
+	<!-- Logout Handler Start -->
+	<bean id="logoutFilter" class="org.springframework.security.ui.logout.LogoutFilter">
+		<constructor-arg value="/${LogoutRedirectUrl}"/> <!-- URL redirected to after logout -->
+		<constructor-arg>
+			<list>
+				<ref bean="logoutHadler"/>		
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="logoutHadler" class="com.tcs.sgv.acl.acegilogin.service.LogOutHandler">
+	 <property name="userCache"><ref local="userCache" /></property>
+	 <property name="requestRegistry"><ref local="requestRegistry" /></property>
+	</bean>
+	<!-- Logout Handler End -->
+	
+  <!-- Concurrent Session Handling --> 
+	<bean id="concurrentSessionFilter" class="org.springframework.security.concurrent.ConcurrentSessionFilter">
+		<property name="sessionRegistry"><ref local="sessionRegistry"/></property>
+		<property name="expiredUrl" value="/${ExpiredUrl}"/>
+	</bean>
+	
+	<bean id="concurrentSessionController" class="com.tcs.sgv.acl.acegilogin.service.ProjectConcurrentSessionControllerImpl">
+		<property name="maximumSessions"><value>${NoOfConcurrentUsers}</value></property>
+		<property name="sessionRegistry"><ref local="sessionRegistry"/></property>
+		<property name="exceptionIfMaximumExceeded"><value>true</value></property>
+		<property name="dbConcurrentEnable"><value>true</value></property>
+		<property name="serverInstanceProp"><value>${serverInstanceProp}</value></property>
+	</bean>
+	
+	<!-- IF  dbConcurrentEnable value false then comment the bean given below-->
+     <bean id="sessionRegistry" class="org.springframework.security.concurrent.SessionRegistryImpl"/>
+        
+     <!-- IF  dbConcurrentEnable value true then comment the bean given below-->
+     <!--<bean id="sessionRegistry" class="com.tcs.sgv.acl.acegilogin.service.DistributableSessionRegistryImpl" init-method="init" destroy-method="destroy">
+			<property name="channelName" value="springcluster1"/>
+			<property name="clusterOptions" value="udp.xml"/>
+			<property name="distributable" value="true"/>
+  	</bean>-->
+
+ 	<!--  Filter for http enable start -->
+     <bean id="channelProcessingFilter" class="org.springframework.security.securechannel.ChannelProcessingFilter">   
+            <property name="filterInvocationDefinitionSource" ref="inMemoryFilterInvocation">
+            	<!--   
+                <property name="filterInvocationDefinitionSource">
+                <value>   
+                    CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON   
+                    PATTERN_TYPE_APACHE_ANT   
+                    /**=REQUIRES_INSECURE_CHANNEL   
+                </value> 
+            	--> </property>   
+            <property name="channelDecisionManager">   
+                <bean class="org.springframework.security.securechannel.ChannelDecisionManagerImpl">   
+                    <property name="channelProcessors">   
+                        <list>   
+                             <ref local="insecureChannelProcessor"/>
+                            <ref local="secureChannelProcessor"/>
+                        </list>   
+                    </property>   
+                </bean>   
+            </property>   
+        </bean>   
+        <!--SecureChannelProcessor -->
+		<bean id="insecureChannelProcessor" class="org.springframework.security.securechannel.InsecureChannelProcessor">
+		   <property name="entryPoint"> 
+			   <ref local="retryWithHttpEntryPoint"/> 
+		   </property> 
+   		</bean>
+   		<bean id="retryWithHttpEntryPoint" class="org.springframework.security.securechannel.RetryWithHttpEntryPoint"> 
+			<property name="portMapper"> 
+				<ref local="portMapper"/> 
+			</property> 
+		</bean>
+		<bean id="secureChannelProcessor" class="org.springframework.security.securechannel.SecureChannelProcessor">
+		   <property name="entryPoint"> 
+			   <ref local="retryWithHttpsEntryPoint"/> 
+		   </property> 
+   		</bean>
+		<bean id="retryWithHttpsEntryPoint" class="org.springframework.security.securechannel.RetryWithHttpsEntryPoint"> 
+			<property name="portMapper"> 
+				<ref local="portMapper"/> 
+			</property> 
+		</bean>
+		<bean id="portMapper" class="org.springframework.security.util.PortMapperImpl"> 
+			<property name="portMappings"> 
+				<map> 
+					<entry key="${httpPort}"><value>${httpsPort}</value></entry> 
+				</map> 
+			</property> 
+		</bean>
+   	  <bean id="inMemoryFilterInvocation" class="com.tcs.sgv.acl.acegilogin.service.InMemoryFilterInvocation">
+       			<property name="channelProperties">
+        			<bean class="com.tcs.sgv.acl.acegilogin.service.ResourceReadingFactoryBean">
+        					<property name="location" value="classpath:channel.properties"/>
+        			</bean>
+       			</property>
+       </bean> 
+     <!--  Filter for http enable end -->
+       		
+     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>    
+    <!-- This bean is optional; it isn't used by any other bean as it only listens and logs
+-->
+	<bean id="loggerListener" class="org.springframework.security.event.authentication.LoggerListener"/>
+
+	<bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    	<property name="locations">
+	  		<list>
+				<value>classpath:SpringSecurity.properties</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

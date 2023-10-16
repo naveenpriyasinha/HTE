@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 30, 2007 6:33:33 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrInvestTypeMst" table="HR_INVEST_TYPE_MST">
+        <id name="investTypeId" type="long">
+            <column name="INVEST_TYPE_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="investName" type="string">
+            <column name="INVEST_NAME" length="50" />
+        </property>
+        <property name="investDesc" type="string">
+            <column name="INVEST_DESC" length="1000" />
+        </property>
+        
+        <many-to-one name="hrItSectionMst" class="com.tcs.sgv.eis.valueobject.HrItSectionMst" fetch="select">
+            <column name="SECT_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <property name="startDate" type="timestamp">
+            <column name="START_DATE" length="7" not-null="true" />
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="END_DATE" length="7" />
+        </property>
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>  
+        
+        
+        
+        <property name="investTypeCode" type="long">
+            <column name="INVEST_TYPE_CODE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="activateFlag" type="long">
+            <column name="ACTIVATE_FLAG" precision="22" scale="0" not-null="true" />
+        </property>
+       
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

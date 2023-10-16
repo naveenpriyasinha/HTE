@@ -1,0 +1,19 @@
+ 
+            .pg-normal {
+                color: blue;
+                font-weight: normal;
+                text-decoration: none;    
+                cursor: pointer;  
+                font-family: Arial, Verdana, Helvetica, sans;  
+            }
+            .pg-selected {
+                color: red;                            
+                font-weight: bold;        
+                text-decoration: underline;
+                cursor: pointer;
+                font-family: Arial, Verdana, Helvetica, sans;
+                font-style: bold;
+            }
+       
+
+

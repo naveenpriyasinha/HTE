@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 24, 2007 8:48:18 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.hr.payincrement.valueobject.HrPayincTxn" table="hr_payinc_txn">
+        <id name="reqTranId" type="long">
+            <column name="REQ_TRAN_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+       <many-to-one name="orgUserMst" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="user_id" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+       
+        <property name="lastIncDate" type="date">
+            <column name="LAST_INC_DATE" length="7" />
+        </property>
+        <property name="lwp" type="long">
+            <column name="LWP" precision="20" scale="0" />
+        </property>
+        
+         <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+         <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+         <many-to-one name="orgUserMstCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+         <many-to-one name="orgPostMstCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <property name="createdDate" type="date">
+            <column name="created_date" length="7" not-null="true"/>
+        </property>
+        <many-to-one name="orgUserMstUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by" precision="22" scale="0" />
+        </many-to-one>
+         <many-to-one name="orgPostMstUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post" precision="22" scale="0" />
+        </many-to-one>
+        <property name="updatedDate" type="date">
+            <column name="updated_date" length="7" />
+        </property>
+        
+    <property name="actIncDate" type="date">
+            <column name="ACT_INC_DATE" length="7" />
+        </property>
+        <property name="compFlag" type="string">
+            <column name="COMP_FLAG" length="10" />
+        </property>
+        <property name="sysComSalary" type="long">
+            <column name="SYS_COM_SALARY" precision="20" scale="0" />
+        </property>
+        <property name="userComSalary" type="long">
+            <column name="USER_COM_SALARY" precision="20" scale="0" />
+        </property>
+        <property name="sysComNxtincDate" type="date">
+            <column name="SYS_COM_NXTINC_DATE" length="7" />
+        </property>
+        <property name="userComNxtincDate" type="date">
+            <column name="USER_COM_NXTINC_DATE" length="7" />
+        </property>
+        <property name="defferedDate" type="date">
+            <column name="DEFFERED_DATE" length="7" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="100" />
+        </property>
+        <property name="approvalFlag" type="string">
+            <column name="APPROVAL_FLAG" length="2" />
+        </property>
+    </class>
+</hibernate-mapping>

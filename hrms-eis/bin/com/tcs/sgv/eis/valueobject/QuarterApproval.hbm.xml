@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.eis.valueobject.QuarterApproval"  table="QTR_APR">
+  <id name="sno" type="long">
+            <column name="SNO" />
+            <generator class="assigned" />
+        </id>
+        <property name="quarterId" type="long">
+            <column name="QUARTER_ID" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empId" type="long">
+            <column name="EMP_ID" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="rltDDO" type="long">
+            <column name="RLT_DDO" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="statusFlag" type="java.lang.Character">
+            <column name="STATUS_FLAG" length="1">
+                <comment></comment>
+            </column>
+        </property>
+  </class>
+</hibernate-mapping>

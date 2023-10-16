@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 23, 2007 11:24:54 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping  auto-import="false">
+    <class name="com.tcs.sgv.common.valueobject.WfDocMst" table="wf_doc_mst" catalog="hdiits_dev_db">
+        <comment></comment>
+        <id name="docId" type="long">
+            <column name="DOC_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="docName" type="string">
+            <column name="DOC_NAME" length="100" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="12" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtPost" type="string">
+            <column name="CRT_POST" length="12" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="crtDt" type="timestamp">
+            <column name="CRT_DT" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdUsr" type="string">
+            <column name="LST_UPD_USR" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdPost" type="string">
+            <column name="LST_UPD_POST" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lstUpdDt" type="timestamp">
+            <column name="LST_UPD_DT" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="START_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="END_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="activateFlag" type="boolean">
+            <column name="ACTIVATE_FLAG" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="hierarchyType" type="int">
+            <column name="HIERARCHY_TYPE" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="url" type="string">
+            <column name="URL" length="200">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="java.lang.Long">
+            <column name="LOC_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="langId" type="string">
+            <column name="LANG_ID" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="2000">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

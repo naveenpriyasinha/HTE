@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 30, 2007 6:33:45 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrInvestEmpDtls" table="HR_INVEST_EMP_DTLS">
+        <id name="investDtlsId" type="long">
+            <column name="INVEST_DTLS_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        
+        <many-to-one name="hrInvestTypeMst" class="com.tcs.sgv.eis.valueobject.HrInvestTypeMst" fetch="select">
+            <column name="INVEST_TYPE_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="emp_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+       
+        <property name="investDate" type="timestamp">
+            <column name="INVEST_DATE" length="7" not-null="true" />
+        </property>
+        
+        <property name="amount" type="long">
+            <column name="AMOUNT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="policyNo" type="string">
+            <column name="POLICY_NO" length="20" />
+        </property>
+        <property name="proofSubmitFlag" type="string">
+            <column name="PROOF_SUBMIT_FLAG" length="1" not-null="true" />
+        </property>
+        <property name="approvalFlag" type="string">
+            <column name="APPROVAL_FLAG" length="1" not-null="true" />
+        </property>
+        
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

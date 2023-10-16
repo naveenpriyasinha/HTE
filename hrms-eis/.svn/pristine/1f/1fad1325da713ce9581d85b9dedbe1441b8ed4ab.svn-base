@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2007 4:12:13 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+	<class name="com.tcs.sgv.eis.valueobject.MstStateMatrix7thPay"
+		table="Mst_State_Matrix_7thPay" lazy="true">
+	
+	
+
+		<id name="cell" type="long">
+			<column name="CELL" />
+		</id>
+		
+		<property name="S_1" type="long">
+			<column name="S_1" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="S_2" type="long">
+			<column name="S_2" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="AS_3" type="long">
+			<column name="AS_3" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="S_4" type="long">
+			<column name="S_4" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="S_5" type="long">
+			<column name="S_5" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="AS_6" type="long">
+			<column name="AS_6" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="VTS_17" type="long">
+			<column name="VTS_17" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="NT_VTS_3" type="long">
+			<column name="NT_VTS_3" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="NTS_5" type="long">
+			<column name="NTS_5" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="NT_VTAS_6" type="long">
+			<column name="NT_VTAS_6" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="NT_VTAS_7" type="long">
+			<column name="NT_VTAS_7" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="NT_VTAS_8" type="long">
+			<column name="NT_VTAS_8" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="NT_VTAS_10" type="long">
+			<column name="NT_VTAS_10" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="NTS_12" type="long">
+			<column name="NTS_12" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="NT_VTAS_14" type="long">
+			<column name="NT_VTAS_14" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="NT_VTS_15" type="long">
+			<column name="NT_VTS_15" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="NTS_16" type="long">
+			<column name="NTS_16" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="VTS_13" type="long">
+			<column name="VTS_13" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		
+		
+		<property name="VTS_20" type="long">
+			<column name="VTS_20" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="VTS_22" type="long">
+			<column name="VTS_22" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="AS1_13" type="long">
+			<column name="AS1_13" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		<property name="VC_12K" type="long">
+			<column name="VC_12K" length="19">
+				<comment></comment>
+			</column>
+		</property>
+		
+		
+		
+	</class>
+</hibernate-mapping>

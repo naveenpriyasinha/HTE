@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 8, 2008 1:14:00 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisNomineeDtl" table="hr_eis_nominee_dtl">
+        <comment></comment>
+        <id name="memberId" type="long">
+            <column name="member_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cmnLookupMstByNomnRelation" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="nomn_relation">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUserId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByNomnBenefitTypeId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="nomn_benefit_type_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMstByNomnAddress" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="nomn_address">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMstByGuardianAddress" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="guardian_address">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByGuardianRelation" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="guardian_relation">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="nomnName" type="string">
+            <column name="nomn_name" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="nomnSharePercent" type="double">
+            <column name="nomn_share_percent" precision="6" scale="3">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="nomnMinor" type="string">
+            <column name="nomn_minor" length="2">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="nomnDob" type="timestamp">
+            <column name="nomn_dob" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="nomnOtherRelation" type="string">
+            <column name="nomn_other_relation" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="guardianFirstname" type="string">
+            <column name="guardian_firstname" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="guardianMiddlename" type="string">
+            <column name="guardian_middlename" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="guardianLastname" type="string">
+            <column name="guardian_lastname" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="guardianRelationOther" type="string">
+            <column name="guardian_relation_other" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="deleteFlag" type="string">
+            <column name="delete_flag" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="familyMemberId" type="java.lang.Long">
+            <column name="family_member_id">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="trn_counter">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

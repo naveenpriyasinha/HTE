@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 31, 2007 12:48:42 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.dss.valueobject.RptExpenditureDtls" table="RPT_EXPENDITURE_DTLS"  >
+        <id name="expId" type="big_decimal">
+            <column name="EXP_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="deptCode" type="string">
+            <column name="DEPT_CODE" length="15" />
+        </property>
+        <property name="officeCode" type="string">
+            <column name="OFFICE_CODE" length="15" />
+        </property>
+        <property name="tsryCode" type="string">
+            <column name="TSRY_CODE" length="15" />
+        </property>
+        <property name="districtCode" type="string">
+            <column name="DISTRICT_CODE" length="10" />
+        </property>
+        <property name="ddoCode" type="string">
+            <column name="DDO_CODE" length="15" />
+        </property>
+        <property name="expNo" type="big_decimal">
+            <column name="EXP_NO" precision="20" scale="0" />
+        </property>
+        <property name="expTypeCode" type="string">
+            <column name="EXP_TYPE_CODE" length="30" />
+        </property>
+        <property name="billGrpCode" type="string">
+            <column name="BILL_GRP_CODE" length="30" />
+        </property>
+        <property name="clsExpCode" type="string">
+            <column name="CLS_EXP_CODE" length="30" />
+        </property>
+        <property name="fundTypeCode" type="string">
+            <column name="FUND_TYPE_CODE" length="30" />
+        </property>
+        <property name="budTypeCode" type="string">
+            <column name="BUD_TYPE_CODE" length="30" />
+        </property>
+        <property name="demandNo" type="string">
+            <column name="DEMAND_NO" length="15" />
+        </property>
+        <property name="scheme" type="java.lang.Integer">
+            <column name="SCHEME" precision="7" scale="0" />
+        </property>
+        <property name="mjrHd" type="string">
+            <column name="MJR_HD" length="15" />
+        </property>
+        <property name="subMjrHd" type="string">
+            <column name="SUB_MJR_HD" length="15" />
+        </property>
+        <property name="minHd" type="string">
+            <column name="MIN_HD" length="15" />
+        </property>
+        <property name="subHd" type="string">
+            <column name="SUB_HD" length="15" />
+        </property>
+        <property name="dtlHd" type="string">
+            <column name="DTL_HD" length="15" />
+        </property>
+        <property name="finYrId" type="big_decimal">
+            <column name="FIN_YR_ID" precision="22" scale="0" />
+        </property>
+        <property name="expDt" type="date">
+            <column name="EXP_DT" length="7" />
+        </property>
+        <property name="grossAmnt" type="big_decimal">
+            <column name="GROSS_AMNT" precision="20" />
+        </property>
+        <property name="expStatusCode" type="string">
+            <column name="EXP_STATUS_CODE" length="45" />
+        </property>
+        <property name="expStatusDt" type="date">
+            <column name="EXP_STATUS_DT" length="7" />
+        </property>
+        <property name="expCrtDt" type="date">
+            <column name="EXP_CRT_DT" length="7" />
+        </property>
+        <property name="agApprvl" type="java.lang.Character">
+            <column name="AG_APPRVL" length="1" />
+        </property>
+        <property name="dedctnaAmt" type="big_decimal">
+            <column name="DEDCTNA_AMT" precision="20" />
+        </property>
+        <property name="dedctnbAmt" type="big_decimal">
+            <column name="DEDCTNB_AMT" precision="20" />
+        </property>
+        <property name="netAmt" type="big_decimal">
+            <column name="NET_AMT" precision="20" />
+        </property>
+        <property name="expAmt" type="big_decimal">
+            <column name="EXP_AMT" precision="20" />
+        </property>
+        <property name="recoveryAmt" type="big_decimal">
+            <column name="RECOVERY_AMT" precision="20" />
+        </property>
+        <property name="clientData" type="java.lang.Character">
+            <column name="CLIENT_DATA" length="1" />
+        </property>
+        <property name="active" type="java.lang.Character">
+            <column name="ACTIVE" length="1" />
+        </property>
+        <property name="deduction" type="big_decimal">
+            <column name="DEDUCTION" precision="20" />
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="30" />
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

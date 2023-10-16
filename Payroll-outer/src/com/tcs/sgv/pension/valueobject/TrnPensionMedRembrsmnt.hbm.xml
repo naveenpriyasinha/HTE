@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 2, 2008 2:41:00 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pension.valueobject.TrnPensionMedRembrsmnt" table="TRN_PENSION_MED_REMBRSMNT" dynamic-update="true">
+        <id name="medRembrsmntId" type="long">
+            <column name="MED_REMBRSMNT_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="billHdrId" type="long">
+            <column name="BILL_HDR_ID" precision="20" scale="0" />
+        </property>
+        <property name="remAmnt" type="big_decimal">
+            <column name="REM_AMNT" precision="12" />
+        </property>
+        <property name="grantAmnt" type="big_decimal">
+            <column name="GRANT_AMNT" precision="12" />
+        </property>
+        <property name="maAmnt" type="big_decimal">
+            <column name="MA_AMNT" precision="12" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" />
+        </property>
+        <property name="fromMonth" type="java.lang.Integer">
+            <column name="FROM_MONTH" precision="6" scale="0" />
+        </property>
+        <property name="toMonth" type="java.lang.Integer">
+            <column name="TO_MONTH" precision="6" scale="0" />
+        </property>
+        <property name="finYearId" type="java.lang.Integer">
+            <column name="FIN_YEAR_ID" precision="8" scale="0" />
+        </property>
+        <property name="inwdNo" type="string">
+            <column name="INWD_NO" length="20" />
+        </property>
+        <property name="inwdDate" type="date">
+            <column name="INWD_DATE" length="7" />
+        </property>
+        <property name="patientName" type="string">
+            <column name="PATIENT_NAME" length="600" />
+        </property>
+        <property name="relationship" type="string">
+            <column name="RELATIONSHIP" length="40" />
+        </property>
+        <property name="age" type="java.lang.Short">
+            <column name="AGE" precision="3" scale="0" />
+        </property>
+        <property name="hospitalName" type="string">
+            <column name="HOSPITAL_NAME" length="600" />
+        </property>
+        <property name="deductionAmnt" type="big_decimal">
+            <column name="DEDUCTION_AMNT" precision="12" />
+        </property>
+        <property name="permissibleAmnt" type="big_decimal">
+            <column name="PERMISSIBLE_AMNT" precision="12" />
+        </property>
+        <property name="reason" type="string">
+            <column name="REASON" length="1200" />
+        </property>
+        <property name="refNum" type="big_decimal">
+            <column name="REF_NUM" precision="20" scale="0" />
+        </property>
+        <property name="branchCode" type="string">
+            <column name="BRANCH_CODE" length="20" />
+        </property>
+        <property name="scheme" type="string">
+            <column name="SCHEME" length="30" />
+        </property>
+        <property name="headCode" type="big_decimal">
+            <column name="HEAD_CODE" precision="20" scale="0" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" />
+        </property>
+        <property name="pensionerName" type="string">
+            <column name="PENSIONER_NAME" />
+        </property>
+        <property name="auditorPostId" type="big_decimal">
+            <column name="AUDITOR_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="STATUS" precision="5" scale="0" />
+        </property>
+        <property name="authoriserPostId" type="big_decimal">
+            <column name="AUTHORISER_POST_ID" precision="20" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

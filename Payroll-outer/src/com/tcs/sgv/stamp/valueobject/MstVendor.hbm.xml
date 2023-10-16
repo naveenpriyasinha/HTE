@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 24, 2007 12:30:15 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.stamp.valueobject.MstVendor" table="MST_VENDOR"  >
+        <id name="venId" type="big_decimal">
+            <column name="VEN_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="venCode" type="short">
+            <column name="VEN_CODE" precision="4" scale="0" not-null="true" />
+        </property>
+        <property name="venName" type="string">
+            <column name="VEN_NAME" length="100" not-null="true" />
+        </property>
+        <property name="venAdd" type="string">
+            <column name="VEN_ADD" length="200" />
+        </property>
+        <property name="venRegNo" type="string">
+            <column name="VEN_REG_NO" length="30" not-null="true" />
+        </property>
+        <property name="placeOfBusiness" type="string">
+            <column name="PLACE_OF_BUSINESS" length="200" />
+        </property>
+        <property name="discAllowed" type="char">
+            <column name="DISC_ALLOWED" length="1" not-null="true" />
+        </property>
+        <property name="active" type="java.lang.Character">
+            <column name="ACTIVE" length="1" />
+        </property>
+        <property name="startDate" type="date">
+            <column name="START_DATE" length="7" />
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0" />
+        </property>
+        <property name="locCode" type="string">
+            <column name="LOC_CODE" length="10" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="2" />
+        </property>
+    </class>
+</hibernate-mapping>

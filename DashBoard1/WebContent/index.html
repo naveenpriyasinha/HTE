@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>DashBoard MahaSevaarth</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script><script type="text/javascript" src='<c:url value="/script/common/tableHTMLExport.js"/>'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+	
+	
+	<link href="https://cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css">
+	
+	
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
+    <style type="text/css">
+    .pageTitle {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px !important;
+    font-weight: 600;
+    border: none !important;
+}
+.body-contents {
+    box-shadow: 0px 0px 7px #ccc;
+    min-height: 550px;
+    margin-top: 90px;
+}   .logo-mainn {
+    border-bottom: 2px solid orange;
+    padding-bottom: 5px;
+}
+    .navbar-inverse {
+        background-color: #37bec3;
+        border-color: #37bec3;
+    }
+
+    .navbar-nav li a {
+        color: #fff !IMPORTANT;
+    }
+
+    .navbar-inverse .navbar-nav>.active>a {
+        background-color: #157478 !important;
+    }
+
+    .navbar-inverse .navbar-nav>li:hover {
+        background-color: #157478 !important;
+    }
+
+    .m-title {
+        font-size: 25px;
+        font-family: 'Alfa Slab One', arial;
+        letter-spacing: 0px;
+        color: #ef7c01;
+        font-weight: 900;
+        margin-bottom: 0;
+    }
+
+    .logo-sub-text {
+        position: relative;
+        top: 5px;
+        color: #004b8f;
+    }
+
+    .logo-Title {
+        margin: auto 0;
+        padding: 0 15px;
+    }
+
+    .flex {
+        display: flex;
+        align-items: center;
+    }
+
+    img.logo-img {
+        width: 100%;
+        max-width: 90px;
+    }
+
+    img.logo-secondary {
+        max-width: 75px;
+    }
+
+    img.logo-img2 {
+        max-width: 90px;
+    }
+
+    .navbar {
+        min-height: 30px !important;
+    }
+    .DepartmentsName li {
+    list-style-type: none;
+    border: 1px solid orange;
+    padding: 20px 10px;
+    text-align:center;
+}
+.DepartmentsName .col-md-4 {
+    max-width: 31%;
+    margin: 0 1%;
+} .DepartmentsName li a {
+    color: #000 !important;
+    font-size: 16px;
+}
+.DepartmentsName ul {
+    padding-left: 0;
+}
+    @media screen and (max-width: 750px){
+            .logobar1 {
+        display: none;
+    }
+    .body-contents {
+        min-height: auto !important;
+    }  
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+  <div class="container body-contents">
+        <div class="hearder-top">
+            <div class="user-name-main row">
+                <div id="txt" class="Heading-timer col-md-4"></div>
+                <div class="col-md-4 deptNameheaderTop">
+                    <input type="hidden" name="departmentCode" id="departmentCode" th:value="${departmentCode}" /> <span th:text="${departmentName}"></span>
+                </div>
+                <div class="col-md-4 user-name-main-top">
+                    <span class="User-name2"><span id="userName" th:text="${loggedInUserType} +' |' "></span></span> <span class="User-name"> <span id="userName" th:text="${loggedInUserName}"> </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class=" logo-mainn">
+            <div class="row logo-row">
+                <div class="col-md-9 flex">
+                    <div class="logobar ">
+                        <a class="logo" href="#"><img src="images/logo-v16.png" class="logo-img"></a>
+                    </div>
+                    <h5 class="logo-Title">
+                        <p class="m-title">MahaSevaarth</p>
+                        <p class="logo-sub-text">Official Website of Government of Maharashtra</p>
+                    </h5>
+                </div>
+                <div class="col-md-3 text-ri<ght">
+                    <div class="logobar1">
+                        <a class="logo-secondary-m" href="#"><img src="images/mahait_logo.png" class="logo-secondary"></a> <a class="logo" href="#"><img src="images/GOM.png" class="logo-img2"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<h1 class="text-center">Report DashBoard</h1>
+
+<br/><br/>
+<div class="DepartmentsName">
+<ul class="row" style="margin-bottom:15px">
+<li class="col-md-4" style="background: coral;"><a href= "dcpsLegacyReport.jsp">DCPS Legacy Status Report</a></li>
+<li class="col-md-4" style="background: coral;"><a href= "dcpsRegularReport.jsp">DCPS Regular Status Report</a></li>
+<!--  <li class="col-md-4" style="background: coral;"><a href= "PostReport.jsp">Post Static Status Report</a></li> -->
+  <li class="col-md-4" style="background: coral;"><a href= "groupempcnt.jsp">Group Wise Employee count Report</a></li>
+ 
+</div>
+</body>
+</html>

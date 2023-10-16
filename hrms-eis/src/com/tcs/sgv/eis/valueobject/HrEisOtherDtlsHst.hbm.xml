@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 23, 2007 11:35:44 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisOtherDtlsHst" table="HR_EIS_OTHER_DTLS_HST">
+        <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrEisOtherDtlsHstId">
+            <key-property name="otherId" type="long">
+                <column name="OTHER_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" precision="10" scale="0" />
+            </key-property>
+        </composite-id>       
+       
+       <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID" not-null="true" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="hrEisSgdMpg" class="com.tcs.sgv.eis.valueobject.HrEisSgdMpg" fetch="select">
+            <column name="EMP_SGD_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <!-- 
+        <many-to-one name="hrEisDeptMst" class="com.tcs.sgv.eis.valueobject.HrEisDeptMst" fetch="select">
+            <column name="EMP_DEPT_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one> 
+         -->
+        <many-to-one name="hrQuaterTypeMst" class="com.tcs.sgv.eis.valueobject.HrEisQuaterTypeMst" fetch="select">
+            <column name="QUATER_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+        <!-- <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>  -->
+        
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="incomeTax" type="long">
+            <column name="income_tax" precision="20" scale="0" not-null="false"/>
+        </property>
+        <property name="otherCurrentBasic" type="long">
+            <column name="OTHER_CURRENT_BASIC" precision="20" scale="0" not-null="true"/>
+        </property>
+        
+        <property name="phyChallenged" type="string">
+            <column name="PHY_CHALLENGED" />
+        </property>
+        <property name="city" type="long">
+            <column name="CITY" />
+        </property>
+        <property name="totalSalary" type="double">
+            <column name="total_salary" precision="20" scale="0" not-null="false"/>
+        </property>       
+    
+       <property name="ownHouse" type="int">
+            <column name="OWN_HOUSE" />
+        </property>  
+        
+        
+        
+    
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="incrementDate" type="timestamp">
+            <column name="INCREMENT_DATE"  />
+        </property>
+        
+        
+        
+        
+        
+        
+        <property name="medAllowance" type="long">
+            <column name="MED_ALLOWANCE"/>
+        </property>
+        <property name="uniformAvailed" type="long">
+            <column name="UNIFORM_AVAILED"/>
+        </property><!--
+        
+        
+        
+        <property name="sis1979Flag" type="string">
+            <column name="SIS_1979_flag" />
+        </property>
+        <property name="othFamilyPlanning" type="string">
+            <column name="OTH_FAMILY_PLANNING" />
+        </property>        
+         <property name="familyPlnAmt" type="int">
+            <column name="family_pln_amt"/>
+        </property>  
+      
+        <property name="isSis" type="int">
+            <column name="is_sis" />
+        </property>
+        
+        --><property name="commissionAcceptanceDate" type="timestamp">
+            <column name="COMMISSION_ACCEPTANCE_DT" length="7" />
+        </property>
+        
+        <property name="isAvailedHRA" type="int">
+            <column name="isAvailedHRA" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

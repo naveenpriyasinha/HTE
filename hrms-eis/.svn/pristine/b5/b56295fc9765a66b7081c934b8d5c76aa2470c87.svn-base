@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2008 7:42:30 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayCompGrpMst" table="HR_PAY_COMPONENT_GRP_MST">
+
+        <id name="compoGrpId" type="long">
+            <column name="COMPO_GROUP_ID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+	
+		<property name="month" type="long">
+            <column name="GRP_MONTH" precision="10" scale="0" />
+        </property>
+        
+        <property name="year" type="long">
+            <column name="GRP_YEAR" precision="10" scale="0" />
+        </property>
+        
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+		<property name="isactive" type="long">
+            <column name="IS_ACTIVE" precision="10" scale="0" />
+        </property>
+	
+		 <property name="wefDate" type="timestamp">
+            <column name="WEF_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>	
+        
+         <property name="remarks" type="string">
+            <column name="REMARKS" length="200" />
+        </property>
+        
+        <many-to-one name="createdBy" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+         <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        
+        <many-to-one name="updatedBy" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+		
+    </class>
+</hibernate-mapping>

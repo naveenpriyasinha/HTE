@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 15, 2007 12:20:23 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.stamp.valueobject.StampStockMst" table="STAMP_STOCK_MST"  >
+        <id name="stpStockId" type="big_decimal">
+            <column name="STP_STOCK_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="stpGrpCode" type="byte">
+            <column name="STP_GRP_CODE" precision="2" scale="0" not-null="true" />
+        </property>
+        <property name="stpDnmCode" type="int">
+            <column name="STP_DNM_CODE" precision="7" scale="0" not-null="true" />
+        </property>
+        <property name="stpLocCode" type="string">
+            <column name="STP_LOC_CODE" length="10" not-null="true" />
+        </property>
+        <property name="stpMinStock" type="int">
+            <column name="STP_MIN_STOCK" precision="7" scale="0" not-null="true" />
+        </property>
+        <property name="stpDiscount" type="byte">
+            <column name="STP_DISCOUNT" precision="2" scale="0" not-null="true" />
+        </property>
+        <property name="stpDlQty" type="int">
+            <column name="STP_DL_QTY" precision="7" scale="0" not-null="true" />
+        </property>
+        <property name="stpSlQty" type="int">
+            <column name="STP_SL_QTY" precision="7" scale="0" not-null="true" />
+        </property>
+        <property name="stpDlVal" type="long">
+            <column name="STP_DL_VAL" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="stpSlVal" type="long">
+            <column name="STP_SL_VAL" precision="10" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

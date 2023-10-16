@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 29, 2007 5:55:22 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.billproc.cheque.valueobject.HstTrnChequeDtls" table="hst_trn_cheque_dtls" dynamic-update="true" >
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.billproc.cheque.valueobject.HstTrnChequeDtlsId">
+            <key-property name="chequeId" type="long">
+                <column name="CHEQUE_ID" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" />
+            </key-property>
+        </composite-id>
+        <property name="chequeAmt" type="big_decimal">
+            <column name="CHEQUE_AMT" precision="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fromDt" type="date">
+            <column name="FROM_DT" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="toDt" type="date">
+            <column name="TO_DT" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="partyName" type="string">
+            <column name="PARTY_NAME" length="45" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="clearedDt" type="date">
+            <column name="CLEARED_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chequeNo" type="java.lang.Long">
+            <column name="CHEQUE_NO">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="printDate" type="date">
+            <column name="PRINT_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="printUser" type="java.lang.Long">
+            <column name="PRINT_USER">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="adviceNo" type="java.lang.Long">
+            <column name="ADVICE_NO">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="adviceDt" type="date">
+            <column name="ADVICE_DT" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="45" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="prevChequeId" type="java.lang.Long">
+            <column name="PREV_CHEQUE_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="finYearId" type="java.lang.Long">
+            <column name="FIN_YEAR_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="10" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chequeType" type="string">
+            <column name="CHEQUE_TYPE" length="30">
+                <comment></comment>
+            </column>
+        </property>       
+        <property name="groupId" type="string">
+            <column name="GROUP_ID" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ddoParty" type="string">
+            <column name="DDO_PARTY" length="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="1000">
+                <comment></comment>
+            </column>
+        </property>
+         <property name="statusDate" type="date">
+            <column name="STATUS_DATE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="partyAddr" type="string">
+            <column name="PARTY_ADDR" length="90" />
+        </property>
+        <property name="accntNum" type="string">
+            <column name="ACCNT_NUM" length="90"/>
+        </property>
+        <property name="partyCode" type="string">
+            <column name="PARTY_CODE" length="20"/>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

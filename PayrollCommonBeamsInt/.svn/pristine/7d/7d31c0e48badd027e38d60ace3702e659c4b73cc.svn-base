@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://authorization.bds" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax23="http://authorization.bds/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://authorization.bds">
+    <wsdl:documentation>
+		Generates Authorization Slip
+	</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema xmlns:ax24="http://authorization.bds/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://authorization.bds">
+            <xs:import namespace="http://authorization.bds/xsd"/>
+            <xs:element name="getAuthSlip">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAuthSlipResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ax24:AuthorizationSlip"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://authorization.bds/xsd">
+            <xs:complexType name="AuthorizationSlip">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="additionalFields" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="authNO" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="authPdf" nillable="true" type="xs:base64Binary"/>
+                    <xs:element minOccurs="0" name="budgetYear1" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="budgetYear2" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ddoCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="expTotal" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="statusCode" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="totalBudget" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="transNo" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="validTo" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="getAuthSlipRequest">
+        <wsdl:part name="parameters" element="ns:getAuthSlip"/>
+    </wsdl:message>
+    <wsdl:message name="getAuthSlipResponse">
+        <wsdl:part name="parameters" element="ns:getAuthSlipResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="AuthorizationServicePortType">
+        <wsdl:operation name="getAuthSlip">
+            <wsdl:input message="ns:getAuthSlipRequest" wsaw:Action="urn:getAuthSlip"/>
+            <wsdl:output message="ns:getAuthSlipResponse" wsaw:Action="urn:getAuthSlipResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="AuthorizationServiceSoap11Binding" type="ns:AuthorizationServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getAuthSlip">
+            <soap:operation soapAction="urn:getAuthSlip" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="AuthorizationServiceSoap12Binding" type="ns:AuthorizationServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getAuthSlip">
+            <soap12:operation soapAction="urn:getAuthSlip" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="AuthorizationServiceHttpBinding" type="ns:AuthorizationServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="getAuthSlip">
+            <http:operation location="AuthorizationService/getAuthSlip"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="getAuthSlip"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="getAuthSlip"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="AuthorizationService">
+        <wsdl:port name="AuthorizationServiceHttpSoap11Endpoint" binding="ns:AuthorizationServiceSoap11Binding">
+            <soap:address location="http://115.112.239.72:8080/BeamsWS1/services/AuthorizationService.AuthorizationServiceHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="AuthorizationServiceHttpSoap12Endpoint" binding="ns:AuthorizationServiceSoap12Binding">
+            <soap12:address location="http://115.112.239.72:8080/BeamsWS1/services/AuthorizationService.AuthorizationServiceHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="AuthorizationServiceHttpEndpoint" binding="ns:AuthorizationServiceHttpBinding">
+            <http:address location="http://115.112.239.72:8080/BeamsWS1/services/AuthorizationService.AuthorizationServiceHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

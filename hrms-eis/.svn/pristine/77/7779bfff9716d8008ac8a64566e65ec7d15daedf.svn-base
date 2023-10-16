@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayArrearBillpostMpg" table="HR_PAY_ARREAR_BILLPOST_MPG">
+        <id name="arrearBillpostId" type="long">
+            <column name="ARREAR_BILLPOST_ID"  />
+            <generator class="assigned" />
+        </id>        
+        <many-to-one name="orgPostMst" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="POST_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrPaySalRevMst" class="com.tcs.sgv.eis.valueobject.HrPaySalRevMst" fetch="select">
+            <column name="SAL_REV_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrPayBillHeadMpg" class="com.tcs.sgv.eis.valueobject.HrPayBillHeadMpg" fetch="select">
+            <column name="bill_no">
+                <comment></comment>
+            </column>
+        </many-to-one>
+         <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>       
+         <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="emp_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>       
+   </class>
+</hibernate-mapping>

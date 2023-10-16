@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xmlns:aop="http://www.springframework.org/schema/aop"
+	     xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+
+ <bean id="hList" class="java.util.ArrayList">
+<constructor-arg>
+		<list>
+			<!--  Core Entries for Framework  -->
+				<!-- <value>com/tcs/sgv/common/valueobject/${DBTYPE}.hbm.xml</value>  -->
+				<value>	com/tcs/sgv/common/valueobject/SgvaExpestFinalamt.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/SgvaRcptestFinalamt.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/MstStatusLiability.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudmjrhdMst.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/SgvoDeptMst.hbm.xml</value>		
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudrlsOrderHdr.hbm.xml</value>						
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudrlsMonthMpg.hbm.xml</value>						
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudrlsOrderDtls.hbm.xml</value>						
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudrlsUsrAmt.hbm.xml</value>						
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudrlsDivisionMpg.hbm.xml</value>	
+				<value>	com/tcs/sgv/common/valueobject/RltLocationDepartment.hbm.xml</value>
+				<value> com/tcs/sgv/common/valueobject/RltLevelStatus.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudgrantMst.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudsubmjrhdMst.hbm.xml</value>						
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudminhdMst.hbm.xml</value>						
+				<value>	com/tcs/sgv/common/valueobject/SgvaExpestWrkMst.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudbpnMapping.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudcssMst.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/SgvaBuddemandMst.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/Payment.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/SgvaBudrlsMonthDtls.hbm.xml</value>
+				<value>com/tcs/sgv/common/valueobject/TrnBillMvmnt.hbm.xml</value>
+				<value>com/tcs/sgv/common/valueobject/RltDdoOrg.hbm.xml</value> 
+				<value>com/tcs/sgv/common/valueobject/MstScheme.hbm.xml</value>
+			<!--  OVER core Entries for Framework  -->		
+			
+			<!--  Entry for DCPS -->
+			
+				<value>com/tcs/sgv/dcps/valueobject/RltDcpsPayrollEmp.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/RltOfficeDesig.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/MstDcpsTierICntrnbtn.hbm.xml</value>  
+				<value>com/tcs/sgv/dcps/valueobject/RltDcpsDdoScheme.hbm.xml</value>
+  				<value>com/tcs/sgv/common/valueobject/OrgDdoMst.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/MstDcpsSchemes.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/DcpsDdoInfo.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/HstEmp.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/MstDcpsDesignation.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/HstEmpDeputation.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/MstEmp.hbm.xml</value> 
+  				<value>com/tcs/sgv/dcps/valueobject/MstEmpNmn.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/MstDdo.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/RltPhyFormStatus.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/MstOffice.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/DdoOffice.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/DDOInformationDetail.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/RltDdoAsst.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/MstDcpsBillGroup.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/RltBillgroupClassgroup.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/RltDcpsBillgroupOffice.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/MstSixPCArrears.hbm.xml</value>
+				<value>com/tcs/sgv/common/valueobject/SgvcFinYearMst.hbm.xml</value> 
+			    <value>com/tcs/sgv/dcps/valueobject/RltDcpsSixPCYearly.hbm.xml</value> 
+			  	<value>com/tcs/sgv/common/valueobject/SgvaMonthMst.hbm.xml</value> 
+				<value>com/tcs/sgv/dcps/valueobject/TrnDcpsContribution.hbm.xml</value> 
+				<value>com/tcs/sgv/dcps/valueobject/HstDcpsChanges.hbm.xml</value> 
+				<value>com/tcs/sgv/dcps/valueobject/HstDcpsPersonalChanges.hbm.xml</value> 
+			 	<value>com/tcs/sgv/dcps/valueobject/HstDcpsOfficeChanges.hbm.xml</value> 
+			  	<value>com/tcs/sgv/dcps/valueobject/HstDcpsOtherChanges.hbm.xml</value> 
+			  	<value>com/tcs/sgv/dcps/valueobject/HstDcpsNomineeChanges.hbm.xml</value> 
+			  	<value>com/tcs/sgv/dcps/valueobject/HstDcpsContribution.hbm.xml</value> 
+				<value>com/tcs/sgv/dcps/valueobject/DcpsCadreMst.hbm.xml</value> 
+				<value>com/tcs/sgv/dcps/valueobject/MstDcpsOrganization.hbm.xml</value> 
+  				<value>com/tcs/sgv/dcps/valueobject/SanctionedBudget.hbm.xml</value>
+  				<value>com/tcs/sgv/dcps/valueobject/InterestRate.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/DARate.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/TickerMessage.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/Feedback.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/NoticeBoard.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/PostEmpContri.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/TrnDcpsChanges.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/MstDcpsContriVoucherDtls.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/MstDummyOffice.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/MstDcpsContributionYearly.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/TrnDcpsDeputationContribution.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/MstDcpsTreasurynetData.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/MstEmpDetails.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/RltDcpsPayrollEmpDetails.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/MstEmpNmnDetails.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/MstDcpsSixPCInterestYearly.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/MstBrokenPeriodPay.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/RltBrokenPeriodAllow.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/RltBrokenPeriodDeduc.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/TrnDcpsTerminalDtls.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/TrnDcpsMissingCreditsDtls.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/HstChangePayScaleDtls.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/ShDDOOfficeMPG.hbm.xml</value>
+				<value>com/tcs/sgv/dcps/valueobject/AdmDept.hbm.xml</value>
+				
+			<!--  OVER Entry for DCPS --> 
+			
+			<!-- Entry for GPF -->
+				<value>com/tcs/sgv/gpf/valueobject/MstGpfAdvance.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/MstEmpGpfAcc.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/MstGpfEmp.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/TrnGpfFinalWithdrawal.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/MstGpfYearly.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/MstGpfMonthly.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/MstGpfEmpSubscription.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/MstGpfReq.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/MstGpfChallanDtls.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/MstGpfInterestRate.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/MstGpfArrearsYearly.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/RltGpfDdoVerifierHo.hbm.xml</value>
+				<value>com/tcs/sgv/gpf/valueobject/TrnEmpGpfAcc.hbm.xml</value>
+			<!-- End GPF -->
+			
+			<!-- Entry for LnA -->
+				<value>com/tcs/sgv/lna/valueobject/MstLnaCompAdvance.hbm.xml</value>
+				<value>com/tcs/sgv/lna/valueobject/MstLnaHouseAdvance.hbm.xml</value>
+				<value>com/tcs/sgv/lna/valueobject/MstLnaMotorAdvance.hbm.xml</value>
+				<value>com/tcs/sgv/lna/valueobject/MstLnaRequest.hbm.xml</value>
+				<value>com/tcs/sgv/lna/valueobject/MstLnaDocChecklist.hbm.xml</value>
+				<value>com/tcs/sgv/lna/valueobject/MstLnaChallanDtls.hbm.xml</value>
+				<value>com/tcs/sgv/lna/valueobject/MstLnaMonthly.hbm.xml</value>
+				<value>com/tcs/sgv/lna/valueobject/TrnEmpLoanDtls.hbm.xml</value>								
+			<!-- Entry for LnA -->
+			
+			<!-- Ankit Bhatt -->
+			<value>	com/tcs/sgv/common/valueobject/SgvaBudsubhdMst.hbm.xml</value>
+			<!--  -->
+			
+			<!-- Entry for Pension Processiong Module Starts -->
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnProcInwardPension.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnProcPnsnrDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnProcPnsnCalc.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnprocPnsnrpay.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnprocEventdtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnprocPnsnrservcbreak.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnprocAvgPayCalc.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnProcRecovery.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnProcAdvnceBal.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnProcAssesdDues.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnProcCheckList.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnprocFamilydtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/TrnPnsnprocNomineedtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionproc/valueobject/MstPensionCvpRate.hbm.xml</value>
+			<!-- Entry for Pension Processiong Module Ends -->
+			
+			<!--  Entry for Pension Payment Module Starts -->
+				<value>com/tcs/sgv/pensionpay/valueobject/CmnHolidayMst.hbm.xml</value>	
+				<value>com/tcs/sgv/pensionpay/valueobject/MstPnsnpmntSlots.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPnsnpmntSchedular.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/StgCpo.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/StgCpoAlloc.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/StgFamily.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/StgGpoAlloc.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/StgPensioner.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/StgPpoAlloc.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/StgRecovery.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/StgDeliveryDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/MstPensionerHdr.hbm.xml</value>
+			    <value>com/tcs/sgv/pensionpay/valueobject/MstPensionerDtls.hbm.xml</value>
+			    <value>com/tcs/sgv/pensionpay/valueobject/TrnPensionRqstHdr.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/MstPensionerFamilyDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/MstPensionerNomineeDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionerRivisionDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/MstPensionHeadcode.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnProvisionalPensionDtls.hbm.xml</value>
+				<value>com/tcs/sgv/common/valueobject/MstBank.hbm.xml</value>
+				 <value>com/tcs/sgv/common/valueobject/RltBankBranch.hbm.xml</value>
+				 <value>com/tcs/sgv/common/valueobject/MstBankPay.hbm.xml</value>
+				<value>com/tcs/sgv/common/valueobject/RltBankBranchPay.hbm.xml</value>
+				<value>	com/tcs/sgv/common/valueobject/CmnLocationMstCoddo.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnProvisionalVoucherDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionRecoveryDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionTransferDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionerSeenDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionSixpayfpArrear.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/HstMstPensionerHdr.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/HstMstPensionerDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionChallanDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/MstChangeStmntCtgry.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/HstReEmploymentDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/HstPnsnPmntPpoNo.hbm.xml</value>	
+				<value>com/tcs/sgv/pensionpay/valueobject/HstCommutationDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/HstPnsnPmntDcrgDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionCaseMvmnt.hbm.xml</value>		
+				<value>com/tcs/sgv/pensionpay/valueobject/MstPensionMainCategory.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/MstPensionStateRate.hbm.xml</value>
+				<!-- bank branch mapping -->
+				<value>com/tcs/sgv/pensionpay/valueobject/BankMpg.hbm.xml</value>		
+				<value>com/tcs/sgv/pensionpay/valueobject/PasBankMaster.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/PasBranchMaster.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/RltBankBranchTmp.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/MstBankTmp.hbm.xml</value>
+					
+<!--  Entry for Pension Payment Module for bill vipul Starts -->
+	
+				<value>com/tcs/sgv/pensionpay/valueobject/MstPensionRqstReason.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/RltPensioncaseBill.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/RltPensionHeadcodeChargable.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/RltPensionHeadcodeRate.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/RltPensionHeadcodeSpecial.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/RltPensionRevisedPayment.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionArrearDtls.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionBillHdr.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionBillDtls.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionBillReceipt.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionCorrectionDtls.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionHeldReasonDtls.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionItCutDtls.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionOtherPartyPay.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionRqstTracking.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPnsncaseRopRlt.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/ValidPcodeView.hbm.xml</value>
+ 			    <value>com/tcs/sgv/pensionpay/valueobject/ConfigOnlineBill.hbm.xml</value>
+ 				<value>com/tcs/sgv/pensionpay/valueobject/RltAuditorBank.hbm.xml</value> 
+				<value>com/tcs/sgv/pensionpay/valueobject/HstRltAuditorBank.hbm.xml</value> 
+				<value>com/tcs/sgv/common/valueobject/TrnBillRegister.hbm.xml</value>
+				<value>com/tcs/sgv/common/valueobject/RltBillParty.hbm.xml </value>  
+				  
+				<!--  Entry for Pension Payment Module for bill vipul Starts -->	
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnChequeDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/RltBillCheque.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnEcsDtl.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnCvpRestorationDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnMonthlyChangeRqst.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionChangeHdr.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionChangeDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionSupplyBillDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/MstPensionChecklist.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionerChecklistDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/ReturnedEcsDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnMonthlyPensionRecoveryDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/TrnPensionCutDtls.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/MstBankGrp.hbm.xml</value>
+				<value>com/tcs/sgv/pensionpay/valueobject/RltBankBranchGrp.hbm.xml</value>
+				<value>com/tcs/sgv/common/valueobject/OrgTicketMst.hbm.xml</value> 
+				<value>com/tcs/sgv/common/valueobject/OrgTicketMstHistory.hbm.xml</value>
+				<!--  Entry for NPS Contribution Integration Starts -->
+					<value>com/tcs/sgv/nps/valueobject/NsdlBhDtls.hbm.xml</value> 
+					<value>com/tcs/sgv/nps/valueobject/NsdlDhDtls.hbm.xml</value> 
+					<value>com/tcs/sgv/nps/valueobject/NsdlSdDtls.hbm.xml</value> 
+					<!--  Entry for NPS Contribution Integration Starts -->	
+				
+		</list>			
+</constructor-arg>
+</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceC3POMaster"/>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.connection.release_mode">auto</prop>
+					<!-- c3p0 conneciton pool properties -->
+				<!-- end of c3p0 props -->
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.dialect">${dialect}</prop>
+				<prop key="hibernate.use_outer_join">true</prop>
+				<prop key="hibernate.use_sql_comments">false</prop>
+				<prop key="hibernate.jdbc.batch_size">${batchSize}</prop>
+				<prop key="hibernate.connection.release_mode">auto</prop>				
+
+				<!--properties for Query cahce and second leve cache-->
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				
+				<!-- Added by Nirav Bumia for enabling second level caching -->
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				
+				<prop key="hibernate.generate_statistics">true</prop>
+				
+			</props>
+		</property>
+		
+		<property name="mappingJarLocations">
+		 <list>
+		  <value>WEB-INF/lib/hdiits*.jar</value>
+		  <value>WEB-INF/lib/hrms*.jar</value> 
+		  
+		  </list>
+        </property>	
+			
+		<property name="mappingResources" ref="hList"/>
+		</bean>
+
+<!-- Jignesh Sakhiya -->
+
+<bean id="sessionFactorySlave"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceC3POSlave"/>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.connection.release_mode">auto</prop>
+					<!-- c3p0 conneciton pool properties -->
+				<!-- end of c3p0 props -->
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.dialect">${dialect}</prop>
+				<prop key="hibernate.use_outer_join">true</prop>
+				<prop key="hibernate.use_sql_comments">false</prop>
+				<prop key="hibernate.jdbc.batch_size">${slaveBatchSize}</prop>
+				<prop key="hibernate.connection.release_mode">auto</prop>				
+				<!--properties for Query cahce and second leve cache-->
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<!-- Added by Nirav Bumia for enabling second level caching -->
+				
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.generate_statistics">true</prop>
+				
+			</props>
+		</property>
+		
+		<property name="mappingJarLocations">
+		 <list>
+		  <value>WEB-INF/lib/hdiits*.jar</value>
+		  <value>WEB-INF/lib/hrms*.jar</value> 
+		  </list>
+        </property>	
+		<property name="mappingResources" ref="hList"/>
+	</bean>
+	
+<!-- Jignesh end -->
+
+	
+	
+	
+	<bean id="dataSourceC3POMaster"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass"><value>${driverClass}</value></property>
+		<property name="jdbcUrl"><value>${connectionUrl}</value></property>
+		<property name="user"><value>${username}</value></property>
+		<property name="password"><value>${password}</value></property>
+		<property name="maxPoolSize"><value>${maxSize}</value></property>
+		<property name="maxStatements"><value>${maxStatements}</value></property>
+		<property name="minPoolSize"><value>${minSize}</value></property>
+		<property name="maxIdleTime"><value>${maxIdleTime}</value></property>
+		<property name="acquireIncrement"><value>${acquireIncrement}</value></property>
+		<property name="idleConnectionTestPeriod"><value>${idleConnectionTestPeriod}</value></property>
+		<property name="preferredTestQuery"><value>${preferredTestQuery}</value></property>
+		
+		<!-- Ankit Bhatt -->
+		<!-- 
+		<property name="unreturnedConnectionTimeout"><value>${unreturnedConnectionTimeout}</value></property>
+		<property name="debugUnreturnedConnectionStackTraces"><value>${debugUnreturnedConnectionStackTraces}</value></property>
+		<property name="numHelperThreads"><value>${numHelperThreads}</value></property>
+		 -->
+	</bean>
+	
+	<bean id="dataSourceC3POSlave"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass"><value>${driverClass}</value></property>
+		<property name="jdbcUrl"><value>${connectionUrlSlave}</value></property>
+		<property name="user"><value>${username}</value></property>
+		<property name="password"><value>${password}</value></property>
+		<property name="maxPoolSize"><value>${slaveMaxSize}</value></property>
+		<property name="maxStatements"><value>${slaveMaxStatements}</value></property>
+		<property name="minPoolSize"><value>${slaveMinSize}</value></property>
+		<property name="maxIdleTime"><value>${slaveMaxIdleTime}</value></property>
+		<property name="acquireIncrement"><value>${slaveAcquireIncrement}</value></property>
+		<property name="idleConnectionTestPeriod"><value>${slaveIdleConnectionTestPeriod}</value></property>
+		<property name="preferredTestQuery"><value>${slavePreferredTestQuery}</value></property>
+		<!-- 
+		<property name="unreturnedConnectionTimeout"><value>${unreturnedConnectionTimeout}</value></property>
+		<property name="debugUnreturnedConnectionStackTraces"><value>${debugUnreturnedConnectionStackTraces}</value></property>		
+		<property name="numHelperThreads"><value>${numHelperThreads}</value></property>
+		 -->
+	</bean>
+
+	<bean id="reportDbCon" class="com.tcs.sgv.common.util.DBConnection">
+		<property name="dataSource">
+			<ref bean="dataSourceC3POSlave" />
+		</property>
+	</bean> 
+	
+	
+	
+	<bean id="localeChangeInterceptor" class="com.tcs.sgv.core.utils.ProjectLocaleChangeInterceptor"/>	
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>	
+	<bean abstract="true"
+		class="com.tcs.sgv.core.dao.GenericDaoHibernateImpl"
+		id="abstractDaoTarget">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean abstract="true"
+		class="org.springframework.aop.framework.ProxyFactoryBean"
+		id="abstractDao">
+	</bean>
+	<bean class="com.tcs.sgv.core.controller.BaseController"
+		id="baseController">
+		<property name="serviceLocator">
+			<ref bean="servLocator" />
+		</property>
+	</bean>
+
+	<bean class="com.tcs.sgv.core.service.ServiceLocator"
+		id="servLocator">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<property name="putIntoMessageQueue">
+			<ref bean="putIntoMessageQueue" />
+		</property>
+		<property name="sessionFactorySlave">
+			<ref bean="sessionFactorySlave" />
+		</property>		
+		<property name="dataSource">
+			<ref bean="dataSourceC3POMaster" />
+		</property>
+	</bean>
+	
+	<bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<!-- the transactional semantics... -->
+		<tx:attributes>
+			<!-- all methods starting with 'executeService' are read-only -->
+			<tx:method name="handleRequest*" rollback-for="IllegalArgumentException"/>
+		</tx:attributes>
+	</tx:advice>
+	<aop:config>
+		<aop:pointcut id="handleRequestOperation"
+			expression="execution(* com.tcs.sgv.core.controller.BaseController.handle*(..))" />
+		<aop:advisor advice-ref="txAdvice"
+			pointcut-ref="handleRequestOperation" />
+	</aop:config>
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"
+		id="urlMapping">
+		<property name="interceptors">
+			<list>
+				<ref bean="localeChangeInterceptor"/>		
+			    <ref bean="themeChangeInterceptor"/>
+			</list>
+		</property>		
+		<property name="mappings">
+			<props>				
+				<prop key="/ifms.htm">baseController</prop>
+ 				<prop key="/hdiits.htm">baseController</prop>
+				<prop key="/hrms.htm">baseController</prop>				
+			</props>
+		</property>
+	</bean>
+ <bean
+  class="org.springframework.web.servlet.theme.ThemeChangeInterceptor" id="themeChangeInterceptor"/>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">	
+		<property name="basename" value="resources/CommonLables"/>
+	</bean>
+	
+ <!-- ========================= MAPPING DEFINITIONS ========================= 
+
+	- Explicit view mappings in bundle instead of default InternalResourceViewResolver.
+    - Fetches the view mappings from localized "views_xx" classpath files, i.e.
+	- "/WEB-INF/classes/views-hdiits.properties".
+	-
+	- Symbolic view names returned by controllers will be resolved in the respective
+	- properties file, allowing for arbitrary mappings between names and resources.
+	-
+	- We use the "defaultParentView" property. All views defined will by default inherit
+	- the properties defined in the "modelView" view.
+  -->
+	<bean
+		class="org.springframework.web.servlet.view.ResourceBundleViewResolver"
+		id="modelViewResolver">
+		<property name="basenames">
+			<list>
+			<!-- added by bhargav for pension processing module starts-->
+				<value>resources/views-pensionproc</value>
+			<!-- added by bhargav for pension processing module ends -->
+					
+			<!-- added by shivani for pension pay module starts-->
+				<value>resources/views-pensionpay</value>
+			<!-- added by shivani for pension pay module ends -->
+					
+				<value>resources/ess/hdiits-ess-views</value>
+		 		<value>resources/ess/hrms-ess-views</value>
+				<value>resources/eis/hrms-eis-views</value>
+				<value>resources/hr/hrms-hr-views</value>
+				<value>resources/mstscr/hrms-mst-scr-views</value>
+				<value>resources/views-hdiits</value>
+				<value>resources/hdiits-mst-scr-views</value>
+				<value>resources/common/hdiits-common-views</value>	
+				<value>resources/acl/hdiits-acl-views</value>
+				<value>resources/core/hdiits-core-views</value>				
+				<value>resources/appgen/hdiits-appgen-views</value>
+				<value>resources/reports/reports-views</value> 
+				<value>resources/views-dcps</value>
+				<value>resources/views-nps</value>
+				<value>resources/views-gpf</value>
+				<value>resources/views-lna</value>
+				<value>resources/hod/common/hdiits-hod-common-views</value>
+				
+				<!--  Added by Nirav for WF Admin Module Start -->
+				<value>resources/workflow/hdiits-workflow-views</value>
+				<!--  Added by Nirav for WF Admin Module End -->
+				
+				<!-- Ankit Bhatt -->
+				<value>resources/payroll/hrms-payroll-views</value>
+				<!-- Ended Ankit Bhatt -->
+				
+			</list>
+		</property>
+		<property name="defaultParentView" value="modelView" />
+		<property name="order" value="1" />
+	</bean>
+ <!--
+  - We specify here that Locale and theme are stored in cookies.
+  - They could be stored in a Session. Default resolvers don't allow changing them on the fly.
+ -->
+ <bean class="org.springframework.web.servlet.theme.SessionThemeResolver" id="themeResolver">
+  <property name="defaultThemeName" value="ifmsblue"/>
+ </bean>
+ 
+ 	<!--                   This part contain JMS related code      -->
+	<!--                   This part contain JMS related code      -->
+	<!--                   This part contain JMS related code      -->
+	<!--                   This part contain JMS related code      -->
+	
+	
+	<!--                   Start of MESSAGE QUEUE description      -->
+
+
+<!-- 	<bean class="org.apache.activemq.pool.PooledConnectionFactory"
+		destroy-method="stop" id="connectionFactory">
+		<property name="connectionFactory">
+			<bean
+				class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL"
+					value="tcp://localhost:61616" />
+				<property name="useAsyncSend">
+					<value>TRUE</value>
+				</property>
+				
+			</bean>
+		</property>
+	</bean>
+ -->
+ 	<!-- Thread for writing the Cache statistics in log file -->
+	<bean id="cacheStatWriter" class="com.tcs.sgv.common.util.CacheStatisticsWriter"/>
+	
+	
+	 
+ <bean id="connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory" destroy-method="destroy">
+<property name="targetConnectionFactory">
+<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+<property name="brokerURL" value="tcp://localhost:61616" />
+<property name="useAsyncSend"><value>TRUE</value></property> 
+</bean>
+</property>
+</bean>
+ 
+ 
+ 
+ 
+	<bean class="org.springframework.jms.core.JmsTemplate" id="jmsTemplate">
+    	<property name="receiveTimeout" value="1000" /> 
+		<property name="connectionFactory">
+			<ref local="connectionFactory" />
+		</property>
+		<property name="defaultDestination">
+			<ref local="messageQueue" />
+		</property>
+		<property name="deliveryPersistent" value="true" />
+		<property name="sessionTransacted" value="true" />
+	</bean>
+
+	<bean class="org.apache.activemq.command.ActiveMQQueue"
+		id="messageQueue">
+		<constructor-arg index="0" value="HDIITS_AUDIT_MESSAGE_QUEUE" />
+	</bean>
+
+	<!--                   End of MESSAGE QUEUE description      -->
+	<!--                   End of MESSAGE QUEUE description      -->
+	<!--                   End of MESSAGE QUEUE description      -->
+
+
+	<bean class="com.tcs.sgv.core.dao.PutIntoMessageQueue"
+		id="putIntoMessageQueue">
+		<property name="jmsTemplate">
+			<ref local="jmsTemplate" />
+		</property>
+	</bean>
+	
+<!-- <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+</bean> -->
+
+<!-- property placeholder 
+	<bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+		<property name="locations">
+			<list>
+				<value>classpath:ApplicationDB.properties</value>
+				<value>classpath:c3p0.properties</value>
+			</list>
+		</property>
+	</bean>
+ -->
+ 
+ <bean id="configurationEncryptor"
+    	  class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+    	  <property name="password" value="password" />
+    </bean>
+ 	
+ 	<bean id="propertyConfigurer"
+    	  class="org.jasypt.spring.properties.EncryptablePropertyPlaceholderConfigurer">
+   		  <constructor-arg ref="configurationEncryptor" />
+   						   <property name="locations">
+     								 <list>
+       										<value>classpath:ApplicationDB.properties</value>
+											<value>classpath:c3p0.properties</value>
+     								 </list>
+   						   </property>
+ 	</bean>
+
+<!-- Added by Brijesh Prajapati to publish Application Event -->
+	<bean name="HandleApplicationEvent" class="com.tcs.sgv.acl.acegilogin.event.HandleApplicationEvent"></bean>
+
+<!-- Added by Brijesh Prajapati for Audit Trail Interceptor ...... start -->
+	<bean name="auditTrailInterceptor" class="com.tcs.sgv.core.interceptor.AuditTrailInterceptor" ></bean>
+	<bean name="auditTrailInterceptor.Pointcut" 		    
+	      class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+ 				<property name="advice" ref="auditTrailInterceptor"/>
+		 		<property name="mappedName" value="handleRequest"/>
+	</bean>
+	<bean class="org.springframework.aop.framework.ProxyFactoryBean">
+		  <property name="interceptorNames">
+			  		<list>
+		 				  <value>auditTrailInterceptor</value>
+						  <value>auditTrailInterceptor.Pointcut</value>
+					</list>
+		  </property>
+	</bean>   
+<!-- Added by Brijesh Prajapati for Audit Trail Interceptor ...... end -->
+ 	
+<!-- 	<bean class="com.tcs.sgv.hdiits.core.dao.RunGetFromMessageQueue" 
+		id="runGetFromMessageQueue">   
+ 	<property name="jmsTemplate">
+			<ref local="jmsTemplate" />
+		</property>
+ 		
+	</bean>-->	
+
+	<!--                    Start of timer related code                      -->
+	
+
+
+<!--  <bean id="scheduledTask" 
+		class="org.springframework.scheduling.timer.ScheduledTimerTask">
+		<property name="delay" value="${SCHEDULED_TIMER_TASK_DELAY}" /> 
+		<property name="delay" value="30000" />  
+	  <property name="period" value="${SCHEDULED_TIMER_TASK_INTERVAL}" /> 
+		<property name="period" value="20000" />  
+		<property name="fixedRate" value="false" />
+		<property name="timerTask" ref="runGetFromMessageQueue" />		
+	</bean>
+-->		
+ <!-- <bean id="methodInvokingTask" class="org.springframework.scheduling.timer.MethodInvokingTimerTaskFactoryBean">
+	<property name="targetObject"><ref local="runGetFromMessageQueue"/></property>
+	<property name="targetMethod" value="queueExtractionMethod">
+	</property>
+	</bean> 
+-->
+
+<!-- <bean id="timerFactoryBean" class="org.springframework.scheduling.timer.TimerFactoryBean" destroy-method="destroy">
+		<property name="scheduledTimerTasks">
+		<list>
+			<ref local="scheduledTask" />
+		</list>
+		</property>
+		<property name="daemon" value="true" />		
+	</bean>
+
+ -->	
+
+
+	<!--                    end of timer related code                        -->
+
+	<!--                   End of JMS related code                 -->
+<!-- Added By Divyesh Jariwala for posting scheduler - STARTS -->
+	<!-- Ankit Bhatt -->
+  	<!-- 
+  	<bean name="postingSchedulerJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+        <property name="jobClass" value="com.tcs.sgv.hr.utils.PostingSchedulerJob"/>
+         	
+    </bean>
+		
+	<bean id="postCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="postingSchedulerJob" />
+		<property name="cronExpression" value="0 0 0/12 * * ?" />
+	</bean>
+	
+	<bean name="postingJobForStartup" class="com.tcs.sgv.hr.utils.PostingJobForStartup">
+    </bean>
+    
+	 <bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	 
+
+
+    </bean>
+     -->  
+
+    <!-- Added By Divyesh Jariwala for posting scheduler - ENDS -->
+    
+   
+ 
+
+	
+	<!-- Added By NIRAV BUMIA for pension unseen scheduler - ENDS -->
+	
+	
+
+	
+	<!-- Added By NIRAV BUMIA for deletion of pension variation report data - ENDS -->
+</beans>

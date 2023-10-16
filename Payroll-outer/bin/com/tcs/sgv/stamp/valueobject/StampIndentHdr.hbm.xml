@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 15, 2007 12:20:23 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.stamp.valueobject.StampIndentHdr" table="STAMP_INDENT_HDR"  >
+        <id name="indId" type="big_decimal">
+            <column name="IND_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="indFdate" type="date">
+            <column name="IND_FDATE" length="7" />
+        </property>
+        <property name="indTdate" type="date">
+            <column name="IND_TDATE" length="7" />
+        </property>
+        <property name="indLocCode" type="string">
+            <column name="IND_LOC_CODE" length="20" />
+        </property>
+        <property name="indTypeCode" type="string">
+            <column name="IND_TYPE_CODE" length="20" />
+        </property>
+        <property name="indStatus" type="string">
+            <column name="IND_STATUS" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

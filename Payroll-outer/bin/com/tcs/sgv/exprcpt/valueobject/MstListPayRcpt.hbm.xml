@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 12, 2007 6:30:11 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.exprcpt.valueobject.MstListPayRcpt" table="MST_LIST_PAY_RCPT" dynamic-update="true">
+        <id name="id" type="big_decimal">
+            <column name="ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="text" type="string">
+            <column name="TEXT" length="60" />
+        </property>
+        <property name="formula" type="string">
+            <column name="FORMULA" length="500" />
+        </property>
+        <property name="isFormula" type="java.lang.Character">
+            <column name="IS_FORMULA" length="1" />
+        </property>
+        <property name="type" type="java.lang.Character">
+            <column name="TYPE" length="1" />
+        </property>
+        <property name="srNo" type="java.lang.Short">
+            <column name="SR_NO" precision="4" scale="0" />
+        </property>
+        <property name="total" type="java.lang.Character">
+            <column name="TOTAL" length="1" />
+        </property>
+        <property name="belongsTo" type="string">
+            <column name="BELONGS_TO" length="3" />
+        </property>
+        <property name="list" type="java.lang.Character">
+            <column name="LIST" length="1" />
+        </property>
+        <property name="rcptData" type="java.lang.Character">
+            <column name="RCPT_DATA" length="1" />
+        </property>
+        <property name="section" type="string">
+            <column name="SECTION" length="6" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

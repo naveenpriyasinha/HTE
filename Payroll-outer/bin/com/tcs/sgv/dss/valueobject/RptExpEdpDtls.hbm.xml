@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 14, 2007 3:56:08 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.dss.valueobject.RptExpEdpDtls" table="RPT_EXP_EDP_DTLS">
+        <id name="expEdpId" type="big_decimal">
+            <column name="EXP_EDP_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="expId" type="big_decimal">
+            <column name="EXP_ID" precision="20" scale="0" />
+        </property>
+        <property name="objHd" type="string">
+            <column name="OBJ_HD" length="15" />
+        </property>
+        <property name="edpHd" type="string">
+            <column name="EDP_HD" length="15" />
+        </property>
+        
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="20" />
+        </property>
+        <property name="paymentid" type="big_decimal">
+            <column name="PAYMENTID" precision="20" scale="0" />
+        </property>
+        <property name="edpType" type="java.lang.Character">
+            <column name="EDP_TYPE" length="1" />
+        </property>
+        <property name="trnExpEdpId" type="big_decimal">
+            <column name="TRN_EXP_EDP_ID" precision="20" scale="0" />
+        </property>
+        <property name="clientData" type="java.lang.Character">
+            <column name="CLIENT_DATA" length="1" />
+        </property>
+        <property name="active" type="java.lang.Character">
+            <column name="ACTIVE" length="1" />
+        </property>
+        <property name="crtUsr" type="string">
+            <column name="CRT_USR" length="30" />
+        </property>
+        <property name="crtDt" type="date">
+            <column name="CRT_DT" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

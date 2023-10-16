@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 22, 2007 6:16:17 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.PaybillEmpCompMpg" table="HR_PAY_PAYBILL_EMP_COMP_MPG">
+    
+        <id name="paybillEmpCompId" type="long">
+            <column name="PAYBILL_EMP_COMP_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        
+       	<property name="paybillID"  type="long">
+            <column name="HR_PAY_PAYBILL_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>       
+                     
+        <property name="paybillHeadMpg" type="long" >
+            <column name="PAYBILL_HEAD_MPG_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="compoType" type="long" >
+            <column name="COMPO_TYPE" precision="22" scale="0" not-null="true" />
+        </property>
+        
+        <property name="compoId" type="string" >
+            <column name="COMPO_ID"  />
+        </property>
+        
+        
+        
+    </class>
+</hibernate-mapping>

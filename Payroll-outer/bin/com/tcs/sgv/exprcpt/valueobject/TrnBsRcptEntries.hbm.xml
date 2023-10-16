@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 22, 2007 4:03:15 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.exprcpt.valueobject.TrnBsRcptEntries" table="trn_bs_rcpt_entries" dynamic-update="true" >
+        <comment></comment>
+        <id name="bsRcptEntryId" type="long">
+            <column name="BS_RCPT_ENTRY_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="bsDetailId" type="long">
+            <column name="BS_DETAIL_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="receiptNo" type="int">
+            <column name="RECEIPT_NO" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="depositorName" type="string">
+            <column name="DEPOSITOR_NAME" length="45" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="majorHead" type="string">
+            <column name="MAJOR_HEAD" length="15" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="intl" type="string">
+            <column name="INTL" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="dbId" type="long">
+            <column name="DB_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

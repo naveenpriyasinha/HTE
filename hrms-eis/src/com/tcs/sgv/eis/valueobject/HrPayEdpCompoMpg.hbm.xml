@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 17, 2007 10:37:47 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayEdpCompoMpg" table="HR_PAY_EDP_COMPO_MPG">
+        <id name="id" type="long">
+            <column name="ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="rltBillTypeEdp" class="com.tcs.sgv.eis.valueobject.RltBillTypeEdp" fetch="select">
+            <column name="TYPE_EDP_ID" precision="22" scale="0" />
+        </many-to-one>
+        <property name="cmnLookupId" type="long">
+            <column name="CMN_LOOKUP_ID" precision="22" scale="0" />
+        </property>
+        <property name="isOneTime" type="long">
+            <column name="isOneTime" precision="22" scale="0" />
+        </property>
+        <property name="typeId" type="string">
+            <column name="TYPE_ID"/>
+        </property>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        
+         <property name="subDtlHead" type="long">
+            <column name="SUB_DETAILED_HEAD" precision="20" scale="0" />
+        </property>
+        
+        <property name="headOfAcc" type="long">
+            <column name="Head_of_account_code" precision="15" scale="0" />
+        </property>
+        <property name="displayOrder" type="long">
+            <column name="display_order" precision="15" scale="0" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

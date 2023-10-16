@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.tcs.sgv.eis.valueobject.HrPayRuleParamMst" table="HR_PAY_RULE_PARAM_MST">
+		<id name="paramId" type="int">
+			<column name="PARAM_ID" precision="10" scale="0" not-null="true" />
+			<generator class="assigned" />
+		</id>
+		<property name="paramName" type="string">
+			<column name="PARAM_NAME" not-null="true" />
+		</property>
+		<property name="paramType" type="int">
+			<column name="PARAM_TYPE" not-null="true" />
+		</property>
+		<property name="propertyValName" type="string">
+			<column name="PROPERTY_VAL_NAME" not-null="true" />
+		</property>
+		<property name="propertyUpperValName" type="string">
+			<column name="PROPERTY_UPPERVAL_NAME" />
+		</property>
+		<property name="crtdBy" type="string">
+			<column name="CRTD_BY" precision="20" scale="0" not-null="true" />
+		</property>
+		<property name="crtdDate" type="date">
+			<column name="CRTD_DATE" length="7" not-null="true" />
+		</property>
+		<property name="updatedBy" type="string">
+			<column name="UPD_BY" precision="10" scale="0"/>
+		</property>
+		<property name="updDate" type="date">
+			<column name="UPD_DATE" length="7" />
+		</property>
+	</class>
+</hibernate-mapping>

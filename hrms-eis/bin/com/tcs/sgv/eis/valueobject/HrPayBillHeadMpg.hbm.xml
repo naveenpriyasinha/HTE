@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2007 12:44:58 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayBillHeadMpg" table="hr_pay_bill_subhead_mpg">
+        <id name="billHeadId" type="long">
+            <column name="BILL_SUBHEAD_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="billId" type="long">
+            <column name="BILL_NO"/>
+        </property>
+        <property name="subheadId" type="java.lang.Long">
+            <column name="SUBHEAD_CODE" precision="15" scale="0" />
+        </property>
+        <!--  Added By Urvin shah -->
+        <many-to-one name="postType" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="post_type">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <!--  End -->
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+         <many-to-one name="orgSchemeMst" class="com.tcs.sgv.eis.valueobject.OrgSchemeMstVO" fetch="select">
+            <column name="scheme_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <!-- 
+        <property name="loc_id" type="long">
+            <column name="LOC_ID" length="20" />
+        </property>
+        -->
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="finYearId" type="long">
+            <column name="FIN_YEAR_ID"/>
+        </property>
+        
+           <property name="dsgn_Id" type="string">
+            <column name="DSGN_ID"/>
+        </property>
+        
+         <property name="class_Id" type="string">
+            <column name="CLASS_ID"/>
+        </property>
+        
+        <property name="headChargable" type="string">
+            <column name="head_chargable"/>
+        </property>
+        
+    </class>
+</hibernate-mapping>

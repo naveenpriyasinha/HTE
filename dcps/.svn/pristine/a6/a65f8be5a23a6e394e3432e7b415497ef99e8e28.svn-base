@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated 29 Aug, 2023 5:52:31 PM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.tcs.sgv.nps.valueobject.NsdlBhDtls" optimistic-lock="version" 
+    polymorphism="implicit" select-before-update="false" table="NSDL_BH_DTLS">
+        <id name="bhPk" type="long">
+            <column name="BH_PK"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="srNo" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="SR_NO"/>
+        </property>
+        <property generated="never" lazy="false" name="headerName" optimistic-lock="true" type="string" unique="false">
+            <column length="2" name="HEADER_NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="bhNo" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="BH_NO"/>
+        </property>
+        <property generated="never" lazy="false" name="bhCol2" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="BH_COL2"/>
+        </property>
+        <property generated="never" lazy="false" name="bhFixNo" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="BH_FIX_NO"/>
+        </property>
+        <property generated="never" lazy="false" name="bhDate" optimistic-lock="true" type="string" unique="false">
+            <column length="10" name="BH_DATE"/>
+        </property>
+        <property generated="never" lazy="false" name="bhBatchFixId" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="BH_BATCH_FIX_ID" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="bhDdoCount" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="BH_DDO_COUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="bhPranCount" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="BH_PRAN_COUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="bhEmpAmount" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="BH_EMP_AMOUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="bhEmplrAmount" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="BH_EMPLR_AMOUNT"/>
+        </property>
+        <property generated="never" lazy="false" name="bhTotalAmt" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="BH_TOTAL_AMT"/>
+        </property>
+        <property generated="never" lazy="false" name="fileName" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="FILE_NAME"/>
+        </property>
+        <property generated="never" lazy="false" name="year" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="YEAR"/>
+        </property>
+        <property generated="never" lazy="false" name="month" optimistic-lock="true" type="java.lang.Short" unique="false">
+            <column name="MONTH"/>
+        </property>
+        <property generated="never" lazy="false" name="status" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="STATUS"/>
+        </property>
+        <property generated="never" lazy="false" name="nsdlFileHash" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="NSDL_FILE_HASH"/>
+        </property>
+        <property generated="never" lazy="false" name="fileStatus" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="FILE_STATUS"/>
+        </property>
+        <property generated="never" lazy="false" name="transactionId" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="TRANSACTION_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="errorData" optimistic-lock="true" type="clob" unique="false">
+            <column name="ERROR_DATA"/>
+        </property>
+        <property generated="never" lazy="false" name="oldTransactionId" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="OLD_TRANSACTION_ID"/>
+        </property>
+        <property generated="never" lazy="false" name="reasonForTranIdUpdatevar" optimistic-lock="true" type="string" unique="false">
+            <column length="25" name="REASON_FOR_TRAN_ID_UPDATEVAR"/>
+        </property>
+        <property generated="never" lazy="false" name="remarkForTranIdUpdate" optimistic-lock="true" type="string" unique="false">
+            <column length="45" name="REMARK_FOR_TRAN_ID_UPDATE"/>
+        </property>
+        <property generated="never" lazy="false" name="frnNo" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="FRN_NO"/>
+        </property>
+        <property generated="never" lazy="false" name="isLegacyData" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <column length="1" name="IS_LEGACY_DATA"/>
+        </property>
+        <property generated="never" lazy="false" name="ddoCode" optimistic-lock="true" type="string" unique="false">
+            <column length="15" name="DDO_CODE"/>
+        </property>
+        <property generated="never" lazy="false" name="fileCreatedDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="26" name="FILE_CREATED_DATE"/>
+        </property>
+        <property generated="never" lazy="false" name="fileUploadCreatedDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="26" name="FILE_UPLOAD_CREATED_DATE"/>
+        </property>
+        <property generated="never" lazy="false" name="challanReceivedCreatedDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="26" name="CHALLAN_RECEIVED_CREATED_DATE"/>
+        </property>
+        <property generated="never" lazy="false" name="bankRefno" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="BANK_REFNO"/>
+        </property>
+        <property generated="never" lazy="false" name="voucherNo" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="VOUCHER_NO"/>
+        </property>
+        <property generated="never" lazy="false" name="voucherDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="26" name="VOUCHER_DATE"/>
+        </property>
+        <property generated="never" lazy="false" name="bdsNo" optimistic-lock="true" type="string" unique="false">
+            <column length="30" name="BDS_NO"/>
+        </property>
+    </class>
+</hibernate-mapping>

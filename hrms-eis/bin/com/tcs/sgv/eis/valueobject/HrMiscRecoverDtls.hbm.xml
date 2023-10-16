@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 17, 2007 6:59:46 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrMiscRecoverDtls" table="HR_MISC_RECOVER_DTLS" >
+        <id name="miscId" type="long">
+            <column name="MISC_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID" precision="22" />
+        </many-to-one>
+        <!-- <property name="empId" type="long">
+            <column name="EMP_ID" precision="22" scale="0" />
+        </property>  -->
+        <property name="recoverAmt" type="long">
+            <column name="RECOVER_AMT" precision="22" scale="0" />
+        </property>
+        <property name="reason" type="string">
+            <column name="REASON" length="500" />
+        </property>
+        <property name="recoverDate" type="timestamp">
+            <column name="START_DATE" length="7" />
+        </property>
+       <!--  <property name="dbId" type="long">
+            <column name="DB_ID" precision="22" scale="0" />
+        </property>
+        <property name="locId" type="long">
+            <column name="LOC_ID" precision="22" scale="0" />
+        </property>
+        <property name="langId" type="long">
+            <column name="LANG_ID" precision="22" scale="0" />
+        </property>  -->
+        <property name="elementCode" type="long">
+            <column name="ELEMENT_CODE" precision="22" scale="0" />
+        </property>
+       <!--  <property name="createdBy" type="long">
+            <column name="CREATED_BY" precision="22" scale="0" />
+        </property>
+        <property name="createdByPost" type="long">
+            <column name="CREATED_BY_POST" precision="22" scale="0" />
+        </property>  -->
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+       <!--  <property name="updatedBy" type="long">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </property>
+        <property name="updatedByPost" type="long">
+            <column name="UPDATED_BY_POST" precision="22" scale="0" />
+        </property>  -->
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+         <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER"  >
+                <comment></comment>
+            </column>
+        </property>
+                <property name="attachment_Id" type="java.lang.Long">
+            <column name="ATTACHMENT_ID"  />
+        </property>
+        <property name="recoverEndDate" type="timestamp">
+            <column name="END_DATE" length="7" />
+        </property>
+         <property name="total_amount" type="long">
+            <column name="TOTAL_AMT" precision="22" scale="0" />
+        </property>
+         <property name="installment" type="long">
+            <column name="TOTAL_INSTALLMENT" precision="22" scale="0" />
+        </property>
+         <property name="edpTypeId" type="long">
+            <column name="TYPE_EDP_ID" precision="22" scale="0" />
+        </property>
+         
+        <property name="miscActivateFlag" type="java.lang.Integer">
+            <column name="MISC_ACTIVATE_FLAG" not-null="true" />
+        </property>
+        <property name="tot_recv_amt" type="int">
+            <column name="total_recovered_amt"/>
+        </property>
+        <property name="tot_recv_inst" type="int">
+            <column name="total_recovered_inst"/>
+        </property>
+        
+        
+        </class>
+</hibernate-mapping>

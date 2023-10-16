@@ -1,0 +1,173 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
+<!-- For Taglib -->
+<%@ taglib prefix="hdiits" uri="http://hdiits.tcs.com"%>  
+<fmt:setBundle basename="resources.billproc.billproc_en_US" var="billprocLabels" scope="application"/>
+
+<html>
+	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>Insert title here</title>
+		<script language="javascript">
+		function showForward(url)
+		{
+			url="ifms.htm?viewName=cmnForward";
+			window.open(url,"_blank","toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,top=100,left=150,width=550,height=400"); 			
+		}
+		
+		function showBill(url)
+		{
+//			alert("Inside function");
+//			var url="ifms.htm?viewName=MRBillPage";
+			window.open(url,"_blank","toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,top=100,left=150,width=742,height=500"); 
+		}
+		</script>
+
+		</head>	
+	<body>
+		<hdiits:form name="frmInwOnlineBills" validate="true">
+
+<!--			 				1st Table							-->
+			<hdiits:table width="100%">
+				<hdiits:tr>
+					<hdiits:td align="center">
+					<b>
+						Treasury > Bill Processing > Counter Branch > Inward Online Bills
+					</b>
+					</hdiits:td>
+				</hdiits:tr>
+				<hdiits:tr><hdiits:td><br></hdiits:td></hdiits:tr>
+				<hdiits:tr><hdiits:td><br></hdiits:td></hdiits:tr>
+				<hdiits:tr>
+					<hdiits:td align="center">
+					<b>
+						INWARD ONLINE BILLS
+					</b>
+					</hdiits:td>
+				</hdiits:tr>
+				<hdiits:tr><hdiits:td><br></hdiits:td></hdiits:tr>				
+			</hdiits:table>
+<!-- --------------------------------------------------------------  -->
+
+		<jsp:include page="../common/include/billproc/billSearch.jsp" />
+		<jsp:include page="../common/include/billproc/pagination.jsp" />
+			
+<!-----------	 				2nd Table				---------------->			
+				<hdiits:table width="100%" align="center">
+   					<hdiits:tr>
+   						<hdiits:td>
+   							<hdiits:checkbox name="chkSelect" value=""></hdiits:checkbox>
+   						</hdiits:td>
+   						<hdiits:td>
+   							<fmt:message key="CMN.BILL_CONTROL_NO" bundle="${billprocLabels}"></fmt:message>
+						<jsp:include page="/common/include/billproc/sort.jsp" />			    	   							
+   						</hdiits:td>
+   						<hdiits:td>
+   							 <fmt:message key="CMN.TOKEN_NO" bundle="${billprocLabels}"></fmt:message>
+   						</hdiits:td>	
+   						<hdiits:td>
+   							<fmt:message key="CMN.BILL_AMOUNT" bundle="${billprocLabels}"></fmt:message>
+						<jsp:include page="/common/include/billproc/sort.jsp" />	
+   						</hdiits:td>	
+   						<hdiits:td> 
+	   						<fmt:message key="CMN.BILL_TYPE" bundle="${billprocLabels}"></fmt:message>
+						<jsp:include page="/common/include/billproc/sort.jsp" />			    		   						
+   						</hdiits:td>
+   						<hdiits:td> 
+   							<fmt:message key="CMN.BILL_DATE" bundle="${billprocLabels}"></fmt:message>
+						<jsp:include page="/common/include/billproc/sort.jsp" />			    	   							
+   						</hdiits:td>	      
+   						<hdiits:td> 
+	   						<fmt:message key="CNTR.DDO_NO" bundle="${billprocLabels}"></fmt:message>
+   							(<fmt:message key="CMN.CARDEX_NO" bundle="${billprocLabels}"></fmt:message>)   							
+						<jsp:include page="/common/include/billproc/sort.jsp" />			    	   							
+   						</hdiits:td>	
+   						<hdiits:td>
+   							 <fmt:message key="CMN.DDO_NAME" bundle="${billprocLabels}"></fmt:message>
+						<jsp:include page="/common/include/billproc/sort.jsp" />			    	   							 
+   						</hdiits:td>	
+   						<hdiits:td> 
+   							<fmt:message key="CMN.MAJOR_HEAD" bundle="${billprocLabels}"></fmt:message>
+						<jsp:include page="/common/include/billproc/sort.jsp" />			    	   							
+   						</hdiits:td>
+   						<hdiits:td> 
+	   						<fmt:message key="CMN.AUDITOR_NAME" bundle="${billprocLabels}"></fmt:message>
+   						</hdiits:td>	
+   						<hdiits:td> 
+	   						<fmt:message key="CMN.BILL_CATEGORY" bundle="${billprocLabels}"></fmt:message>
+   						</hdiits:td>	
+   						
+   					</hdiits:tr>
+   					<hdiits:tr> 
+   						<hdiits:td>
+   							<hdiits:checkbox name="chkSelect1" value=""></hdiits:checkbox>
+   						</hdiits:td>
+   						<hdiits:td>
+   							<hdiits:a href="javascript:void(0)" onclick="showBill('ifms.htm?viewName=MRBillPage')">BIL001</hdiits:a>   							
+   						</hdiits:td>
+   						<hdiits:td>
+   							<hdiits:text name="txtTokenNo1" size="10"></hdiits:text>
+   						</hdiits:td>	
+   						<hdiits:td>85777.00</hdiits:td>	
+   						<hdiits:td>Medical Reimbursement</hdiits:td>	
+   						<hdiits:td>19/09/2006</hdiits:td>
+   						<hdiits:td>DDO102(CDX1)</hdiits:td>	      
+   						<hdiits:td>Sanjeev Shah</hdiits:td>	
+   						<hdiits:td>2772</hdiits:td>
+   						
+   						<hdiits:td>
+   							<hdiits:select name="cmbAuditor1">
+   								<hdiits:option value="0">-----Select-----</hdiits:option>
+									<hdiits:option value="0" selected="true" >K.C. Patel</hdiits:option>
+	   								<hdiits:option value="0">R.B. Joshi</hdiits:option>
+	   								<hdiits:option value="0">P.K. Parikh</hdiits:option>
+			   					   								
+   							</hdiits:select>
+ 						</hdiits:td>
+ 						<hdiits:td>TC</hdiits:td>
+   					</hdiits:tr>
+   					
+   					<hdiits:tr> 
+   						<hdiits:td>
+   							<hdiits:checkbox name="chkSelect1" value=""></hdiits:checkbox>
+   						</hdiits:td>
+   						<hdiits:td>
+   							<hdiits:a href="javascript:void(0)" onclick="javascript:showBill('ifms.htm?viewName=MRBillPage')">BIL007</hdiits:a>
+   						</hdiits:td>
+   						<hdiits:td>
+   							<hdiits:text name="txtTokenNo2" size="10"></hdiits:text>
+   						</hdiits:td>	
+   						<hdiits:td>6000.00</hdiits:td>	
+   						<hdiits:td>NewsPaper</hdiits:td>	
+   						<hdiits:td>30/09/2006</hdiits:td>
+   						<hdiits:td>DDO101(CDX2)</hdiits:td>	      
+   						<hdiits:td>Rajeev Shah</hdiits:td>	
+   						<hdiits:td>3884</hdiits:td>	   						
+   						<hdiits:td>
+   							<hdiits:select name="cmbAuditor2">
+   								<hdiits:option value="0">-----Select-----</hdiits:option>
+   								<hdiits:option value="0" selected="true">K.C. Patel</hdiits:option>
+	   							<hdiits:option value="0">R.B. Joshi</hdiits:option>
+	   							<hdiits:option value="0">P.K. Parikh</hdiits:option>			   					
+   							</hdiits:select>
+ 						</hdiits:td>
+ 						<hdiits:td>Regular</hdiits:td>	
+   					</hdiits:tr>
+<!-- --------------------------------------------------------------  -->
+  				
+  		<hdiits:tr>
+  			<hdiits:td><br></hdiits:td>
+  		</hdiits:tr>
+  		<hdiits:tr>
+  			<hdiits:td align="center" colspan="10">
+   					<hdiits:button type="button" name="btnReceived" value="Receive" ></hdiits:button>
+<!--    					<hdiits:button type="button" name="btnForward" value="Forward" onclick="javascript:showForward();"></hdiits:button> -->
+   					<hdiits:button type="button" name="btnClose" value="Close" onclick="window.location.href='index.jsp'"></hdiits:button>
+   			</hdiits:td>
+   		</hdiits:tr>
+		</hdiits:table>
+   </hdiits:form>
+</body>
+</html>

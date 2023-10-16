@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xmlns:aop="http://www.springframework.org/schema/aop"
+	     xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.connection.url">
+					jdbc:oracle:thin:@172.17.171.119:1521:tcsifms
+				</prop>
+				<prop key="hibernate.connection.driver_class">
+					oracle.jdbc.driver.OracleDriver
+				</prop>
+				<prop key="hibernate.connection.username">ifms_admin</prop>
+				<prop key="hibernate.connection.password">ifms</prop>
+				<!-- c3p0 conneciton pool properties -->
+				<prop key="hibernate.c3p0.min_size">0</prop>
+				<prop key="hibernate.c3p0.max_size">10</prop>
+				<prop key="hibernate.c3p0.max_statements">100</prop>
+				<prop key="hibernate.c3p0.timeout">50</prop>
+				<prop key="hibernate.c3p0.acquire_increment">1</prop>
+				<prop key="hibernate.c3p0.idle_test_period">300</prop>				
+				<!-- end of c3p0 props -->
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.Oracle9Dialect
+				</prop>
+				<prop key="hibernate.use_outer_join">true</prop>
+				<prop key="hibernate.use_sql_comments">true</prop>
+			</props>
+		</property>
+		
+		<property name="mappingLocations">
+			<value>classpath*:/com/tcs/sgv/core/valueobject/*.hbm.xml</value>
+			<value>classpath*:/com/tcs/sgv/core/valueobject/FrmAuditLog.hbm.xml</value>
+		</property>
+		<property name="mappingLocations">
+			<value>classpath*:com/**/*.hbm.xml</value>
+		</property>
+		
+	</bean>
+</beans>

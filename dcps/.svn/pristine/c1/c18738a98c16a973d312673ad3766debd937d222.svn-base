@@ -1,0 +1,7 @@
+<com.tcs.sgv.eis.valueobject.HrPayOrderMst>
+  <orderId>0</orderId>
+  <orderName>Finance Test Order-1</orderName>
+  <orderDate>2010-05-01 00:00:00.0 IST</orderDate>
+  <locationCode>10001</locationCode>
+  <attachment__Id>0</attachment__Id>
+</com.tcs.sgv.eis.valueobject.HrPayOrderMst>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.eis.valueobject">
+  <class name="EmployeeStatisticsViewVO" table="EMPLOYEESTATISTICS">
+  
+  <id name="sno" type="long">
+            <column name="SNO" length="19"/>
+            <generator class="assigned" />
+        </id>
+   <property name="saveasdraft" type="long">
+            <column name="SAVE_AS_DRAFT" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="forwadedfromdraft" type="long">
+            <column name="FORWADED_FROM_DRAFT" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="formapproved" type="long">
+            <column name="FORM_APPROVED" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="totalnumberofemployees" type="long">
+            <column name="TOTAL_NO_OF_EMPLOYEES" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="balancenumberofemployees" type="long">
+            <column name="BALANCE_NO_OF_EMPLOYEES" length="19">
+                <comment></comment>
+            </column>
+        </property>
+  
+  
+  </class>
+</hibernate-mapping>

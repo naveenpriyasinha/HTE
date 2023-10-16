@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 12, 2007 4:02:49 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pdpla.valueobject.TrnPdChq" table="TRN_PD_CHQ"  >
+        <id name="chqId" type="long">
+            <column name="CHQ_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="chqNo" type="int">
+            <column name="CHQ_NO" precision="6" scale="0" not-null="true" />
+        </property>
+        <property name="chqIssueDate" type="date">
+            <column name="CHQ_ISSUE_DATE" length="7" />
+        </property>
+        <property name="payeeNm" type="string">
+            <column name="PAYEE_NM" length="300" not-null="true" />
+        </property>
+        <property name="chqClearanceDate" type="date">
+            <column name="CHQ_CLEARANCE_DATE" length="7" not-null="true" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="16" not-null="true" />
+        </property>
+        <property name="status" type="boolean">
+            <column name="STATUS" precision="1" scale="0" not-null="true" />
+        </property>
+        <property name="inventoryId" type="big_decimal">
+            <column name="INVENTORY_ID" precision="20" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

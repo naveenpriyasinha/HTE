@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 8, 2008 1:14:00 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisFamilyDtlHst" table="hr_eis_family_dtl_hst" >
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrEisFamilyDtlHstId">
+            <key-property name="memberId" type="long">
+                <column name="member_id" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="trn_counter" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="cmnLookupMstByFmGender" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="fm_gender">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAttachmentMst" class="com.tcs.sgv.common.valueobject.CmnAttachmentMst" fetch="select">
+            <column name="attachment_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByFmDeadOrAlive" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="fm_dead_or_alive">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByFmRelation" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="fm_relation">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByFmEmploymentStatus" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="fm_employment_status">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByFmMaritalStatus" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="fm_marital_status">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUserId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMst" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="address_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByFmQualification" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="fm_qualification">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstBySubQualification" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="fm_subqualification">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByDiscipline" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="fm_discipline">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByFmOccupation" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="fm_occupation">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+         <many-to-one name="cmnCountryMstByFmNationality" class="com.tcs.sgv.common.valueobject.CmnCountryMst" fetch="select">
+            <column name="fm_nationality">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+         <many-to-one name="orgDepartmentMstByFmDept" class="com.tcs.sgv.ess.valueobject.OrgDepartmentMst" fetch="select">
+            <column name="fm_department">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="fmFirstName" type="string">
+            <column name="fm_first_name" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fmMiddleName" type="string">
+            <column name="fm_middle_name" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fmLastName" type="string">
+            <column name="fm_last_name" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fmDateOfBirth" type="timestamp">
+            <column name="fm_date_of_birth" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fmRemarks" type="string">
+            <column name="fm_remarks" length="2000">
+                <comment></comment>
+            </column>
+        </property>
+        
+   	<many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="fmRelationOther" type="string">
+            <column name="fm_relation_other" length="80">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="deleteFlag" type="string">
+            <column name="delete_flag" length="4">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="companyName" type="string">
+            <column name="company_name" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="designation" type="string">
+            <column name="DESIGNATION" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="annualIncome" type="string">
+            <column name="annual_income" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dependentOrNot" type="string">
+            <column name="dependent_or_not" length="2">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dateOfDemise" type="timestamp">
+            <column name="date_of_demise" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="start_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="end_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="otherOccupation" type="string">
+            <column name="other_occupation" length="100">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

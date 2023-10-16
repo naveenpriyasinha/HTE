@@ -1,0 +1,6 @@
+HR.ESS.Installment=Enter Installment amount       
+HR.ESS.req_ent=The required amount should be less than entitled amount           
+HR.ESS.ist_req=The installment should be less than required amount
+HR.ESS.ist_sanct=The installment should be less than Sanctioned amount
+HR.ESS.sanct_req=The Sanctioned Amount should be less than Required amount
+HR.ESS.Sactioned=Enter Sactioned amount

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.common.valueobject">
+  
+  
+  <class name="com.tcs.sgv.common.valueobject.MstScreenDesc"
+		table="Mst_Screen_Desc">
+
+		<id name="screenId" type="long">
+			<column name="Screen_Id" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="screenDesc" type="java.lang.String">
+			<column name="screen_Desc" />
+		</property>
+		
+		<property name="createdDate" type="timestamp">
+			<column name="CREATED_DATE" />
+		</property>
+		
+		<property name="activateFlag" type="java.lang.Integer">
+			<column name="activate_Flag" />
+		</property>
+  </class>
+</hibernate-mapping>

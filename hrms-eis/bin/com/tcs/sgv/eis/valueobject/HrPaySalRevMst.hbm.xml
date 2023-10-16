@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 30, 2007 6:32:30 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPaySalRevMst" table="HR_PAY_SAL_REV_MST">
+
+        <id name="salRevId" type="long">
+            <column name="SAL_REV_ID"  />
+            <generator class="assigned" />
+        </id>
+        <property name="revOrderNo" type="string">
+            <column name="REV_ORDER_NO"  />
+        </property>
+    
+    	<property name="revReason" type="string">
+            <column name="REV_REASON"  />
+        </property>
+    
+    
+        <property name="revOrderDate" type="timestamp">
+            <column name="REV_ORDER_DATE"  />
+        </property>
+        <property name="revEffcFrmDate" type="timestamp">
+            <column name="REV_EFFECTIVE_FROM_DATE" />
+        </property>
+        <property name="revEffcToDate" type="timestamp">
+            <column name="REV_EFFECTIVE_TO_DATE" />
+        </property>
+        
+         <property name="revFreqMthPaid" type="long">
+            <column name="REV_FREQ_MONTHS_PAID"  />
+        </property>
+        <property name="revInstallments" type="long">
+            <column name="REV_INSTALLMENTS"  />
+        </property>        
+         <many-to-one name="rltBillTypeEdp" class="com.tcs.sgv.eis.valueobject.RltBillTypeEdp" fetch="select">
+            <column name="REV_TYPE" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+            <property name="revPayOutDate" type="timestamp">
+            <column name="REV_PAY_OUT_DATE" />
+        </property>
+         <property name="revStatus" type="long">
+            <column name="REV_STATUS"  />
+        </property>
+        
+        <property name="revAttachmentId" type="long">
+            <column name="REV_ATTACHMENT_ID"  />
+        </property>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>        
+       
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" />
+        </property>        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE"  />
+        </property>
+        
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="cashPercentage" type="double">
+            <column name="CASH_PERCENTAGE" precision="22" scale="0" />
+        </property>
+         <property name="pblIndependentFlg" type="string">
+            <column name="pbl_independent_flg"  />
+        </property>
+    </class>
+</hibernate-mapping>

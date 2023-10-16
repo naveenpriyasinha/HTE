@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.eis.zp.zpDepartmentMst.valueobject.ZpdeptnameMST" table="ZP_DEPT_NAME_MST">
+  	
+  	<id name="Id" type="java.lang.Long">
+            <column name="ID" precision="20" scale="0" />
+            <generator class="assigned" />
+       </id>
+     
+        <property name="deptCode" type="string">
+            <column name="DEPT_CODE"  />
+  	</property>
+
+       <property name="deptName" type="string">
+            <column name="DEPT_NAME" />
+  	</property>
+</class>
+</hibernate-mapping>

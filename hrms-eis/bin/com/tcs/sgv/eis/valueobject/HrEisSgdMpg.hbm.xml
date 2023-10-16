@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 17, 2007 11:35:24 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisSgdMpg" table="HR_EIS_SGD_MPG" >
+        <id name="sgdMapId" type="long">
+            <column name="SGD_MAP_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrEisScaleMst" class="com.tcs.sgv.eis.valueobject.HrEisScaleMst" fetch="select">
+            <column name="SGD_SCALE_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrEisGdMpg" class="com.tcs.sgv.eis.valueobject.HrEisGdMpg" fetch="select">
+            <column name="SGD_GD_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7"  />
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="elementCode" type="long">
+            <column name="ELEMENT_CODE" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

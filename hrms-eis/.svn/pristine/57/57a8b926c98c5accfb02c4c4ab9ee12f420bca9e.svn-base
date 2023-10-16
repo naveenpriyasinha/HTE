@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 23, 2012 4:42:54 PM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.zp.ReportingDDO.valueobject.ConsolidatedBillLvlMpgMst" table="CONSOLIDATED_BILL_LEVEL_POST_MPG">
+        <id name="id" type="long">
+            <column name="MPG_ID" length="19"/>
+            <generator class="assigned" />
+        </id>
+        
+        <property name="billId" type="long">
+            <column name="CONS_BILL_ID" length="19" />
+        </property>
+        
+        <property name="lvl2PostId" type="long">
+            <column name="LEVEL2_POST_ID" length="19" />
+        </property>
+        
+        <property name="lvl3PostId" type="long">
+            <column name="LEVEL3_POST_ID"  />
+        </property>
+        
+           <property name="lvl4PostId" type="long">
+            <column name="LEVEL4_POST_ID"  />
+        </property>
+           <property name="status" type="long">
+            <column name="STATUS"  />
+        </property>
+           <property name="level" type="long">
+            <column name="LEVEL"  />
+        </property>
+        
+        
+    </class>
+</hibernate-mapping>
+

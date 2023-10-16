@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 14, 2008 11:12:21 AM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisEmpMstHst" table="HR_EIS_EMP_MST_HST" >
+        <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrEisEmpMstHstId">
+            <key-property name="empId" type="long">
+                <column name="EMP_ID" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" precision="20" scale="0" />
+            </key-property>
+        </composite-id>
+         <many-to-one name="orgPostMst" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMstByEmpBirthPlaceAddressId" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="EMP_BIRTH_PLACE_ADDRESS_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMstByEmpPermanentAddressId" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="EMP_PERMANENT_ADDRESS_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="EMP_MOTHER_TONGUE_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgEmpMst" class="com.tcs.sgv.ess.valueobject.OrgEmpMst" fetch="select" lazy="false" cascade="all">
+            <column name="emp_mpg_id" unique="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMstByEmpNativePlaceAddressId" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="EMP_NATIVE_PLACE_ADDRESS_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpCasteId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="emp_caste_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpSubCasteId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="EMP_SUB_CASTE_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMstByEmpCurrentAddressId" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="EMP_CURRENT_ADDRESS_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpReligionId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="emp_religion_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpCategoryId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="EMP_CATEGORY_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpMaritalStatusId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="EMP_MARITAL_STATUS_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrPersonBiometricDtls" class="com.tcs.sgv.eis.valueobject.HrEisBiometricDtl" fetch="select">
+            <column name="EMP_BIOMETRIC_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="empGender" type="java.lang.Character">
+            <column name="emp_gender" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empStatusId" type="string">
+            <column name="emp_status_id" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empApptLtrDt" type="timestamp">
+            <column name="emp_appt_ltr_dt" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empApptLtrNo" type="string">
+            <column name="emp_appt_ltr_no" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empConfDueDt" type="timestamp">
+            <column name="emp_conf_due_dt" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empSalDisbMd" type="string">
+            <column name="emp_sal_disb_md" length="10">
+                <comment></comment>
+            </column>
+        </property>
+        <!-- commented by sandip
+        <property name="empNationality" type="string">
+            <column name="emp_nationality" length="45">
+                <comment></comment>
+            </column>
+        </property>   -->
+        <many-to-one name="cmnCountryMstByEmpNationality" class="com.tcs.sgv.common.valueobject.CmnCountryMst" fetch="select">
+            <column name="emp_nationality">
+                <comment></comment>
+            </column>
+        </many-to-one>    
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empHobby" type="string">
+            <column name="emp_hobby" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empType" type="java.lang.Long">
+            <column name="emp_type">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empRecruitSrc" type="java.lang.Long">
+            <column name="emp_recruit_src">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="contactNo" type="java.lang.Long">
+            <column name="contact_no">
+                <comment></comment>
+            </column>
+        </property>
+		<!-- <set name="hrLoanEmpDtlses" inverse="true">
+            <key>
+                <column name="EMP_ID" precision="22" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.tcs.sgv.eis.valueobject.HrLoanEmpDtls" />
+        </set>
+        
+         <set name="hrEisBankDtlses" inverse="true">
+            <key>
+                <column name="BANK_EMP_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.tcs.sgv.eis.valueobject.HrEisBankDtls" />
+        </set>
+        
+         <set name="hrLeaveEmpDtlses" inverse="true">
+            <key>
+                <column name="EMP_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.tcs.sgv.eis.valueobject.HrLeaveEmpDtls" />
+        </set>  -->
+    </class>
+</hibernate-mapping>

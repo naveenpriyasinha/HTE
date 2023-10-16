@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 6, 2008 10:09:56 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pension.valueobject.TrnPensionCaseOutwrd" table="TRN_PENSION_CASE_OUTWRD">
+        <id name="caseOutwrdId" type="long">
+            <column name="CASE_OUTWRD_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+         <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" not-null="true" />
+        </property>
+        <property name="outwrdDate" type="date">
+            <column name="OUTWRD_DATE" length="7" />
+        </property>
+        <property name="inwrdDate" type="date">
+            <column name="INWRD_DATE" length="7" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="20" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" />
+        </property>
+        <property name="subtrsryCode" type="string">
+            <column name="SUBTRSRY_CODE" length="10" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="trnCounter" type="integer">
+              <column name="TRN_COUNTER" precision="11" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

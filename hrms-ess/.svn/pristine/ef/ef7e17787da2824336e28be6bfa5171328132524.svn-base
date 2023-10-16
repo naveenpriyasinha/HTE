@@ -1,0 +1,11 @@
+selectFromDate=Please Select From Date
+period30Days=Charge Period Should Be More than 30 Days
+pendingLeaveMsg=Sorry, You Are Not Able To Generate Additional Pay Request Because There Are Some Pending Leaves
+FileNumber=Request File Number  
+AllReadySent=  All ready sent.
+AttachmentReq=ATTACHMENT is Required
+clickOnAttachment=You should click on Add Attachment for : ATTACHMENT Or you should leave it blank.
+numericVal=Please  Insert Numeric Value in User Sanction Amount
+addPayWithFilenum=Your Additional Pay Request with file Number
+SeniorOfficerForApproval=has been send to Senior Officer For Approval
+userVal=Please Enter Amount

@@ -1,0 +1,114 @@
+<html>
+<head>	
+
+<title>Tata Consultancy Servcies </title>
+
+</head>
+
+<body onLoad='test()' >
+
+<applet archive="SSignedApplet.jar" code="com.tcs.sgv.printTest.class" name=counter ID=counter width=0 height=0 >
+	</applet>
+<div id='msg' >
+
+<table style="padding-top: 20px;" align="center">
+	<tr>
+		<td><input type="button" value="Print" id="Okbtn"
+			 onclick="sentToPrinter();"></td>
+		<td><input type="button" value="Cancel" onclick="closeWindow();">
+		</td>
+	</tr>
+	<tr>
+	<td colspan=2>
+		<select name="mySelect" id ="mySelect" size="10">
+		</select>
+	</td>
+	</tr>
+</table>
+
+</div>
+
+</body>
+<script>
+
+function closeWindow()
+{
+	    window.returnValue = "0";
+	    window.close();
+}
+
+function test()
+{
+		document.getElementById("Okbtn").disabled=true;
+		var defaultp =	document.counter.getPrinterNameDefault();
+		var printerList = 	document.counter.getPrinterName();
+		var aryPrint = printerList.split("^");
+
+		var x=document.getElementById("mySelect");
+			for(i = 0 ; i < aryPrint.length-1 ; i ++)
+			{
+				 var y=document.createElement('option');
+				  y.text= aryPrint[i];
+				 y.value	= aryPrint[i];
+			  try
+			  {
+			 		   x.add(y); // IE only
+			  }
+			  catch(ex)
+			  { 
+			  }
+			 }
+			 x.value = defaultp;
+			document.getElementById("Okbtn").disabled=false;
+}
+function sentToPrinter()
+{
+	try
+
+	{
+		var j = window.dialogArguments;
+		var strSelectedPrinter  = document.getElementById("mySelect").value;
+
+		document.counter.setSelectedPrinter(strSelectedPrinter);
+		document.counter.setData(j[0]);
+	    document.counter.startPrint();
+		document.getElementById('msg').innerHTML = "Document was sent to printer." 
+		+ "<br> Total Character Sent: " + j[0].length  ;
+			    window.returnValue = "1";
+	    window.setTimeout("window.close()",1000);
+
+	}catch(e)
+	{
+		alert(e);
+		window.returnValue = "0";
+	}
+}
+
+
+
+
+
+</script>
+
+
+<style>
+div {
+	background-color: #EBF3FB;
+	font-family: 'verdana';
+	font-size: 11px;
+	font-weight: bold;
+	BORDER-RIGHT: #ace 1px solid;
+	BORDER-TOP: #ace 1px solid;
+	BORDER-LEFT: #ace 1px solid;
+	BORDER-BOTTOM: #ace 1px solid;
+	color: #066FCC;
+	width: 283px;
+	height: 135px;
+	left: 5px;
+	top: 5px;
+	position: absolute;
+	text-align: center;
+}
+</style>
+
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 1, 2007 7:24:36 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.deduction.valueobject.HrDeducArgumentMpg" table="HR_DEDUC_ARGUMENT_MPG">
+        <id name="deducArgueId" type="long">
+            <column name="DEDUC_ARGUE_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrPayArgumentMstByCondArgueId" class="com.tcs.sgv.allowance.valueobject.HrPayArgumentMst" fetch="select">
+            <column name="COND_ARGUE_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="hrPayDeducTypeMst" class="com.tcs.sgv.deduction.valueobject.HrPayDeducTypeMst" fetch="select">
+            <column name="DEDUC_ID" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="hrPayArgumentMstByMainArgueId" class="com.tcs.sgv.allowance.valueobject.HrPayArgumentMst" fetch="select">
+            <column name="MAIN_ARGUE_ID" precision="22" scale="0" />
+        </many-to-one>
+        <property name="methodName" type="string">
+            <column name="METHOD_NAME" length="100" />
+        </property>
+        <property name="arguOrder" type="long">
+            <column name="ARGU_ORDER" precision="22" scale="0" />
+        </property>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrPayCommissionMst" class="com.tcs.sgv.common.payroll.valueobject.HrPayCommissionMst" fetch="select">
+			<column name="commission_id"/>
+		</many-to-one>
+        <property name="elementCode" type="long">
+            <column name="ELEMENT_CODE" precision="22" scale="0" />
+        </property>
+        <property name="elementOrder" type="long">
+            <column name="ELEMENT_ORDER" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

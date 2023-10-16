@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 1, 2008 8:43:11 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pension.valueobject.TrnPensionBillArrearDtls" table="TRN_PENSION_BILL_ARREAR_DTLS" dynamic-update="true">
+        <id name="trnPnsnBillArrearDtlsId" type="long">
+            <column name="TRN_PNSN_BILL_ARREAR_DTLS_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="50" />
+        </property>
+        <property name="pensionerCode" type="string">
+            <column name="PENSIONER_CODE" length="20" not-null="true" />
+        </property>
+        <property name="formonth" type="int">
+            <column name="FORMONTH" precision="6" scale="0" not-null="true" />
+        </property>
+        <property name="basicPensionAmount" type="big_decimal">
+            <column name="BASIC_PENSION_AMOUNT" precision="10" />
+        </property>
+        <property name="pensnCutAmount" type="big_decimal">
+            <column name="PENSN_CUT_AMOUNT" precision="10" />
+        </property>
+        <property name="dpAmount" type="big_decimal">
+            <column name="DP_AMOUNT" precision="10" />
+        </property>
+        <property name="tiAmount" type="big_decimal">
+            <column name="TI_AMOUNT" precision="10" />
+        </property>
+        <property name="cvpMonthAmount" type="big_decimal">
+            <column name="CVP_MONTH_AMOUNT" precision="10" />
+        </property>
+        <property name="medicalAllowenceAmount" type="big_decimal">
+            <column name="MEDICAL_ALLOWENCE_AMOUNT" precision="6" />
+        </property>
+        <property name="tiArrearAmount" type="big_decimal">
+            <column name="TI_ARREAR_AMOUNT" precision="10" />
+        </property>
+        <property name="otherBenefits" type="big_decimal">
+            <column name="OTHER_BENEFITS" precision="10" />
+        </property>
+        <property name="personalPensionAmount" type="big_decimal">
+            <column name="PERSONAL_PENSION_AMOUNT" precision="10" />
+        </property>
+        <property name="irAmount" type="big_decimal">
+            <column name="IR_AMOUNT" precision="10" />
+        </property>
+        <property name="incomeTaxCutAmount" type="big_decimal">
+            <column name="INCOME_TAX_CUT_AMOUNT" precision="10" />
+        </property>
+        <property name="specialCutAmount" type="big_decimal">
+            <column name="SPECIAL_CUT_AMOUNT" precision="10" />
+        </property>
+        <property name="otherArrearAmount" type="big_decimal">
+            <column name="OTHER_ARREAR_AMOUNT" precision="10" />
+        </property>
+        <property name="recoveryAmount" type="big_decimal">
+            <column name="RECOVERY_AMOUNT" precision="10" />
+        </property>
+        <property name="omrAmount" type="big_decimal">
+            <column name="OMR_AMOUNT" precision="10" />
+        </property>
+        <property name="reducedPension" type="big_decimal">
+            <column name="REDUCED_PENSION" precision="14" />
+        </property>
+        <property name="trnPensionBillHdrId" type="long">
+            <column name="TRN_PENSION_BILL_HDR_ID" precision="20" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

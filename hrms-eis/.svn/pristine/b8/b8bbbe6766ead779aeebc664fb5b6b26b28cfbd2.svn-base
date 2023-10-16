@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2007 4:12:13 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+	<class name="com.tcs.sgv.eis.valueobject.RLTPaybandGPState7PC"
+		table="rlt_payband_gp_state_7pc" lazy="true">
+	
+	<!-- <hibernate-mapping package="com.tcs.sgv.eis.valueobject.RLTPaybandGPState7PC">
+	<class name="RLTPaybandGPState7PC" table="rlt_payband_gp_state_7pc"> -->
+
+		<id name="id" type="string">
+			<column name="ID" />
+		</id>
+		<property name="payInPayband" type="string">
+			<column name="PAY_IN_PAYBAND" length="50">
+				<comment></comment>
+			</column>
+		</property>
+
+		<property name="gradePay" type="string">
+			<column name="GRADE_PAY" length="10">
+				<comment></comment>
+			</column>
+		</property>
+
+		<property name="level" type="string">
+			<column name="LEVEL" length="5">
+				<comment></comment>
+			</column>
+		</property>
+
+		<property name="levelId" type="string">
+			<column name="LEVEL_ID" length="10">
+				<comment></comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

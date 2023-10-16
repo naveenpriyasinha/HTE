@@ -1,0 +1,85 @@
+<html>
+<head>	
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+
+<title>Tata Consultancy Servcies </title>
+
+</head>
+
+<body onunload="closeWindow();" >
+<applet archive="SSignedApplet.jar" 
+	code="com.tcs.sgv.printTest.class" name=counter ID=counter width=0
+	height=0 onerror='alert();' >
+	</applet>
+<div id='msg' align="center">
+<table style="padding-top: 20px;" align="center">
+	<tr>
+		<td><input class="buttontag" type="button" value="Print" id="Okbtn" onclick="startPrinting();"></td>
+		<td><input class="buttontag" type="button" value="Cancel" onclick="closeWindow();">
+		</td>
+	</tr>
+</table>
+</div>
+</body>
+<script>
+
+	function closeWindow(){
+		
+		if(document.getElementById('Okbtn') == null || document.getElementById('Okbtn') == undefined){
+			
+		}else{
+			window.opener.document.getElementById('printAll').disabled = '';
+			window.opener.document.getElementById('btnClose').disabled = '';
+		}
+		window.opener.hideProgressbar();
+	   	window.close();
+	   
+	}
+	
+	function startPrinting(){
+		document.getElementById('msg').innerHTML = "<br><br><font size='2'>Sending data to printer...</font><br><br><br><br><br><font color='red'>Please, do not close this window.</font>";
+		window.setTimeout("window.opener.printItNewNext()",1000);
+	}
+
+function sentToPrinter(data)
+{
+	try{
+		document.counter.setData(data);
+	    document.counter.startPrint();
+		document.getElementById('msg').innerHTML = "Document was sent to printer." 
+		+ "<br> Total Character Sent: " + data.length  ;
+	    window.setTimeout("window.close()", 1000);
+		return "done";
+	}catch(e){
+		try{
+			window.close();
+		}catch(e){}
+		return "printererror";
+	}
+}
+
+</script>
+
+<style>
+div {
+	background-color: #EBF3FB;
+	font-family: 'verdana';
+	font-size: 11px;
+	font-weight: bold;
+	BORDER-RIGHT: #ace 1px solid;
+	BORDER-TOP: #ace 1px solid;
+	BORDER-LEFT: #ace 1px solid;
+	BORDER-BOTTOM: #ace 1px solid;
+	color: #066FCC;
+	width: 283px;
+	height: 135px;
+	left: 5px;
+	top: 5px;
+	position: absolute;
+	text-align: center;
+}
+.buttontag{border-top:solid 1px gray;border-left:solid 1px gray;border-right:solid 2px gray;border-bottom:solid 2px gray;background:#FFF;width:100px;font-weight:800;color:#5289F2;}
+</style>
+
+</html>

@@ -1,0 +1,51 @@
+ZPDDOOFFICE_SELECT2=---------------------------------------- Select ------------------------------------------
+MSG.DESIGNATION=Please enter the first three charactors of designation that you want to select. Ex. If you want to select Lecturer then enter Lec. 
+SUBMIT_SUCESSFULL_MSG = 53
+UPDATE_SUCESSFULL_MSG = 55
+ZPADMINOFFICE_RESET = Reset
+ZPADMINOFFICE_ADD = Add
+ZPADMINOFFICE_CANCEL = Cancel
+ZPADMINOFFICE_UPDATE = Update
+ZPADMINOFFICE_SEARCHRESULT = Search Result
+ZPDDOOFFICE_SELECT = --------------------------------- Select -----------------------------------
+ZPDDOOFFICE_SELECT1 = -------------------------------------------------- Select ----------------------------------------------------
+ZPADMINOFFICE_SAVE = Save
+ZPADMINOFFICE_SEARCH = Search
+ZPADMINOFFICE_VALIDENDDATE = To Date cannot be less than From Date
+ZPADMINOFFICE_ALERTFORADDRECORDS = Please add atleast one record
+ZPADMINOFFICE_ZPADMINOFFICE_SEARCH = ZpAdminOffice Search
+ZPADMINOFFICE_ZPADMINOFFICECREATE = Create Admin Office
+ZPDDOOFFICE_ZPADMINOFFICE = Admin Office
+ZPDDOOFFICE_ZPDISTRICTOFFICE =District Office
+ZPDDOOFFICE_ZPGENDER = Gender
+ZPDDOOFFICE_ZPGENDER_MALE = Male
+ZPDDOOFFICE_ZPGENDER_FEMALE = Female
+ZPADMINOFFICE_ZP_OFFICES = Offices
+ZPDDOOFFICE_DDO_TREASURY_CODE = Treasury Code
+ZPDDOOFFICE_DDO_OFFICE_NAME = Organization/Office
+ZPDDOOOFFICE_DEPT = Department
+ZPDDOOOFFICE_EMP_NAME = DDO Name
+ZPDDOOOFFICE_TREASURY = Treasury Name
+ZPDDOOOFFICE_SUB_TREASURY = Sub Treasury Name
+ZPDDOOOFFICE_OFFICE_NAME = Institute Name
+ZPDDOOOFFICE_DDO_CODE = DDO Code
+ZPDDOOOFFICE_DDO_Dsgn =DDO for Institute
+ZPDDOOOFFICE_REPDDO_CODE = DDO Code Level 2 
+ZPDDOOOFFICE_FINALDDO_CODE = DDO Code Level 3 
+ZPDDOOOFFICE_SPECIALDDO_CODE = DDO Code Level 4
+ZPADMINOFFICE_CODE = Office Code
+ZPADMINOFFICE_OFC_ID = OFC_ID
+ZPDDOOOFFICE_FINAL_LEVEL = Final Level
+
+
+
+
+#added By Vivekl
+ZP.DefineLvl2DDO=Defining Level2 DDO for offices having no DDO Code
+ZP.lvl2DDO=Level2 DDO
+
+
+#added by Samadhan
+ZPDDOOOFFICE_EMP_NAME_SALUTATION = DDO Name Salutation
+ZPDDOOOFFICE_MOBILE_NO = Mobile No.
+ZPDDOOOFFICE_EMAIL_ID = Email Id

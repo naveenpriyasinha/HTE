@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 21, 2007 4:32:53 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.lcm.valueobject.TrnLcChequeBook" table="TRN_LC_CHEQUE_BOOK"  >
+        <id name="chqBookId" type="big_decimal">
+            <column name="CHQ_BOOK_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="lcAccNo" type="big_decimal">
+            <column name="LC_ACC_NO" precision="20" scale="0" />
+        </property>
+        <property name="issueDt" type="date">
+            <column name="ISSUE_DT" length="7" />
+        </property>
+        <property name="chqSrStart" type="big_decimal">
+            <column name="CHQ_SR_START" precision="20" scale="0" />
+        </property>
+        <property name="chqSrEnd" type="big_decimal">
+            <column name="CHQ_SR_END" precision="20" scale="0" />
+        </property>
+        <property name="finYearId" type="java.lang.Long">
+            <column name="FIN_YEAR_ID" precision="12" scale="0" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="locCode" type="string">
+            <column name="LOC_CODE" length="15" />
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

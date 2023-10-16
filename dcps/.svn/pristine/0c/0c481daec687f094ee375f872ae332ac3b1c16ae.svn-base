@@ -1,0 +1,24 @@
+<com.tcs.sgv.eis.valueobject.LoanCustomVO>
+  <empId>767</empId>
+  <loanTypeId>58</loanTypeId>
+  <loanPrinAmt>30000</loanPrinAmt>
+  <loanIntAmt>0</loanIntAmt>
+  <loanPrinInstNo>10</loanPrinInstNo>
+  <loanIntInstNo>0</loanIntInstNo>
+  <loanAcNo>9632587411</loanAcNo>
+  <loanDate>2011-06-01 00:00:00.0 IST</loanDate>
+  <trnCounter>1</trnCounter>
+  <loanIntEmiAmt>0</loanIntEmiAmt>
+  <loanPrinEmiAmt>3000</loanPrinEmiAmt>
+  <loanSancOrderNo> </loanSancOrderNo>
+  <loanActivateFlag>1</loanActivateFlag>
+  <loanPrinRecovAmt>3000</loanPrinRecovAmt>
+  <loanPrinRecovInt>1</loanPrinRecovInt>
+  <loanIntRecovAmt>0</loanIntRecovAmt>
+  <loanIntRecovInt>0</loanIntRecovInt>
+  <empLoanId>0</empLoanId>
+  <outstandingPrincipleAmt>0</outstandingPrincipleAmt>
+  <outstandingInterestAmt>0</outstandingInterestAmt>
+  <loanOddinstno>0</loanOddinstno>
+  <loanOddinstAmt>0</loanOddinstAmt>
+</com.tcs.sgv.eis.valueobject.LoanCustomVO>

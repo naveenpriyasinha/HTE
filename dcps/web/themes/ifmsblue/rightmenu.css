@@ -1,0 +1,66 @@
+.menutable {
+	border: solid 0px #CDCDCD;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: #336699;
+	width: 110%;
+	margin: 0px 2px 0 0;
+	cellpadding: 0px;
+	border-collapse: collapse;
+}
+
+.menutd,.menuparent {
+	color: #dddddd;
+	padding: 0;
+}
+
+.menutd a,.menuparent a {
+	font-size: 12px;
+	font-weight: normal;
+	width: 94%;
+	display: block;
+/*	border: solid 0px #22437f;*/
+	padding: 4px;
+	text-decoration: none;
+	color: #ffffff;
+/*	border-top: outset 1px #88a9df;
+	border-bottom: outset 1px #6687bf;*/
+	border: outset 1px ;
+	border-color: #88bbee #1144aa #1144aa #88bbee;
+	font-face: 'Georgia';
+}
+
+.menuparent a {
+	background: url(images/next.gif);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+}
+
+.menuparent a:hover {
+	background: #dddddd url(images/next-hover.gif);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+}
+
+.menutd a:hover,.menuparent a:hover {
+	background-color: #dddddd;
+	text-decoration: none;
+	color: #343434;
+	padding: 4px;
+	/*border-top: solid 1px #f0f2f5;
+	border-bottom: solid 1px #f0f2f5;*/
+	border: outset 1px #667788;
+	border-top: solid 1px #667788;
+	/*	border-color: #88a9df #6687bf #6687bf #88a9df;*/
+	/*border-top: solid 1px #80a1db;
+	border-bottom: solid 1px #80a1db;*/
+}
+
+
+
+#dropmenudiv {
+	position: relative;
+	z-index: 100;
+	visibility: hidden;
+}

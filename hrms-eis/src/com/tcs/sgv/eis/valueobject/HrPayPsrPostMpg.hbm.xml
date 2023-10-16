@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2007 12:44:58 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayPsrPostMpg" table="hr_pay_post_psr_mpg">
+        <id name="psrPostId" type="long">
+            <column name="ID"  />
+            <generator class="assigned" />
+        </id>
+        <property name="psrId" type="long">
+            <column name="PSR_NO"/>
+        </property>
+        <property name="postId" type="long">
+            <column name="POST_ID"  />
+        </property>
+        
+        <property name="loc_id" type="long">
+            <column name="LOC_ID"  />
+        </property>
+        
+         <property name="billNo" type="java.lang.Long">
+            <column name="BILL_NO"/>
+        </property>
+        
+        
+        
+    </class>
+</hibernate-mapping>

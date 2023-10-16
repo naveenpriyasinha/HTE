@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 15, 2007 12:20:23 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.stamp.valueobject.StampIndentDtls" table="STAMP_INDENT_DTLS"  >
+        <id name="indDtlsId" type="big_decimal">
+            <column name="IND_DTLS_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="indId" type="big_decimal">
+            <column name="IND_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="indGrpCode" type="java.lang.Byte">
+            <column name="IND_GRP_CODE" precision="2" scale="0" />
+        </property>
+        <property name="indDnmCode" type="java.lang.Integer">
+            <column name="IND_DNM_CODE" precision="7" scale="0" />
+        </property>
+        <property name="indQty" type="java.lang.Integer">
+            <column name="IND_QTY" precision="7" scale="0" />
+        </property>
+        <property name="indPqty" type="java.lang.Integer">
+            <column name="IND_PQTY" precision="7" scale="0" />
+        </property>
+        <property name="indRqty" type="java.lang.Integer">
+            <column name="IND_RQTY" precision="7" scale="0" />
+        </property>
+        <property name="indRemarks" type="string">
+            <column name="IND_REMARKS" length="200" />
+        </property>
+        <property name="indConsolidate" type="string">
+            <column name="IND_CONSOLIDATE" length="20" />
+        </property>
+        <property name="indPrevStock" type="big_decimal">
+            <column name="IND_PREV_STOCK" precision="20" scale="0" />
+        </property>
+        <property name="indPrevRcpt" type="java.lang.Integer">
+            <column name="IND_PREV_RCPT" precision="7" scale="0" />
+        </property>
+        <property name="indPrevIssued" type="java.lang.Integer">
+            <column name="IND_PREV_ISSUED" precision="7" scale="0" />
+        </property>
+        <property name="indPrevClosingBal" type="big_decimal">
+            <column name="IND_PREV_CLOSING_BAL" precision="20" scale="0" />
+        </property>
+        <property name="indPrevQtyDue" type="big_decimal">
+            <column name="IND_PREV_QTY_DUE" precision="20" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

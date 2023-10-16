@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Generated Jun 30, 2009 11:53:30 AM by Hibernate Tools 3.2.0.beta8
+	-->
+
+<hibernate-mapping>
+	<class name="com.tcs.sgv.eis.valueobject.HrPayRemarksMst" table="HR_PAY_REMARKS_MST">
+
+		<id name="remarkId" type="long">
+			<column name="remark_id" precision="20" scale="0" />
+			<generator class="assigned" />
+		</id>
+		
+		
+		<many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+			<column name="emp_id" not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		
+		
+	
+		<many-to-one name="orgPostMst" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+			<column name="POST_ID" not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		
+		
+		<many-to-one name="cmnLookupMstForShortRemarks" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+			<column name="short_remarks" not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		
+		
+		  <property name="remarks" type="string">
+            <column name="remarks"  />
+  	      </property>
+  	
+		
+		<many-to-one name="orgDdoMst" class="com.tcs.sgv.common.valueobject.OrgDdoMst" fetch="select">
+			<column name="ddo_id" not-null="true">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		
+			<property name="remarksDate" type="date">
+			<column name="remarks_date" length="7" not-null="false"/>
+	    	</property>
+		
+		
+		<many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst"
+			fetch="select">
+			<column name="created_by_post" not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		
+	
+		<many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst"
+			fetch="select">
+			<column name="created_by" not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+	
+		
+		<property name="createdDate" type="date">
+			<column name="CREATED_DATE" length="7" />
+		</property>
+		
+	</class>
+</hibernate-mapping>

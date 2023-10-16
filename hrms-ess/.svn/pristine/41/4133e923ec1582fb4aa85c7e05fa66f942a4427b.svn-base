@@ -1,0 +1,83 @@
+#LTC Starts
+HRMS.Name=Name
+HRMS.LTCHeader LTC Request
+HRMS.LTCDetails LTC Details
+HRMS.LTCReqType Request Type
+HRMS.Advance Advance 
+HRMS.Reimbursement Reimbursement
+HRMS.Self For Self / With Family 
+HRMS.YES=Yes
+HR.SELECT=[SELECT]
+HRMS.NO=No
+HRMS.FamilyOnly Family Only 
+HRMS.HomeTown Home Town
+HRMS.ELDates Approved Earned Leave
+HRMS.DateOfJourney Date of Journey (DD/MM/YYYY)
+HRMS.DateOfReturnJourney Date of Return Journey (DD/MM/YYYY)
+HRMS.TransportMode Mode of Transport
+HRMS.Block Block
+HRMS.VisitingPlace Visiting Place
+HRMS.PlaceName Place Name
+HRMS.SpouseEmployed Spouse Employed
+HRMS.SpouseEntitled Spouse Entitled to LTC
+HRMS.MinFare Minimum fare by Shortest route
+HRMS.ReMinFare Minimum fare per Ticket(INR)
+HRMS.NoOfFares Number of Persons Traveling
+HRMS.TotalFare Total Fare(INR)
+HRMS.ApprAdvanceAmount Approved Advance Amount(INR)
+HRMS.AdvanceReqNo Advance Request Number
+HRMS.ClassEntitled Class to which entitled
+HRMS.ClassTravelled Class actually Traveled
+HRMS.DependentDetails Dependent Details
+HRMS.Departure Departure Place / Date 
+HRMS.Arrival Arrival Place / Date 
+HRMS.DistanceInKm Distance in km
+HRMS.ClassofAcc Class of Travel used
+HRMS.FaresPaid Total Fares paid (INR)
+HRMS.SlNo Sl. No.
+HRMS.Age Age
+HRMS.Relationship Relationship
+HRMS.Journey Journey
+HRMS.NOC Attach NOC
+HRMS.Tickets Attach Tickets
+HRMS.BalanceAmount Balance Amount to be Sanctioned(INR)
+HRMS.SanctionedAdvAmt Sanctioned Advance Amount(INR)
+HRMS.LTCAdvApproved Advance Taken(INR)
+HRMS.AdvDates Advance Approved Dates(DD/MM/YYYY)
+HRMS.Rule.SecondSleeper You are entitled to Second Sleeper
+HRMS.Rule.ChairCar You are entitled to First class/II AC III-Tier Sleeper/AC Chair Car
+HRMS.Rule.TwoTierSleeper You are entitled to II AC 2-Tier Sleeper
+HRMS.Rule.FirstClass You are entitled to AC First Class and air allowance
+HRMS.NOCA Please Attach NOC Below 
+HRMS.In.SecondSleeper  Second Sleeper
+HRMS.In.ChairCar First class/II AC III-Tier Sleeper/AC Chair Car
+HRMS.In.TwoTierSleeper  II AC 2-Tier Sleeper
+HRMS.In.FirstClass   AC First Class and air allowance
+HRMS.Entitled= Entitled To
+HRMS.Remarks=Remarks
+HRMS.EntitledAmount=Entitled Amount (80% of the Total fare)(INR)
+HRMS.AdvanceAmount=Advance Amount (INR)
+HRMS.msg1=You have not added your Dependent Details  
+HRMS.NoRecords=No records found
+HRMS.msg2=You do not have any Approved Earned Leave 
+HRMS.selctDpn Please select Dependent Details
+HRMS.Detl=Departure/Arrival Details
+HRMS.blocktype=Block Type
+HRMS.actions Actions
+HRMS.delete Delete
+HRMS.blckMaster LTC Block Master
+HRMS.srNo Sr.No.
+HRMS.addNew Add New
+HRMS.blkStartYr Block Start Year
+HRMS.blkEndYr Block End Year
+HRMS.blkStartDate Start Date
+HRMS.blkEndDate End Date
+HRMS.activateFlag Activate Flag
+HRMS.active Active
+HRMS.deactive Deactive
+HRMS.blkUpdate Update
+HRMS.back Back
+HRMS.alreadyExist The entry already exists \!
+HRMS.blockSize Block Size
+BUNDLE_BASE_NAME=resources/ess/ltc/LtcCaption
+#LTC end

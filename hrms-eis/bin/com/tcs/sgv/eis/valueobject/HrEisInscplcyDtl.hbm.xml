@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2008 9:57:12 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisInscplcyDtl" table="hr_eis_inscplcy_dtl">
+        <comment></comment>
+        <id name="empInsrcpolicyDtlsPk" type="long">
+            <column name="emp_insrcpolicy_dtls_pk" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByOrgUserMstUserIdFk" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="org_user_mst_user_id_fk" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="policyNumber" type="string">
+            <column name="policy_number" length="50" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="nameOfPolicy" type="string">
+            <column name="name_of_policy" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="insrcCompanyName" type="string">
+            <column name="insrc_company_name" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dateOfPolicy" type="timestamp">
+            <column name="date_of_policy" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="durationYear" type="java.lang.Long">
+            <column name="duration_year">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="durationMonth" type="java.lang.Long">
+            <column name="duration_month">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="insuredAmount" type="java.lang.Long">
+            <column name="insured_amount">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

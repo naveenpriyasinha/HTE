@@ -1,0 +1,658 @@
+html {
+	padding: 0;
+	margin: 0px;
+	/*background-color: rgb(228, 239, 243);*/
+/*	background-color: rgb(228, 239, 248);*/
+	text-align: center;
+	font-family: Arial, Verdana, Helvetica, sans;
+    }
+
+body {
+	width: 99%;
+	margin: 3px;
+	background: url(header.gif) no-repeat;
+	padding: 0 0 0 0;
+	border: solid 1px #DEDEDE;
+}
+
+h1 {
+	font-size: 12px;
+	font-weight: bold;
+	color: black;
+	margin: 0 0 0 0;
+}
+
+h2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: gray;
+	margin: 0 0 0 0;
+}
+
+h3 {
+	font-size: 13px;
+	font-style: italic;
+	color: #90A720;
+	margin: 0 0;
+}
+
+h4 {
+	font-size: 13px;
+	font-style: italic;
+	color: gray;
+	margin: 0 0;
+}
+
+p {
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+
+/*
+table {
+	width: 100%;
+	border: 0;
+	margin: 0px;
+	cellpadding: 2px;
+	border-collapse: collapse;
+}
+*/
+/*
+thead {
+	background: #C9DFFF;
+	color: black;
+}
+*/
+/*
+a:hover {
+	background: #FDF5E6;
+	color: black;
+}
+*/
+
+/* all table header green color, tr 1, tr2 both color, font color apply from datatableheader,odd,even*/
+.headertable
+{
+	cellspacing: 0;
+	cellpadding: 0;
+	border: 0;	
+	
+}
+.uheadertable_td1
+{
+	padding: 3px; 
+	border-top: solid 1 #ffffff; 
+	border-bottom: outset 1px #888888;
+	color: white;
+}
+.lheadertable_tr
+{
+		background: #777777;
+		height: 4;
+		
+}
+.lheadertable_td1
+{
+	padding: 0 3px 0 3px;
+	border-top: solid 1px #999999; 
+	border-right: outset 1px #666666;
+	border-bottom: outset 1px #666666;
+	
+	color: #FFFFFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold; 
+}
+.lheadertable_td2
+{
+	padding: 0 3px 0 3px;
+	border-right: outset 1px #666666;
+	border-top: solid 1px #999999; 
+	border-bottom: outset 1px #666666; 
+	color: white;	
+}
+.lheadertable_td3
+{
+	padding: 0 10px 0 10px;
+	border-left: solid 1px #999999;
+	border-right: outset 1px #666666;
+	border-top: solid 1px #999999; 
+	border-bottom: outset 1px #666666; 
+	color: white;
+}
+.lheadertable_td4
+{
+	padding: 0 10px 0 10px;
+	border-left: solid 1px #999999; 
+	border-top: solid 1px #999999; 
+	border-bottom: outset 1px #666666; 
+	color: white;	
+}
+
+.datatableheader {
+    
+	border-style:solid 1px #000000; 
+    /*border-bottom: solid 0px #000000;
+	border-right: solid 0px #000000;
+	border-left: solid 0px #000000;
+	border-top: solid 0px #000000;*/
+	font-size: 11px;
+	font-color:black;
+	font-weight: bold;
+	text-align: center;
+	background:#CFE2FE; /*th color apply from here*/
+
+}
+.odd{
+	height: 5px;
+	border-style:solid 1px #000000;
+	/*border-bottom: solid 1px #000000;
+	border-right: solid 1px #000000;
+	border-left: solid 1px #000000;
+	border-top: solid 1px #000000;*/
+	font-size: 11px;
+	font-color:black;
+	font-weight: normal;
+	text-align: center; 
+	background: #f7f7f7;
+}
+
+.oddleft {  
+	height: 5px;
+	border-style:solid 1px #000000;
+	/*border-bottom: solid 1px #000000;
+	border-right: solid 1px #000000;
+	border-left: solid 1px #000000;
+	border-top: solid 1px #000000;*/
+	font-size: 11px;
+	font-color:black;
+	font-weight: normal;
+	text-align: left; 
+}
+.oddcentre {
+	height: 5px;
+	border-style:solid 1px #000000;
+	/*border-bottom: solid 1px #000000;
+	border-right: solid 1px #000000;
+	border-left: solid 1px #000000;
+	border-top: solid 1px #000000;*/
+	font-size: 11px;
+	font-color:black;
+	font-weight: normal;
+	text-align: center; 
+	
+}
+.oddright {
+	height: 5px;
+	border-style:solid 1px #000000;
+	/*border-bottom: solid 1px #000000;
+	border-right: solid 1px #000000;
+	border-left: solid 1px #000000;
+	border-top: solid 1px #000000;*/
+	font-size: 11px;
+	font-color:black;
+	font-weight: normal;
+	text-align: right; 
+}
+.even {
+    height: 5px;
+	border-style:solid 1px #000000;
+	/*border-bottom: solid 1px #000000;
+	border-right: solid 1px #000000;
+	border-left: solid 1px #000000;
+	border-top: solid 1px #000000;*/
+	font-size: 11px;
+	font-color:black;
+	font-weight: normal;
+	text-align: left;
+	background: #edeeef;
+}
+
+ /*table data text class apply from here*/
+/*.tablecelltext {
+ 	height:5px;
+     border: solid 0px #000000;
+	border-right: solid 0px #000000;
+	border-left: solid 0px #000000;
+	border-top: solid 0px #000000;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left; 
+}*/
+/*this link for the table header hyperlink - text*/
+.datatableheader a:link {font-family:Verdana; text-decoration: none; color:blue;font-weight:bold; font-size:12px }
+.datatableheader link a{font-family:Verdana; text-decoration: underline; color:blue;font-weight:bold; font-size:12px }
+.datatableheader a:active { font-family:Verdana; text-decoration: none; color:blue;font-weight:bold; font-size:12px} 
+.datatableheader a:visited {font-family:Verdana; text-decoration:none; color:blue; font-weight:bold;font-size:12px }
+.datatableheader a:hover {font-family:Verdana; text-decoration: underline; color:black;font-weight:bold; font-size:12px }
+
+/*this link for the table odd row  hyperlink - text*/
+
+.odd a:link {font-family:Verdana; text-decoration: underline; color:blue;font-weight: normal; font-size:10 }
+.odd link a{font-family:Verdana; text-decoration: underline; color:blue;font-weight:normal; font-size:10 }
+.odd a:active { font-family:Verdana; text-decoration: none; color:blue;font-weight:normal; font-size:10} 
+.odd a:visited {font-family:Verdana; text-decoration:underline; color:blue; font-weight:normal;font-size:10 }
+.odd a:hover {font-family:Verdana; text-decoration: underline; color:black;font-weight:normal; font-size:10 }
+
+/*this link for the table even row  hyperlink - text*/
+
+.even a:link {font-family:Verdana; text-decoration: underline; color:blue;font-weight:normal; font-size:10 }
+.even link a{font-family:Verdana; text-decoration: underline; color:blue;font-weight:normal; font-size:10 }
+.even a:active { font-family:Verdana; text-decoration: none; color:blue;font-weight:normal; font-size:10} 
+.even a:visited {font-family:Verdana; text-decoration:underline; color:blue; font-weight:normal;font-size:10 }
+.even a:hover {font-family:Verdana; text-decoration: underline; color:black;font-weight:normal; font-size:10 }
+
+
+/*this link for the table odd center row  hyperlink - text*/
+
+.oddcenter a:link {font-family:Verdana; text-decoration: underline; color:blue;font-weight: normal; font-size:10 }
+.oddcenterlink a{font-family:Verdana; text-decoration: underline; color:blue;font-weight:normal; font-size:10 }
+.oddcenter a:active { font-family:Verdana; text-decoration: none; color:blue;font-weight:normal; font-size:10} 
+.oddcenter a:visited {font-family:Verdana; text-decoration:underline; color:blue; font-weight:normal;font-size:10 }
+.oddcenter a:hover {font-family:Verdana; text-decoration: underline; color:black;font-weight:normal; font-size:10 }
+
+/*this link for the table odd right row  hyperlink - text*/
+
+.oddright a:link {font-family:Verdana; text-decoration: underline; color:blue;font-weight: normal; font-size:10 }
+.oddrightlink a{font-family:Verdana; text-decoration: underline; color:blue;font-weight:normal; font-size:10 }
+.oddright a:active { font-family:Verdana; text-decoration: none; color:blue;font-weight:normal; font-size:10} 
+.oddright a:visited {font-family:Verdana; text-decoration:underline; color:blue; font-weight:normal;font-size:10 }
+.oddright a:hover {font-family:Verdana; text-decoration: underline; color:black;font-weight:normal; font-size:10 }
+
+
+/*Text Box Effect Apply from Here*/
+.currencyText{ border:1px solid #999999; background-color:#FFFFFF; color:#000000;
+font-size:12px;font-weight:lighter;height:15px;padding-top:1px;padding-right:1px;padding-bottom:1px;padding-left:1px;
+letter-spacing:0px;text-align:left;text-indent:0pt;cursor:crosshair;vertical-align:middle
+}
+
+
+
+/*text effectapply from here which is come from database*/
+.sno {font-family: Arial, Helvetica, sans-serif;font-weight:bold;font-size: 8pt; color:#565656}
+
+/*
+td {
+	color: black;
+	font-weight: normal;
+	font-size: 10px;
+	font-style: normal;
+}*/
+
+
+.odd1 {
+	background: #F5F5F5;
+}
+
+.even2 {
+	background: white;
+}
+
+/*tr.ruled { cursor: pointer; background: #90A720; }*/
+#pageContent {
+	margin: 0;
+	padding: 0px;
+	text-align: left;
+	border: solid 1px #ABABAB;
+	background-color: #ABABAB;
+}
+
+#inContent {
+	padding: 0;
+	margin: 0;
+	border: solid 1px #888888;
+	background-color: #CFE2FE;    /*left side menu and whole page basic background color applly from here */
+}
+
+#header {
+	top: 0px;
+	left: 0px;
+	margin: 0;
+	padding: 0;
+    border-bottom: solid 1px #ABABAB;
+	height: 100%;
+}
+
+.headertext {
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold;
+	color: black;
+}
+
+#toolbar {
+	margin: 0px;
+	/*border-bottom: solid 1px #ABABAB;*/
+	display: none;
+}
+
+#nav {
+	margin: 6px 0 0 2px;
+	position: relative;
+	float: left;
+	width: 15%;
+	height: 100%;
+	padding: 5px 0 0 2px;
+	/*background: #ABABAB;*/
+	font-size: 14px;
+	z-index: 100;
+}
+#currentApplication
+  {
+  border-bottom: 1px solid black;
+	border-left: solid 1px #CFE2FE;
+	padding: 0px 6px 0 6px;
+	float: right;
+	z-index: 1;
+	margin: 0px 0px 0px 0px;
+	width: 82%;
+	min-height: 5px;
+	height:auto !important;
+	height: 5px;
+	background: #999999;
+	background: #ABABAB url(images/1background.gif);
+	font-size: 12px;
+	color: #000000;
+	text-align: left;
+ }
+ #currentApplication table tr td{
+ padding: 2px;
+ }
+
+/* all pages back ground effect apply from here*/
+#content {
+	background: #ffffff;    /*page content back ground color*/
+	padding: 6px;
+	float: right;
+	z-index: 1;
+	margin: 0px 0px 0px 0px;
+	width: 82%;
+	min-height: 450px;
+	height:auto !important;
+	height: 450px;
+	font-size: 12px;
+	text-align: left;
+    border-left: solid 1px #ABABAB;
+     }
+
+#footer {
+	width: 100%;
+	margin: 0;
+	padding: 0 0 -5px 0;
+	height: 100%;
+	border-top: solid 1px #ABABAB;
+}
+
+#footer ul {
+	display: none;
+}
+
+#footertext {
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	color: #363636;
+	text-align: right;
+	width: 100%;
+}
+
+.datatable {
+	border: solid 1px gray;
+	width: 100%;
+	margin: 0px;
+	cellpadding: 2px;
+	border-collapse: collapse;
+}
+
+
+.fieldLabel {
+	font-family: Verdana;
+	text-decoration:none;
+	font-size: 12px;
+	font-weight: bold;
+	color: black;
+}
+
+.screenLabel {
+	font-family: Verdana;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+	color: Black;
+}
+
+
+.groupHeaderLabel {
+	background: #CFE2FE;
+/*	background: #e4eff8;*/
+/*	background: f0f7ff;*/
+}
+
+.groupHeaderLabel td {
+	font-size: 13px;
+	font-weight: bold;
+	border: solid 0px #c0c0c0; 
+	padding: 0px 2px 0px 2px;
+}
+
+.textField{
+	border-top: solid 1px gray;
+	border-left: solid 1px gray;
+	border-right: solid 1px #BCBCBC;
+	border-bottom: solid 1px #BCBCBC;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.groupTable{
+	border: solid 1px gray;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	cellpadding: 2px;
+	border-collapse: collapse;
+}
+
+.groupTable td{
+	padding: 2px;
+/*	border: solid 1px #DEDEDE;*/
+}
+
+.tabtable{ 
+/*	 sub table attributes*/
+	/*border-right: solid 1px #ffffff;
+	border-bottom: solid 1px #ffffff;
+	border-top: solid 1px #6587a9;
+	border-left: solid 1px #6587a9;*/
+	cellspacing: 0;
+	width: 100%;
+	background: trasnparant;
+}
+	
+.tabtable td{
+	padding: 3px;
+}
+
+.mandatory{
+	background: #FFFFE9;
+}
+
+.button{
+	border-top: solid 1px #FFFFFF;
+	border-left: solid 1px #FFFFFF;
+	border-right: solid 1px #FFFFFF;
+	border-bottom: solid 1px #FFFFFF;
+		}
+
+.cc { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black}
+
+.TableBorderN {border-style : solid ; border-color :grey; border-width: 1px;}
+
+.TableBorderBN {border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;}
+
+.TableBorderRN {border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderLN {border-left-style : solid ; border-left-color :grey; border-left-width: 1px;}
+
+.TableBorderTN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;}
+
+.TableBorderLTN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;}
+
+.TableBorderTRN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderRBN {border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderBLN {border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;}
+
+.TableBorderLRN {border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderRLN {border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderBTN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;}
+
+.TableBorderTBN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;}
+
+.TableBorderLTRN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderTRBN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderRBLN {border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderBLTN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;}
+
+.TableBorderLTRBN {border-top-style : solid ; border-top-color :"#375472"; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :"#375472"; border-bottom-width: 1px;border-left-style : solid ; border-left-color :"#375472"; border-left-width: 1px;border-right-style : solid ; border-right-color :"#375472"; border-right-width: 1px;}
+
+.TableBorderTRBLN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderRBLTN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+.TableBorderBLTRN {border-top-style : solid ; border-top-color :grey; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :grey; border-bottom-width: 1px;border-left-style : solid ; border-left-color :grey; border-left-width: 1px;border-right-style : solid ; border-right-color :grey; border-right-width: 1px;}
+
+
+/*
+
+
+#div-body {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(body-background.gif);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -3;
+}
+#div-left-top { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(lt-corner.gif);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-top { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("top-border.gif");
+  background-repeat: repeat-x;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+vertical-align: middle;
+}
+#div-right-top { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("rt-corner.gif");
+  background-repeat: no-repeat;
+  border: none;
+  background-position: 100% 0%;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-left-bottom { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("lb-corner.gif");
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  border: none;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-bottom { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("bottom-border.gif");
+  background-repeat: repeat-x;
+  background-position: 0% 100%;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+}
+#div-right-bottom { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("rb-corner.gif");
+  background-repeat: no-repeat;
+  border: none;
+  background-position: 100% 100%;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-left { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("left-border.gif");
+  background-repeat: repeat-y;
+  background-position: 0% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+}
+#div-right { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("right-border.gif");
+  background-repeat: repeat-y;
+  background-position: 100% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+}
+*/

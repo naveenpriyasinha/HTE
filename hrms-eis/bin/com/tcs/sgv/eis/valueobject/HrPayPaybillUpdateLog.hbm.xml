@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 12 Jun, 2012 2:45:48 PM by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayPaybillUpdateLog" table="HR_PAY_PAYBILL_UPDATE_LOG">
+        <id name="updateLogId" type="long">
+            <column name="UPDATE_LOG_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="empId" type="long">
+            <column name="EMP_ID" not-null="true" precision="22" scale="0" />
+        </property>
+        <property name="hrPayPaybillId" type="long">
+            <column name="HR_PAY_PAYBILL_ID" not-null="true" precision="22" scale="0" />
+        </property>
+        <property name="oldNetAmt" type="double">
+            <column name="OLD_NET_AMT" not-null="true" precision="22" scale="0" />
+        </property>
+        <property name="oldGrossAmt" type="double">
+            <column name="OLD_GROSS_AMT" not-null="true" precision="22" scale="0" />
+        </property>
+        <property name="oldTotalDed" type="double">
+            <column name="OLD_TOTAL_DED" not-null="true" precision="22" scale="0" />
+        </property>
+        <property name="newNetAmt" type="double">
+            <column name="NEW_NET_AMT" not-null="true" precision="22" scale="0" />
+        </property>
+        <property name="newGrossAmt" type="double">
+            <column name="NEW_GROSS_AMT" not-null="true" precision="22" scale="0" />
+        </property>
+        <property name="newTotalDed" type="double">
+            <column name="NEW_TOTAL_DED" not-null="true" precision="22" scale="0" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="20" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" not-null="true" />
+        </property>
+        <property name="createdPost" type="long">
+            <column name="CREATED_POST" not-null="true" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

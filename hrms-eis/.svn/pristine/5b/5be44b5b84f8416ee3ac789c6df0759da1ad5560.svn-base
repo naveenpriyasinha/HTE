@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2007 4:12:13 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisScaleMst" table="hr_eis_scale_mst">
+        <comment></comment>
+        <id name="scaleId" type="long">
+            <column name="scale_id" />
+            <generator class="assigned" />
+        </id>
+        
+        
+             <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+		<many-to-one name="hrPayCommissionMst" class="com.tcs.sgv.common.payroll.valueobject.HrPayCommissionMst" fetch="select">
+			<column name="commission_id"/>
+		</many-to-one>
+		<many-to-one name="payBandId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+			<column name="payband_id"/>
+		</many-to-one>
+         
+         <!-- Added by Muneendra for  payScaleType-->
+        <many-to-one name="payScaleType" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+			<column name="PayScale_Type"/>
+		</many-to-one> 
+        <!-- ended by Muneendra for  payScaleType-->
+        
+        
+        <property name="scaleName" type="string">
+            <column name="scale_name" length="40" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scaleDesc" type="string">
+            <column name="scale_desc" length="100" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scaleStartAmt" type="long">
+            <column name="scale_start_amt" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scaleEndAmt" type="long">
+            <column name="scale_end_amt" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scaleIncrAmt" type="long">
+            <column name="scale_incr_amt" >
+                <comment></comment>
+            </column>
+        </property>
+        <!-- <property name="langId" type="long">
+            <column name="lang_id" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="long">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="long">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </property> -->
+        
+        <property name="elementCode" type="java.lang.Long">
+            <column name="element_code">
+                <comment></comment>
+            </column>
+        </property>
+        <!--  <property name="createdBy" type="long">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </property> -->
+        
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" >
+                <comment></comment>
+            </column>
+        </property>
+        <!--  <property name="createdByPost" type="long">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedBy" type="java.lang.Long">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </property> -->
+        
+      
+        <!--  <property name="updatedByPost" type="java.lang.Long">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </property> -->
+        <property name="scaleEffFromDt" type="timestamp">
+            <column name="SCALE_EFF_FROM_DT" length="7" />
+        </property>
+        
+        <property name="scaleEffToDt" type="timestamp">
+            <column name="SCALE_EFF_TO_DT" length="7" />
+        </property>
+        
+        <property name="incrementDate" type="timestamp">
+            <column name="increment_date" length="19" >
+                <comment></comment>
+            </column>
+        </property>
+        <!-- Added by Mrugesh for Bigger Scale Value -->
+        <property name="scaleHigherIncrAmt" type="long">
+            <column name="scale_higher_incr_amt" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scaleHigherEndAmt" type="long">
+            <column name="scale_higher_end_amt" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scaleSecondHigherIncrAmt" type="long">
+            <column name="scale_2nd_higher_incr_amt" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scaleSecondHigherEndAmt" type="long">
+            <column name="scale_2nd_higher_end_amt" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scaleThirdHigherIncrAmt" type="long">
+            <column name="scale_3rd_higher_incr_amt" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scaleThirdHigherEndAmt" type="long">
+            <column name="scale_3rd_higher_end_amt" >
+                <comment></comment>
+            </column>
+        </property>
+        <!-- Ended by Mrugesh -->
+        
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER"  >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="scaleGradePay" type="long">
+            <column name="SCALE_GRADE_PAY" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="migratedScale" type="java.lang.Integer">
+            <column name="MIGRATED_SCALE"  >
+                <comment></comment>
+            </column>
+        </property>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+#start of search application
+empname=Employee Name
+post=Post
+location=Location
+search=Search
+preferred=Preferred List
+new=New Search
+employee=Employee
+empid=Employee ID
+newsubpath=Selected Employee
+designation=Designation
+department=Department
+name=Name
+#end of search application

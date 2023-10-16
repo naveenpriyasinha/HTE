@@ -1,0 +1,217 @@
+.anchortag {
+}
+
+.checkboxtag {
+	padding: 2px;
+}
+
+.filetag {
+	border: inset 1px #bbbbbb;
+	padding: 2px;
+}
+
+.radiobuttontag {
+	padding: 2px;
+}
+
+.resetbuttontag {
+	border: outset 1px #888888;
+	background: #efefef;
+}
+
+.selecttag {
+	border: inset 1px #bbbbbb;
+	padding: 2px;
+}
+
+ .textareatag, .passwordtag {
+	border: inset 1px #bbbbbb;
+	padding: 2px;
+}
+
+/*Do not Modify - Jignesh */
+.texttag
+{
+//padding: 2px;
+}
+
+.textOnFocustag
+{
+border: solid 1px #FF0000;
+padding: 2px;
+}
+
+.selectOnFocustag
+{
+scrollbar-face-color:#8080FF;
+scrollbar-arrow-color:#FFFFFF;
+scrollbar-track-color:#DDDDFF;
+scrollbar-shadow-color:'red';
+scrollbar-highlight-color:'red';
+scrollbar-3dlight-color:'red';
+scrollbar-darkshadow-Color:'red';
+
+}
+
+.textareatag{
+	font-family:  Arial, Verdana, Helvetica, sans;
+	font: inherit;
+}
+
+.textareatag, .selecttag{
+scrollbar-3dlight-color:#eeeeee; 
+scrollbar-arrow-color:#000000; 
+scrollbar-base-color:#ababab; 
+scrollbar-darkshadow-color:#444444; 
+scrollbar-face-color:#bbbbbb; 
+scrollbar-highlight-color:#bbbbbb; 
+scrollbar-shadow-color:#999999;
+}
+
+.buttontag{
+	border-top: solid 1px gray;
+	border-left: solid 1px gray;
+	border-right: solid 2px gray;
+	border-bottom: solid 2px gray;
+	background: #FFFFFF;
+	width: 100px; 
+	font-weight: 800;
+	color: #5289F2;
+}
+
+.savebutton{
+	margin: 4px;
+	padding: 2px 5px 2px 2px;
+	width: 100px;
+	height: 28px;
+	border: outset 1px #888888;
+	background: #efefef url(images/save.png) no-repeat 5% center;
+	text-align: right;
+}
+
+.mandatorycontrol{
+	background: #FFFFF0;
+}
+
+.mandatoryindicator{
+	font-size: 10pt;
+	font-weight: bold;
+	color :#F80000;
+}
+
+.disabledcontrol{
+	background: #dedede;
+}
+
+/* added by vidhyaa*/
+
+.mandatoryindicator, .mandatoryindicatorlegend{
+	font-family: Verdana;
+	font-size: 14px;
+	font-weight: bold;
+	color :#F80000;
+}
+
+.mandatoryindicatorlegend{
+	font-size: 15pt;
+	
+}
+
+.searchbutton{
+	padding: 2px 5px 2px 2px;
+	background: #efefef url(images/search-02.gif) no-repeat 5% center;
+	text-align: right;
+}
+.captionTag{
+	font-family: Verdana;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+	color: Black;
+}
+.buttontag,.searchbutton{
+	border: solid 1px #999999;
+	background: #ffffff;
+}
+.buttontag:hover{
+	border: solid 1px #999999;
+	background: #ffffff;
+}
+
+.fieldGroupTag{
+	position: relative;
+	background:  #eeeeef url(images/fieldsettop.png) repeat-x top;
+    border: 0px groove #aaa;
+    border-bottom: 1px ridge #fff;
+    border-left: 0px groove #aaa;
+    border-right: 0px ridge #fff;
+    padding: 2px 2px 2px 2px;
+}
+.fieldGroupExpand{
+	position: absolute;
+	background-color : transparent;
+	background: url(images/taglib/fieldGrpMax.png) no-repeat;
+	width: 16px;
+	height: 14px;
+}
+.fieldGroupCollapse{
+	position: absolute;
+	background-color : transparent;
+	background: url(images/taglib/fieldGrpMin.png) no-repeat;
+	width: 16px;
+	height: 14px;
+}
+.fieldGroupTag legend{
+    border: 0px solid #678;
+	font-size: 12px;
+    font-weight:  bold;
+    position: relative;
+    top: 0px;
+    left: -5px;
+    width: 95%;
+    padding: 2px 2px 2px 2px;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.zoom_div {
+	display: none;
+	position: absolute;
+	top: 20%;
+	left: 25%;
+	width: 50%;
+	height: 400;
+	padding: 1px;
+	/*border: 4px solid orange;*/
+	border: solid 1px #aaaaaa;
+	background-color: #888888;
+	z-index:1002;
+}
+
+.zoom_div table{
+	width: 100%;
+	height: 100%;
+	padding: 1px;
+	border: solid 1px #333333;
+	background: #000000;
+}
+		
+.zoom_div table table{
+	border-left: solid 1px #efefef;
+	border-top: solid 1px #efefef;
+	border-right: solid 1px #898989;
+	border-bottom: solid 1px #898989;
+	background: #dddddd;
+}
+
+.imgtagtable{
+	border: 1px solid #88aacc;
+	background: #ccddff;
+}
+
+.imgtagimg{
+}
+
+.zoomlinktd{
+	background: url(images/taglib/zoom.gif) no-repeat right bottom;
+}

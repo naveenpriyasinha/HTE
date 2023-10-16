@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.eis.valueobject.HrForm16Args" table="HR_FORM16_ARGS">
+  		<id name="argId" type="long">
+            <column name="ARG_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="dispOrder" type="long">
+            <column name="DISP_ORDER" precision="22" scale="0" />
+        </property>
+        <property name="valueInCol" type="long">
+            <column name="VALUE_IN_COL" precision="22" scale="0" not-null="false"/>
+        </property>
+        <property name="voProperty" type="string">
+            <column name="VO_PROPERTY" length="40" />
+        </property>
+        <property name="displayName" type="string">
+            <column name="DISPLAY_NAME" length="40" />
+        </property>
+        <property name="locId" type="long">
+            <column name="LOC_ID" precision="22" scale="0" />
+        </property>
+        <property name="dbId" type="long">
+            <column name="DB_ID" precision="22" scale="0" />
+        </property>
+        <property name="createdBy" type="long">
+            <column name="CREATED_BY" precision="22" scale="0" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updateBy" type="long">
+            <column name="UPDATE_BY" precision="22" scale="0" />
+        </property>
+        <property name="createdByPost" type="long">
+            <column name="CREATED_BY_POST" precision="22" scale="0" />
+        </property>
+   </class>
+</hibernate-mapping>

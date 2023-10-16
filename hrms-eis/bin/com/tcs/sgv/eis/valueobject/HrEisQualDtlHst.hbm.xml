@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 8, 2008 1:14:00 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisQualDtlHst" table="hr_eis_qual_dtl_hst">
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrEisQualDtlHstId">
+            <key-property name="srNo" type="long">
+                <column name="sr_no" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="trn_counter" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="cmnLookupMstByDicipline" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="dicipline">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUserId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByCourseCategory" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="course_category">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAttachmentMst" class="com.tcs.sgv.common.valueobject.CmnAttachmentMst" fetch="select">
+            <column name="attachment_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByUnitsOfMarks" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="units_of_marks">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByQualificationId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="qualification_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstBySubQualificationId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="sub_qualification_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="uniInstituteBoard" type="string">
+            <column name="uni_institute_board" length="90">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="yearOfPassing" type="java.lang.Long">
+            <column name="year_of_passing">
+                <comment></comment>
+            </column>
+        </property>
+       <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="marksScored" type="string">
+            <column name="marks_scored" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="deleteFlag" type="string">
+            <column name="delete_flag" length="2">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

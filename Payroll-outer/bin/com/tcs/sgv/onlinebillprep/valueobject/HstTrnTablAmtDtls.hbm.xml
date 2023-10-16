@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 28, 2007 12:20:53 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.onlinebillprep.valueobject.HstTrnTablAmtDtls" table="HST_TRN_TABL_AMT_DTLS"  >
+        <composite-id name="id" class="com.tcs.sgv.onlinebillprep.valueobject.HstTrnTablAmtDtlsId">
+            <key-property name="trnTablAmtDtlsId" type="long">
+                <column name="TRN_TABL_AMT_DTLS_ID" precision="20" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" precision="11" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="trnTablHdrId" type="long">
+            <column name="TRN_TABL_HDR_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="rlwStmFare" type="big_decimal">
+            <column name="RLW_STM_FARE" precision="17" />
+        </property>
+        <property name="rdTrlFare" type="big_decimal">
+            <column name="RD_TRL_FARE" precision="17" />
+        </property>
+        <property name="ttlDaClmed" type="big_decimal">
+            <column name="TTL_DA_CLMED" precision="17" />
+        </property>
+        <property name="incdntlExp" type="big_decimal">
+            <column name="INCDNTL_EXP" precision="17" />
+        </property>
+        <property name="grossTotal" type="big_decimal">
+            <column name="GROSS_TOTAL" precision="17" not-null="true" />
+        </property>
+        <property name="dedTaAdv" type="big_decimal">
+            <column name="DED_TA_ADV" precision="17" />
+        </property>
+        <property name="dedPtaDays" type="big_decimal">
+            <column name="DED_PTA_DAYS" precision="20" scale="0" />
+        </property>
+        <property name="dedPta" type="big_decimal">
+            <column name="DED_PTA" precision="17" />
+        </property>
+        <property name="netClaimed" type="big_decimal">
+            <column name="NET_CLAIMED" precision="17" not-null="true" />
+        </property>
+        <property name="snctndAmt" type="big_decimal">
+            <column name="SNCTND_AMT" precision="17"/>
+        </property>
+        <property name="billPassedDate" type="date">
+            <column name="BILL_PASSED_DATE" length="7" />
+        </property>
+        <property name="billPassedAmt" type="big_decimal">
+            <column name="BILL_PASSED_AMT" precision="17" />
+        </property>
+        <property name="attachId" type="long">
+            <column name="ATTACH_ID" precision="20" scale="0" />
+        </property>
+        <property name="chqOrder" type="string">
+            <column name="CHQ_ORDER" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" />
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="long">
+            <column name="DB_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="rdChrgsPsperkm" type="big_decimal">
+            <column name="RD_CHRGS_PSPERKM" precision="17" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 10, 2007 4:10:58 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.onlinebillprep.valueobject.TrnTablRqst" table="TRN_TABL_RQST" dynamic-update="true">
+        <id name="trnTablRqstId" type="long">
+            <column name="TRN_TABL_RQST_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="trnTarqstHdrId" type="long">
+            <column name="TRN_TARQST_HDR_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="orderNo" type="short">
+            <column name="ORDER_NO" precision="3" scale="0" not-null="true" />
+        </property>
+        <property name="depDate" type="date">
+            <column name="DEP_DATE" length="7" />
+        </property>
+        <property name="arrDate" type="date">
+            <column name="ARR_DATE" length="7" />
+        </property>
+        <property name="fareNumber" type="java.lang.Integer">
+            <column name="FARE_NUMBER" precision="5" scale="0" />
+        </property>
+        <property name="fareAmt" type="big_decimal">
+            <column name="FARE_AMT" precision="17" not-null="true" />
+        </property>
+        <property name="admsblOrdRate" type="big_decimal">
+            <column name="ADMSBL_ORD_RATE" precision="17" not-null="true" />
+        </property>
+        <property name="admsblOthRate" type="big_decimal">
+            <column name="ADMSBL_OTH_RATE" precision="17" not-null="true" />
+        </property>
+        <property name="admsblDa" type="big_decimal">
+            <column name="ADMSBL_DA" precision="17" not-null="true" />
+        </property>
+        <property name="numOfDaysClmed" type="java.lang.Short">
+            <column name="NUM_OF_DAYS_CLMED" precision="3" scale="0" />
+        </property>
+        <property name="purpose" type="string">
+            <column name="PURPOSE" />
+        </property>
+        <property name="totalAmt" type="big_decimal">
+            <column name="TOTAL_AMT" precision="17" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" />
+        </property>
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER" precision="11" scale="0" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="depStationEn" type="string">
+            <column name="DEP_STATION_EN" />
+        </property>
+        <property name="depStationGu" type="string">
+            <column name="DEP_STATION_GU" />
+        </property>
+        <property name="arrStationEn" type="string">
+            <column name="ARR_STATION_EN" />
+        </property>
+        <property name="arrStationGu" type="string">
+            <column name="ARR_STATION_GU" />
+        </property>
+        <property name="depHour" type="string">
+            <column name="DEP_HOUR" />
+        </property>
+        <property name="arrHour" type="string">
+            <column name="ARR_HOUR" />
+        </property>
+        <property name="trvlModeEn" type="string">
+            <column name="TRVL_MODE_EN" />
+        </property>
+        <property name="trvlModeGu" type="string">
+            <column name="TRVL_MODE_GU" />
+        </property>
+        <property name="fareClass" type="string">
+            <column name="FARE_CLASS" />
+        </property>
+        <property name="ttlDa" type="big_decimal">
+            <column name="TTL_DA" />
+        </property>
+    </class>
+</hibernate-mapping>

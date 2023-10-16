@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 18, 2008 3:53:13 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisEmpDtlTxn" table="hr_eis_emp_dtl_txn">
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrEisEmpDtlTxnId">
+            <key-property name="reqId" type="long">
+                <column name="REQ_ID" />
+            </key-property>
+            <key-property name="langId" type="long">
+                <column name="LANG_ID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY_POST">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMstByEmpBirthPlaceAddressId" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="EMP_BIRTH_PLACE_ADDRESS_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAttachmentMstByEmpThumbAttachmentId" class="com.tcs.sgv.common.valueobject.CmnAttachmentMst" fetch="select">
+            <column name="EMP_THUMB_ATTACHMENT_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgEmpMst" class="com.tcs.sgv.ess.valueobject.OrgEmpMst" fetch="select">
+            <column name="EMP_MPG_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMstByEmpPermanentAddressId" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="EMP_PERMANENT_ADDRESS_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLanguageMstByEmpMotherTongueId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="EMP_MOTHER_TONGUE_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMstByEmpNativePlaceAddressId" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="EMP_NATIVE_PLACE_ADDRESS_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpCasteId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="EMP_CASTE_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLanguageMstByLangId" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" update="false" insert="false" fetch="select">
+            <column name="LANG_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAttachmentMstByEmpPhotoAttachmentId" class="com.tcs.sgv.common.valueobject.CmnAttachmentMst" fetch="select">
+            <column name="EMP_PHOTO_ATTACHMENT_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpSubCasteId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="EMP_SUB_CASTE_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAddressMstByEmpCurrentAddressId" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="EMP_CURRENT_ADDRESS_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpReligionId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="EMP_RELIGION_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpCategoryId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="EMP_CATEGORY_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpMaritalStatusId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="EMP_MARITAL_STATUS_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY">
+                <comment></comment>
+            </column>
+        </many-to-one>
+         <many-to-one name="cmnCountryMstByEmpNationality" class="com.tcs.sgv.common.valueobject.CmnCountryMst" fetch="select">
+            <column name="emp_nationality">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="empGender" type="java.lang.Character">
+            <column name="EMP_GENDER" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="actionFlag" type="string">
+            <column name="ACTION_FLAG" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empFname" type="string">
+            <column name="EMP_FNAME" length="60">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empMname" type="string">
+            <column name="EMP_MNAME" length="60">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empLname" type="string">
+            <column name="EMP_LNAME" length="60">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empDob" type="timestamp">
+            <column name="EMP_DOB" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empPrefix" type="string">
+            <column name="EMP_PREFIX" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="addressTypeFlag" type="string">
+            <column name="ADDRESS_TYPE_FLAG" length="12">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empStdCode" type="java.lang.Long">
+            <column name="EMP_STD_CODE">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empPhoneNumber" type="java.lang.Long">
+            <column name="EMP_PHONE_NUMBER">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empMobileNumber" type="java.lang.Long">
+            <column name="EMP_MOBILE_NUMBER">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empEmail" type="string">
+            <column name="EMP_EMAIL" length="80">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

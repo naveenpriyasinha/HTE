@@ -1,0 +1,43 @@
+#statusbar {
+	position: absolute;
+	border: 1px solid black;
+	display: inherit;
+	z-index: 200;
+	width: 360px;
+	height: 70px;
+	visibility: hidden;
+}
+
+#statusbar table 
+{
+	width: 99%;
+	height: 98%;
+	padding-top: 8px;
+	padding-left: 8px;
+	border: 2px solid #ace;
+	background: url(images/wintop.gif) repeat;
+	color: white;
+	font-family:  "verdana", "georgia";
+	font-weight: bold;
+	font-size: 13px;
+	font-style:normal;
+	white-space: nowrap;
+}
+
+#statusbar td 
+{
+	color: white;
+	font-family:  "verdana", "georgia";
+	font-weight: bold;
+	font-size: 13px;
+	font-style:normal;
+	white-space: nowrap;
+	
+}
+
+#imgtd 
+{
+	padding: 5px;
+	background: url(images/ajax-loader4.gif) 40% 40% no-repeat;
+	width: 20%;
+}

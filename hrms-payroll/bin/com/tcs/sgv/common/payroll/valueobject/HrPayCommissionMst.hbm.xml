@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.tcs.sgv.common.payroll.valueobject.HrPayCommissionMst" table="HR_PAY_COMMISSION_MST">
+		
+		<id name="id" type="long">
+            <column name="ID" not-null="true" />
+            <generator class="assigned" />
+        </id>
+        <property name="commissionName" type="string">
+            <column name="COMMISSION_NAME" length="30" not-null="true" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ruleEngineClassPath" type="string">
+            <column name="RULE_ENGINE_CLASSPATH" length="60" not-null="true" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="commissionCode" type="string">
+            <column name="commission_code" length="10" not-null="true" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="START_DATE" length="19" not-null="true" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="END_DATE" length="19" >
+                <comment></comment>
+            </column>
+        </property>
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+                <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" >
+                <comment></comment>
+            </column>
+        </property>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+          <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+	</class>
+</hibernate-mapping>

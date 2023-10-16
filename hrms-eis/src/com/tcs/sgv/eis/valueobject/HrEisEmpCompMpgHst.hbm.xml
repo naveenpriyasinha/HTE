@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2008 7:42:30 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisEmpCompMpgHst" table="HR_EIS_EMP_COMPONENT_MPG_HST">
+        <comment></comment>
+
+        <id name="EmpCompId" type="long">
+            <column name="EMP_COMP_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+		
+		<many-to-one name="orgEmpMst" class="com.tcs.sgv.ess.valueobject.OrgEmpMst" fetch="select">
+            <column name="EMP_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+		<many-to-one name="cmnLookupMst" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="COMPO_TYPE">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <property name="compId" type="long">
+            <column name="COMPO_ID" precision="10" scale="0" />
+        </property>
+        
+        <property name="month" type="long">
+            <column name="MONTH" precision="10" scale="0" />
+        </property>
+        
+         <property name="year" type="long">
+            <column name="YEAR" precision="10" scale="0" />
+        </property>
+        
+        <property name="effectDate" type="timestamp">
+            <column name="EFFECT_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        
+		<property name="isactive" type="long">
+            <column name="IS_ACTIVE" precision="10" scale="0" />
+        </property>
+        
+         <property name="grpId" type="long">
+            <column name="GRP_ID" precision="20" scale="0" />
+        </property>
+	
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 29, 2007 4:08:47 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.billproc.common.valueobject.TrnBillRemarks" table="trn_bill_remarks" dynamic-update="true">
+        <comment></comment>
+        <id name="rmrksId" type="long">
+            <column name="RMRKS_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="billNo" type="long">
+            <column name="BILL_NO" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="postId" type="long">
+            <column name="POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="2000">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="lineItemNo" type="java.lang.Long">
+            <column name="LINE_ITEM_NO">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="rmrksFlag" type="string">
+            <column name="RMRKS_FLAG" length="2">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDt" type="timestamp">
+            <column name="CREATED_DT" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>        
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billMvmntId" type="java.lang.Long">
+            <column name="BILL_MVMNT_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

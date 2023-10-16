@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 23, 2012 4:42:54 PM by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.zp.zpDdoOffice.valueobject.ZpRltDdoMap" table="RLT_ZP_DDO_MAP">
+        <id name="ZP_MAP_ID" type="long">
+            <column name="ZP_MAP_ID" precision="10" scale="0" />
+
+            <generator class="assigned" />
+        </id>
+        
+        <property name="ZP_DDO_POST_ID" type="long">
+            <column name="ZP_DDO_POST_ID" length="10" />
+        </property>
+        
+        <property name="REPT_DDO_POST_ID" type="long">
+            <column name="REPT_DDO_POST_ID" length="10" />
+        </property>
+        
+         <property name="FINAL_DDO_POST_ID" type="long">
+            <column name="FINAL_DDO_POST_ID" length="10" />
+        </property>
+        
+		<property name="SPECIAL_DDO_POST_ID" type="long">
+            <column name="SPECIAL_DDO_POST_ID" length="10" />
+        </property>
+        
+        <property name="ZP_DDO_CODE" type="string">
+            <column name="ZP_DDO_CODE" precision="150" />
+        </property>
+        
+        <property name="FINAL_DDO_CODE" type="string">
+            <column name="FINAL_DDO_CODE" precision="150" />
+        </property>
+
+		<property name="REPT_DDO_CODE" type="string">
+            <column name="REPT_DDO_CODE" precision="150" />
+        </property>
+
+		<property name="SPECIAL_DDO_CODE" type="string">
+            <column name="SPECIAL_DDO_CODE" precision="150" />
+        </property>
+        
+        <property name="ZPLEVEL" type="long">
+            <column name="ZPLEVEL" precision="150" />
+        </property>
+
+        <property name="LANG_ID" type="java.lang.Long">
+            <column name="LANG_ID" precision="10" scale="0" />
+        </property>
+
+        <property name="CREATED_USER_ID" type="java.lang.Long">
+            <column name="CREATED_USER_ID" precision="10" scale="0" />
+        </property>
+
+        <property name="CREATED_DATE" type="timestamp">
+            <column name="CREATED_DATE" length="20" />
+        </property>
+
+        <property name="UPDATED_USER_ID" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" precision="10" scale="0" />
+        </property>
+
+        <property name="UPDATED_DATE" type="timestamp">
+            <column name="UPDATED_DATE" length="20" />
+        </property>
+
+        <property name="CREATED_POST_ID" type="java.lang.Long">
+            <column name="CREATED_POST_ID" precision="10" scale="0" />
+        </property>
+
+        <property name="UPDATED_POST_ID" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
+

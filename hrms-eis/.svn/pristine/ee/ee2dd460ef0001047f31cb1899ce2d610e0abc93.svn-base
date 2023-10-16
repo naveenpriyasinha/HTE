@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.tcs.sgv.eis.valueobject.DemoViewVO" table="DEMOTABLE">
+<id name="sno" type="long">
+            <column name="SNO" />
+            <generator class="assigned" />
+        </id>
+        
+<property name="demovalue" type="long">
+<column name="DEMO_VALUE"></column>
+</property>
+
+<property name="demoName" type="string">
+<column name="DEMO_NAME"></column>
+</property>
+
+</class>
+
+</hibernate-mapping>

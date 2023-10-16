@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-schema="IFMS_ADMIN" match-name="MST_STAMP_CATEGORY"/>
+  <table-filter match-schema="IFMS_ADMIN" match-name="MST_STAMP_DENOMINATION"/>
+  <table-filter match-schema="IFMS_ADMIN" match-name="MST_STAMP_GROUP"/>
+  <table-filter match-schema="IFMS_ADMIN" match-name="MST_VENDOR"/>
+  <table-filter match-schema="IFMS_ADMIN" match-name="TRN_STAMP_CHALLAN_HDR"/>
+  <table-filter match-schema="IFMS_ADMIN" match-name="TRN_STAMP_REGESTER_DTLS"/>
+</hibernate-reverse-engineering>

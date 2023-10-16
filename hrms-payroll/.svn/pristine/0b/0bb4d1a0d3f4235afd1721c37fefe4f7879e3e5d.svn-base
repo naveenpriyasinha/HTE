@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 16, 2007 1:01:37 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.allowance.valueobject.HrPayExpressionMst" table="HR_PAY_EXPRESSION_MST">
+        <id name="ruleId" type="long">
+            <column name="RULE_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="ruleDescription" type="string">
+            <column name="RULE_DESCRIPTION" />
+        </property>
+        <property name="ruleExpression" type="string">
+            <column name="RULE_EXPRESSION" />
+        </property>
+    <!--     <property name="ruleValue" type="string">
+            <column name="RULE_VALUE" />
+        </property>  -->
+        <property name="ruleValue" type="long">
+            <column name="RULE_VALUE" />
+        </property>
+        
+        <property name="isactive" type="long">
+            <column name="ISACTIVE" precision="22" scale="0" />
+        </property>
+        <property name="ruleEffStartDate" type="timestamp">
+            <column name="RULE_EFF_START_DATE"/>
+        </property>
+        <property name="ruleEffEndDate" type="timestamp">
+            <column name="RULE_EFF_END_DATE"/>
+        </property>
+        <property name="ruleCode" type="long">
+            <column name="RULE_CODE"/>
+        </property>
+        
+        <many-to-one name="hrPayAllowTypeMst" class="com.tcs.sgv.allowance.valueobject.HrPayAllowTypeMst" fetch="select">
+            <column name="allow_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="hrPayCommissionMst" class="com.tcs.sgv.common.payroll.valueobject.HrPayCommissionMst" fetch="select">
+			<column name="pay_commission_id"/>
+		</many-to-one>
+        
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

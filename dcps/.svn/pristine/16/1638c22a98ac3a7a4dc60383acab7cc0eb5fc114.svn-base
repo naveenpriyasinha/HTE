@@ -1,0 +1,221 @@
+.shadetabs {
+	padding: 2px 0; /*distance btwn tab button to content*/
+	margin-left: 0;
+	margin-top: 1px;
+	margin-bottom: 0;
+	margin-right: 2px;
+	font: bold 13px Arial;
+	list-style-type: none;
+	text-align: left;
+	/*set to left, center, or right to align the menu as desired*/
+	border-bottom: solid 1px #d7f9d2;
+}
+
+
+.shadetabs li {
+	display: inline;
+/*	margin: 0px;*/
+	position: relative;
+	top: 5px;
+}
+
+.shadetabs li a {
+	text-decoration: underline;
+	padding: 3px 4px;
+	margin-right: 2px;
+	border: 1px solid #AAAAAA;
+	color: black;
+	/*  main tab image path gray image*/
+	background: white url("images/shade.gif") top left repeat-x;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.shadetabs a:visited {
+	 font-family:Verdana; 
+	 text-decoration:underline; 
+	 color:blue;
+	 font-weight:bold;
+	 font-size:10 
+}
+
+.shadetabs li a:hover {
+	font-family:Verdana;
+    text-decoration: underline;
+    color:black;
+    font-weight:bold; 
+    font-size:10;
+}
+
+.shadetabs li.selected {
+	position: relative;
+	top: 1px;
+	color: orange;
+}
+.shadetabs li.selected a { /*selected main tab blue style   main tab image path*/
+	background-image: url("images/shadeactive.gif");
+	border: 1px solid #98badb;
+	color: #000000;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.shadetabs li.selected a:hover { /*selected main tab style */
+	text-decoration: underline;
+}
+
+.shadetabs a :hover { /*selected main tab style */
+	text-decoration:underline;
+}
+.tabnavtd input:FOCUS {
+	background: #AAAAAA;
+}
+
+.tabcontentstyle { /*style of tab content container*/
+	position: relative;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	background-color:#BADCFD ;   /*tab content background color*/
+	border-left: 1px solid #98badb;
+	border-bottom: 1px solid #98badb;
+	border-right: 1px solid #98badb;
+	margin-bottom: 1px;
+	padding: 4px;
+    height: 100%; 
+}
+
+.tabcontent {   
+	z-index: 1;
+	display: none;
+	min-height: 380px;
+	height:auto !important;
+	height: 380px;
+  	border-top: outset 2px #a6caf0;
+	border-left: outset 2px #cbedFe;
+	border-right: inset 2px #cbedFe;
+	border-bottom: inset 2px #DAFAFD;
+
+	background: #ffffff; /*tab detail-content  back color  */
+	padding: 3px;
+}
+
+.tabNavigationBar {
+	width: 100%;
+}
+
+.tabnavtd {
+	padding: 5px 0 0 0;
+	text-align: right;
+    
+	
+
+
+}
+
+
+.tabnavtd input {/*subtable class this is used in like - getroles.jsp page*/
+	border-top: solid 1px #FFFFFF;
+	border-left: solid 1px #FFFFFF;
+	border-right: solid 3px gray;
+	border-bottom: solid 3px gray;
+	background: #EFEFEF;
+	width: 80px;
+}
+
+@media print {
+	.tabcontent {
+		display: block !important;
+	}
+}
+#tabmenu ul,#tabmenu li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#tabmenu {
+	border-left: 1px solid #9a9a9a;
+	z-index: 2;
+	width: 100%;
+}
+
+#tabmenu li {
+	float: left;
+	border-right: 1px solid #777777;
+	border-top: 1px solid #898989;
+}
+
+#tabmenu a {
+	font-weight: bold;
+	display: block;
+	cursor: pointer;
+	padding: 5px 5px;
+}
+
+#tabmenu a.unselected:hover {
+	color: black;
+	background: #cccccc url("images/shadetop-hover.gif") repeat-x top;
+}
+
+#tabmenu li a.selected {
+	border-bottom: 1px solid #a6caf0;
+	background: #a6caf0 url("images/shadetop.gif") repeat-x top;
+}
+
+#tabmenu li a.unselected {
+	color: #555555;
+	border-bottom: 1px solid #909090;
+	background: #cdcdcd url("images/shadetop-hover.gif") repeat-x top;
+}
+
+#tabmenu a:link,#tabmenu a:visited,#tabmenu a:active {
+	color: black;
+	text-decoration: none;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-table;
+}
+
+.tabcontentstyleForPopup { /*style of tab content container*/
+
+	position: relative;
+
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	background-color: #7fa87f;
+	border-left: 2px outset #b8c6a6;
+	border-bottom: ridge 2px #7fa87f;
+	border-right: ridge 2px #7fa87f;
+	margin-bottom: 1px;
+	padding: 4px;
+	height:100%;
+}
+
+.tabcontentForPopup {
+	z-index: 1;
+	display: none;
+	min-height: 380px;
+	height:auto !important;	
+	height:498px;
+	border-top: ridge 2px #7fa87f;
+	border-left: ridge 2px #7fa87f;
+	border-right: 2px inset #b8c6a6;
+	border-bottom: 2px inset #b8c6a6;
+	/*	border-top: solid 1px #a9cbec;
+	border-left: solid 1px #a9cbec;
+	border-right: solid 1px #daebfe;
+	border-bottom: solid 1px #daebfe;*/
+	background: #ffffff;
+	padding: 3px;
+}

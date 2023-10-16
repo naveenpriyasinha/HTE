@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 22, 2007 3:26:22 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.allowance.valueobject.HrPayAllowTypeMst" table="HR_PAY_ALLOW_TYPE_MST" >
+        <id name="allowCode" type="long">
+            <column name="ALLOW_CODE" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="allowName" type="string">
+            <column name="ALLOW_NAME" />
+        </property>
+        
+        <property name="allowDisplayName" type="string">
+            <column name="ALLOW_DISPLAY_NAME" />
+        </property>
+        
+        <property name="allowDesc" type="string">
+            <column name="ALLOW_DESC" />
+        </property>
+         		<many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+        
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="allowTypeCode" type="long">
+            <column name="ALLOW_TYPE_CODE" precision="22" scale="0" />
+        </property>
+        <property name="sequence_no" type="long">
+            <column name="SEQUENCE_NO" precision="22" scale="0" not-null="false"/>
+        </property> 
+        <property name="payCommissionId" type="long">
+            <column name="PAY_COMMISSION_ID" precision="22" scale="0" not-null="false"/>
+        </property> 
+       <property name="allwDedId" type="long">
+            <column name="all_ded_id" precision="22" scale="0" />
+        </property>
+        <set name="hrAllowArgumentMpgs" inverse="true">
+            <key>
+                <column name="ALLOW_ID" precision="22" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.tcs.sgv.allowance.valueobject.HrAllowArgumentMpg" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 27, 2007 6:27:24 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+	<class name="com.tcs.sgv.onlinebillprep.valueobject.HstTrnAprvdRqst"
+		table="HST_TRN_APRVD_RQST"  >
+		<composite-id name="id" class="com.tcs.sgv.onlinebillprep.valueobject.HstTrnAprvdRqstId">
+			<key-property name="trnAprvdRqstId" type="long">
+				<column name="TRN_APRVD_RQST_ID" precision="20"
+					scale="0" />
+			</key-property>
+			<key-property name="trnCounter" type="long">
+				<column name="TRN_COUNTER" precision="20" scale="0" />
+			</key-property>
+		</composite-id>
+		<property name="aprvdReqId" type="java.lang.String">
+			<column name="APRVD_REQ_ID" precision="20" scale="0"
+				not-null="true" />
+		</property>
+		<property name="reqAprvdDt" type="date">
+			<column name="REQ_APRVD_DT" length="7" not-null="true" />
+		</property>
+		<property name="empDeptId" type="string">
+			<column name="EMP_DEPT_ID" length="15" not-null="true" />
+		</property>
+		<property name="empNameEn" type="string">
+			<column name="EMP_NAME_EN" length="250" />
+		</property>
+		<property name="empNameGu" type="string">
+			<column name="EMP_NAME_GU" />
+		</property>
+		<property name="empDesgnEn" type="string">
+			<column name="EMP_DESGN_EN" length="100" />
+		</property>
+		<property name="empDesgnGu" type="string">
+			<column name="EMP_DESGN_GU" />
+		</property>
+		<property name="isBillCrtd" type="string">
+			<column name="IS_BILL_CRTD" length="1" not-null="true" />
+		</property>
+		<property name="updatedUserId" type="long">
+			<column name="UPDATED_USER_ID" precision="20" scale="0" />
+		</property>
+		<property name="updatedPostId" type="long">
+			<column name="UPDATED_POST_ID" precision="20" scale="0" />
+		</property>
+		<property name="updatedDate" type="date">
+			<column name="UPDATED_DATE" length="7" />
+		</property>
+		<property name="empType" type="string">
+			<column name="EMP_TYPE" length="20" />
+		</property>
+		<property name="billTypeId" type="long">
+			<column name="BILL_TYPE_ID" precision="20" scale="0" />
+		</property>
+		<property name="attachmentId" type="long">
+			<column name="ATTACHMENT_ID" precision="20" scale="0" />
+		</property>
+		<property name="empId" type="string">
+			<column name="EMP_ID" length="15" />
+		</property>
+	</class>
+</hibernate-mapping>

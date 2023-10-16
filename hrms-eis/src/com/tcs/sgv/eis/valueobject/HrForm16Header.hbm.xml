@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.eis.valueobject">
+  <class name="com.tcs.sgv.eis.valueobject.HrForm16Header" table="HR_FORM16_HEADER"> 
+  <id name="id" type="long">
+            <column name="ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="year" type="long">
+            <column name="year" precision="22" scale="0" not-null="true"/>
+        </property>
+        <many-to-one name="deptId" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="DEPT_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="ddoId" type="long">
+            <column name="DDO_ID" precision="22" scale="0" not-null="true"/>
+        </property>
+        <property name="tan" type="string">
+            <column name="TAN" length="50" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="ito" type="string">
+            <column name="ITO" length="200" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+		<property name="quarter1" type="string">
+            <column name="QUATER1" length="100" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="quarter2" type="string">
+            <column name="QUATER2" length="100" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="quarter3" type="string">
+            <column name="QUATER3" length="100" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="quarter4" type="string">
+            <column name="QUATER4" length="100">
+                <comment></comment>
+            </column>
+        </property>        
+
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+  </class>
+</hibernate-mapping>

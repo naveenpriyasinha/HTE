@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 19, 2007 1:10:18 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.stamp.valueobject.TrnStampRegisterHdr" table="TRN_STAMP_REGISTER_HDR"  >
+        <id name="trnRegId" type="big_decimal">
+            <column name="TRN_REG_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="typeCode" type="string">
+            <column name="TYPE_CODE" length="2" not-null="true" />
+        </property>
+        <property name="refDocNo" type="big_decimal">
+            <column name="REF_DOC_NO" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="locCode" type="long">
+            <column name="LOC_CODE" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="trnDate" type="date">
+            <column name="TRN_DATE" length="7" not-null="true" />
+        </property>
+        <property name="vendorCode" type="java.lang.Short">
+            <column name="VENDOR_CODE" precision="4" scale="0" />
+        </property>
+        <property name="vendorPartyName" type="string">
+            <column name="VENDOR_PARTY_NAME" length="100" />
+        </property>
+        <property name="partyAddress" type="string">
+            <column name="PARTY_ADDRESS" length="200" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0" />
+        </property>
+        <property name="grossAmt" type="big_decimal">
+            <column name="GROSS_AMT" precision="12" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.tcs.sgv.eis.valueobject.HrPayAllowDedMst"
+		table="HR_PAY_ALLOW_DED_MST">
+		<id name="allowDedId" type="long">
+			<column name="ALLOW_DED_ID" precision="10" scale="0" not-null="true" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="allowDedShrtName" type="string">
+			<column name="ALLOW_DED_SHRT_NAME" not-null="true" />
+		</property>
+		<property name="allowDedName" type="string">
+			<column name="ALLOW_DED_NAME" />
+		</property>
+
+		<property name="type" type="int">
+			<column name="TYPE" precision="1" scale="0" not-null="true" />
+		</property>
+		<property name="otherAllowRecov" type="int">
+			<column name="OTHERALLOW_RECOV" precision="1" scale="0"
+				not-null="true" />
+		</property>
+		<property name="agTresry" type="java.lang.Integer">
+			<column name="AG_TRESRY" precision="1" scale="0" default="-1" />
+		</property>
+		<property name="componentHead" type="string">
+			<column name="COMPONENT_HEAD"/>
+		</property>
+		<property name="langId" type="int">
+			<column name="LANG_ID" precision="1" scale="0" not-null="true" />
+		</property>
+		<property name="allwDedCode" type="long">
+			<column name="ALLWDED_CODE" precision="10" scale="0" not-null="true" />
+		</property>
+		<property name="displayOrder" type="int">
+			<column name="DISPLAY_ORDER" precision="2" scale="0" not-null="true" />
+		</property>
+		
+		<property name="displaySubOrder" type="java.lang.Integer">
+			<column name="DISP_SUB_ORDER" precision="2" scale="0"/>
+		</property>
+
+		<property name="ruleBasedFlag" type="int">
+			<column name="RULE_BASED" precision="1" scale="0"
+				not-null="true" />
+		</property>
+
+		<property name="status" type="int">
+			<column name="STATUS" precision="1" scale="0" not-null="true" />
+		</property>
+
+		<property name="startDate" type="date">
+			<column name="START_DATE" length="7" not-null="true" />
+		</property>
+
+		<property name="interestRate" type="java.lang.Double">
+			<column name="ANNUAL_INT_RATE" precision="5" scale="0" default="-1" />
+		</property>
+		
+		<property name="taxExemptedFlag" type="int">
+			<column name="TAX_EXEMPTD" precision="1" scale="0" not-null="true" />
+		</property>
+		<property name="taxExemptionSection" type="java.lang.Integer">
+			<column name="TAX_EXEMPT_SECTN" precision="2" scale="0"/>
+		</property>
+		
+		<many-to-one name="orgUserMstBycrtdBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst"
+			fetch="select">
+			<column name="CRTD_BY" precision="20" scale="0" not-null="true">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="orgPostMstBycrtdByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst"
+			fetch="select">
+			<column name="CRTD_BY_POST" precision="20" scale="0"
+				not-null="true">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		
+		
+ 		<many-to-one name="orgUserMstByupdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst"
+			fetch="select">
+			<column name="UPD_BY" precision="20" scale="0" not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+
+		<many-to-one name="orgPostMstByupdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst"
+			fetch="select">
+			<column name="UPD_BY_POST" precision="20" scale="0"
+				not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		<property name="crtdDate" type="date">
+            <column name="CRTD_DATE" length="7" not-null="true"/>
+        </property>
+		<property name="updDate" type="date">
+			<column name="UPD_DATE" length="7" />
+		</property>
+		<property name="trnCounter" type="java.lang.Integer">
+			<column name="TRN_COUNTER" precision="10" scale="0" not-null="true"/>
+		</property>
+		<property name="usedInOtherCalculation" type="java.lang.Integer">
+			<column name="USED_IN_OTHER_CAL" precision="1" scale="0" not-null="true" />
+		</property>
+		</class>
+</hibernate-mapping>

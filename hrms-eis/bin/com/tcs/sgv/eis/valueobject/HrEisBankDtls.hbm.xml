@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 13, 2007 12:49:42 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisBankDtls" table="HR_EIS_BANK_DTLS">
+        <id name="bankDtlId" type="long">
+            <column name="BANK_DTL_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="BANK_EMP_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="rltBankBranch" class="com.tcs.sgv.common.valueobject.RltBankBranchPay" fetch="select">
+            <column name="BANK_BRANCH_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="mstBank" class="com.tcs.sgv.common.valueobject.MstBank" fetch="select">
+            <column name="BANK_ID" precision="22" scale="0" />
+        </many-to-one>
+        <property name="bankAcctNo" type="string">
+            <column name="BANK_ACCT_NO" precision="22" scale="0" />
+        </property>
+        <property name="bankAcctStartDt" type="timestamp">
+            <column name="BANK_ACCT_START_DT"/>
+        </property>
+        <property name="bankAcctType" type="long">
+            <column name="BANK_ACCT_TYPE" precision="22" scale="0" />
+        </property>
+        
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

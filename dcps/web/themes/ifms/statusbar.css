@@ -1,0 +1,30 @@
+#statusbar{
+	position: absolute;
+	border-left: outset 2px #dddddd;
+	border-top: outset 2px #dddddd;
+	border-right:ridge 2px #eeeeee;
+	border-bottom:ridge 2px #eeeeee;
+	display:inherit;
+	z-index:200;
+	width:360px;
+	background: #99aabb;
+	visibility: hidden;
+}
+#statusbar table{
+	width: 100%;
+	padding: 8px;
+}
+
+#statusbar td{
+	font-style: italic;
+	font-weight: bold;
+	white-space: nowrap;
+	color: #454545;
+	padding: 5px;
+}
+
+#imgtd{
+	padding: 5px;
+	background: url(images/ajax-loader4.gif) 40% 40% no-repeat;
+	width: 20%;
+}

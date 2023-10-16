@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 24, 2007 4:07:21 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrLoanEmpDtlsHst" table="HR_LOAN_EMP_DTLS_HST">
+        <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrLoanEmpDtlsHstId">
+            <key-property name="empLoanId" type="long">
+                <column name="EMP_LOAN_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Integer">
+                <column name="TRN_COUNTER" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+       
+       
+       
+         <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="hrLoanAdvMst" class="com.tcs.sgv.common.loan.valueobject.HrLoanAdvMst" fetch="select">
+            <column name="LOAN_TYPE_ID" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>     
+        
+        <property name="loanPrinAmt" type="long">
+            <column name="LOAN_PRIN_AMT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="loanInterestAmt" type="long">
+            <column name="LOAN_INTEREST_AMT" precision="22" scale="0" />
+        </property>
+        <property name="loanPrinInstNo" type="long">
+            <column name="LOAN_PRIN_INST_NO" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="loanIntInstNo" type="long">
+            <column name="LOAN_INT_INST_NO" precision="22" scale="0"  />
+        </property>
+        <property name="loanPrinEmiAmt" type="long">
+            <column name="LOAN_PRIN_EMI_AMT" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="loanIntEmiAmt" type="long">
+            <column name="LOAN_INT_EMI_AMT" precision="22" scale="0" />
+        </property>
+        
+        <property name="loanAccountNo" type="string">
+            <column name="LOAN_ACCOUNT_NO" />
+        </property>
+        <property name="loanSancOrderNo" type="string">
+            <column name="LOAN_SANC_ORDER_NO"/>
+        </property>
+        <!--
+        added by khushal 
+         -->
+         
+         <property name="loanSancOrderdate" type="date">
+            <column name="LOAN_SANC_ORDER_DATE"/>
+        </property><!--
+        
+        ended by khushal
+        --><property name="loanDate" type="timestamp">
+            <column name="LOAN_DATE" length="7" not-null="true" />
+        </property>
+       
+        <!-- Added by Javed -->
+        <property name="loanOddinstno" type="java.lang.Long"> 
+      	  <column name="ODD_INST_NO" />
+        </property>
+        <property name="loanOddinstAmt" type="java.lang.Long"> 
+          <column name="ODD_INST_AMT"  />
+        </property>
+	
+        <!-- Added by Javed -->
+         
+        <property name="isApproved" type="java.lang.Integer">
+            <column name="IS_APPROVED" length="10" />
+        </property>
+        
+         <property name="voucherNo" type="string" not-null="false">
+            <column name="voucher_no" length="10" />
+        </property>
+         <property name="voucherDate" type="date" not-null="false">
+            <column name="voucher_date" length="10" />
+        </property>
+        
+        
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+      
+        <property name="loanActivateFlag" type="java.lang.Integer">
+            <column name="LOAN_ACTIVATE_FLAG" not-null="true" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property><!--
+       
+       
+        <set name="hrLoanEmpPrinRecoverDtlses" inverse="true">
+            <key>
+                <column name="EMP_LOAN_ID" precision="22" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.tcs.sgv.eis.valueobject.HrLoanEmpPrinRecoverDtls" />
+        </set>
+        <set name="hrLoanEmpIntRecoverDtlses" inverse="true">
+            <key>
+                <column name="EMP_LOAN_ID" precision="22" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.tcs.sgv.eis.valueobject.HrLoanEmpIntRecoverDtls" />
+        </set>
+   
+   
+         --><property name="mulLoanRecoveryMode" type="java.lang.Integer">
+            <column name="loan_rec_type"  >
+                <comment></comment>
+            </column>
+        </property>
+         <property name="mulLoanInstRecvd" type="java.lang.Integer">
+            <column name="multi_inst_recvd"  >
+                <comment></comment>
+            </column>
+        </property>
+           <property name="mulLoanRecRemarks" type="string">
+            <column name="loan_rec_remarks" />
+        </property>
+         <property name="mulLoanAmtRecvd" type="java.lang.Long"> 
+      	  <column name="multi_amt_recvd" />
+        </property>
+    </class>
+</hibernate-mapping>

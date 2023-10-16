@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 19, 2007 5:29:07 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.hrModInfo.valueobject.HrModEmpRlt" table="HR_MOD_EMP_RLT" >
+        <id name="reqId" type="long">
+            <column name="REQ_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrModMst" class="com.tcs.sgv.eis.hrModInfo.valueobject.HrModMst" fetch="select">
+            <column name="MOD_ID" precision="12" scale="0" />
+        </many-to-one>
+        <property name="userId" type="java.lang.Long">
+            <column name="USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="basicSal" type="java.lang.Long">
+            <column name="BASIC_SAL" precision="8" scale="0" />
+        </property>
+        <many-to-one name="scaleId" class="com.tcs.sgv.eis.valueobject.HrEisScaleMst" fetch="select">
+            <column name="SCALE_ID" precision="20" scale="0" />
+        </many-to-one>
+        <many-to-one name="dsgnId" class="com.tcs.sgv.ess.valueobject.OrgDesignationMst" fetch="select">
+            <column name="DSGN_ID" precision="20" scale="0" />
+        </many-to-one>
+        <property name="postId" type="java.lang.Long">
+            <column name="POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true"/>
+        </property>
+        <property name="createdBy" type="java.lang.Long">
+            <column name="CREATED_BY" precision="20" scale="0" />
+        </property>
+        <property name="createdByPost" type="java.lang.Long">
+            <column name="CREATED_BY_POST" precision="20" scale="0" />
+        </property>
+        <property name="updatedBy" type="java.lang.Long">
+            <column name="UPDATED_BY" precision="20" scale="0" />
+        </property>
+        <property name="updatedByPost" type="java.lang.Long">
+            <column name="UPDATED_BY_POST" precision="20" scale="0" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

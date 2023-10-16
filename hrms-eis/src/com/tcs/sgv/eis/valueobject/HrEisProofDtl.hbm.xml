@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2008 10:22:20 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisProofDtl" table="hr_eis_proof_dtl">
+        <comment></comment>
+        <id name="srNo" type="long">
+            <column name="sr_no" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cmnLookupMst" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="PROOFTYPE_LOOKUPID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUserId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="cmnLookupMstByLicenseType" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="license_type">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <property name="proofNum" type="string">
+            <column name="PROOF_NUM" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="prooftypeOther" type="string">
+            <column name="PROOFTYPE_OTHER" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="issueDate" type="timestamp">
+            <column name="ISSUE_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="expiryDate" type="timestamp">
+            <column name="EXPIRY_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="issuePlace" type="string">
+            <column name="ISSUE_PLACE" length="50">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="issueAuthority" type="string">
+            <column name="ISSUE_Authority" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 18, 2007 5:37:49 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayEmpallowMpg" table="HR_PAY_EMPALLOW_MPG">
+        <id name="allowCode" type="long">
+            <column name="ALLOW_CODE" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY_POST" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="hrPayAllowTypeMst" class="com.tcs.sgv.allowance.valueobject.HrPayAllowTypeMst" fetch="select">
+            <column name="EMP_ALLOW_ID" precision="22" scale="0" />
+        </many-to-one>
+        <property name="empAllowAmount" type="double">
+            <column name="EMP_ALLOW_AMOUNT" precision="22" scale="0" />
+        </property>
+        <property name="empCurrentStatus" type="long">
+            <column name="EMP_CURRENT_STATUS" precision="22" scale="0" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+         <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER"  >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="month" type="long">
+            <column name="MONTH" precision="20" scale="0" />
+        </property>
+         <property name="year" type="long">
+            <column name="YEAR" precision="20" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

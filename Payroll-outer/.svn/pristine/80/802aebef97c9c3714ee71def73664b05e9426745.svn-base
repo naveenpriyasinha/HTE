@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 23, 2007 2:26:20 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.onlinebillprep.valueobject.TrnMedblRqst" table="TRN_MEDBL_RQST" dynamic-update="true">
+        <id name="trnMedblRqstId" type="java.lang.Long">
+            <column name="TRN_MEDBL_RQST_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="trnAprvdRqstId" type="java.lang.Long">
+            <column name="TRN_APRVD_RQST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="ptntNameEn" type="string">
+            <column name="PTNT_NAME_EN" length="250" />
+        </property>
+        <property name="ptntNameGu" type="java.lang.String">
+            <column name="PTNT_NAME_GU" />
+        </property>
+        <property name="rltEn" type="string">
+            <column name="RLT_EN" length="100" />
+        </property>
+        <property name="rltGu" type="java.lang.String">
+            <column name="RLT_GU" />
+        </property>
+        <property name="trtmntFrmDt" type="date">
+            <column name="TRTMNT_FRM_DT" length="7" not-null="true" />
+        </property>
+        <property name="trtmntToDt" type="date">
+            <column name="TRTMNT_TO_DT" length="7" not-null="true" />
+        </property>
+        <property name="claimAmt" type="big_decimal">
+            <column name="CLAIM_AMT" precision="17" not-null="true" />
+        </property>
+        <property name="snctndAmt" type="big_decimal">
+            <column name="SNCTND_AMT" precision="17" not-null="true" />
+        </property>
+        <property name="trnCounter" type="java.lang.Long">
+            <column name="TRN_COUNTER" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        </class>
+</hibernate-mapping>

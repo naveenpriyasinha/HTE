@@ -1,0 +1,1435 @@
+#for Employee Commission Mapping
+EC.Old_Emp_Name=Old Commission Employees Name
+EC.New_Emp_Name=New Commission Employees Name
+EC.billNo=Bill No
+EC.ADD=ADD
+EC.EffectDate=Effective Date
+
+Dsgn_NM Designation Name
+
+PRESRCHNAME Search With Name
+Search_Employee Search
+
+#for emp master by manoj
+
+FIRST_NAME First Name
+MIDDLE_NAME Middle Name
+LAST_NAME Last Name
+GENDER Gender
+DATE_OF_BIRTH Date of Birth
+DATE_OF_JOINING Date of Joining
+LEAVE_DATE Retirement Date
+STATUS Status
+SALARY_MODE Salary Mode
+HANDICAPPED Handicapped
+DESCRIPTION Description
+BLOOD_GROUP Blood Group
+IDENTIFICATION_MARK Identification Mark
+FATHER_NAME Father Name
+MOTHER_NAME Mother Name
+SPOUSE_NAME Spouse Name
+BIRTH_PLACE Birth Place
+NATIVE_PLACE Native Place 
+NATIONALITY Nationality
+MOTHER_TONGUE Mother Tounge
+MARITAL_STATUS Marital Status
+RELIGION Religion
+CASTE Caste
+SUBCASTE Sub Caste
+CONFIRMATION_DUE_DATE Confirmation Due Date
+EMP_TYPE Employee Type
+EMP_RECRUIT_SRC Recruitment Source
+HOBBY Hobby
+CATEGORY Category
+NAME Name
+contactNo=Contact Number
+CLASS=GPF A/C Class Mapping
+# INSERT BY URVIN
+employeeMaster=Employee
+insertEmpMaster=Add Employee
+updateEmpMaster=Update Employee
+
+#by manoj for gpf Account Number
+eis.account_number=GPF Account Number
+eis.account_number12=GPF Account Number
+
+#designation master
+eis.desig_dtl=Designation
+eis.insertDesg_dtl=Add Designation
+eis.updateDesg_dtl=Update Designation
+eis.desig_name=Designation Description
+eis.desig_shrt_name=Short Name
+eis.desig_desc=Description
+eis.desig_lst=Designation List
+eis.desig_add_nw_entry=Add new Entry
+PANNO= PAN No.
+GPF.ACC_NO= GPF/DCPS A/C No.
+#Added By Urvin shah
+eis.gradeDesgScaleMaster=Class Designation Scale Mapping
+eis.insertgradeDesgScaleMaster=Add Class Designation Scale Mapping
+
+
+#for grade master by manoj
+eis.grade_lst=Grade
+eis.grade_name=Grade Name
+eis.grade_desc=Description
+eis.insertGrade_dtl=Add Class
+eis.updateGrade_dtl=Update Class
+# for Grade Designation Master by Urvin.
+eis.gradeDesigMaster=Class Designation Mapping
+eis.insertGradeDesgInfo=Add Class Designation Mapping
+eis.updateGradeDesgInfo=Update Class Designation Mapping
+eis.dsgn_lst=Designation
+eis.paybillGenerated=PayBill Generated
+
+########Added by Mrugesh
+SM.scaleMaster=Scale
+SM.insertScaleMaster=Add Scale
+SM.updateScaleMaster=Update Scale
+SM.scaleId=Scale Id
+SM.scaleName=Scale Name
+SM.scaleDesc=Scale Description
+SM.scaleStrAmt=Start Amount(Rs.)
+SM.scaleIncAmt=Increment Amount(Rs.)
+SM.scaleEndAmt=End Amount(Rs.)
+SM.scaleEFD=Effected From Date
+SM.scaleETD=Effected To Date
+
+SM.scaleEFFD=Effective From Date
+SM.scaleEFTD=Effective To Date
+
+
+
+SM.scaleHigherIncAmt=Higher Increment Amount(Rs.)
+SM.scaleHigherEndAmt=Higher End Amount(Rs.)
+SM.PayCommission=Pay Commission
+SM.PayBand=Pay Band
+
+########Added by Ankit
+BM.bankId=ID
+BM.bankName=Bank Name
+BM.bankMaster=Bank
+BM.updateBankMaster=Update Bank
+BM.insertBankMaster=Add Bank
+
+
+#=-----------------------for component master by manoj----
+eis.component_lst Component List
+eis.component_name Component Name
+eis.component_desc Description
+eis.component_exp Expresion
+Component Component
+amount Amount(Rs.)
+
+#for dept master
+HR.EIS.DeptMaster=Department Master
+HR.EIS.InsertDeptMaster=Insert Department Information
+HR.EIS.UpdateDeptMaster=Update Department Information
+HR.EIS.DeptName=Department Name
+HR.EIS.DeptShortName=Short Name
+HR.EIS.DeptDesc=Description
+HR.EIS.Date=Date
+
+#for Branch master added by Ankit
+BR.NAME=Branch Name
+BR.BRANCHMASTER=Branch
+BR.INSERTBRANCHINFO=Add Branch
+BR.UPDATEBRANCHINFO=Update Branch
+BR.ID=ID
+BR.CODE=Code
+BR.ADD=Address
+BR.COUNTRY=Country
+BR.STATE=State
+BR.DIST=District
+BR.TAL=Taluka
+BR.VIL=Village
+
+#Added by mrugesh For Emp other details
+OT.office=Office
+OT.empId=EmpId
+OT.gpf=G.P.F.NO/DCPS
+OT.PayInPayBand=Pay In PayBand
+OT.sevarthId=HTESevaarth Id
+#OT.otherDetailMaster=Salary Details
+OT.otherDetailMaster=VIEW DRAFT SALARY
+OT.insertOtherDetailInfo=Add Salary Details
+OT.updateOtherDetailInfo=Update Salary Details
+OT.otherId=Id
+#OT.empScale=Scale
+OT.empScale=Pay Scale
+OT.empName=Employee Name
+OT.empGrade=Class
+OT.empDesg=Designation
+OT.empDept=Department
+OT.initialBasic=Initial Basic
+OT.city=Residential City
+OT.Phy_handi=Physical Handicap
+OT.YES=Yes
+OT.NO=No
+OT.quaterAvail=Quater Available
+OT.quaterType=Quater Type
+OT.incomeTax=Income Tax
+OT.ISSIS=SIS Availed
+OT.ATS30 = ATS-Incentive(30)
+OT.ATS50 = ATS-Incentive(50)
+OT.Force100= Force-1 Incentive(100%)
+OT.Force25= Force-1 Incentive(25%)
+OT.quaterId=Quater Id
+# indicates 'true' i.e. value '1' if employee has applied for HRA.
+OT.IsAvailedHRA=Applied for HRA
+#added by manish
+OT.gradePay=Grade Pay
+OT.payCommission=Pay Commission
+OT.PayInPayBand=Pay In PayBand
+OT.GradePay=Grade Pay
+OT.payScale =Pay Scale
+OT.basicPay=Basic Pay
+OT.payBand=Pay Band
+
+
+
+#Added by Ajay
+eis.GradePay= Grade Pay
+#Ended by Ajay
+
+#Added by mrugesh For Emp Loan Details
+EL.empName=Employee Name
+EL.loanName=Loan Name
+EL.lpAmt=Principal Amount
+EL.liAmt=Interest Amount
+EL.lpiNo=Principal Installment No
+EL.liiNo=Interest Installment No
+EL.loanEMIAmt=EMI Amount
+EL.loanPrincipalEmiAmt=Principal EMI Amount
+EL.loanInterestEmiAmt=Interest EMI Amount
+EL.loanACNo=Account No
+EL.loanDate=Loan Date
+EL.loanStartDate=Loan Start Date
+EL.loanMaster=Add Loan
+EL.loanView=Employee Loan
+EL.loanAdd=Add Employee Loan
+EL.loanUpdate=Update Employee Loan
+EL.loanPrinRecovAmt=Principal Recovered Amount
+EL.loanPrinRecovInt=Principal Recovered Installments
+EL.loanIntRecovAmt=Interest Recovered Amount
+EL.loanIntRecovInt=Interest Recovered Installments
+EL.activateFlag=Active
+#varun$
+EL.outstandingAmt=Oustanding Amount
+EL.UploadLoanExcel=Upload Loan Excelsheet
+
+#Added by Ankit Bhatt for Employee Allowance Mapping Screen
+EMPMAP.empName=Employee Name
+
+# Added By Urvin shah for Voluntry Providand Fund Screen
+
+VPF.empName=Employee Name
+VPF.vpfAmount=Amount(Rs.)
+VPF.viewMaster=Voluntary PF
+VPF.insertMaster=Add Voluntary PF Information
+VPF.updateMaster=Update Voluntary PF Infromation
+
+
+# Added by Mrugesh Rajda
+Salutation=Salutation
+ 
+#Added By Ankit Bhatt for Bank Details Screen
+TAB.NAME=Bank Details
+EMP.NAME=Employee Name
+ACC.NO=A/C No.
+ALERT.FROMDATETODAY Start Date should be less than Today's Date.
+ACC.ST.DATE=Start Date
+ACC.TYPE=Account Type
+
+#Added by mrugesh For Employee Leave Screen
+LEV.empName=Employee Name
+LEV.fromDate=From Date
+LEV.toDate=To Date
+LEV.type=Leave Type
+LEV.availBal=Available Balance
+LEV.taken=Leave Taken
+LEV.view=Leave Details
+LEV.master=Add Leave Details
+LEV.edit=Update Leave Details
+LEV.cancel=Cancel Leave
+SM.PayScaleType=Pay Scale Type
+#SM.IncrementInterval=Increment Interval (months)
+SM.IncrementDate=Increment Date
+OT.Uniform=Uniform Availed
+OT.Medical=Pay Medical Allowance
+email=E-mail
+#added by samir for Affective date for 6th pay commision
+effctivedate=Effective Date
+incrementDate=Increment Date
+#for Non Government deduction master by Urvin shah
+NGD.empName=Employee Name
+NGD.deductionType=Type
+NGD.startDate=Start Date
+NGD.endDate=End Date
+NGD.amount=Amount(Rs.)
+NGD.period=Deduction Period
+NGD.insertNonGovDeductMaster=Add Non Organization/Institution Deduction
+NGD.updateNonGovDeductMaster=Update Non Organization/Institution Deduction
+NGD.nonGovDeducMaster=Non Organization/Institution Deduction
+currentBasic=Current Basic
+#currentBasic=Basic(Pay in PB+GP)
+NGD.accNo=Account No
+NGD.updatedRecords=Updated Records
+NGD.notUpdatedRecords=Not Updated Records
+NGD.updatedPaybillRecords=Updated Paybill Records
+NGD.notUpdatedPaybillRecords=Not Updated Paybill Records
+NGD.uploadSummary=Summary
+NGD.updated=Updated
+NGD.notUpdated=Not Updated
+NGD.paybillData=Paybill Non Organization/Institution Data
+NGD.nonGovData=Non Organization/Institution Data
+#Added by Hardik
+#Change in guj
+eis.fm_dependant_dtls=Is Dependent ?
+###########
+eis.Designation=Designation
+eis.NAME Name
+eis.emp_name=Employee Name
+eis.FIRST_NAME=First Name
+eis.MIDDLE_NAME=Middle Name
+eis.LAST_NAME=Last Name
+eis.GENDER=Gender
+eis.DATE_OF_BIRTH=Date of Birth
+eis.age=Age(In Years)
+eis.occupation=Occupation
+eis.date=Date
+eis.view=View
+eis.edit=Edit
+eis.open=Open
+eis.delete=Deletion
+eis.Co-Curricular=Co-Curricular
+eis.extraCoCurricularDtls=Co-Curricular Details
+eis.SubTypes=Sub-Types
+eis.YearOfParticipation=Year of Participation
+eis.Competedat=Competed At
+eis.SpecialAchievement=Special Achievement
+eis.srno=Sr No
+eis.select=Select
+eis.quali_dtls=Qualification Details
+eis.qualification=Education Qualification
+eis.uni_ins_board=University / Institute / Board
+eis.subqualification=Sub Qualification
+eis.marks_scored=Marks Scored
+eis.unit=Unit
+eis.discipline=Discipline
+eis.courseCategory=Course Category
+eis.year_of_pass=Year of Passing
+eis.FamilyDtls=Family Details
+eis.Relation=Relation
+eis.Marital_Status=Marital Status
+eis.Qualification=Qualification
+eis.Remarks=Remarks
+eis.Employment_Status=Employment Status
+eis.Alive=Alive
+eis.Dead=Dead
+eis.marks=Percentage/CGPA(0-5)
+eis.marks_req=Marks
+eis.actions=Actions
+eis.req_for=Request For
+eis.draft_req=Draft Requests
+eis.app_req=Approved Requests
+eis.cur_req=Current Requests
+eis.pending_req=Pending Request
+eis.no_app_req=No records found.
+eis.no_pen_req=No records found.
+eis.no_draft_req=No records found.
+eis.date_submit=Date Submitted
+eis.person_with=Person With
+eis.Links=Links
+eis.type_req=Type of Request
+eis.status=Status
+eis.dependant_dtls=Dependent Details
+eis.exclude=Exclude
+eis.add=Add
+eis.no_dtls=No records found.
+eis.depen_actions=Dependent Actions
+eis.nominee_dtls=Nominee Details
+eis.nominee_purpose=Nomination Purpose
+eis.nominee_type=Nominee Type
+eis.nominee_name=Nominee Name
+eis.otherRelation=Other Relation
+eis.guardianDtls=Guardian Details
+eis.relation_nominee=Relation With Applicant
+eis.minor=Minor
+eis.other=Other
+eis.family=Family
+eis.links=Links
+eis.share=Share(In %)
+eis.department=Department Name
+eis.designation=Designation
+eis.add_cur_req=To Add a New Record in Current Request Table
+eis.save_cur_req=To Update a Record in Current Request Table
+eis.select_Co_Curr=Select Co-Curricular
+eis.approvemsg=File has been Approved For Request No \: 
+eis.person_name=Person Name
+eis.office=Office
+eis.organization=Organization
+eis.annual_Income=Annual Income ( INR )
+eis.name_of_comp=Name of the Company / Office / Organization
+eis.nomn_dtls=Nominee Details
+eis.new_add=Addition
+eis.update=Update
+eis.onSubmit=Request has been Submitted To the Supervisor for Approval.Your Request No :
+eis.MessagePage=Message Page
+eis.onSaveDraft=Your request has been saved as draft successfully
+eis.request=Request No
+eis.succ_fwd=is Successfully Forwarded
+eis.date_Demise=Date of Demise
+eis.Statistics=Bill Statistics
+
+#For Alert Message added By Hardik
+eis.error=ERROR
+eis.share_msg=Please Enter Number In Share Field
+eis.Nomin_Total_Share=Please Enter Valid Share  totalShare 
+eis.Nominee_Type=Please Select Nominee Type
+eis.Nominee_Added=Memeber Already Added
+eis.Missing_Data=There is Some Missing data you can not submit your Request
+eis.ajax_error=Your browser does not support AJAX!
+eis.error_CoCurrSubType=ERROR While Inserting Data into Sub Type Combo!
+eis.edit_mode=You Are in Editing Mode
+eis.req_select=This Request Is Already Selected
+eis.valid_mark=Please Enter Valid Marks
+eis.qua_unit_type=Please Select Unit Type
+eis.date_proper=Please Enter Appropriate Date
+eis.enter_add=Please Enter The Address
+eis.name_alert=Please Enter Name Properly
+eis.submite_alt=Therer is Nothing To Submit
+eis.family_dead=This Member is Added as Dependent Or Nominee
+#For Confirm Message added By Hardik
+eis.alt_submit=Do you want to Submit?
+eis.alt_draft=Do You want to Save This Request as a Draft?
+eis.alt_delete=Do you want to Delete The Draft Rquest Permanently?
+
+#for Branch master
+BR.MICR=IFSC Code
+
+#for post
+hr.other.post=Post
+Retirement_date Retirement Date
+
+#by manoj for search Employee
+populateDetail=Populate Details
+viewAll=View All
+
+#by Ankit Bhatt for Payroll Parameter Page
+PR.YEAR=Year
+PR.MONTH=Month
+PR.DEPT=Institution/Organization
+
+PR.DEMAND=Demand No
+PR.MJRHEAD=Major Head
+PR.SUBMJRHEAD=Sub Major Head
+PR.MNRHEAD=Minor Head
+PR.SUBHEAD=Sub Head
+PR.DTLHEAD=Detail Head
+PR.CAT=Category
+PR.BILLNO=Bill-No
+BillGrpPost.BillNo =Bill No
+# By Japen for parameter page 
+PR.GISTYPE=GIS Type
+
+# Labels for bank details
+eis.addbankdtls Add Bank Details
+eis.updatebankdtls Update Bank Details
+
+# labels for loan update details
+eis.updateloandtls=Update Loan
+EL.loanSancOrderNo=Sanction Order No
+EL.loanSancOrderDate=Sanction Order Date
+EL.UpdateOrderDate=Date of Update
+EL.UpdateOrderNo=Update Order No.
+
+# savetab
+eis.save=Save
+eis.close=Close
+
+#for Miscellaneus Recovery by Mrugesh
+MISC.miscView=Miscellaneus Recovery
+MISC.miscAdd=Add Miscellaneus Recovery
+MISC.miscUpdate=Update Miscellaneus Recovery
+MISC.employee=Employee Name
+MISC.amount=Amount(Rs.)
+MISC.reason=Reason
+MISC.startDate=StartDate
+MISC.installment=Installment
+MISC.installmentAmt=Installment Amount(Rs.)
+MISC.endDate=EndDate
+MISC.recoveryType=Recovery Type
+MISC.recoveredAmt=Recovered Amount(Rs.)
+MISC.recoveredInst=Recovered Installment
+
+#for Investment Type Master
+investTypeMasterView=Investment Type
+investTypeMasterInsert=Add Investment Type
+investTypeMasterUpdate=Update Investment Type
+sectionCode=Section Code
+investName=Name
+investDesc=Description
+
+#Employee Investment Details.
+EMPINVEST.empInvestView=Employee Investment
+EMPINVEST.empInvestAdd=Add Employee Investment
+EMPINVEST.empInvestUpdate=Update Employee Investment
+EMPINVEST.investType=Investment Type
+EMPINVEST.empName=Employee Name
+EMPINVEST.investDate=Date
+EMPINVEST.investAmt=Amount
+EMPINVEST.investPolicyNo=Policy No
+EMPINVEST.proofSubmition=Proof Submission
+EMPINVEST.proofApproval=Proof Approved
+EMPINVEST.addInvDets=Add Investment Details
+EMPINVEST.jsfieldCheckInvestLabel=Please add atleast one investment detail
+
+#for Income Tax Section Master by Mrugesh
+SECT.sectView=Section
+SECT.sectAdd=Add Section
+SECT.sectUpdate=Update Section
+SECT.sectCode=Code
+SECT.sectName=Name
+SECT.sectDesc=Description
+SECT.sectStartDt=Start Date
+SECT.sectEndDt=End Date
+SECT.sectStatus=Status
+
+#Employee Exemption Details.
+empExemptView=Employee Exemption
+empExemptAdd=Add Employee Exemption
+empExemptUpdate=Update Employee Exemption
+exemptType=Exemption Type
+
+#by manoj for pay certificate report
+PayCertificate=Pay Certificate
+gandhinagar=Mumbai
+GeneratePayCertificate=Generate Pay Certificate
+no=No.  
+of=Of Year 
+vide=Vide Order No.
+point2=Paid upto Date   
+point3=Charge upto Date    
+transfer=Transfer/Retirement to 
+
+#Added for Employee Details JSP
+HRMS.EMP=Employee Details
+HRMS.BasicSalary=Basic Salary
+HRMS.DateofJoining=Date of Joining
+HRMS.DateofRetirement=Date of Retirement
+HRMS.Address=Address
+HRMS.Name=Name
+HRMS.Designation=Designation
+
+#by manoj for form16
+form16 Form 16
+searchName=Search Names
+off_add=DDO Information
+tanNo=TAN Number
+ito=ITO Address
+quater=Quarter Id 
+q1=Quarter - 1
+q2=Quarter - 2
+q3=Quarter - 3
+q4=Quarter - 4
+genForm16=Generate Form 16
+
+########Added by VArun for OrderMst
+OM.insertOrderMaster=Add Order
+OM.orderName=Sanction Order No
+ST.DATE=Order Date
+OM.endDate=Order End Date
+OM.updateOrderMaster=Update Order
+OM.orderMaster=Order
+OM.startDate=Order Date
+
+########Added by VArun for OrderHeadLink
+OM.orderheadView=OrderHead Link
+OM.orderheadMaster=Add OrderHead
+
+
+########Added by VArun for PSR
+PSRPOST=Psr No.
+
+########Added by Samir And Ravi for OrderHeadPostMpg
+
+OHP.ordername=Order No
+OHP.headname= Head Name
+OHP.postname=Post Name
+OHP.OrderHeadPost=OrderHeadPost Link
+OHP.updateOrderHeadPost=Update OrderHeadPost 
+OHP.insertOrderHeadPost=Add OrderHeadPost
+OHP.BillNo=Bill No.
+
+
+#######################for GPF ACCT DTLS
+GPF.GPFACCTDTLS=GPF Account details
+GPF.ADDGPFACCTDTLS=Add GPF Account
+GPF.EditGPFACCTDTLS=Update GPF Account
+
+#########Quater Details Added By Urvin shah.######
+
+qtr.quaterName=Quarter Name
+qtr.quaterType=Quarter Type
+qtr.allocationDate=Allocation Date
+qtr.possessionDate=Possession Date
+qtr.vacatDate=Vacate Date
+qtr.quarterMasterView=Organization/Institution Accomodation
+qtr.quarterMasterAdd=Add Organization/Institution Accomodation
+qtr.quarterMasterUpdate=Update Organization/Institution Accomodation
+qtr.quarterRateType=Rate Type
+qtr.OwnHouse=Own House
+qtr.custodianType=Custodian
+
+
+###########payrollGeneration button
+Generate=Generate
+
+#################     hrEmpTraMpg
+Tra.screenName= Employee Transport Allownace Mapping
+Tra.distance=Distance in(kms)
+Tra.vehi_Avail= Vehicle Availed
+Tra.vehi_Avail_From_Date=Vehicle Availed From Date
+Tra.vehi_Avail_To_Date= Vehicle Availed To Date
+Tra.vehi_No=Vehicle Number
+Tra.vehi_type=Vehicle Type
+
+OM.orderheadEdit=Update OrderHead
+
+#by Divyesh
+EIS.EmployeeName=Employee Name
+EIS.UsrNm=User Name
+EIS.Dept=Institution
+EIS.Loctn=Location
+EIS.Designation=Designation
+EIS.Post=Post
+EIS.PersonalInfmation=Personal Information
+EIS.PersonalDtls=Personal Details
+EIS.EducatnDtls=Qualification Details
+EIS.FamilyDtls=Family Details
+EIS.CoCurrDtls=CoCurricular Details
+EIS.NomineeDtls=Nominee Details
+EIS.MiscDtls=Miscellaneous Details
+EIS.ProfInfmation=Professional Information
+EIS.ProfDtls=Professional Details
+EIS.DeptSrvcExamnatnDetl=Department / Service Examination Details
+EIS.InSrvcInformatn= In - Service Information
+EIS.InServcDtls=In - Service Details
+EIS.EmpSearechInfo=Employee Information System
+EIS.searchForEmployee=Search For Employee
+EIS.PrevEmplDtl=Previous Employment Detalis
+EIS.PrsntEmplmntPosngDtls=Present Employment Posting Details
+
+
+# -- Added by Sunil for Employee Personal Details --Starts
+eis.ProperDate_alert=Please Enter Proper Date
+eis.Mobile_alert=Enter Valid Mobile No.
+eis.Mobile_Validlen_alert= Mobile No should not more then 10 Digit
+eis.PhoneNo_alert=Enter Valid Phone No
+eis.ValidEmail_alert=Enter Valid Charecters in Email Field
+eis.RightFormateEmail_alert=Enter your email id in format like info@tcs.com
+eis.Position@_alert=should have @y.com etc
+eis.lastEmail_alert=should have @y.com etc
+eis.contactType_alert=Please Select contactType
+eis.contactNo_alert=Please Select contact No.
+eis.LanguageType_alert=Please Select Language
+eis.Language_alert=You can not have same language more than one.
+eis.speakLanguage_alert=Please Select Speak Language Proficiency
+eis.writeLanguage_alert=Please Select Write Language Proficiency
+eis.readLanguage_alert=Please Select Read Language Proficiency
+EIS.EmpMislDtl=Miscellaneous Details
+
+eis.dataWeightAlert=Weight should not exceed 3 digits
+eis.dataHeightAlert=Height should not exceed 3 digits
+eis.dataChestAlert=Chest should not exceed 3 digits
+eis.EMP_THUMB_IMPRESSION_ATTACHMENT=Thumb Impression Attachment
+eis.EMP_PHOTO_ATTACHMENT=Photograph and Thumb Attachment
+eis.EMP_PERSONAL_DETAILS=Personal Details
+eis.EMP_CONTACT_DETAILS=Contact Details
+eis.UPDATE_EMP_MASTER=Change Employee Profile
+eis.EMP_MASTER=Employee Master
+eis.UPDATE_EMP_DATA=Changed Employee Profile
+eis.EMP_SALUTATION=Salutation
+eis.EN_FIRST_NAME=First Name
+eis.EN_MIDDLE_NAME=Middle Name
+eis.EN_LAST_NAME=(In English) Last Name
+eis.GU_FIRST_NAME=First Name
+eis.GU_MIDDLE_NAME=Middle Name
+eis.GU_LAST_NAME=(In Gujrati) Last Name
+eis.EMP_GENDER=Gender
+eis.EMP_DATE_OF_BIRTH=Date of Birth (DD/MM/YYYY)
+eis.EMP_AGE=Age (In Years)
+eis.EMP_RELIGION=Religion
+eis.EMP_CASTE=Caste
+eis.EMP_SUBCASTE=Sub Caste
+eis.EMP_CATEGORY=Category
+eis.EMP_MOTHER_TONGUE=Mother Tongue
+eis.EMP_MARITAL_STATUS=Marital Status
+eis.EMP_PHONE_NO=Phone No
+eis.EMP_MOBILE_NO=Mobile No
+eis.EMP_EMAIL=E-Mail
+eis.EMP_GENDER_FEMALE=Female
+eis.EMP_GENDER_MALE=Male
+eis.EMP_WRITE_PROFICIENCY=Write Proficiency
+eis.EMP_READ_PROFICIENCY=Read Proficiency
+eis.EMP_SPEAK_PROFICIENCY=Speak Proficiency
+eis.EMP_CONTACT_TYPE=Contact Type
+eis.EMP_CONTACT=Contact No/E-Mail
+eis.TABLE_ACTIONS=Actions
+eis.BIRTH_PLACE=Birth Place
+eis.NATIVE_PLACE=Native Place
+Address_Details=Address Details
+updateAddressMaster=Change Employee Address
+PERMANENT_PLACE=Permanent Address
+CURRENT_PLACE=Current Address
+EIS.empMstAlert=Please first enter Employee Profile
+eis.SAME_AS_BIRTH_Address=(Same As Birth Address)
+eis.SAME_AS_NATIVE_Address=(Same As Native Address)
+eis.SAME_AS_PERMANENT_Address=(Same As Permanent Address)
+eis.Language_Details=Language Details
+eis.Language=Language
+eis.Yes=Yes
+eis.No=No
+eis.Physical_Details=Physical Details
+eis.Physically_Challenged=Physically Challenged
+eis.Type_Of_Disability=Type of Disability
+eis.Details=Details of Disability
+eis.BLOOD_GROUP=Blood Group
+eis.Identification_Mark=Identification Mark
+eis.Weight=Weight(In Kgs.)
+eis.Height=Height(In Cms.)
+eis.Chest=Chest(In Cms.)
+EIS.Add=Add
+EIS.Update=Update
+EIS.Cancel=Cancel
+EIS.CloseButton=Close
+EIS.Reset=Reset
+EIS.Submit=Submit
+EIS.Select=----Select----
+EIS.edtdel=Edit/Delete
+EIS.VIEWREPORTS=View Reports
+EIS.PHOTO=Photograph
+EIS.THUMB=Thumb Impression
+EIS.PROFICIENCY=Proficiency
+EIS.EMR_CONT_DTLS=Emergency Contact Details
+EIS.EMR_CONT_TYPE=Emergency Contact Type
+EIS.RESI_PHONE=Residence Phone No
+EIS.OFFICE_PHONE=Office Phone No
+EIS.FAX=Fax
+EIS.FAMILY_MEM=Family Member
+# -- Added by Sunil for Employee Personal Details --Ends
+
+VPF.ZEROVPFMONTHS=Stop deduction before 6 months 
+
+# Added By Sandip - Starts for change address 
+EIS.selectUpdate=Please Select Any Address For Update
+EIS.confirmSave=Do you want to Submit?
+eis.ApprovedBirth=Approved Birth Address
+eis.RequestedBirth=Requested Birth Address
+eis.ApprovedNative=Approved Native Address
+eis.RequestedNative=Requested Native Address
+eis.RequestedPermanent=Requested Permanent Address
+eis.ApprovedPermanent=Approved Permanent Address
+eis.ApprovedCurrent=Approved Current Address
+eis.RequestedCurrent=Requested Current Address
+eis.Approve=Approve
+eis.Reject=Reject
+eis.RequestApprove=Request is Already Approved
+eis.Emp_Phone_Alert=Length of Phone No.(Std-Code) should be atleast 3.
+eis.Lang_En=English
+eis.Lang_Gu=Gujarati
+eis.Forward=Forward
+eis.NoAttachmnt=No Attachment
+eis.ShowAttachmnt=Show Attachment
+eis.HideAttachmnt=Hide Attachment
+# Added By Sandip - ends for change address 
+OTHER.SIS1979 SIS 1979
+OTHER.FamilyPlanning Family Planning
+
+# Added by Divyesh for EIS - Starts 
+EIS.UserCreation Recruitment
+EIS.UserAllocation Allocation
+EIS.PayFixation Pay Fixation
+EIS.PayIncrement Pay Increment
+EIS.AdditionalCharge Additional Charge 
+EIS.NewUserCreation User Creation
+eis.EN_NAME=(In English) Name
+eis.GU_NAME=(In Gujarati) Name
+eis.APR_PERSONAL_DETAILS=Approved Personal Details
+eis.APR_CONTACT_DETAILS=Approved Contact Details
+eis.REQ_PERSONAL_DETAILS=Requested Personal Details
+eis.REQ_CONTACT_DETAILS=Requested Contact Details
+eis.APR_THUMB_IMPRESSION_ATTACHMENT=Approved Thumb Impression Attachment
+eis.APR_PHOTO_ATTACHMENT=Approved Photograph and Thumb Attachment
+eis.REQ_THUMB_IMPRESSION_ATTACHMENT=Requested Thumb Impression Attachment
+eis.REQ_PHOTO_ATTACHMENT=Requested Photograph and Thumb Attachment
+eis.NotAvailable=Not Available
+Join_Details=Joining Details
+eis.EMP_TYPE=Employment Type
+eis.attachment_Details=Attachment Details
+EIS.otherDetails=Basic details
+# Added by Divyesh for EIS - Ends  
+Eis.StdCode= (Std-Code)
+eis.back=Back
+eis.selectBirthAddress=Please select "Birth Place"
+eis.selectNativeAddress=Please select "Native Place"
+eis.selectPermanenttAddress=Please select "Permanent Place"
+eis.selectCurrentAddress=Please select "Cur Place"
+eis.emergencyAddress=Please enter emergency contact details address
+# Added By Urvin Shah.
+
+eis.addFromSrcToDest=> 
+eis.addMultiFromSrcToDest=>>
+eis.addFromDestToSrc=< 
+eis.addMultiFromDestToSrc=<<
+
+# For Admin Add Post Screen
+admin.Eng=Add Post
+admin.Gujarati=Gujarati
+admin.PostName=Post Name
+admin.PostShortName=Post Short Name
+admin.Location=Location
+admin.designation=Designation
+admin.Branch=Branch
+admin.PostType=Post Type
+admin.parentPost=Parent Post
+admin.postLevel=Post Level
+admin.PostName_GU=Post Name
+admin.PostShortName_GU=Post Short Name
+admin.select=Select
+
+
+# For Admin Show Dtl Screen
+admin.ShowPostDtl=View Post Details
+admin.ActiveFlag=Active Flag
+admin.Active=Active
+admin.Deactive=Deactive
+admin.Delete=Delete
+admin.endDate=End Date
+admin.startDate=Start Date
+admin.AddEntry=Add New Entry
+
+# For Bill Head Mapping by Varun
+BHM.billHeadMaster=Bill Head Master
+BHM.billNo=Bill No.
+BHM.billHeadView=Bill Head View
+BHM.billHeadedit=Update Bill Head
+BHM.designation=Designation
+BHM.class=Class
+BHM.headChargable=Head Chargable
+
+eis.Nationality=Nationality
+eis.langProf_Type=Please select language proficiency
+eis.AjexMsgAlert=Your browser does not support AJAX!
+Eis.mobileNo=Mobile No Should be 10 digit long
+Eis.stdPhoneNo=Phone No(Std-Code) should be 10 digit long
+Eis.Phone_No=Phone No should be 10 digit long
+BUNDLE_BASE_NAME=resources/eis/eis_common_lables
+
+# By Varun For SalRevMst(For Arrears)
+SRM.salRevView=Salary Revision View
+SRM.OrderName=Revision Order No.
+SRM.OrderDate=Revision Order Date
+SRM.EffFromDate=Effective From Date
+SRM.EffToDate=Effective To Date
+SRM.revFreqMntPaid=Freq. Months Paid
+SRM.revInstallments=Rev.Installments
+SRM.revType=Revision Type
+SRM.revPayOutDate=Payout Date
+SRM.revStatus=Revision Status
+SRM.Paid=Paid
+SRM.Deactive=Deactive
+SRM.Active=Active
+SRM.revReason=Revision Reason
+SRM.addSalRevMst=Add Salary Revision Details
+Header1=GENERAL ADMINISTRATION DEPARTMENT
+SRM.daCashPercent= DA cash Percent
+#By Mrugesh for Voucher No
+VN.VoucherNo=Voucher No
+VN.VoucherDate=Voucher Date
+#VARUN SHARMA
+VN.BillNo=BILL NO\: 
+
+#By Mrugesh for Punishment
+PMT.Punishment=Punishment
+PMT.startDate=Start Date
+PMT.endDate=End Date
+PMT.reason=Reason
+PMT.employee=Employee Name
+
+
+#Added By Urvin Shah.
+eis.btnUpload=Upload
+eis.fileName=File
+
+# Added by Divyesh for Employee Change App - Starts 
+eis.EMP_CHANGE_NAME=Change Employee Name
+eis.OLD_NAME_EN=(In English) Old Name
+eis.OLD_NAME_GU=(In Gujarati) Old Name
+eis.GAZETTE_NUM=Gazette No.
+eis.GAZETTE_DATE=Gazette Date
+eis.GAZETTE_EFE_START_DATE=Gazette Effective Start Date
+eis.ISSUING_AUTHO=Issuing Authority
+eis.atchmntTitle=Attachment
+eis.Emp_Old_Name=Employee Old Name
+eis.Emp_New_Name=Employee New Name
+
+eis.GazetteDateAlert=Gazette date should be less than gazette effective start date
+eis.EffectiveDateAlert=Gazette effective start date should be greater than Gazette date
+eis.empChangeNameAlert=Your new name and old name are same So please change your new name
+# Added by Divyesh for Employee Change App - Ends
+eis.OnDataSubmit=Your Data has been saved sucessfully
+
+
+
+# labels for update paybill screen
+eis.updatepaybill.Allowances=Allowances
+eis.updatepaybill.Deductions=Deductions
+eis.updatepaybill.Loans=Loans
+eis.updatepaybill.Basic=Basic
+eis.updatepaybill.ProfessionalTax=Professional Tax
+eis.updatepaybill.OCA=OCA
+eis.updatepaybill.LeaveSalary=Leave Salary
+eis.updatepaybill.HRR=HRR
+eis.updatepaybill.HRR_RENTB=HRR/Rent B
+eis.updatepaybill.OCAInterest=OCA Interest
+eis.updatepaybill.LeaveEncashment=Leave Encashment
+eis.updatepaybill.PLI=PLI
+eis.updatepaybill.HBA=HBA
+eis.updatepaybill.DearnessPay=Dearness Pay
+eis.updatepaybill.SISGIS1979=SIS GIS 1979
+eis.updatepaybill.HBAInterest=HBA Interest
+eis.updatepaybill.BONUS=BONUS
+eis.updatepaybill.SISGIS1981_IF=SIS GIS 1981(I/F)
+eis.updatepaybill.CarScooterMopedAdvance=Car Scooter Moped Advance
+eis.updatepaybill.HRA=HRA
+eis.updatepaybill.SIS1981_SF=SIS 1981(S/F)
+eis.updatepaybill.CarScooterMopedInterest=Car Scooter Moped Interest
+eis.updatepaybill.DA=DA
+eis.updatepaybill.AIS1980_IF=AIS 1980(I/F)
+eis.updatepaybill.FanAdvance=Fan Advance
+eis.updatepaybill.CLA=CLA
+eis.updatepaybill.AIS1980_SF=AIS 1980(S/F)
+eis.updatepaybill.FanInterest=Fan Interest
+eis.updatepaybill.WA=WA
+eis.updatepaybill.GPF=GPF
+eis.updatepaybill.GPFAdvance=GPF Advance
+eis.updatepaybill.MA=MA
+eis.updatepaybill.PayRecovery=Pay Recov(-)
+eis.updatepaybill.FoodAdvance=Food Advance(-)
+eis.updatepaybill.TransAllw=Trans.Allw.
+eis.updatepaybill.JeepR=Jeep R
+eis.updatepaybill.FestAdv=Fest Adv(-)
+eis.updatepaybill.PersPay=Pers.Pay
+eis.updatepaybill.GPFclassIV=GPF class-IV
+eis.updatepaybill.SplPay=Spl.Pay
+eis.updatepaybill.RentB=Rent B
+eis.updatepaybill.TotalAllw=Total Sum of A(D)
+eis.updatepaybill.Totaldeduc=Total Deductions(D-B)
+eis.updatepaybill.NetAmt=Net Amount
+eis.updatepaybill.miscrecv=Misc. Recv.
+eis.updatepaybill.IT=Income Tax
+eis.updatepaybill.DAGPF=DA GPF
+
+
+#for Update PSR by hemant (307727)
+admin.UpdatePsr Update PSR
+
+# for Token Number  by hemant(307727)
+showTokenNumber Show Token Number
+TokenDate Token Date
+# for View Common Details by hemant(307727)
+ViewCommonDetails Common Details
+
+# for IT Gpf Detail Update Screen  by hemant(307727)
+UpdateITGPFDetails Update IT GPF Details
+
+# for New Department Configuration by hemant(307727)
+NewDepartmentConfiguration New Department Configuration
+
+# Added by stephen for Employee Signature Details
+ESD.emp_sgn_dtls=Employee Signature Details
+ESD.ActiveFlag=Active Flag
+ESD.startDate=Start Date
+ESD.endDate=End Date
+ESD.AddEntry=Add New Entry
+ESD.update_emp_sgn_dtls=Update Employee Signature Details
+ESD.add_emp_sgn_dtls=Add Employee Signature Details
+PR.SCHEM=Scheme No
+PR.TYPE.CODE=Type of Budget
+
+# added by rahul for Single screen for new employee configuration in payroll
+pay.usrDetails=User Details
+pay.gpfDetails=GPF Details
+pay.bankDetails=Bank A/c Details
+pay.postDetails=Post Details
+pay.billDetails=Bill Details
+pay.viewEmpList=View Employee List
+pay.viewEmpDtls=View Employee Details
+pay.changePost=Do you want to assign new Post?
+pay.prevPostEndDate=End date of mapping with current post
+pay.startDate=Start Date of employee post mapping
+pay.endDate=End Date of employee post mapping
+
+pay.salRevOrderDetails=Salary Revision Details
+pay.salRevOrderName=Salary Revision Order 
+pay.groupBillNo=Arrear Bill No.
+pay.searchCriteria=Search Criteria
+pay.payBillNo=Paybill No
+pay.desig=Designation
+pay.compoType=Component Type
+pay.searchBtn=Search Employees
+pay.lblEmpDetails=Employee Details
+pay.delBtn=Delete
+pay.withOrWithoutAmt=With or Without Static Amount 
+pay.withStatic=With Static Amount
+pay.withoutStatic=Without Static Amount
+pay.crtExcelBtn=Create Excel
+pay.updExcelBtn=Upload Excel 
+pay.empCmpAmtList=Employee Component Amount List
+pay.empName=Employee Name
+
+pay.pblgen=Is Paybill Generated?
+pay.lblEmpPromotion=Employee with Promotion in between month
+pay.addEmp=Add Employee
+#added by rahul in Salary Revision Mst screen Paybill independent flag
+SRM.pblIndependentFlag=Paybill Independent Arrear
+SRM.pblIndependentYes=Yes
+SRM.pblIndependentNo=No
+# ended by rahul
+
+
+# added by Harish for Single screen for office Details
+eis.officedetails= Office Details
+OFFICENO=OFFICE NUMBER 
+OFFICENAME=OFFICE NAME
+OFFICESHRTNAME=OFFICE SHORT NAME
+OFFICEDESC=OFFICE DESCRIPTION
+UpdateOfficeDetails= Office Details
+viewofcdtls=View Office Details
+# ended by harish
+
+# added by Harish for Single screen for DDO Details
+eis.ddodetails= DDO DETAILS
+DDONO=DDO NUMBER 
+DDONAME=DDO NAME
+CARDEXNUMBER=CARDEX NUMBER
+STARTDATE=START DATE
+ENDDATE=END DATE
+updateDdoDetails= Ddo Details
+viewddodtls=View DDO Details
+DDOCODE= DDO CODE
+DDOTYPE= DDO TYPE
+# ended by harish
+##By Varshil
+	
+	IT.AddOtherDetails Add Details
+	IT.OtherAllow Other Allowances (Added to Gross salary)
+	IT.ForeignAllow Washing Allow./Foreign Allow.
+	IT.TaxPaidChallan Tax Paid By Challan
+	IT.ChallanNumber Challan Number
+	IT.TaxDedInArrear Tax Deducted in Arrears 
+	
+	IT.TravelAllow Travel Allowance
+	IT.ProfTax Professional Tax
+	IT.HBA HBA Interest
+	IT.GPF G.P.F/C.P.F
+	IT.GovIns Government Insurance
+	IT.RepayHBA Repay Of HBA
+	IT.ITax Income Tax Paid
+	IT.jsfieldCheckForm16Label=Please add atleast one Employee detail
+	IT.HBAClaimedCheck HBA Interest Claimed
+
+	IT.HBARepayCheck HBA Repay Claimed
+	
+	IT.Q1 Quarter 1
+	IT.Q2 Quarter 2
+	IT.Q3 Quarter 3
+	IT.Q4 Quarter 4
+	IT.Quarter Tax Deposit details
+	IT.FinYr Financial Year
+	
+	IT.April Tax for April.
+	IT.May Tax for May.
+	IT.June Tax for June.
+	IT.July Tax for July. 
+	IT.August Tax for August.
+	IT.Sept Tax for September.
+	IT.Oct Tax for October.
+	IT.Nov Tax for November.
+	IT.Dec Tax for December.
+	IT.Jan Tax for January.
+	IT.Feb Tax for February.
+	IT.Mar Tax for March.
+	IT.ArrearTax Tax for Arrears.
+	IT.ChallanTax Tax deducted in Challan.
+	
+	IT.UpdateOtherDetails Update Form 16 Details
+
+	#Added by muni for Group management Screen
+gm.GroupManagementView=User Group Management
+gm.showGroupManagement=Group Management Config
+gm.GroupManagementUpdate=Group Management Update
+gm.typeName=Type
+gm.componentType=Component
+gm.startDate=Start Date
+gm.endDate=End Date
+gm.amount=Amount
+gm.class=Class
+gm.designation=Designation
+#Ended by muni for Group management Screen
+ 
+#Added by Abhilash
+
+SR.Scheduler Scheduler
+SR.SchedulerEntry SchedulerEntry
+SR.SchedulerUpdate= SchedulerUpdate
+SR.Day	Day
+SR.BillNo Bill No
+SR.Dept Department
+
+#Added by Japen
+PBA.paybillActivationStatus=PayBill Activation Status
+PBA.startDate= Start Date
+PBA.endDate= End Date
+
+#Added by Abhilash For Salary Details
+#OT.SalaryDetails=Salary Details
+OT.SalaryDetails=Salary Configuration
+OT.AddSalaryDetails=Add Salary Details
+OT.UpdateSalaryDetails=Update Salary Details
+
+#Added by Abhilash For Scheme
+SH.Scheme=DDO Scheme
+SH.SchemeEntry=SchemeEntry
+SH.SchemeUpdate=SchemeUpdate
+SH.HEADCHARGABLE=Head Chargable
+BHM.SCHEMECODE=Scheme Code
+BHM.SCHEMENAME=Scheme Name
+
+SH.SCHEMETYPE=Scheme Type
+SH.CHARGED=Charged
+SH.VOTED=Voted
+SH.ISPLANED=Is Plan
+SH.PLAN=Plan
+SH.NONPLAN=Non-Plan
+
+#Added By Javed For Dept-Component Mpg
+DeptComMpg.DeptCompMpg=Dept. Eligibility for Allowances and Deductions
+DeptComMpg.DeptName=Department/Institution Name
+DeptComMpg.save=Save
+DeptComMpg.Reset=Reset
+DeptComMpg.Close=Close
+DeptComMpg.Allowa=Allowances
+DeptComMpg.Deduct=Deduction
+
+#Added by Abhilash For Cadre Details
+CD.CADREINFORMATION = Cadre Information
+CD.CADRE = Cadre
+CD.GROUPE = Group
+
+PR.SchemeName= Scheme Name
+BHM.scheme=Scheme No.
+
+EL.addintno=Odd Installment No.
+EL.addintamt=Odd Installment Amount
+
+
+
+#Added by Abhilash For SchemeCodeList
+SC.OFFICEDETAILS=Office Details
+SC.SCHEMECODE=Scheme Code
+SC.CURRENTOFFICE=Current Office
+SC.OFFICECITYCLASS=Office City Class
+SC.DATEOFJOINGCURRENTOFFICE=Date Of Joining Current Office
+SC.PARENTFIELDDEPT/HOD=Parent Field Dept/HOD
+SC.CURRENTCADREINPARENTDEPT=Current Cadre in Parent Dept.
+SC.DATEOFJOININGABOVECADRE=Date Of Joing Above Cadre
+SC.DATEOFINTIALAPPOINTMENT=Date of Initial Appointment in Parent Dept./Service Cadre
+SC.GISAPPLICABLE = GIS Applicable?
+SC.CURRENTGISGROUP=Current GIS Group
+SC.MEMBERSHIPGROUP=Membership Group
+SC.MEMBERSHIPDATE=Membership Date
+SC.GISDETAILS=GIS Details
+SC.BANKBRANCHIFSC=Bank Branch IFSC
+SC.LOCALELANG=Full Name in Local Language
+SC.MOBILE = Mobile
+
+
+PR.FullNameInLocalLanguage=Full Name In Local Language            
+PR.DateofInitialAppointmentinParentDept./ServiceCadre =Initial Appointment/Service Cadre Date
+PR.DCPSA/CNo.=DCPS A/C No.
+PR.SchemeCode=Scheme Code
+PR.SchemeName=Scheme Name
+PR.Mobile=Mobile
+FULL_NAME=Full Name
+
+
+SC.PF=PF/Pension Details
+
+CB.BranchName= Branch Name
+CB.BranchCode= Branch Code
+CB.BranchDesc=Branch Desc
+CB.Address= Address
+CB.Active = active
+CB.MainBranch= Main Branch
+CB.CreateBranch=Create Branch
+
+
+#Added by Zankhana
+rtc.RecoveryofPrincipal=Recovery of Principal
+rtc.LoanAmountDistribution=Loan Amount Distribution 
+rtc.TotalNoofInstallment=Total No of Installment
+rtc.InstallmentAmount.=Installment Amount.
+rtc.Odd.InstallmentNo.=Odd.Installment No.
+rtc.OddInstallmentAmount.=Odd Installment Amount.
+rtc.LastInstlNo.Recovered.=Last Instl No. Recovered.
+rtc.OutstandingAmount=Outstanding Amount
+rtc.Ason=As on
+rtc.CurrentPayMonth=Current Pay Month
+rtc.RecoveryOrderNo.=Recovery Order No.
+rtc.RecoveryOrderDate.=Recovery Order Date.
+rtc.ChallanNo.=Challan No.
+rtc.ChallanDate.=Challan Date.
+rtc.AmountPaid.=Amount Paid.
+
+
+#------------added by manish-------------
+CM.DDOName=DDO Name:
+CM.Name=Name:
+CM.Cadre=Cadre:
+CM.Designation=Designation:
+CM.Group=Gorup:
+
+
+
+#Added By Javed For Employee Component Mpg
+EmpCompMpg.Head=Emp. Eligibility for Allowances and Deductions
+EmpCompMpg.Date=Date when Change is made
+EmpCompMpg.WorkList=Emp-Comp Mapping WorkList
+LOCATION Department
+CITY Office
+
+#Added By Javed For Employee Component Mpg
+EmpCompMpg.Head=Emp. Eligibility for Allowances and Deductions
+EmpCompMpg.Date=Date when Change is made
+EmpCompMpg.PayComName=Pay Commission
+pcm-1= 5th and 6th Pay Commission
+pcm2500340= 5th Pay Commission
+pcm2500341= 6th Pay Commission
+#added by manish for bulk aLlowances
+
+bulk.componentType=Type Of Component
+bulk.payItem=Select Pay-Item
+bulk.empByDesignation=Select Employee By Designation
+bulk.selectChkBox=Please Enter Amount (in case applicable to many employees):
+#Bulk.Head=Bulk Allowances
+Bulk.Head=Non Computational Dues/Deductions 
+Bulk.AlDdct=Allowance/Deduction to Bulk of Employees
+#Added by Muni for Cadre master Screen
+cm.CadreMaster = Cadre master
+cm.UpdateCadreMaster = Update Cadre Master 
+cm.CadreName = Cadre Name
+cm.CadreCode = Cadre Code
+cm.CadreDesc = Cadre Desc
+UPDATE = Update
+#Ended by Muni
+
+#Added by Ankit Bhatt
+SchemeName=Scheme Name
+#Ended
+
+
+
+EmpEndDate.Head=Service End Date
+EmpEndDate.EmpName=Employee Name
+EmpEndDate.Desig=Designation
+EmpEndDate.Post=Post
+EmpEndDate.Enddate=End Date
+EmpEndDate.WorkList=Service End WorkList
+
+admin.bill= Bill Group
+admin.postNumber=Number of Post
+
+#--------------added by javed---------------------
+
+EmpEndDate.EndofService=End of Service Details
+EmpEndDate.EndDateServe=Date of End of Service
+EmpEndDate.Resason=Reason for End of Service
+EmpEndDate.ElPension=Eligible of Pension?
+EmpEndDate.ElGrauity=Eligibility for Gratuity
+EmpEndDate.OderDetail=Order Details
+EmpEndDate.orderRef=Order/Ref. Letter No.
+EmpEndDate.Remarks=Remarks
+EmpEndDate.Dated=Dated
+EmpEndDate.Yes=Yes
+EmpEndDate.No=No
+
+SM.scaleSecondHigherIncAmt=Second Increment Amount(Rs.)
+SM.scaleSecondHigherEndAmt=Second End Amount(Rs.)
+SM.scaleThirdHigherIncAmt=Third Increment Amount(Rs.)
+SM.scaleThirdHigherEndAmt=Third End Amount(Rs.)
+
+
+OT.update=Calculate
+
+#Added For Head
+Discard.Head=View / Approve / Delete Bill 
+ViewOuter.Head=Outer Report
+
+#For Quarter
+Quarter.Head=Employee Quarter Details
+Quarter.Head1=Rent Details
+Quarter.Head2=Vacate Quarter Details
+Quarter.Type=Type of Organization/Institution Accomodation 
+Quarter.rentfree=Rent Free
+Quarter.rented=Rented
+Quarter.Allowto=Quarter Allotted To
+Quarter.Rentrs=Rent
+Quarter.ServiceChg=Service Charges
+Quarter.Garage=Garage/Other Charges
+Quarter.checkbox=Check the Box if Quarter is to be vacated
+Quarter.vacateletter=Vacating Letter No.
+Quarter.ldate=Letter Date
+Quarter.Date=Date Vacated
+Quarter.self=Self
+Quarter.Others=Spouse/Relative/Others
+Quarter.TypeOfQuarter=Quarter Type
+Quarter.Submit=Submit
+Quarter.Reset=Reset
+Quarter.Cancel=Cancel
+
+
+BillNo=Bill No
+#Added by Manish  For Recovery Through Challan 
+
+RC.loanAmtDis=Loan Amount Disbursed
+RC.totalInstall=Total No. of Installments
+RC.installAmt=Installment Amount
+RC.oddInstallNo=Odd. Installment No.
+RC.oddInstallAmt=Odd. Installment Amount
+RC.lastInstNoRecoverd=Last Instl. No. Recovered
+RC.outstandingAmt=Outstanding Amount
+RC.asOn=As on
+RC.currPayMonth=Current Pay Month
+RC.recryOrderNo=Recovery Order No.
+RC.recryOrderDate=Recovery Order Dated
+RC.challanNo=Challan No.
+RC.challanDate=Challan Date
+RC.amountPaid=Amount Paid 
+RC.Recovery=Recovery Through Challan
+RC.rcvry=Recovery Through Challan
+
+
+#For Discard bill
+EL.DiscardBill=DiscardBill
+EL.VoucherNo=Voucher Number
+EL.VoucerDate=Voucher Date
+
+
+#Added by Abhilash for pay certificate
+PC.ADDNEWORDER=Add New Order Details
+PC.FORWARD=Forward to DDO
+PC.Increment=Increment Certificate Order No :
+PC.ORDERDATE=Order Date :
+PC.CURRENT=Current Year Orders
+PC.PREVIOUS=Previous Year Orders
+PC.LISTOFEMPLOYEES=List of Employees due for Increment
+PC.LISTRELEASE=List of Employees selected for Release of Increment
+PC.ADDTOLIST=Add to List
+PC.REMOVE=Remove
+PC.SELECT=Select All Employess
+PC.DESELECT=Deselect All Employee
+PC.SAVE=Save
+PC.CANCEL=Cancel
+PC.GO=Go
+ 
+#Added by Muneendra for ChangeGISDetails
+
+CG.ChangeGISDetails=Change GIS Details
+CG.GISAPPLICABLE= GIS Applicable
+CG.GISGROUP=Current GIS Group
+CG.MEMBERSHIPDATE=Membership Date In Current Group
+CG.CurrentDetails=Current GIS Details
+CG.ReviseedDetails =Revised GIS Details
+CG.RevicedGISGROUP=Revised GIS Group
+CG.RevicedMEMBERSHIPDATE=Membership Date In Revised Group
+
+CG.VideOrder/Ref.LetterDetails=Vide Order/Ref.Letter Details
+CG.Order/Ref.LetterNo=Order/Ref.Letter No
+CG.OrderDate=Order Date
+CG.Remarks= Remarks
+
+#Added By Amish for Paybill Para Screen 
+PB.GeneratePaybill = Generate/Regenerate Pay Bill
+
+
+#Added By Amish for Custodian Master
+
+Cust.CustodianMaster=Custodian Master
+Cust.AddNewCustodian=Add New Custodian
+Cust.ExistingCustodians=Existing Custodians
+
+#Added By Amish for Pay Arrears Other Than DA
+Arr.PayArrear=Pay Arrear
+Arr.AddArrear = Add Arrear
+Arr.ExistingArrears = Existing Arrears
+Arr.EmployeeName = Employee Name
+Arr.PayItem = Pay Item
+Arr.FromDate = From Date
+Arr.ToDate = To Date
+Arr.Amount = Amount
+Arr.Reason = Reason
+Arr.CompoType = Component Type
+
+
+#Added By Kishan
+NG.PayItem = Select Deduc Type
+NG.BillGroup = Bill Group
+NG.EmpDsgn = Select Employee By Designation
+NG.AmtForManyEmp = Please Enter Amount (in case applicable to many employees)
+
+
+#Added By Javed For Bill Group Comp Mapping
+BillGrpMpg.BillName=Bill Name
+BillGrpMpg.BillGrpHead=Bill Group Compo Mapping
+
+#For AIS Report
+hbaAisId=64
+hbaAisIntId=71
+mcaaAisId=65
+mcaAisIntId=69
+EIS.EXPORTOEXCEL=Export to Excel
+# for the new Loan Type
+VN.LoanType = Loan Type
+OT.Paused = Paused
+OT.LoanRecoveryMode = Loan Recovery Mode
+OT.Normal = Normal
+OT.Multiple = Multiple Installments
+PR.GRTYPE=Order Type
+PR.GRSUBTYPE=Sub Order Type
+PR.SCHOOLORGANIZATION=School/Organization
+
+#--added by abhishek ----##
+BTN.UPDATE=Update Details
+CMN.DDOCODE=DDO Code
+CMN.FROMDATE=From Date
+CMN.TODATE=To Date
+CMN.DDONAME=DDO Name
+CMN.SRNO=Sr No.
+BTN.CREATE=Create New Entry
+BTN.CREATENEWENTRTY=Add new Entry
+CMN.EIDNo.=EID No.
+CMN.UPDATEDETAILSLEGEND = Update Details
+
+#added by poonamfor beams--eis_common_lables-------
+CMN.AUTH_NO = Authorization No
+EIS.SubmitUid=Submit(Uid)
+#added by poonamfor beams--forchange statement------
+PB.GeneratePaybill = Generate/Regenerate Change Statement
+
+#---added by Tejashree DCPS Legacy---#
+
+EL.BDSno = BDS No.
+EL.BankRefNo = Bank Refference No.

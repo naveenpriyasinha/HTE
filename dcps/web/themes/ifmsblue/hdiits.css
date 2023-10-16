@@ -1,0 +1,621 @@
+html {
+	padding: 0;
+	margin: 0px;
+	/*background-color: rgb(228, 239, 243);*/
+/*	background-color: rgb(228, 239, 248);*/
+	text-align: center;
+	font-family: Arial, Verdana, Helvetica, sans;
+}
+
+body {
+	width: 99%;
+	margin: 3px;
+	/*background: url(header.gif) no-repeat;*/
+	padding: 0 0 0 0;
+	border: solid 1px #DEDEDE;
+}
+
+h1 {
+	font-size: 14px;
+	font-weight: normal;
+	color: #5b3300;
+	margin: 0 0 0 0;
+}
+
+h2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: gray;
+	margin: 0 0 0 0;
+}
+
+h3 {
+	font-size: 13px;
+	font-style: italic;
+	color: #5b3300;
+	margin: 0 0;
+}
+
+h4 {
+	font-size: 13px;
+	font-style: italic;
+	color: gray;
+	margin: 0 0;
+}
+
+p {
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+
+
+/*
+table {
+	width: 100%;
+	border: 0;
+	margin: 0px;
+	cellpadding: 2px;
+	border-collapse: collapse;
+}
+*/
+/*
+thead {
+	background: #ffe5c9;
+	color: black;
+}
+*/
+/*
+td {
+	color: black;
+	font-weight: normal;
+	font-size: 10px;
+	font-style: normal;
+}
+*/
+
+/*tr.ruled { cursor: pointer; background: #5b3300; }*/
+
+
+/*
+for tables displaying data like search results
+*/
+.uheadertable_tr
+{
+	background: #996533;	/*change*/
+	
+}
+	
+.uheadertable_td
+{
+	padding: 3px;
+	border-top: solid 1 #ffffff; 
+	border-bottom: outset 1px #888888;
+	
+}
+.uheadertable_td1
+{
+	padding: 3px; 
+	border-top: solid 1 #ffffff; 
+	border-bottom: outset 1px #888888;
+	color: white;
+}
+.lheadertable_tr
+{
+		background: #eedecc;	/*change*/
+		height: 4;
+		width:100%;
+}
+
+.lheadertable_tr a
+{
+	margin: 0px;
+	/*padding: 2px 10px 2px 10px;*/	
+	padding: 2px 4px 2px 0px;	
+	width: 100%;
+	height: 100%;
+	
+	font-weight : normal;
+	font-size: 0.75em;
+	color: #000000;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-decoration: none;	
+}
+.lheadertable_tr img
+{
+	/*padding: 0 10px 0 0;*/
+	padding: 0 4px 2px 4px
+}
+
+
+.lheadertable_td1
+{
+	padding: 0 3px 0 3px;
+	border-top: solid 1px #fff8ee; 
+	border-bottom: outset 1px #d9c2aa;
+	
+	color: #000000;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold; 
+
+}
+.lheadertable_td2
+{
+	padding: 0 3px 0 3px;
+	border-right: outset 1px #998977;
+	border-top: solid 1px #fff8ee; 
+	border-bottom: outset 1px #d9c2aa; 
+	color: white;
+	
+}
+.lheadertable_td3
+{
+	padding: 0 10px 0 10px;
+	border-left: solid 1px #fff8ee;
+	border-right: outset 1px #d9c2aa;
+	border-top: solid 1px #fff8ee; 
+	border-bottom: outset 1px #d9c2aa; 
+	color: white;
+}
+.lheadertable_td4
+{
+	padding: 0 10px 0 10px;
+	border-left: solid 1px #fff8ee; 
+	border-top: solid 1px #fff8ee; 
+	border-bottom: outset 1px #d9c2aa; 
+	color: white;	
+}
+
+
+.datatable { /*for the table*/
+	border: solid 1px gray;
+	width: 100%;
+	margin: 0px;
+	cellpadding: 2px;
+	border-collapse: collapse;
+}
+
+.datatableheader { /*for the table header td*/
+	border: solid 1px gray;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	background: #ffe5c9;	/*change*/
+}
+
+.tablecellnumber { /*for td showing number data*/
+	border-bottom: solid 1px #DEDEDE;
+	border-right: dotted 1px #DEDEDE;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: right;
+}
+
+.tablecelltext { /*for td showing text data*/
+	border-bottom: solid 1px #DEDEDE;
+	border-right: dotted 1px #DEDEDE;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+
+.odd { 
+	background: #FFFFF0;
+
+}
+
+.even {
+	background: #FFF3F3;
+}
+
+#pageContent {
+	margin: 0;
+	padding: 0px;
+	text-align: left;
+	border: solid 1px #ABABAB;
+	background-color: #bd6c03;	/*change*/
+}
+
+#inContent {
+	padding: 0;
+	margin: 0;
+	border: solid 1px #444444;
+/*	background-color: #aaaaaa;*/
+}
+
+#header {
+	top: 0px;
+	left: 0px;
+	margin: 0;
+	padding: 0;
+	/*border-bottom: solid 1px #BBBBBB;*/
+	height: 100%;
+}
+
+#headertext {
+	font-size: 20px;
+	font-style: normal;
+	font-weight: bold;
+	color: #fdfdfd;
+}
+
+#toolbar {
+	background: #ba9;
+	margin: 0px;
+	border-bottom: solid 1px #321;
+	display: none;
+}
+
+#nav {
+	margin: 0px 0px 0px 0px;
+	/*position: relative;*/
+	float: left;
+	width: 100%;	
+	padding: 0px 0px 0px 0px;
+	background: none;
+	font-size: 14px;
+	z-index: 100;
+}
+#currentApplication
+  {
+  border-bottom: 1px solid black;
+	border-left: solid 1px #ABABAB;
+	padding: 0px 6px 0 6px;
+	float: right;
+	z-index: 1;
+	margin: 0px 0px 0px 0px;
+	width: 99%;
+	min-height: 5px;
+	height:auto !important;
+	height: 5px;
+	background: #eedecc;
+	font-size: 12px;
+	color: #000000;
+	text-align: left;
+ }
+ #currentApplication table tr td{
+ padding: 2px;
+ }
+#content {
+	padding: 5px 5px 5px 5px;
+	float: none;
+	z-index: 1;
+	margin: 0px 0px 0px 0px;
+	width: 99%;
+	min-height: 450px;
+	background: #FFFFFF;
+	/*background: url(images/background.gif);*/
+	font-size: 12px;
+	color: #000000;
+	text-align: left;
+	border-left: solid 1px #ABABAB;
+}
+
+#footer {
+	width: 100%;
+	margin: 0;
+	padding: 0 0 -5px 0;
+	height: 100%;
+	border-top: solid 1px #444444;
+}
+
+#footer ul {
+	display: none;
+}
+
+#footertext {
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	color: #363636;
+	text-align: right;
+	width: 100%;
+	border-top: solid 1px white;
+}
+
+.fieldLabel {
+	font-family: Verdana;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+	color: Black;
+}
+
+.screenLabel {
+	font-family: Verdana;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+	color: Black;
+}
+
+
+.groupHeaderLabel {
+	background: #EEEEEE;
+/*	background: f0f7ff;*/
+}
+
+.groupHeaderLabel td {
+	font-size: 13px;
+	font-weight: bold;
+	border: solid 1px #c0c0c0;
+	padding: 0px 2px 0px 2px;
+}
+
+/*.textField{
+	border-top: solid 1px gray;
+	border-left: solid 1px gray;
+	border-right: solid 1px #BCBCBC;
+	border-bottom: solid 1px #BCBCBC;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}*/
+
+.groupTable{
+	border: solid 1px gray;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	cellpadding: 2px;
+	border-collapse: collapse;
+}
+
+.groupTable td{
+	padding: 2px;
+/*	border: solid 1px #DEDEDE;*/
+}
+
+.mandatory{
+	background: #FFFFE9;
+}
+
+.tabButton{
+	border-top: solid 1px #FFFFFF;
+	border-left: solid 1px #FFFFFF;
+	border-right: solid 1px gray;
+	border-bottom: solid 1px gray;
+	background: #eedecc;
+	width: 80px;
+	font-weight: bold;
+	color: #000000;
+}
+.button{
+	border-top: solid 1px #FFFFFF;
+	border-left: solid 1px #FFFFFF;
+	border-right: solid 1px gray;
+	border-bottom: solid 1px gray;
+	background: #EFEFEF;
+	width: 80px;
+	
+	}
+/*
+#div-body {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(body-background.gif);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -3;
+}
+#div-left-top { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(lt-corner.gif);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-top { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("top-border.gif");
+  background-repeat: repeat-x;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+vertical-align: middle;
+}
+#div-right-top { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("rt-corner.gif");
+  background-repeat: no-repeat;
+  border: none;
+  background-position: 100% 0%;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-left-bottom { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("lb-corner.gif");
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  border: none;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-bottom { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("bottom-border.gif");
+  background-repeat: repeat-x;
+  background-position: 0% 100%;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+}
+#div-right-bottom { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("rb-corner.gif");
+  background-repeat: no-repeat;
+  border: none;
+  background-position: 100% 100%;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-left { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("left-border.gif");
+  background-repeat: repeat-y;
+  background-position: 0% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+}
+#div-right { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("right-border.gif");
+  background-repeat: repeat-y;
+  background-position: 100% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+}
+*/
+/* Added by Keyur For Long Size Buttons */
+.bigbutton{
+	border-top: solid 1px gray;
+	border-left: solid 1px gray;
+	border-right: solid 2px gray;
+	border-bottom: solid 2px gray;
+	background: #FFFFFF;
+	width: relative;
+	font-weight: 800;
+	color: #5289F2;
+}
+
+.tabstyle {
+	border-width: 5px 1px 1px 1px; 
+	border-color: #c06f20;
+	border-style: solid ;
+	}
+	
+.legend {
+	padding-left:5px;
+	padding-right:5px;
+	font-weight:normal; 
+	font-family:verdana;
+		
+	border-width: 0px 0px 1px 0px; 
+	border-color: #c06f20;
+	border-style: solid ;
+	}	
+
+.headertable
+{
+	cellspacing: 0;
+	cellpadding: 0;
+	border: 0;	
+	
+}
+.lheadertable_tr td
+{
+	border-top: 1px groove #ffffff;
+	border-bottom: 1px solid #454545;
+}
+#footer tr{
+	background: #ededed url(images/footer-bg-01.gif) bottom repeat-x;	
+	}
+
+.tabtable{
+/*	border-right: solid 1px #ffffff;
+	border-bottom: solid 1px #ffffff;
+	border-top: solid 1px #6587a9;
+	border-left: solid 1px #6587a9;*/
+	cellspacing: 0;
+	width: 100%;
+	background: trasnparant;
+}
+	
+.tabtable td{
+	padding: 3px;
+}
+
+.toolwin{
+	border: solid 1px #887866;
+}
+.toolwin thead{
+	background: #887866;
+}
+
+.fade_background{
+	display: none;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #777777;
+	z-index:1001;
+	-moz-opacity: 0.6;
+	opacity:.60;
+	filter: alpha(opacity=60);
+}
+
+/* styles for fieldset and the legend inside it will appear as the header */
+.fset{
+	width: 100%;
+	background:  #f2f2f2 url(images/fieldsettop.png) repeat-x top;
+    border: none;
+    border-bottom: 2px ridge #fff;
+    border-left: 1px solid #aaa;
+    border-right: 1px ridge #fff;
+    padding:  0 1 1 2;
+    margin: 0 0;
+}
+
+.fset legend {
+	width: 100%;
+	font-size: 12px;
+    font-weight:  bold;
+    position:  relative;
+    top:  0px;
+    left: 0px;
+    padding: 3px 1px 1px 1px;
+    margin: 0 0 5 0;
+    color: black;
+}

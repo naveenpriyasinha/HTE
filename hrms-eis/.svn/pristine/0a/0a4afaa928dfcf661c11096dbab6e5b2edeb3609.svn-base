@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 10, 2008 4:27:02 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisEmpChgnameTxn" table="hr_eis_emp_chgname_txn">
+        <comment></comment>
+        <composite-id name="id" class="com.tcs.sgv.eis.valueobject.HrEisEmpChgnameTxnId">
+            <key-property name="reqId" type="long">
+                <column name="REQ_ID" />
+            </key-property>
+            <key-property name="langId" type="long">
+                <column name="LANG_ID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="orgEmpMst" class="com.tcs.sgv.ess.valueobject.OrgEmpMst" fetch="select">
+            <column name="EMP_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" update="false" insert="false" fetch="select">
+            <column name="LANG_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAttachmentMst" class="com.tcs.sgv.common.valueobject.CmnAttachmentMst" fetch="select">
+            <column name="ATTACHMENT_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMst" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMst" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="empPrefix" type="string">
+            <column name="EMP_PREFIX" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empFname" type="string">
+            <column name="EMP_FNAME" length="60" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empMname" type="string">
+            <column name="EMP_MNAME" length="60">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empLname" type="string">
+            <column name="EMP_LNAME" length="60" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="gazetteNo" type="string">
+            <column name="GAZETTE_NO" length="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="gazetteDate" type="timestamp">
+            <column name="GAZETTE_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="gazetteEstartDate" type="timestamp">
+            <column name="GAZETTE_ESTART_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="issuingAutho" type="string">
+            <column name="ISSUING_AUTHO" length="60" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="actionFlag" type="string">
+            <column name="ACTION_FLAG" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

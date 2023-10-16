@@ -1,0 +1,15 @@
+<html>
+<body >
+<br>
+
+<center>
+<div id="msg" style="font-family: verdana;font-size: 12px;">
+-
+</div>
+<br>
+<input type="button" value="Ok" onclick="window.close();" onkeypress="window.close();">
+</body>
+<script type="text/javascript">
+document.getElementById("msg").innerHTML = window.dialogArguments;
+</script>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 17, 2007 7:36:59 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping auto-import="false">
+    <class name="com.tcs.sgv.lcm.valueobject.OrgPostDetailsRlt" table="ORG_POST_DETAILS_RLT"  >
+        <id name="postDetailId" type="big_decimal">
+            <column name="POST_DETAIL_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="postId" type="big_decimal">
+            <column name="POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="postName" type="string">
+            <column name="POST_NAME" length="100" not-null="true" />
+        </property>
+        <property name="postShortName" type="string">
+            <column name="POST_SHORT_NAME" length="15" not-null="true" />
+        </property>
+        <property name="locId" type="big_decimal">
+            <column name="LOC_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="dsgnId" type="big_decimal">
+            <column name="DSGN_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="branchId" type="big_decimal">
+            <column name="BRANCH_ID" precision="20" scale="0" />
+        </property>
+        <property name="langId" type="big_decimal">
+            <column name="LANG_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdBy" type="big_decimal">
+            <column name="CREATED_BY" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdByPost" type="big_decimal">
+            <column name="CREATED_BY_POST" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedBy" type="big_decimal">
+            <column name="UPDATED_BY" precision="20" scale="0" />
+        </property>
+        <property name="updatedByPost" type="big_decimal">
+            <column name="UPDATED_BY_POST" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

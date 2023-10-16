@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 8, 2008 1:14:00 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisBiometricDtl" table="hr_eis_biometric_dtl">
+        <comment></comment>
+        <id name="biometricId" type="long">
+            <column name="biometric_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAttachmentMstByEmpPhotoAttachmentId" class="com.tcs.sgv.common.valueobject.CmnAttachmentMst" fetch="select">
+            <column name="emp_photo_attachment_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnAttachmentMstByEmpThumbAttachmentId" class="com.tcs.sgv.common.valueobject.CmnAttachmentMst" fetch="select">
+            <column name="emp_thumb_attachment_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpTypeOfDisability" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="emp_type_of_disability">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLookupMstByEmpBloodGroup" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="emp_blood_group">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+         <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empPhyChallenged" type="java.lang.Character">
+            <column name="emp_phy_challenged" length="1">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empDisabilityDetails" type="string">
+            <column name="emp_disability_details" length="2000">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empIdentificationMark" type="string">
+            <column name="emp_identification_mark" length="2000">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empWeight" type="java.lang.Double">
+            <column name="emp_weight" precision="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empChest" type="java.lang.Double">
+            <column name="emp_chest" precision="5">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="empHeight" type="java.lang.Double">
+            <column name="emp_height" precision="5">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

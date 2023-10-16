@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.tcs.sgv.eis.valueobject.HrEisGroupCadreDesign" table="HR_EIS_GROUP_CADRE_DESIGN">
+
+ <id name="Id" type="long">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        
+           <many-to-one name="hrEisCadreMst" class="com.tcs.sgv.eis.valueobject.HrEisCadreMst" fetch="select">
+            <column name="CADRE_ID"  scale="0" />
+        </many-to-one> 
+        
+        
+         <many-to-one name="orgGradeMst" class="com.tcs.sgv.ess.valueobject.OrgGradeMst" fetch="select">
+            <column name="GRADE_ID"  scale="0" />
+        </many-to-one> 
+        
+        
+         <many-to-one name="orgDesignationMst" class="com.tcs.sgv.ess.valueobject.OrgDesignationMst" fetch="select">
+            <column name="DSGN_ID"  scale="0" />
+        </many-to-one> 
+        
+          <property name="group" type="string">
+            <column name="GROUP" length="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        
+          
+          <property name="dsg_desc" type="string">
+            <column name="DSG_DESC" length="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+          <property name="class_name" type="string">
+            <column name="CLASS_NAME" length="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+          
+          <property name="cdr_grp_cd" type="string">
+            <column name="CDR_GRP_CD" length="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+          <property name="cdr_desc" type="string">
+            <column name="CDR_DESC" length="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+</class>
+</hibernate-mapping>

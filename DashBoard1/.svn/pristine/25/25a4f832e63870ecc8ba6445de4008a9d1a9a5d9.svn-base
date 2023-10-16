@@ -1,0 +1,11 @@
+$(document).ready(function(){
+if(navigator.appCodeName=="IE")
+	{
+	$('#exportexcel').removeClass("chrome");
+	$('#exportexcel').addClass("IE");
+	}
+else{
+	$('#exportexcel').removeClass("IE");
+	$('#exportexcel').addClass("chrome");	
+}
+});

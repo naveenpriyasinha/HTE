@@ -1,0 +1,250 @@
+/*package com.tcs.sgv.nps.service;
+
+public class NpsDetailsAndStatusServiceImpl {
+
+}*/
+
+
+package com.tcs.sgv.nps.service;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.ResourceBundle;
+
+import org.apache.log4j.Logger;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.tcs.sgv.acl.login.valueobject.LoginDetails;
+import com.tcs.sgv.common.business.reports.ReportDataFinder;
+import com.tcs.sgv.common.dao.reports.DefaultReportDataFinder;
+import com.tcs.sgv.common.exception.reports.ReportException;
+import com.tcs.sgv.common.util.reports.IReportConstants;
+import com.tcs.sgv.common.valuebeans.reports.ReportVO;
+import com.tcs.sgv.core.service.ServiceLocator;
+import com.tcs.sgv.nps.dao.NpsDetailsAndStatusDaoImpl;
+
+
+public class NpsDetailsAndStatusServiceImpl extends DefaultReportDataFinder implements ReportDataFinder {
+	
+
+
+		private static final Logger gLogger = Logger.getLogger("PensionpayReports");
+		private NpsDetailsAndStatusDaoImpl gObjRptQueryDAO = null;
+		ServiceLocator serviceLocator = null;
+		SessionFactory gObjSessionFactory = null;
+		String gStrLocCode = null;
+		String gStrDdoCode = null;
+		Long gLngLangId = null;
+		Long gPostId=null;
+		Map lMapSeriesHeadCode = null;
+		Session ghibSession = null;
+
+		/**
+		 * Global Variable for Resource Bundle
+		 */
+		private ResourceBundle gObjRsrcBndle = ResourceBundle.getBundle("resources/pensionpay/PensionCaseConstants");
+
+		private ResourceBundle bundleConst = ResourceBundle.getBundle(("resources/pensionpay/PensionConstants"));
+
+		public Collection findReportData(ReportVO lObjReport, Object criteria) throws ReportException {
+
+			List lLstDataList = new ArrayList();
+			Map lMapRequestAttributes = null;
+			Map lMapSessionAttributes = null;
+			LoginDetails lObjLoginVO = null;
+			try {
+				lMapRequestAttributes = (Map) ((Map) criteria).get(IReportConstants.REQUEST_ATTRIBUTES);
+				lMapSessionAttributes = (Map) ((Map) criteria).get(IReportConstants.SESSION_KEYS);
+				lObjLoginVO = (LoginDetails) lMapSessionAttributes.get("loginDetails");
+				serviceLocator = (ServiceLocator) lMapRequestAttributes.get("serviceLocator");
+				gObjSessionFactory = serviceLocator.getSessionFactorySlave();
+				gStrLocCode = lObjLoginVO.getLocation().getLocationCode();
+				//gStrDdoCode= lObjLoginVO.getDdo().getDdoCode();
+				gLngLangId = lObjLoginVO.getLangId();
+				gPostId=lObjLoginVO.getLoggedInPost().getPostId();
+				ghibSession = gObjSessionFactory.getCurrentSession();
+				gObjRptQueryDAO = new NpsDetailsAndStatusDaoImpl(null, gObjSessionFactory);
+
+				gObjRptQueryDAO.setReportHeaderAndFooter(lObjReport, lObjLoginVO);
+				
+				String ddocode = gObjRptQueryDAO.getDdoCode(gStrLocCode);
+				//Added by ---DTA & DTO Registration Details Report
+				if (lObjReport.getReportCode().equals("80000942")) {
+					lLstDataList = getNPSStatusReport(lObjReport, gStrLocCode);
+				}
+				
+				
+				//Added by --- DDO Registration Details for NPS Report
+				if (lObjReport.getReportCode().equals("80000947")) {
+					lLstDataList = getDdoRegDtls(lObjReport, gStrLocCode,ddocode);
+				}
+				
+				//Added by --- Level 2 DDO Details for NPS Report
+				if (lObjReport.getReportCode().equals("80000944")) {
+					lLstDataList = getLevel2DdoDtls(lObjReport, gStrLocCode,ddocode);
+				}
+				
+				//Added by --- PRAN Registration Details for NPS Report
+				if (lObjReport.getReportCode().equals("80000946")) {
+					lLstDataList = getPranRegDtls(lObjReport, gStrLocCode,ddocode);
+				}
+				
+				//Added by --- Employee Details for NPS Report
+				if (lObjReport.getReportCode().equals("80000945")) {
+					lLstDataList = getEmpDtls(lObjReport, gStrLocCode,ddocode);
+				}
+				
+				//Added by --- NPS UTR report
+				if (lObjReport.getReportCode().equals("80000943")) {
+					lLstDataList = getCMPUTRReport(lObjReport, gStrLocCode);
+				}
+			}
+			catch (Exception e) {
+				gLogger.info("findReportData(): Exception is" + e, e);
+			}
+			return lLstDataList;
+		}
+			
+			
+			
+			private List getPranRegDtls(ReportVO lObjReport, String lStrLocCode, String ddocode) {
+			  
+				System.out.println("Hiiii i am here");	
+				List lArrReturn = new ArrayList();
+				
+				NpsDetailsAndStatusDaoImpl gObjRptQueryDAO = new NpsDetailsAndStatusDaoImpl(null, gObjSessionFactory);
+				
+				try {
+					String header1 = "<p style=\"text-align:center;\"><b>PRAN Registration Details</b> </p>";
+					lObjReport.setAdditionalHeader(header1);
+					lArrReturn=gObjRptQueryDAO.getPranRegDtls(lStrLocCode,ddocode);
+				}
+				
+				catch (Exception e) {
+					gLogger.error("Error is :" + e);
+				}
+				return lArrReturn;
+			
+		}
+
+
+
+			private List getDdoRegDtls(ReportVO lObjReport, String lStrLocCode, String ddocode) {
+			  
+				System.out.println("Hiiii i am here");	
+				List lArrReturn = new ArrayList();
+				
+				NpsDetailsAndStatusDaoImpl gObjRptQueryDAO = new NpsDetailsAndStatusDaoImpl(null, gObjSessionFactory);
+				
+				try {
+					String header1 = "<p style=\"text-align:center;\"><b> DTO & DDO Registration Details</b> </p>";
+					lObjReport.setAdditionalHeader(header1);
+					lArrReturn=gObjRptQueryDAO.getDdoRegDtls(lStrLocCode, ddocode);
+				}
+				
+				catch (Exception e) {
+					gLogger.error("Error is :" + e);
+				}
+				return lArrReturn;
+		}
+
+
+
+			private List getEmpDtls(ReportVO lObjReport, String lStrLocCode, String ddocode) {
+			   
+				System.out.println("Hiiii i am here");	
+				List lArrReturn = new ArrayList();
+				String flag="";
+				NpsDetailsAndStatusDaoImpl gObjRptQueryDAO = new NpsDetailsAndStatusDaoImpl(null, gObjSessionFactory);
+				
+				try {
+					if(lObjReport.getParameterValue("flag").toString()!=null && (!lObjReport.getParameterValue("flag").toString().equals("")))
+					{
+						flag = lObjReport.getParameterValue("flag").toString();
+						System.out.println("Inside getParameterValue flag--"+flag);
+					}
+					lArrReturn=gObjRptQueryDAO.getEmpDtls(lStrLocCode,flag,ddocode);
+					
+				}
+				
+				catch (Exception e) {
+					gLogger.error("Error is :" + e);
+				}
+				return lArrReturn;
+				
+		}
+
+
+
+			private List getLevel2DdoDtls(ReportVO lObjReport, String lStrLocCode, String ddocode) {
+				System.out.println("Swati");	
+				List lArrReturn = new ArrayList();
+				NpsDetailsAndStatusDaoImpl gObjRptQueryDAO = new NpsDetailsAndStatusDaoImpl(null, gObjSessionFactory);
+				
+				try {
+					String header1 = "<p style=\"text-align:center;\"><b> Level 2 DDO Details Report</b> </p>";
+					lObjReport.setAdditionalHeader(header1);
+					lArrReturn=gObjRptQueryDAO.getLevel2DdoDtls(lStrLocCode, ddocode);
+				}
+				
+				catch (Exception e) {
+					gLogger.error("Error is :" + e);
+				}
+
+				return lArrReturn;
+		}
+
+
+
+			public List  getNPSStatusReport(ReportVO lObjReport, String lStrLocCode) {
+				List lArrReturn = new ArrayList();
+				
+				NpsDetailsAndStatusDaoImpl gObjRptQueryDAO = new NpsDetailsAndStatusDaoImpl(null, gObjSessionFactory);
+				
+				try {
+					String header1 = "<p style=\"text-align:center;\"><b> DTA & DTO Registration Details </b> </p>";
+					lObjReport.setAdditionalHeader(header1);
+					lArrReturn=gObjRptQueryDAO.getNPSStatusReport(lStrLocCode);
+				}
+				
+				catch (Exception e) {
+					gLogger.error("Error is :" + e);
+				}
+				return lArrReturn;	
+}
+			
+			public List	getCMPUTRReport(ReportVO lObjReport, String lStrLocCode) { 
+				
+				System.out.println("Hiiii i am here");	
+				List lArrReturn = new ArrayList();
+				String forYear = "";
+				String forMonth = "";
+				NpsDetailsAndStatusDaoImpl gObjRptQueryDAO = new NpsDetailsAndStatusDaoImpl(null, gObjSessionFactory);
+				try{
+				
+					forYear = lObjReport.getParameterValue("forYear").toString();
+					forMonth = lObjReport.getParameterValue("forMonth").toString();
+					gLogger.info("forYear*************"+forYear);
+					gLogger.info("forMonth*************"+forMonth);
+					int month=0;
+					
+					if(Integer.parseInt(forMonth)>0 && Integer.parseInt(forMonth)<10){
+						month=Integer.parseInt(forMonth)+3;
+					}
+					
+					if(Integer.parseInt(forMonth)>= 10 || Integer.parseInt(forMonth)<=12){
+						month=Integer.parseInt(forMonth);
+					}
+					gLogger.info("forMonth*****222********"+month);
+					lArrReturn=gObjRptQueryDAO.getCMPUTRReport(forYear,Integer.toString(month),gPostId);
+			
+}
+				catch (Exception e) {
+					gLogger.error("Error is :" + e);
+				}
+				return lArrReturn;
+			}	
+		}

@@ -1,0 +1,1 @@
+log4jdbc.drivers=com.ibm.db2.jcc.DB2Driver

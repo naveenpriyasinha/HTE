@@ -1,0 +1,64 @@
+body {
+	border: none;
+}
+
+#pageContent {
+	border: none;
+}
+
+#inContent {
+	border: none;
+}
+
+#header {
+	display: none;
+}
+
+#toolbar {
+	display: none;
+}
+
+#nav {
+	display: none;
+}
+#verticalnav {
+	display: none;
+}
+
+#rightInfo {
+	display: none;
+}
+
+#tempDivLeft,#tempDivRight{
+	display: none;
+}
+#horizontalNav {
+	display: none;
+}
+#currentApplication
+{
+	display: none;
+}
+#mandatoryNotes
+{
+	display: none;
+}
+#content {
+	margin: 0 0 0 0;
+	height: 99%;
+	background: none;
+	font-size: 12px;
+	color: #000000;
+	text-align: left;
+	width: 99%;
+	border: none;
+	padding: 5px;
+}
+
+#footer {
+	display: none;
+}
+
+#footer ul {
+	display: none;
+}

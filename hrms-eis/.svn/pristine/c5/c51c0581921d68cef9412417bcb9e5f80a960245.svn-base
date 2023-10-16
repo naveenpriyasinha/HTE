@@ -1,0 +1,646 @@
+#--------------------------Employee commission mapping---------------------------------
+employeeCommissionMpg.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmpCommissionMpg.jsp]
+	
+#---------------
+	
+viewPostByLevelOne.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/admin/ViewPostForLevelOne.jsp]	
+updatePaybill.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/updatePaybill.jsp]
+updatePaybillRemarks.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/updatePaybillRemarks.jsp]	
+
+#--------------------------Employee Master---------------------------------
+
+empAllRec.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empAllRec.jsp]
+treeMenu.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/treeMenu.jsp]
+headerApps.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/headerApps.jsp]
+EmployeeMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empmaster.jsp]
+EmployeeMasterEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/empmaster.jsp]
+empViewList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empViewList.jsp]
+empViewListEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/empViewList.jsp]
+empEditList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empEditList.jsp]
+empEditListEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/empEditList.jsp]
+ScaleViewList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ScaleViewList.jsp]
+newScaleMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/newScaleMaster.jsp]
+#----------Added by Demolisher---------------
+employeeStatisticsReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/employeeStatisticsReport.jsp]
+schoolValidation.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/schoolValidation.jsp]
+employeeValidation.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/employeeValidationReport.jsp]
+
+#-- Added By Manish Khunt For Rule Engine in Maharashtra
+adminViewRuleBasedPayComponent.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ViewRuleBasedPayCompList.jsp]
+adminViewPayComponentRuleList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ViewPayCompRuleList.jsp]
+adminAddPayComponentRule.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/AddPayComponentRule.jsp]
+adminUpdatePayComponentRule.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/UpdatePayComponentRule.jsp]
+#----------Added by Demolisher---------------
+shalarthReportFilter.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ShalarthReportFilter.jsp]
+viewStatisticsReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ViewStatistics.jsp]
+
+
+
+scaleEditList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/scaleEditList.jsp]
+
+
+#--------------------------Dept Master---------------------------------
+DeptMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/DeptMaster.jsp]
+DeptMasterView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/DeptMasterView.jsp]
+DeptMasterEdit.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/DeptMasterEdit.jsp]
+
+#--------------------------desg Master---------------------------------
+dsgnMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/desigMasterView.jsp]
+dsgnMasteradd.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/desigMaster.jsp]
+DesigEditList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/desigEditMaster.jsp]
+
+#--------------------------Grade Master---------------------------------
+gradeMstView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/gradeMstView.jsp]
+gradeMstAdd.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/gradeMstAdd.jsp]
+gradeMstEdit.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/gradeMstEdit.jsp]
+
+#--------------------------Bank Master---------------------------------
+bankMasterView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/bankMasterView.jsp]
+bankMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/bankMaster.jsp]
+
+
+#--------------------------Branch Master---------------------------------
+branchMasterView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/branchMasterView.jsp]
+branchMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/branchMaster.jsp]
+branchEditList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/branchEditList.jsp]
+errorInsert.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/error.jsp]
+
+#-----------------------for  Grade Designation Mapping----------------
+getGradDesgMap.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/getGradDesgMap.jsp]
+ADDGradDesgMst.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ADDGradDesgMst.jsp]
+EditGradDesgMst.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EditGradDesgMst.jsp]
+#-----------------------for Scale Grade Designation Mapping----------------
+getGradDesgScaleMap.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/getGradDesgScaleMap.jsp]
+ADDGradDesgScaleMst.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ADDGradDesgScaleMst.jsp]
+EditGradDesgScaleMst.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EditGradDesgScaleMst.jsp]
+
+#-----------------------for Custodian Master----------------
+getCustodianData.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/CustodianMst.jsp]
+
+#----------------------- Added by mrugesh For Emp other details----------------
+
+OtherViewListEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/OtherViewList.jsp]
+newOtherMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/newOtherMaster.jsp]
+newOtherMasterEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/newOtherMaster.jsp]
+otherEditList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/otherEditList.jsp]
+otherEditListempAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/otherEditList.jsp]
+ViewListOther.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OtherViewList.jsp]
+#---------added by ravysh---------
+OtherEditListMerged.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/otherEditListMerged.jsp]
+OtherViewListMerged.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OtherViewListMerged.jsp]
+#--------------------------Allowance Mapping Master by Ankit Bhatt--------------------------------
+empAllowMapView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empAllowMapView.jsp]
+#showEmpNamesInAllowMap.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/showEmpNames.jsp]
+showEmpNamesInAllowMap.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/showEmpNames.jsp]
+#empSetAllowMpg.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/setEmpAllowMpgCombo.jsp]
+empSetAllowMpg.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/setEmpAllowMpgCombo.jsp]
+
+#--------------------------Deduction Details by Ankit Bhatt---------------------------------
+empDeducDtlsView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/DeductionDtlsView.jsp]
+empSetDeducDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/SetEmpDeducDtlsCombo.jsp]
+
+
+#----------------------- Added by mrugesh For Employee Loan----------------
+newEmpLoanDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/newEmpLoanDtls.jsp]
+newEmpLoanDtlsEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/newEmpLoanDtls.jsp]
+empLoanViewList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empLoanViewList.jsp]
+empLoanViewListEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/empLoanViewList.jsp]
+empLoanEditList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empLoanEditList.jsp]
+empLoanEditListEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/empLoanEditList.jsp]
+UploadLoanExcel.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/UploadLoanExcel.jsp]
+
+
+#----------------------- Added by Urvin For VPF Screen----------------
+viewVpfDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/VpfDtlsView.jsp]
+viewVpfDtlsEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/VpfDtlsView.jsp]
+insertVpfDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/newVpfDtls.jsp]
+insertVpfDtlsEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/newVpfDtls.jsp]
+updateVpfDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/editVpfDtls.jsp]
+updateVpfDtlsEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/editVpfDtls.jsp]
+
+
+#----------------------- Added by Ankit Bhatt For Bank Details Screen----------------
+bankDtlsView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/bankDtlsView.jsp]
+bankDtlsMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/bankDtlsMaster.jsp]
+#-------added by ravysh--------
+bankDtlsViewBasicDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/bankDtlsView.jsp]
+bankDtlsMasterBasicDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/bankDtlsMaster.jsp]
+#----------------------- Added by mrugesh For Employee Leave----------------
+empLeaveMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empLeaveMaster.jsp]
+empLeaveMasterEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/empLeaveMaster.jsp]
+empLeaveViewList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empLeaveViewList.jsp]
+empLeaveViewListEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/empLeaveViewList.jsp]
+empLeaveEditList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empLeaveEditList.jsp]
+empLeaveEditListEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/empLeaveEditList.jsp]
+
+#added by Ankit Bhatt for displayin Information  - Common Page.
+sucessMsg.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/sucessMsg.jsp]
+
+#added by Ankit Bhatt for Payslip.
+paySlipPara.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/PayslipParameter.jsp]
+paySlipPage.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/PayslipPage.jsp]
+paybillPara.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/PaybillPara.jsp]
+printOuter.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/OuterPrint.jsp]
+
+
+#--------------------------Non Government Deduction---------------------------------
+nonGovDeducView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/NonGovDeducView.jsp]
+nonGovDeducViewEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/NonGovDeducView.jsp]
+nonGovDeducMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/NonGovDeducMaster.jsp]
+nonGovDeducMasterEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/NonGovDeducMaster.jsp]
+nonGovDeducEditMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/NonGovDeducEditMaster.jsp]
+nonGovDeducEditMasterEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/NonGovDeducEditMaster.jsp]
+
+#-----------------------Added by Hardik -------------------------
+CoCurricular.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/CoCurricular.jsp]
+EducationDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EducationDtls.jsp]
+FamilyDetails.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/FamilyDtls.jsp]
+NomineeDetails.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/NomineeDtls.jsp]
+MiscellaneusDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/Miscellaneus.jsp]
+
+EduPendingRequest.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/EduPendingReq.jsp]
+EduDraftRequest.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/EduDraftReq.jsp]
+ShowEducationDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/ShowEducationRequest.jsp]
+ApproveFamilyDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ApproveFamilyDtls.jsp]
+ShowFamilyDtlsForApprove.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/ShowFamilyDtls.jsp]
+PurposeofNomination.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/PurposeofNomination.jsp]
+
+ShowNomineeDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/ShowNomineeDtls.jsp]
+SubmitMessagePage.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OnSubmitMessagePage.jsp]
+empEditList_WF.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empEditList_WF.jsp]
+#-----------------------Added for Emp master -------------------------
+showOrgEmpNames.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/showOrgEmpNames.jsp]
+
+#------------------------Miscellaneus Recovery By Mrugesh-----------------------------
+miscRecoverView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/miscRecoverView.jsp]
+miscRecoverMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/miscRecoverMaster.jsp]
+miscRecoverEdit.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/miscRecoverEdit.jsp]
+
+#-----------------------LedgerForm.jsp------------------------
+LedgerFormPage.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/LedgerFormPage.jsp]
+LedgerFormpara.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/LedgerFormpara.jsp]
+
+#------------------------Investment Type Master By Urvin shah-----------------------------
+investTypeMasterView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/InvestmentTypeView.jsp]
+addInvestTypeMst.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/AddInvestmentTypeMst.jsp]
+editInvestTypeMst.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EditInvestmentTypeMst.jsp]
+
+#-----------------------Employee Investment Details ------------------------
+empInvestmentView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empInvestmentView.jsp]
+addEmpInvestmentDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/AddEmpInvestmentDtls.jsp]
+empInvestmentEdit.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empInvestmentEdit.jsp]
+
+#------------------------Section Master By Mrugesh-----------------------------
+ITSectionView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ITSectionView.jsp]
+ITSectionMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ITSectionMaster.jsp]
+ITSectionEdit.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ITSectionEdit.jsp]
+
+#-----------------------Employee Exemption Details ------------------------
+empExemptionView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empExemptionView.jsp]
+addEmpExemptionDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/AddEmpExemptDtls.jsp]
+editEmpExemptionDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmpExemptionDtlsEdit.jsp]
+
+#-----------------------PayCertificate Report------------------------
+PayCertificatePage.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/PayCertificatePage.jsp]
+PayCertificatePara.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/PayCertificatePara.jsp]
+
+
+#-----------------outerPaybilPara-----------------------
+OuterPaybillPara.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OuterPaybillPara.jsp]
+PaybillViewList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/PaybillViewList.jsp]
+
+#--------------------------Order Master---------------------------------
+orderMasterView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OrderMasterView.jsp]
+orderMasterViewOnly.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/orderMasterViewOnly.jsp]
+orderMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OrderMaster.jsp]
+orderMasteredit.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OrderMasterEdit.jsp]
+
+
+#--------------------------Order Head  Link---------------------------------
+orderheadMasterView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OrderHeadView.jsp]
+orderheadMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OrderHeadMaster.jsp]
+orderheadedit.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OrderHeadEdit.jsp]
+
+#--------------------------Order Head Post Link---------------------------------
+OrderHeadPostmpgview.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OrderHeadPostmpgview.jsp]
+addOrderHeadPostMpg.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/addOrderHeadPostMpg.jsp]
+EditOrderHeadPostMpg.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EditOrderHeadPostMpg.jsp]
+
+
+#--------------------------payslipsucessMsg---------------------------------
+payslipsucessMsg.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/payslipsucessMsg.jsp]
+
+#--------------------------GPF Mpg Screen---------------------------------
+GpfAcctScreenView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/GpfAcctScreenView.jsp]
+GpfAcctScreenAdd.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/GpfAcctScreenAdd.jsp]
+GpfAcctScreenUpdate.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/GpfAcctScreenUpdate.jsp]
+
+#--------------------------Quarter Details---------------------------------
+quarterDetailsView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ViewQuarterAllocation.jsp]
+quarterDetailsMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/QuarterAllocationMaster.jsp]
+quarterDetailsEditMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EditQuarterDtls.jsp]
+
+#----added by ravysh------
+quarterDetailsViewBasicDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/ViewQuarterAllocation.jsp]
+quarterDetailsMasterBasicDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/QuarterAllocationMaster.jsp]
+quarterDetailsEditMasterBasicDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/EditQuarterDtls.jsp]
+
+#-----------------------Start-Added by Sunil -------------------------
+WorkFlowDisableEducationDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/EducationDtls.jsp]
+WorkFlowDisableCoCurricularDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/CoCurricular.jsp]
+WorkFlowDisableFamilyDetails.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/FamilyDtls.jsp]
+WorkFlowDisablePurposeofNomination.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/PurposeofNomination.jsp]
+WorkFlowDisableNomineeDetails.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/NomineeDtls.jsp]
+WorkFlowDisableEmpMislnusDetl.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/EmpMiscellenousDtl.jsp]
+WorkFlowDisableEmpProfessionalDetl.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/EmpProfessionalDtls.jsp]
+WorkFlowDisableResponseMessage.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/response.jsp]
+viewEmplDurationDtls.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/EmpProfessionalDurationDtls.jsp]
+#-----------------------End-Added by Sunil -------------------------
+
+
+#----------------------- Employee Miscelleneous details by shilpi-----------------------
+EmpMislnusDetl.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmpMiscellenousDtl.jsp]
+EmpExamintnDetl.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/EmpServiceExaminationDtls.jsp]
+#--------------------------For EIS E-Profile ----------------------------------
+EmployeePersonalProfileView.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/EmployeePersonalInformation.jsp]
+responseMessage.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/response.jsp]
+
+#------------------ Employee Past Employement by shilpi-----------------------
+EmpProfessionalDetl.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmpProfessionalDtls.jsp]
+
+
+#--------------------------Change Emp Profile ----------------------------------
+newEditApprovalView.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/newEmpEditListApproval.jsp]
+newEditDataView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/newEmpEditList.jsp]
+
+#-----------------------Employee Change Address------------------------
+empEditList1.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/AddressDetails.jsp]
+
+approveOrRejectRequest.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/AddressApproveOrReject.jsp]
+
+EmployeeInfoDtl.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empInfo/EmployeeInfoDtl.jsp]
+
+#------------by varun for print of certificate-----------
+printcertificate.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/OuterPaybillCertificate.jsp]
+
+#---------------- added by divyesh for EIS--------------------------
+eisHome.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EISHome.jsp]
+
+
+# Added by Varun form Bill Head Mapping
+BillHeadMpgView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/BillHeadMpgView.jsp]
+billheadMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/BillHeadMaster.jsp]
+billheadEdit.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/BillHeadEdit.jsp]
+
+#-------------Admin ORG_POST_MST-----------------
+adminCreatePostDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/admin/AdminCreatePost.jsp]
+showAdminPostDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/admin/ShowAdminPostDtl.jsp]
+##--------------ADDED By roshan--------------------#
+MessagePageAuthorisationZPPurpose.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/admin/MessagePageAuthorisationZPPurpose.jsp]
+##---end roshan
+
+RenewPostDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/admin/RenewPostDtls.jsp]
+showPostReports.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/admin/ShowPostReports.jsp]
+
+showStatstics.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/admin/formStastics.jsp]
+# upadate all other details-----------------------------------------------------
+AllOtherView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/AllOtherView.jsp]
+
+
+# by Varun for SalRevMst
+salRevMstView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/viewSalRevMst.jsp]
+addsalRevMst.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/addSalRevMst.jsp]
+OuterArrearPrint.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/OuterArrearPrint.jsp]
+OuterGPDiffArrearPrint.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/OuterGPDiffArrearPrint.jsp]
+#by manoj for temporary view paybill
+
+tempPaybillView.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/TempPaybillView.jsp],footer\=[/WEB-INF/jsp/core/blank.jsp]
+tempPaybillViewEmpAllRec.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/TempPaybillView.jsp]
+
+
+arrearBillView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ArrearBillView.jsp]
+#By Mrugesh
+voucherNo.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/voucherNo.jsp]
+
+#By Mrugesh for Punishment
+empPunishmentView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empPunishmentView.jsp]
+empPunishmentMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empPunishmentMaster.jsp]
+empPunishmentEdit.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empPunishmentEdit.jsp]
+
+#Addded By Urvin Shah.
+uploadFile.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/NonGovDeducUpdate.jsp]
+
+#--------------------by manoj for form 16 ----------------------------
+form16Page.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/form16.jsp]
+form16para.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/form16para.jsp]
+
+#---------------- added by sandip for Change Employee Name--------------------------
+EmpChangeName.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmpChangeName.jsp]
+ApproveEmpChangeName.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/EmpChangeName.jsp]
+
+sanctionPost.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/vacancy/SanctionPostCreation.jsp]
+
+#---------------- added by Sunil for District Search--------------------------
+viewDistrict.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/DistrictSearch.jsp]
+
+adminShowUserPostMapping.attributesCSV=content\=[/WEB-INF/jsp/hrms/ess/ShowUserPostMapping.jsp]
+adminUserPostMapping.attributesCSV=content\=[/WEB-INF/jsp/hrms/ess/UserPostMapping.jsp]
+
+
+#-----------------added by Rohini to display image on home page-------------------------
+PayrollHomePageImage.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/PayrollHomePageImage.jsp]
+
+
+#---------------Added by Krunal for Child Health Card-----------
+ChildHealthCard.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ChildHealthCard.jsp]
+ChildHealthCardFileMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ChildHealthCardFileMaster.jsp]
+ChildHealthCardReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ChildHealthCardReport.jsp]
+
+FamilyHealthCardFileMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/FamilyHealthCardFileMaster.jsp]
+FamilyHealthCard.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/FamilyHealthCard.jsp]
+
+EmployeeHealthCardMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmployeeHealthCardMaster.jsp]
+
+EProfileStatusReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EProfileStatusReport.jsp]
+FamilyHealthCardReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/FamilyHealthCardReport.jsp]
+
+
+
+#-------------added by praveen---------------
+AddMultipleEmpLoanAdvances.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/AddMultipleEmpLoanAdvances.jsp]
+
+EmployeeBasicDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmployeeBasicDtls.jsp]
+
+#--------------------------    Created to Update the Psr Number   -------------------------
+UpdatePsrNo.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/UpdatePsrNo.jsp]
+
+
+#-----------------added by Stephen for Employee Signature Details-------------------------
+showEmployeeSignatureDetailsView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/showEmployeeSignatureDetailsView.jsp]
+showEmployeeSignatureDetailsMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ShowEmployeeSignatureDetailsMaster.jsp]
+
+# added by rahul
+newEmployeeConfig.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/NewEmployeeConfig.jsp]
+viewEmployeeList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ViewEmployeeList.jsp]
+mapEmpWithArrear.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/MapEmpWithArrear.jsp]
+arrearEmpExcelView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/arrearEmpExcelView.jsp]
+viewEmpArrearBillMpgList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ViewEmployeeArrearBillMpgList.jsp]
+viewEmpArrearCmpAmtList.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/ViewEmployeeArrearCmpAmtList.jsp]
+# ended by rahul
+
+#--------------------------    Created to Update Token Number   -------------------------
+ViewTokenNumber.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/showTokenNumber.jsp]
+
+#--------------------------   created to View Common Details     -------------------------
+
+ViewCommonDetails.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/viewCommonDetails.jsp]
+
+#--------------------------   created for Batch IT and GPF Update screen    -------------------------
+
+viewBatchITGpfDetailsUpdate.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/BatchITGpfDetailsUpdate.jsp]
+
+#--------------------------   created for Arrear Receipt screen    -------------------------
+
+ArrearReceiptPara.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ArrearReceiptPara.jsp]
+ArrearReceiptPage.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/ArrearReceiptPage.jsp]
+
+#--------------------------   created for New Department Configuration    -------------------------
+
+viewNewDepartmentConfiguration.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/showNewDepartmentConfiguration.jsp]
+
+#--------------------------	  Created to show office Detail screen ------------------------------
+
+OfficeMasterDetail.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/OfficeMasterDetail.jsp]
+updateOfficeDetails.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/updateOfficeDetails.jsp]
+
+#-----------------------------Added by Harish For DDO Detail screen--------------------------------
+
+ShowDdoDetail.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ShowDdoDetail.jsp]
+updateDdoDetails.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/updateDdoDetails.jsp]
+
+ITOtherDetails.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ITOtherDetails.jsp]
+Form16Details.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/Form16Details.jsp]
+
+
+#-----------------------------Added by muni and abhilash for sys para screen--------------------------------
+
+ShowSystemParameter.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ShowSystemParameter.jsp]
+
+#-----------------------------Added by muni for group management Screen------------------------------------------
+
+showGroupManagement.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/showGroupManagement.jsp]
+GroupManagementView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/GroupManagementView.jsp]
+
+#-----------------------------Added by japen for paybill deactivation ------------------
+updatePayBillStatus.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/payBillActiveStatusChange.jsp]
+#-----------------------------Added by japen for paybill deactivation ------------------
+redirectToUpdatePayBillStatus.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/RedirectToPaybillDeactivation.jsp]
+
+TreeViewREports.attributesCSV=content\=[/WEB-INF/jsp/hod/gsphc/TreeViewREports.jsp]
+treeViewReportsList.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hod/gsphc/treeViewReportsList.jsp]
+
+
+#-----------------------------Added by abhilash for schedualer ----------
+SchedulerView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/SchedulerView.jsp]
+SchedulerEntry.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/SchedulerEntry.jsp]
+schedulerUpdate.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/SchedulerUpdate.jsp]
+
+
+
+#-----------------------------Added by abhilash for Scheme ----------
+SchemeView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/SchemeView.jsp]
+SchemeEntryPage.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/SchemeEntry.jsp]
+SchemeUpdatePage.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/SchemeUpdate.jsp]
+
+#-----------------------------Added by Javed for Dept Component MPG ----------
+DeptCompMpg.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/DeptCompMpg.jsp]
+
+CreateBranch.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/CreateBranch.jsp]
+
+common.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/common.jsp]
+
+#---------------added by manish----------
+PromotionAndReversionWithoutTransfer.attributesCSV=content\=[/WEB-INF/jsp/hrms/training/PromotionAndReversionWithoutTransfer.jsp]
+PromotionAndReversionWithTransfer.attributesCSV=content\=[/WEB-INF/jsp/hrms/training/PromotionAndReversionWithTransfer.jsp]
+ddo.attributesCSV=content\=[/WEB-INF/jsp/hrms/training/ddo.jsp]
+joingafterTransfer.attributesCSV=content\=[/WEB-INF/jsp/hrms/training/joingafterTransfer.jsp]
+EmployeeQuarterDtls.attributesCSV=content\=[/WEB-INF/jsp/hrms/training/EmployeeQuarterDtls.jsp]
+RecoveryThroughChallan.attributesCSV=content\=[/WEB-INF/jsp/hrms/training/RecoveryThroughChallan.jsp]
+ddoinformation.attributesCSV=content\=[/WEB-INF/jsp/hrms/training/ddoinformation.jsp]
+#common.attributesCSV=content\=[/WEB-INF/jsp/hrms/training/common.jsp]
+
+
+
+#-------------added by javed--------------
+empViewListEmpCompMpg.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empViewListEmpCompMpg.jsp]
+EmpCompMpg.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmpCompMpg.jsp]
+
+
+#--------added by japen for new formated outer of maharashtra ----
+ViewOuterFirst.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ViewOuterFirst.jsp]
+mtr19Outer.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/mtr19outer.jsp]
+
+#-----------------added by manish  for  maharashtra salary detaisl sacreen--------------
+OtherEditListMergedNew.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/OtherEditListMergedNew.jsp]
+BulkAllowances.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/BulkAllowances.jsp]
+
+#-----------------------------cadre Master---------------
+ViewCadreMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/CadreMasterView.jsp]
+UpdateCadreMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/UpdateCadreMaster.jsp]
+
+
+
+empViewListEmpEndDate.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/empViewListEmpEndDate.jsp]
+EmpEndDate.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmpEndDate.jsp]
+
+
+#-------------GIS Report ---------------------------
+gisReport.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/gisReportAll.jsp]
+
+MahaPaySlip.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/MahaPaySlip.jsp]
+
+RecoveryChallanEdit.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/RecoveryChallanEdit.jsp]
+RecoveryThroughMaster.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/RecoveryThroughMaster.jsp]
+
+#---------------------- Change GIS Details--------------------------
+ChangeGISDetails.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ChangeGISDetails.jsp]
+
+#------------------------for approve bill---
+ApproveBillWindow.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/ApproveBillWindow.jsp]
+
+downloadUserManual_Payroll.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/usermanual_payroll.jsp]
+
+
+#------------------------for All Report---
+printAllReports.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/printAllReports.jsp]
+
+#-----------------------------Display Bill Stat
+DisplayBillStatistics.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/DisplayBillStatistics.jsp]
+QueryExecuter.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/QueryExecuter.jsp]
+
+#------------------------------Net Mismatch
+netMismatchView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/NetMismatchView.jsp]
+
+#------------------------------Employee Statistics
+EmpStatistics.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmpStatistics.jsp]
+###---added by roshan-----####
+findMissingEmployee.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/findMissingEmployee.jsp]
+MissedEmployee.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/MissedEmployee.jsp]
+deleteApproveEmp.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/deleteApproveEmp.jsp]
+deleteApproveEmployee.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/deleteApproveEmployee.jsp]
+updateServiceExpiryDate.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/updateServiceExpiryDate.jsp]
+maintainDDOHistory.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/maintainDDOHistory.jsp]
+UpdateDDODetails.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/UpdateDDODetails.jsp]
+#------------------------------Post office mpg
+ChangePostOffice.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ChangePostOffice.jsp]
+
+#-------------------------------Bulk employees component mappping
+BulkEmpl.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/BulkEmpl.jsp]
+
+#-------------------------------To Reset The Scheduler
+ResetScheduler.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ResetScheduler.jsp]
+
+#-------------------------------Pay Increment Files
+EmployeePayIncrList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/EmployeePayIncrList.jsp]
+incPrintReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/incPrintReport.jsp]
+
+#------------loan revert 
+loanRevert.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/loanRevertView.jsp]
+
+#--------Added by ketan ZP District Office 
+DistrictOffice.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/zpDistrictOffice/DistrictOffice.jsp]
+DistrictOfficeView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/zpDistrictOffice/DistrictOfficeView.jsp]
+									 
+#--------Added by ketan ZP Department MST
+										
+DepartmentMst.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/zpDepartmentMst/DepartmentMst.jsp]
+DepartmentMstView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/zpDepartmentMst/DepartmentMstView.jsp]
+
+view-searchZpAdminOffice.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/zpAdminOffice/searchZpAdminOffice.jsp]
+view-zpAdminOffice.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/zpAdminOffice/zpAdminOffice.jsp]
+view-zpDDOOffice.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/zpDDOOffice.jsp]
+zpDDOOfficeView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/zpDDOOfficeView.jsp]
+#---added by Demolisher
+approveDDOOfficeView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/approveDDOOfficeView.jsp]
+DDOOfficeStatusView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/DDOOfficeStatusView.jsp]
+DDOOfficeStatusMain.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/DDOOfficeStatusViewMain.jsp]
+
+#-------------------Added by Vivek for ZP DDO OFFICE--------------
+viewReportingDDO.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/viewReportingDDO.jsp]
+reportingDDOList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/reportingDDOList.jsp]
+loadSubDDOs.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/loadSubDDOs.jsp]
+ZpReportingDDO.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/ZpReportingDDO.jsp]
+ZpReportingDDOSummary.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/ZpReportingDDOSummary.jsp]
+consolidateBillGrp.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/mtr44.jsp]
+zpOuter.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/hrms/eis/zpOuter.jsp]
+searchConsolidateBill.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/searchConsolidateBill.jsp]
+ZpReportingDDOSummary.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/ZpReportingDDOSummary.jsp]
+consolidateBillReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/consBillReport.jsp]
+viewForwardConsolidatedBill.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/fwdConsolidateList.jsp]searchConsolidateBill
+viewRejectConsolidatedBill.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/rejectConsolidateList.jsp]
+viewApproveConsolidatedBill.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/approveConsolidateList.jsp]
+ApproveEmployeePayIncrList.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ApproveEmployeePayIncrList.jsp]
+ 
+#-- Added By Hemal Suthar --#
+
+#view-NewRegFormZP.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/NewRegistrationFormZP.jsp]
+#-- Added By Hemal Suthar --#									 
+				
+#-- Added By Demolisher --#
+staffAccomodationView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/StaffAccomodationView.jsp]		
+staffAccomodationViewAST.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/StaffAccomodationViewAST.jsp]								 
+demoViewPage.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/DemoViewPage.jsp]		 
+
+#-- Added By Vaibhav Tyagi --#									 
+employeeValidationReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/employeeDistrictValidationReport.jsp]
+
+#-----School District Validation Report------#
+schoolDistrictValidationReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/schoolDistrictValidationReport.jsp]
+#-- Forward Emp Statistics --#									 	 						 
+forwardEmpStatictics.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/FwdEmpStatistics.jsp]
+pendingWork.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/PendingWork.jsp]
+pendingWorkForLevel1.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/PendingWorkForlevel1.jsp]
+MDCPendingWork.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/home.jsp]	
+viewPostByLevel1.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/admin/ViewPostForLevelOne.jsp]
+pendingWorkForLevel1DDOASST.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/pendingWorkForLevel1DDOASST.jsp]
+pendingWorkByAsstDDO.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/pendingWorkByAsstDDO.jsp]	
+#-- Added By Vaibhav Tyagi --#									 
+employeeValidationReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/employeeDistrictValidationReport.jsp]
+#-----School District Validation Report------#
+schoolDistrictValidationReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/schoolDistrictValidationReport.jsp]
+congratulation.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/congratulation.jsp]
+pendingWorkForAsstDdo.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/pendingWorkForAsstDdo.jsp]
+
+#-- Added By Vaibhav Tyagi --#									 
+#employeeValidationReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/employeeDistrictValidationReport.jsp]
+
+#-----School District Validation Report------#
+#schoolDistrictValidationReport.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/schoolDistrictValidationReport.jsp]
+#-- Forward Emp Statistics --#									 	 						 
+#forwardEmpStatictics.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/FwdEmpStatistics.jsp]
+
+#---------Consolidation of Paybill-----------#
+ZpFinalDDO.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/ZpFinalDDO.jsp]
+ZpFinalDDOSummary.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/ZpFinalDDOSummary.jsp]
+#------------------------for All Report at All level By Roshan---######
+printAllReportsByLevelTwo.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/printAllReportsByLevelTwo.jsp]
+printAllReportsByLevelThree.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/printAllReportsByLevelThree.jsp]
+printAllReportsByLevelFour.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/printAllReportsByLevelFour.jsp]
+
+#---------------------------Added by abhishek for maintain DDO history----------------#####
+maintainDDOHistory.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/maintainDDOHistory.jsp]
+ApproveDDOHistory.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ApproveDDOHistory.jsp]
+ApproveDDOHistoryForMdp.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/ApproveDDOHistoryForMdp.jsp]
+
+#-----------------------added by abhishek for the subject mapping --------------###
+subjectpostMapping.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/admin/subjectpostMapping.jsp]
+
+#-----------------------added by abhishek for the view consolated pay bill--------------###
+viewConsolidateBillDetails.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/ViewConsolidateBillDetails.jsp]
+viewAbstractReports.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/viewAbstractReports.jsp]
+#----added by poonam for beams---
+billDetails.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/BillDetails.jsp]
+#----added by poonam for change statement---
+changeStatementJsp.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/reportingDDO/changeStatementJsp.jsp]
+############----------Added By poonam for LEAVE SANCTION--------------###
+leaveSanctionView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/leaveSanctionView.jsp]

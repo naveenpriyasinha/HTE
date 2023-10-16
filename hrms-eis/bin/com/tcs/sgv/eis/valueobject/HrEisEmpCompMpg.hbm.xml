@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2008 7:42:30 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisEmpCompMpg" table="HR_EIS_EMP_COMPONENT_MPG">
+        <comment></comment>
+
+        <id name="EmpCompId" type="long">
+            <column name="EMP_COMP_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+		
+		<many-to-one name="cmnLookupMst" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="COMPO_TYPE">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <property name="compId" type="long">
+            <column name="COMPO_ID" precision="10" scale="0" />
+        </property>
+        
+		<property name="isactive" type="long">
+            <column name="IS_ACTIVE" precision="10" scale="0" />
+        </property>
+        
+        <many-to-one name="hrEisEmpCompGrpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpCompGrpMst" fetch="select">
+            <column name="COMPO_GROUP_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+     
+     	<property name="startDate" type="timestamp">
+            <column name="START_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="endDate" type="timestamp">
+            <column name="END_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+	
+		<property name="remarks" type="string">
+            <column name="REMARKS" length="200" />
+        </property>
+        
+        <property name="updatedByPost" type="java.lang.Long">
+            <column name="UPDATED_BY" precision="10" scale="0" />
+        </property>
+        
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

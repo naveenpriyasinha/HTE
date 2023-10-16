@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 23, 2007 4:22:01 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.exprcpt.valueobject.WebPurposeDetails" table="WEB_PURPOSE_DETAILS" >
+        
+            <id name="wpdChallanId" type="string">
+                <column name="WPD_CHALLAN_ID" length="15" />
+            </id>
+            <property name="wpdMajorHead" type="string">
+                <column name="WPD_MAJOR_HEAD" length="5" />
+            </property>
+            <property name="wpdSubMajorHead" type="string">
+                <column name="WPD_SUB_MAJOR_HEAD" length="5" />
+            </property>
+            <property name="wpdMinorHead" type="string">
+                <column name="WPD_MINOR_HEAD" length="8" />
+            </property>
+            <property name="wpdSubMinorHead" type="string">
+                <column name="WPD_SUB_MINOR_HEAD" length="5" />
+            </property>
+            <property name="wpdDetailHead" type="string">
+                <column name="WPD_DETAIL_HEAD" length="5" />
+            </property>
+            <property name="wpdAmount" type="string">
+                <column name="WPD_AMOUNT" length="15" />
+            </property>
+            <property name="wpdCreatedBy" type="string">
+                <column name="WPD_CREATED_BY" length="8" />
+            </property>
+            <property name="wpdCreatedDt" type="date">
+                <column name="WPD_CREATED_DT" length="7" />
+            </property>
+            <property name="wpdUpdatedBy" type="string">
+                <column name="WPD_UPDATED_BY" length="8" />
+            </property>
+            <property name="wpdUpdatedDt" type="date">
+                <column name="WPD_UPDATED_DT" length="7" />
+            </property>
+        
+    </class>
+</hibernate-mapping>

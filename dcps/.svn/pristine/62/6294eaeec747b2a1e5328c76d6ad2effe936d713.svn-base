@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!--
+  - Root application context for the Countries application.
+  - Web-specific beans are defined in "countries-servlet.xml".
+  -->
+<beans>
+
+	<!--
+	  - The message source for this context, loaded from localized "messages_xx" files
+	  - in the classpath, i.e. "/WEB-INF/classes/messages.properties" or
+	  - "/WEB-INF/classes/messages_fr.properties".
+	  -
+	  - "getMessage" calls to this context will use this source.
+	  - Child contexts can have their own message sources, inheriting all messages from this
+	  - source, being able to define new messages and override ones defined in this source.
+	  -
+	  - We have no need for application messages in this tiny application, so this
+		- definition will simply be used by the next level (countries-servlet.xml).
+	  -->
+
+
+
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">	
+		<property name="basenames">
+		<list>
+		    <value>resources.pensionproc.PensionCaseLabels</value>
+		    <value>resources.gpf.gpfLabels</value>
+		    <!--<value>resources.lna.lnaLabels</value>-->
+		    <value>resources.dcps.dcpsLabels</value>
+			<value>resources.pensionpay.PensionCaseLabels</value>
+			<value>resources.pensionpay.PensionLabels</value>
+			<value>resources.pensionpay.PensionBillAlerts</value>
+			<value>resources.pensionpay.PensionConstants</value>
+			<value>resources.hr.payincrement.PayInc</value>
+			<value>resources.mstscr.hrms_mstscr</value>
+			<value>resources.ess.utils.search.search</value>
+			<value>resources.eis.eisLables</value>
+			<value>resources.hr.dept.deptLables</value>
+			<value>resources.ess.UserPost</value>		
+			<value>resources.emd.EMDLabels</value>
+			<value>resources.pdpla.PdPlaLabels</value>
+			<value>resources.billproc.billproc</value>			
+			<value>resources.admin.admin</value>
+			<value>resources.expacct.expacct</value>
+			<value>resources.rcptacct.rcptacct</value>
+			<value>resources.onlinebillprep.CommonLabels</value>
+			<value>resources.pension.PensionLabels</value>
+			<value>resources.lf.PreAuditLabels</value>
+			<value>resources.lf.PayFixationLabels</value>
+			<value>resources.acl.acegiMessages</value>
+			<value>resources.ess.UserDsgnLables</value>
+			<value>resources.acl.AclRole</value>
+			<value>resources.acl.acl</value>
+			<value>resources.common.MstScrLables</value>
+			<value>resources.common.CmnLocationMst</value>	
+			<value>resources.ess.OrgDeptMstLabels</value>
+			<value>resources.ess.OrgGradeMstLabels</value>
+			<value>resources.ess.UserPost</value>
+			<value>resources.common.BranchMasterLables</value>
+			<value>resources.eis.zp.zpAdminOffice.ZpAdminOfficeLabels</value>
+			<value>resources.eis.zp.zpDDOOffice.ZpDDOOfficeLabels</value>
+		</list>
+		</property>
+	</bean>
+
+<!--  Added for multi-language support. -->
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver"/>
+
+
+
+
+
+
+
+
+
+
+</beans>

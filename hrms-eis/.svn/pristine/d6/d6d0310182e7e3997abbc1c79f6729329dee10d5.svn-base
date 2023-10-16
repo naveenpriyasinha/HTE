@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.tcs.sgv.eis.valueobject.HrForm16BankMst" table="HR_FORM16_BANK_MST">
+  		<id name="bankId" type="long">
+            <column name="BANK_ID"/>
+            <generator class="assigned" />
+        </id>
+        
+        <property name="bankName" type="string">
+            <column name="BANK_NAME" />
+        </property>
+        
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="19"/>
+        </property>
+   </class>
+</hibernate-mapping>

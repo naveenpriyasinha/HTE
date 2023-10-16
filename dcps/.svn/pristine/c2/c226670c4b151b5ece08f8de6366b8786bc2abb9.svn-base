@@ -1,0 +1,55 @@
+<%@ include file="../../../core/include.jsp"%>
+<%@ taglib prefix="hdiits" uri="http://hdiits.tcs.com"%>
+<%@ taglib uri="http://ajaxtags.org/tags/ajax" prefix="ajax"%>
+
+<c:set var="resultObj" value="${result}">
+</c:set>
+<c:set var="resultValue" value="${resultObj.resultValue}">
+</c:set>
+<c:set var="message" value="${resultValue.msg}">
+</c:set>
+<c:set var="id" value="${resultValue.appReqId}">
+</c:set>
+
+
+<fmt:setBundle basename="resources.hr.foreigntourtravel.foreigntourtravel" var="foreignTourLables" scope="request"/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<table width="100%" align="center" 	style="margin: 5px 0px;  font-family: arial; color: #333333;border: solid 1px #6B2700; width: 50%; clear: center;">
+	<tr >
+		<td align="right">
+		<b><font color="red">*</font></b>
+		<b><fmt:message key="HRMS.TYPE" bundle="${foreignTourLables}"/> :</b>
+		</td>
+		<td align="left"><fmt:message key="HRMS.${message}" bundle="${foreignTourLables}"/>(${id})
+		</td>
+		</tr>
+		<tr align="center">
+		<td align="right">
+		<b><font color="red">*</font><fmt:message key="HRMS.APPROVER" bundle="${foreignTourLables}"/> :</b>	
+			</td>
+		<td  align="left" >
+		 ${resultValue.fwdTo}
+		</td>
+		</tr>
+
+</table>
+
+
+
+
+
+
+
+
+	

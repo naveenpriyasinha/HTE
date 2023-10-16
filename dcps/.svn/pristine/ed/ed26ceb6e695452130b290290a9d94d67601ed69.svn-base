@@ -1,0 +1,67 @@
+/*
+Added By Sagar
+Do not Modify & Delete
+*/
+
+.pnsntexttag
+{
+//padding: 2px;
+}
+
+.pnsnradioOnFocustag
+{
+border: solid 2px #FF0000;
+}
+.pnsnradiotag
+{
+border: solid 1px #000000;
+}
+
+.pnsntextOnFocustag
+{
+border: solid 2px #FF0000;
+background-color: #FEEEF4;
+padding: -1px;
+}
+
+.pnsnselectOnFocustag
+{
+scrollbar-face-color:#8080FF;
+scrollbar-arrow-color:#FFFFFF;
+scrollbar-track-color:#DDDDFF;
+scrollbar-shadow-color:'red';
+scrollbar-highlight-color:'red';
+scrollbar-3dlight-color:'red';
+scrollbar-darkshadow-Color:'red';
+}
+
+.pnsntextareatag{
+	font-family:  Arial, Verdana, Helvetica, sans;
+	font: inherit;
+}
+
+.pnsntextareatag, .pnsnselecttag{
+scrollbar-3dlight-color:#eeeeee; 
+scrollbar-arrow-color:#000000; 
+scrollbar-base-color:#ababab; 
+scrollbar-darkshadow-color:#444444; 
+scrollbar-face-color:#bbbbbb; 
+scrollbar-highlight-color:#bbbbbb; 
+scrollbar-shadow-color:#999999;
+}
+.gridDiv{
+	float: inherit;
+	border: 1px #000000;
+	background-color: transparent;
+	height: 100px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scrollbar-3dlight-color:#9FAFDF;
+    scrollbar-arrow-color:#191970;
+    scrollbar-base-color:#729FD8;
+    scrollbar-track-color:#EAF1F8;
+    scrollbar-darkshadow-color:#9FAFDF;
+    scrollbar-face-color:#729FD8;
+    scrollbar-highlight-color:#B0E0E6;
+    scrollbar-shadow-color:#9FAFDF;
+}

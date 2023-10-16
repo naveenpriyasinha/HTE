@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 14, 2007 5:48:26 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.exprcpt.valueobject.HstBsPayEntries" table="hst_bs_pay_entries" >
+        <comment></comment>
+        <id name="hstPayEntryId" type="long">
+            <column name="hst_pay_entry_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="bsPayEntryId" type="long">
+            <column name="bs_pay_entry_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="bsDetailId" type="long">
+            <column name="bs_detail_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="paymentNo" type="java.lang.Integer">
+            <column name="payment_no">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="payeeName" type="string">
+            <column name="payee_name" length="45" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chequeNo" type="int">
+            <column name="cheque_no" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="chequeDate" type="timestamp">
+            <column name="cheque_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="45" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="20" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="initial" type="string">
+            <column name="initial" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="remarks" type="string">
+            <column name="remarks" length="45">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="long">
+            <column name="created_user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="long">
+            <column name="created_post_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="long">
+            <column name="updated_user_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="long">
+            <column name="updated_post_id" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locId" type="long">
+            <column name="LOC_ID"  not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="dbId" type="long">
+            <column name="DB_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

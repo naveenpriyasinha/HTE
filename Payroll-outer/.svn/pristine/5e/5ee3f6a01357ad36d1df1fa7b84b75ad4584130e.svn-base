@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 4, 2008 5:52:02 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.pension.valueobject.TrnPensionPsbDtls" table="TRN_PENSION_PSB_DTLS" dynamic-update="true">
+        <id name="psbDtlId" type="long">
+            <column name="PSB_DTL_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="ppoNo" type="string">
+            <column name="PPO_NO" length="35" not-null="true" />
+        </property>
+        <property name="actualPayment" type="big_decimal">
+            <column name="ACTUAL_PAYMENT" precision="12" />
+        </property>
+        <property name="bankPayment" type="big_decimal">
+            <column name="BANK_PAYMENT" precision="12" />
+        </property>
+        <property name="lessPayment" type="big_decimal">
+            <column name="LESS_PAYMENT" precision="12" />
+        </property>
+        <property name="excessPayment" type="big_decimal">
+            <column name="EXCESS_PAYMENT" precision="12" />
+        </property>
+        <property name="differenceAmount" type="big_decimal">
+            <column name="DIFFERENCE_AMOUNT" precision="12" />
+        </property>
+        <property name="bankCode" type="string">
+            <column name="BANK_CODE" length="20" />
+        </property>
+        <property name="voucherNo" type="big_decimal">
+            <column name="VOUCHER_NO" precision="20" scale="0" />
+        </property>
+        <property name="monthYear" type="int">
+            <column name="MONTH_YEAR" precision="6" scale="0" not-null="true" />
+        </property>
+        <property name="dbId" type="big_decimal">
+            <column name="DB_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true" />
+        </property>
+        <property name="createdUserId" type="big_decimal">
+            <column name="CREATED_USER_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdPostId" type="big_decimal">
+            <column name="CREATED_POST_ID" precision="20" scale="0" not-null="true" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="updatedUserId" type="big_decimal">
+            <column name="UPDATED_USER_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedPostId" type="big_decimal">
+            <column name="UPDATED_POST_ID" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="incomeTaxCutAmount" type="big_decimal">
+            <column name="INCOME_TAX_CUT_AMOUNT" precision="10" />
+        </property>
+        <property name="pensnCutAmount" type="big_decimal">
+            <column name="PENSN_CUT_AMOUNT" precision="10" />
+        </property>
+        <property name="specialCutAmount" type="big_decimal">
+            <column name="SPECIAL_CUT_AMOUNT" precision="10" />
+        </property>
+        <property name="dpAmount" type="big_decimal">
+            <column name="DP_AMOUNT" precision="10" />
+        </property>
+        <property name="tiAmount" type="big_decimal">
+            <column name="TI_AMOUNT" precision="10" />
+        </property>
+        <property name="medicalAllowenceAmount" type="big_decimal">
+            <column name="MEDICAL_ALLOWENCE_AMOUNT" precision="6" />
+        </property>
+        <property name="arrearAmount" type="big_decimal">
+            <column name="ARREAR_AMOUNT" precision="10" />
+        </property>
+        <property name="recoveryAmount" type="big_decimal">
+            <column name="RECOVERY_AMOUNT" precision="10" />
+        </property>
+        <property name="cvpMonthlyAmount" type="big_decimal">
+            <column name="CVP_MONTHLY_AMOUNT" precision="10" />
+        </property>
+        <property name="basicPension" type="big_decimal">
+            <column name="BASIC_PENSION" precision="10" />
+        </property>
+        <property name="personalPensionAmount" type="big_decimal">
+            <column name="PERSONAL_PENSION_AMOUNT" precision="10" />
+        </property>
+        <property name="irAmount" type="big_decimal">
+            <column name="IR_AMOUNT" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

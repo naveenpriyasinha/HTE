@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayUpdatebillRemarks" table="HR_PAY_UPDATEPAYBILL_REMARKS">
+    
+        <id name="id" type="long">
+            <column name="id"  />
+            <generator class="assigned" />
+        </id>        
+          <many-to-one name="hrPayUpdatebillDtls" class="com.tcs.sgv.eis.valueobject.HrPayUpdatebillDtls" fetch="select">
+            <column name="UPDATEPAYBILL_ID"  >
+                <comment></comment>
+            </column>
+        </many-to-one>
+		<many-to-one name="rltBillTypeEdp" class="com.tcs.sgv.eis.valueobject.RltBillTypeEdp" fetch="select">
+            <column name="TYPE_EDP_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="500" />
+        </property>
+
+   </class>
+</hibernate-mapping>

@@ -1,0 +1,9 @@
+/*Not really sure why IE needs all these,but it works!*/
+.horizontalOther  li ul{
+	margin-top: 22px;
+	margin-left: -157px;
+}	
+.horizontalOther  li li ul{
+	position: absolute;
+	left: 0px;
+}

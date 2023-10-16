@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+ <!-- 
+      Author:nishant.vaidya@tcs.com
+      version:1.0
+      Created date:13/07/2008
+      Description:Configuration file used to implement cas authentication ( Single Sign On) for hdiits framework
+                  using spring security 2.0.4 and cas-client-core-3.1.3. and spring-security-cas-client-2.0.4. 
+                  
+                  
+   -->
+<beans>
+   <!-- ======================== FILTER CHAIN ======================= -->
+
+  <bean id="filterChainProxy" class="org.springframework.security.util.FilterChainProxy">
+    <property name="filterInvocationDefinitionSource">
+   
+<value><![CDATA[
+			CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+                   /.*=channelProcessingFilter,httpSessionContextIntegrationFilter,casLogoutFilter,casLogoutCallbackFilter,casProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor
+		]]></value>
+    </property>
+  </bean>
+   <!-- To disable single sign out remove the filters named casLogoutFilter and casLogoutCallbackFlter from above the value property -->
+
+  <!-- ======================== AUTHENTICATION ======================= -->
+
+  <bean id="authenticationManager" class="org.springframework.security.providers.ProviderManager">
+    <property name="providers">
+      <list>
+        <ref local="casAuthenticationProvider"/>
+      </list>
+    </property>
+  </bean>
+
+	<bean id="casAuthenticationProvider" class="org.springframework.security.providers.cas.CasAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService"/>
+        <property name="serviceProperties" ref="serviceProperties"/>
+        <property name="statelessTicketCache"><ref local="statelessTicketCache"/></property>
+        <property name="ticketValidator">
+            <bean class="org.jasig.cas.client.validation.Cas20ServiceTicketValidator">
+                <constructor-arg index="0" value="${CasTicketValidatorUrl}"/>
+            </bean>
+            </property>
+		<property name="key"><value>changeit</value></property>
+	</bean>
+	<bean id="userDetailsService" class="com.tcs.sgv.acl.acegilogin.dao.AuthenticationDaoImpl"></bean>
+	<bean id="statelessTicketCache" class="org.springframework.security.providers.cas.cache.EhCacheBasedTicketCache">
+      <property name="cache"><ref local="ticketCacheBackend"/></property>
+	</bean>
+	
+ 	<bean id="httpSessionContextIntegrationFilter" class="org.springframework.security.context.HttpSessionContextIntegrationFilter"/>
+
+  <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"/>
+
+  <bean id="ticketCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+    <property name="cacheManager"><ref local="cacheManager"/></property>
+    <property name="cacheName" value="ticketCache"/>
+  </bean>
+
+	<!-- ===================== HTTP CHANNEL REQUIREMENTS ==================== -->
+
+	<!-- Enabled by default for CAS, as a CAS deployment uses HTTPS -->
+	<bean id="channelProcessingFilter" class="org.springframework.security.securechannel.ChannelProcessingFilter">
+		<property name="channelDecisionManager"><ref local="channelDecisionManager"/></property>
+ 		<property name="filterInvocationDefinitionSource">
+			<value>
+			    CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				\A/j_spring_cas_security_check.*\Z=REQUIRES_SECURE_CHANNEL
+				\A.*\Z=REQUIRES_INSECURE_CHANNEL
+			</value>
+		</property>
+	</bean>
+
+	<bean id="channelDecisionManager" class="org.springframework.security.securechannel.ChannelDecisionManagerImpl">
+	    <property name="channelProcessors">
+      		<list>
+ 	        	<ref local="secureChannelProcessor"/>
+        		<ref local="insecureChannelProcessor"/>
+     		</list>
+	    </property>
+	</bean>
+
+	<bean id="secureChannelProcessor" class="org.springframework.security.securechannel.SecureChannelProcessor"/>
+	<bean id="insecureChannelProcessor" class="org.springframework.security.securechannel.InsecureChannelProcessor"/>
+
+	<!-- ===================== HTTP REQUEST SECURITY ==================== -->
+	
+	<bean id="casProcessingFilter" class="org.springframework.security.ui.cas.CasProcessingFilter">
+		<property name="authenticationManager"><ref local="authenticationManager"/></property>
+		<property name="authenticationFailureUrl"><value>/${CasAuthenticationFailureUrl}</value></property>
+		<property name="alwaysUseDefaultTargetUrl" value="${CasAlwaysUseDefaultTargetUrl}"/>
+		<property name="defaultTargetUrl"><value>/${CasDefaultTargetUrl}</value></property>
+		<property name="filterProcessesUrl"><value>/j_spring_cas_security_check</value></property>
+	</bean>
+	
+	<bean id="exceptionTranslationFilter" class="org.springframework.security.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint"><ref local="casProcessingFilterEntryPoint"/></property>
+	</bean>
+	
+	<bean id="casProcessingFilterEntryPoint" class="org.springframework.security.ui.cas.CasProcessingFilterEntryPoint">
+		<property name="loginUrl"><value>${CasLoginUrl}</value></property>
+		<property name="serviceProperties"><ref local="serviceProperties"/></property>
+	</bean>
+	
+	<bean id="serviceProperties" class="org.springframework.security.ui.cas.ServiceProperties">
+		<property name="service" value="${CasServiceUrl}"/> 
+		<property name="sendRenew" value="false"/>
+	</bean>
+
+	<bean id="httpRequestAccessDecisionManager" class="org.springframework.security.vote.AffirmativeBased">
+   		<property name="allowIfAllAbstainDecisions"><value>false</value></property>
+		<property name="decisionVoters">
+		  <list>
+		    <ref bean="roleVoter"/>
+		  </list>
+		</property>
+	</bean>
+	
+	<bean id="roleVoter" class="org.springframework.security.vote.RoleVoter">
+        <property name="rolePrefix" value=""/>
+    </bean>
+	
+
+	<!-- Note the order that entries are placed against the objectDefinitionSource is critical.
+	     The FilterSecurityInterceptor will work from the top of the list down to the FIRST pattern that matches the request URL.
+	     Accordingly, you should place MOST SPECIFIC (ie a/b/c/d.*) expressions first, with LEAST SPECIFIC (ie a/.*) expressions last -->
+	<bean id="filterInvocationInterceptor" class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+    	<property name="authenticationManager"><ref local="authenticationManager"/></property>
+    	<property name="accessDecisionManager"><ref local="httpRequestAccessDecisionManager"/></property>
+ 		<property name="objectDefinitionSource">
+			<value>
+			  ><![CDATA[
+			CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+			   /.*=HOMEROLE
+                   ]]></value>
+			
+		</property>
+	</bean>
+	<bean id="expiredTicketCache" class="com.tcs.sgv.cas.EhCacheBasedExpiredTicketCache">
+  		<property name="cache">
+    		<bean class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+      			<property name="cacheManager"> <ref bean="cacheManager" /> </property>
+      			 <property name="cacheName"> <value>expiredTicketCache</value> </property>
+	   		 </bean>
+    	</property>
+	</bean>
+	
+	<bean id="casLogoutCallbackFilter" class="com.tcs.sgv.cas.CasLogoutCallbackFilter">
+  		<property name="filterProcessesUrl"> 
+  			<value>/j_spring_cas_security_check</value>
+  			</property>
+  			<property name="expiredTicketCache"><ref local="expiredTicketCache" /></property>
+	</bean>
+	<bean id="casLogoutFilter" class="com.tcs.sgv.cas.CasLogoutFilter">
+  		<property name="filterProcessesUrl"><value>/j_spring_security_logout</value></property>
+  		<!--  <property name="logoutSuccessUrl"><value>/hdiits.htm?viewName=login</value></property>  -->
+  		<property name="logoutSuccessUrl"><value>/${CasLogoutSuccessUrl}</value></property>
+  		<property name="logoutHandlers">
+		    <list>
+		      <!--  <bean class="org.springframework.security.ui.logout.SecurityContextLogoutHandler">  -->
+		        <bean class="com.tcs.sgv.acl.acegilogin.service.LogOutHandler">  	
+		        <property name="invalidateHttpSession"><value>true</value></property>
+		      </bean>
+		    </list>
+  		</property>
+  		<property name="serviceProperties"><ref local="serviceProperties" /></property>
+  		<property name="logoutUrl"><value>${CasLogoutUrl}</value></property>
+  		<property name="expiredTicketCache"><ref local="expiredTicketCache" /></property>
+  	</bean>
+  	
+  	<bean id="logoutHadler" class="com.tcs.sgv.acl.acegilogin.service.LogOutHandler"></bean>
+  	
+  	<bean id="authEventManager" class="com.tcs.sgv.acl.acegilogin.service.AuthenticationEventManager" ></bean> 
+	
+	<bean id="placeholderConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    	<property name="locations">
+	  		<list>
+				<value>classpath:SpringSecurity.properties</value>
+			</list>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,244 @@
+/* NOTE: for menu formatting first refer mlmenuformat.css */
+
+/*colors for menu*/
+.blackwhite li a {
+	background-color: white;
+	color: black;
+	border-color: black;
+}
+
+.blackwhite li a:hover {
+	background-color: black;
+	color: white;
+	border-color: black;
+}
+
+.blackwhite ul {
+	border-color: black;
+}
+
+.bluewhite li a {
+	background-color: white;
+	color: #000033;
+	border-color: #000033;
+}
+
+.bluewhite li a:hover {
+	background-color: #000033;
+	color: white;
+	border-color: #000033;
+}
+
+.bluewhite ul {
+	border-color: #000033;
+}
+
+.themeclr li a {
+	background-color: #dedede;
+	color: #000033;
+	border-color: #333333;
+}
+
+.themeclr li a:hover {
+	background-color: #666666;
+	color: white;
+	border-color: #333333;
+}
+
+.themeclr ul {
+	border-color: #333333;
+}
+
+/*black*/
+.themeblack li, .themegray li ul{
+	background: #474747;
+}
+
+.themeblack li a {
+	background-color: #474747;
+	color: white;
+	border-color: #222222;
+	border-top-color: #585858;
+	border-left-color: #585858;
+}
+
+.themeblack li a:hover {
+	background-color: #666666;
+	color: white;
+	border-color: #666666;
+	border-bottom-color: #777777;
+}
+
+.themeblack ul {
+	border-color: #363636;
+}
+
+.themeblack a.horz {
+	background: #474747 url(images/downarrow-white.gif) 98% no-repeat;
+}
+
+.themeblack a.horz:hover {
+	background: #666666 url(images/downarrow-white.gif) 98% no-repeat;
+}
+
+.themeblack a.vert {
+	background: #474747 url(images/next-white.gif) 98% no-repeat;
+}
+
+.themeblack a.vert:hover {
+	background: #666666 url(images/next-white.gif) 98% no-repeat;
+}
+
+/*gray*/
+.themegray li ul, .themegray ul{
+	background: #CFCFCF url(images/menu-bg-gray.gif) repeat-y right;
+}
+
+.themegray li a {
+	color: black;
+	border-color: #ACACAC;
+	border-top-color: #DFDFDF;
+	border-left-color: #DFDFDF;
+}
+
+.themegray li a:hover {
+	background-color: #363636;
+	color: white;
+	border-color: #363636;
+	border-bottom-color: #696969;
+}
+
+.themegray a.horz {
+	background: url(images/downarrow-hover.gif) 98% no-repeat;
+}
+
+.themegray a.horz:hover {
+	background: #363636 url(images/downarrow-white.gif) 98% no-repeat;
+}
+
+.themegray a.vert {
+	background: url(images/next-hover.gif) 98% no-repeat;
+}
+
+.themegray a.vert:hover {
+	background: #363636 url(images/next-white.gif) 98% no-repeat;
+}
+
+/*******************************************************************/
+
+.themeclrHorizontalToolbar a.horz {
+	background: url(images/downarrow-white.gif) 98% no-repeat;
+}
+
+.themeclrHorizontalToolbar a.horz:hover {
+	background: #dedede url(images/downarrow-hover.gif) 98% no-repeat;
+}
+
+.themeclrHorizontalToolbar a.vert {
+	background: #636DA5 url(images/next-white.gif) 98% no-repeat;
+}
+
+.themeclrHorizontalToolbar a.vert:hover {
+	background: #dedede url(images/next-hover.gif) 98% no-repeat;
+}
+
+.themeclrHorizontalToolbar li a {
+	color: white;
+	/*border-right: 2px groove #565656;*/
+}
+
+/**** Settings menu hover *****/
+.themeclrHorizontalToolbar li a:hover {
+	background: #dedede;
+	color: #000033;
+	border-bottom: 1px solid #373984;
+	border-left: 1px solid #aeafdd;
+	border-right: 1px solid #373984;
+	border-top: 1px solid #aeafdd;
+/*	border: 1px solid #aeafdd;
+	border-left: 1px solid #373984;
+	border-top: 1px solid #373984;*/
+}
+
+.themeclrHorizontalToolbar li ul li a {
+	background: #636DA5;
+	color: white;
+/*	border: 1px solid #373984;
+	border-left: 1px solid #aeafdd;
+	border-top: 1px solid #aeafdd;*/
+}
+
+.themeclrHorizontalToolbar ul {
+	background: #323030  url(images/toolbar-bg-top-05.gif) top repeat-x;
+}
+
+/*********************** FTSearch ******************************/
+.themeclrSearchControl a.horz {
+	background:#e2e2e7 url(images/downarrow-hover.gif) 98% no-repeat;	
+}
+
+.themeclrSearchControl a.horz:hover {
+	background: #626262 url(images/downarrow-white.gif) 98% no-repeat;
+	/*background : #777777 url(images/toolbar-bg-04.gif);*/
+}
+
+.themeclrSearchControl li a {
+	color: black;
+	background: #e2e2e2;
+		/*border-right: 1px groove #565656;*/
+}
+
+.themeclrSearchControl li a:hover {
+	color: white;
+	background: #626262;	
+}
+/************************** END FTSearch ************************/
+
+/************************** Workflow Horizontal Menu ************************/
+.themeclrHorizontalWorkflow a.horz {
+	background: url(images/downarrow-white.gif) 98% no-repeat;
+}
+
+.themeclrHorizontalWorkflow a.horz:hover {
+	background: #dedede url(images/downarrow-hover.gif) 98% no-repeat;
+}
+
+.themeclrHorizontalWorkflow a.vert {
+	background: #323030 url(images/next-white.gif) 98% no-repeat;
+}
+
+.themeclrHorizontalWorkflow a.vert:hover {
+	background: #dedede url(images/next-hover.gif) 98% no-repeat;
+}
+.themeclrHorizontalWorkflow ul li{
+	background: #323030 url(images/menu-bg-09.gif) top repeat-x;
+}
+
+.themeclrHorizontalWorkflow ul li ul li{
+	width: 100%;
+	background: #323030;
+}
+
+.themeclrHorizontalWorkflow li a {
+	color: white;
+	border-right: 2px groove #565656;
+}
+
+.themeclrHorizontalWorkflow li a:hover {
+	background: #dedede;
+	color: #000033;
+}
+
+.themeclrHorizontalWorkflow li ul li a {
+	color: white;
+	border-top: 1px solid #565656;
+	border-bottom: 1px solid #232323;
+	border-left: 1px solid #565656;
+	border-right: 1px solid #232323;
+}
+
+.themeclrHorizontalWorkflow li ul
+{
+	margin : 21px 0px 0px 0px;
+}
+/************************** End of Workflow Horizontal Menu ************************/

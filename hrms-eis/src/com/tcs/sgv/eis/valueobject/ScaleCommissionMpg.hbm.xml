@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+	<hibernate-mapping>
+		<class name="com.tcs.sgv.eis.valueobject.ScaleCommissionMpg" table="scale_commission_mpg">
+			<id name="ScMpgId" type="long" >
+				<column name="sc_mpg_id" precision="22" scale="0" ></column>
+				<generator class="assigned"/>
+			</id>
+			<many-to-one name="payBand" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+				<column name="pay_band"/>
+			</many-to-one>
+			<many-to-one name="commissionFive" class="com.tcs.sgv.eis.valueobject.HrEisScaleMst" fetch="select" >
+				<column name="commission_five_scale_id"/>
+			</many-to-one>
+			<many-to-one name="commissionSix" class="com.tcs.sgv.eis.valueobject.HrEisScaleMst" fetch="select" >
+				<column name="commission_six_scale_id" />
+			</many-to-one>
+		</class>
+	</hibernate-mapping>

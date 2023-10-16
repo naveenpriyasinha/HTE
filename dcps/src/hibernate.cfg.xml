@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    
+    <!-- DB2 configuration --> 
+    
+		<property name="hibernate.connection.driver_class">com.ibm.db2.jcc.DB2Driver</property>     
+        <property name="hibernate.connection.password">ifms@123</property>
+        <property name="hibernate.connection.url">jdbc:db2://3.6.98.156:55000/HTE</property>
+        <property name="hibernate.connection.username">ifms</property>
+        <property name="hibernate.connection.release_mode">auto</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.DB2Dialect</property>
+        <property name="default_schema">ifms</property>
+        
+<!-- Oracle configuration  
+    
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>     
+        <property name="hibernate.connection.password">mahaifms</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@172.26.139.23:1521:mpdev</property>
+        <property name="hibernate.connection.username">mahaifms</property>
+        <property name="hibernate.connection.release_mode">auto</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle9Dialect</property>
+        -->
+ 
+ <!-- MySQL configuration 
+        <property name="hibernate.connection.password">ifms2009</property>
+        <property name="hibernate.connection.url">jdbc:mysql://172.26.146.244:3309/ifms2009</property>
+        <property name="hibernate.connection.username">ifms2009</property>
+        <property name="hibernate.connection.release_mode">auto</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property>
+        <property name="hibernate.default_schema">ifms2009</property>
+        -->
+        <mapping resource="com/tcs/sgv/core/valueobject/FrmAuditLog.hbm.xml"/>
+        <mapping resource="com/tcs/sgv/nps/valueobject/NsdlBhDtls.hbm.xml"/>
+        <mapping resource="com/tcs/sgv/nps/valueobject/NsdlDhDtls.hbm.xml"/>
+        <mapping resource="com/tcs/sgv/nps/valueobject/NsdlSdDtls.hbm.xml"/>
+     
+    </session-factory>
+</hibernate-configuration>

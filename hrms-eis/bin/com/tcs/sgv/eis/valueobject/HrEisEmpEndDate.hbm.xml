@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 8, 2008 7:42:30 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisEmpEndDate" table="hr_eis_emp_end_date">
+        <comment></comment>
+
+        <id name="endDateId" type="long">
+            <column name="END_DATE_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+		
+		<many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="cmnLookupMstReason" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="REASON">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+         <property name="pension" type="long">
+            <column name="PENSION" precision="10" scale="0" />
+        </property>
+        
+        <property name="gratuity" type="long">
+            <column name="GRATUITY" precision="10" scale="0" />
+        </property>
+        
+        <property name="orderNo" type="string">
+            <column name="ORDER_NO" length="50" />
+        </property>
+        
+        
+        <property name="endDate" type="timestamp">
+            <column name="END_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="orderDate" type="timestamp">
+            <column name="ORDER_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="200" />
+        </property>
+        
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+         <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        
+        <many-to-one name="createdByPostID" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+    </class>
+</hibernate-mapping>

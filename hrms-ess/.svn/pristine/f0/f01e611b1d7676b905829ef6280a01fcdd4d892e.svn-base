@@ -1,0 +1,61 @@
+HR.SELECT_ELDATES=Please select the Approved Leave for which LTC is required
+HR.SELECT_MODE=Please select the Mode of Transport
+HR.ATTACH_NOC=Please attach NOC
+HR.MIN_FARE=Please enter the minimum fare per ticket
+HR.TOTAL_NUM=Please enter the number of persons traveling
+HR.ADV_AMT=Please enter the advance Amount
+HR.REIMB_DEPR=Please enter the Departure place name in row 
+HR.REIMB_DEPR_DATE=Please enter the From date in row 
+HR.REIMB_ARR=Please enter the Arrival place name in row 
+HR.REIMB_ARR_DATE=Please enter the To date in row 
+HR.REIMB_DIST=Please enter the Distance in row 
+HR.REIMB_TRAVEL_MODE=Please select the Mode of Transport in row 
+HR.REIMB_CLASS=Please select the Class of Travel in row 
+HR.REIMB_TOTAL_FARE=Please enter the total Fare in row 
+HR.REIMB_FARES_PAID=Please enter the fare Paid in row 
+HR.REIMB_REMARKS=Please enter the remarks in row 
+HR.REIMB_TICKETS=Please attach the Tickets 
+HR.AJAX_BROWSER=Your browser does not support AJAX!
+HR.CANNOT_DELETE=You cannot delete this row
+HR.ADVANCE_ENTITLED=Advance amount should not be more than entitled amount
+HR.DEPENDENT_CHECK=Do you want to select any family member?
+HR.VDate=To date must occur after the from date.
+HR.YES=Yes
+HR.NO=No
+HR.LeaveAl=Sorry Backdated leave is Not Accepted 
+HR.ADDROW= Add a Row
+HR.DELROW= Delete last row
+HR.SELECT=[SELECT]
+HR.Submit=Submit
+HR.Close=Close
+HR.LTC_PLACE_NAME=Please select the Visiting Place Name
+HR.BLOCK_YEAR=Please select the Block
+HR.FROM_DATE=Please enter the Date of Journey 
+HR.TO_DATE=Please enter the Date of return Journey  
+HR.PLACE_NAME= Please enter the Place Name
+HR.Home_Town=Home Town
+HR.LTC=LTC 
+HR.Bus=Road
+HR.Rail=Rail
+HR.Cab=Cab
+HR.Air=Air
+HRMS.SecondSleeper Second Sleeper
+HRMS.ChairCar First class/II AC III-Tier Sleeper/AC Chair Car
+HRMS.TwoTierSleeper II AC 2-Tier Sleeper
+HRMS.FirstClass AC First Class/ Air Allowance
+HR.REQNO=Request Number
+HR.REQTYPE=Request Type 
+HR.ADV=LTC Advance 
+HR.REIM=LTC Reimbursement
+HR.Status=Status
+HR.Pending=Pending
+HR.Approved=Successfully Approved
+HR.selctDpn Please select Dependent Details
+HR.SubmitFinal Are you sure you want to submit?
+HR.SecnAmount You are having negative Balance Amount to be Sanctioned 
+HR.BackDatedAdv Sorry you cannot apply LTC Request for dates less than todays date.
+HR.ReLtcMsg Approved LTC request is not available
+HR.AdvApproveDt Please select the Advance Approved Dates
+HR.deleteAlert Are you sure want to delete the selected data?
+HR.selCheckBox Please select a checkbox
+BUNDLE_BASE_NAME=resources/ess/ltc/AlertMessages

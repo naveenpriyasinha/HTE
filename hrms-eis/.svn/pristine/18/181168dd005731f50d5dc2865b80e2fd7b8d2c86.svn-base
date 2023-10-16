@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 9, 2007 12:43:12 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayOrderMst" table="HR_PAY_ORDER_MST">
+        <id name="orderId" type="long">
+            <column name="ORDER_ID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="orderName" type="string">
+            <column name="ORDER_NAME" length="100" />
+        </property>
+        <property name="orderDate" type="timestamp">
+            <column name="ORDER_DATE" length="7" />
+        </property>
+        
+        <property name="endDate" type="timestamp">
+            <column name="END_DATE" length="7" />
+        </property>
+        <property name="locationCode" type="string">
+            <column name="location_code" length="20" />
+        </property>
+        
+        <property name="attachment_Id" type="java.lang.Long">
+            <column name="ATTACHMENT_ID" />
+        </property>
+        <property name="grtype" type="java.lang.Long">
+            <column name="GR_TYPE" length="11" />
+        </property>
+        
+        
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column> 
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER"  >
+                <comment></comment>
+            </column>
+        </property>  
+        
+    </class>
+</hibernate-mapping>

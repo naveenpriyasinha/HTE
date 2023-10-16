@@ -1,0 +1,179 @@
+# for ASSET application
+BUNDLE_BASE_NAME=resources/ess/asset/AssetLables
+PER_PUR_SALE=Permission to Purchase/Sell
+EMP_DTLS=Employee Details
+PARTY_DTLS=	Party Details
+OWNER_DTLS= Asset Ownership Details
+EMP=Employee
+Purpose=Purpose
+ASSET_REQ=Asset Request
+REQ_TYPE=Request type
+PRIROR_INT=Intimation
+PRIROR_PER=Permission
+PUR_SOLD=Transaction type
+TRANXN_DATE=Transaction date
+TRANXN_PRICE=Transaction price
+ADD_OF_ASSET= Address of asset
+ACTION=Action
+PURCHASE=Purchase 
+SELL=Sell
+DATE_OF_PUR=Expected date of purchase/sell
+DATE_OF_TRANS=Purchasing date
+SELL_DATE=Selling date  
+SELL_PRICE=Selling price (INR)
+NAME_OF_PRPTY=Name of property
+REGI_NO=Registration No.
+SELL_REGI_NO=Registration No.
+PUR_SELL_RCV=Mode of purchase/sell
+PAYMENT_PLACE=Source of payment 
+SAVING_SRC=Description of source of payment
+PERMISSION_TAKEN=Informed/taken permission at the time of purchase
+YES=Yes
+NO=No
+ATTACH=Attach the permission/intimation letter
+RSN_PERMISSION=Reason for not taking the permission
+ASN_GIFT=Reason for not taking the permission for gift
+NAME_OF_PARTY=Person Name
+NAME_OF_OWNER=Owner Name
+FIRST_NAME=(First Name)
+MIDDLE_NAME=(Middle Name)
+LAST_NAME=(Last Name)
+ADDRESS=Address
+RELATION_EMP=Any relation with employee 
+SPECIFY_DTLS=kindly specify the details
+PRO_RELATION_FUTURE=Whether any professional relationship or any possibility of having such relationships in near future with the party?
+PER_DTLS=Details of work with this Person
+MEDIUM_OF_DEAL=Medium of deal 
+PERMISSION_OBTAINED=If the property is a gift then permission has been obtained under Guj. state service rules 1971 & rule 13
+MOV_OR_NOT=Type of asset
+FIXED=Fixed
+MOVABLE=Movable
+TRAN_DTLS=Transaction Details
+APP_PRICE=Purchasing price (INR)
+RELATION Relation
+APP_MARKET_PRICE=Market price (INR)
+BILL_DATE=Bill date
+BILL_NO=Bill No.
+BILL_DTLS=Bill Details
+BILL_ATTACHMENT=Attach bill
+TYPE_OF_PARTY=Type of party
+TYPE_OF_OWNER= Type of owner
+OWNER= Owner
+PERSON=Person
+COMPANY=Company
+COMPANY_NAME= Organization Name
+SUBMIT=Submit
+CLOSE=Close
+RESET=Reset
+NAME=Name
+ASSETID=Asset No
+TRANSACTION_PRICE=Transaction Price(INR)
+CHOOSE_ASSET=Select any one asset for sale
+DETAILS_APPLICANT Details Of Applicant
+ASSET_NAME Name
+ASSET_POST Post
+ASSET_DESIGANATION Designation
+ASSET_DEPARTMENT Department
+ADDITIONL_POST Details Of Additional Post Held
+RELATION_TYPE Relation with employee
+ASSET_DTLS Asset Details
+ASSET_ADDRESS Address
+NO_RECORDS_FOUND= Any Purchased Asset Not Found
+ASSET_ADMIN_SCREEN=Asset Admin Screen
+EDIT_DATA=Submission Of Actuals
+REMARKS=Remarks
+EDIT=Edit
+DELETE=Delete
+DATE_FORMATE=(DD/MM/YYYY)
+CHNGE_PARTY_DTLS= Do you want to edit party details
+CHANGE_OWNER_DTLS=Do you want to edit owner details
+SRNO=SrNo.
+ASSET_DECL_ON_JOINING=Asset Declarations On Joining
+INCOME_DECL=Declaration of Income from fixed Assets
+PREV_YEAR_DECL=Previous Year's Income Declarations
+YEAR_DECL=Income Declarations for
+INCOME_DECL_SYSTEMYEAR Income From All The Fixed Assets On 31st DEC
+INCOME Income
+ASSET_DECL=Asset Declaration
+TOTAL_YEARS_OF_SERVICE Total years of service
+GAZETTED=Gazetted
+NON_GAZETTED=Non-Gazetted
+TOTAL_SERVICE=Total service
+ASSET_BANCHMARK Asset Benchmark
+ANNUAL_INCOME Annual Income from the asset
+INTIMATION_FOR Intimation for
+NEW_ASSET New Asset
+APPROVED_ASSET_REQ Approved Asset Request
+PLZ_CHHOSE_ONE_RECORD Please Choose Any One Asset Record
+ASSET_DECL_YEAR Annual Declaration of Movable Assets 
+ASSET_DECL_FOR_YEAR Asset Declaration for year
+MOVABLE_ASSETS Movable Assets\:
+FIXED_ASSET Total Assets On Held:
+NO_RECORDS=No Records Found
+ASSET_REQ_NO=Asset Request No.
+ASSET_FORWARD=has been Forwarded to
+ASSET_APPROVE=for approval
+ASSET_DECL_SAVED=Asset Declaration On Joining Request has been saved sucessfully
+ASSET_BANCHMARK_SAVED=Asset Benchmark Request has been saved sucessfully
+ASSET_DECL_REQ_NO=Asset Declaration Request 
+HAS_SAVED=has been saved sucessfully
+ASSET_INCOME_REQ=Your Asset Income Declaration Request for Year
+HAS_SUBMITTED=has been submitted sucessfully
+ASSET_DECL_REQ_YEAR=Your Asset Declaration Request for Year
+REQ_APPROVE_SEND=has been approved and send to
+REQ_REJECT_SEND=has been Rejected and send to
+NOTE_ASSET_REQ=NOTE :(1) Your Asset Request No.
+NOTE_APPROVE=has been Approved with ASSET No.
+NOTE_EDIT=NOTE :(2) You can EDIT Data through "Asset > Permission to purchase/sell > Submissions Of Actuals" link
+NOTE_REJECT=NOTE \: Your Asset Request No. 
+IS_REJECTED=is Rejected
+NOTE_REQ_NO=NOTE \: Your Asset Request No. 
+DROPDOWN.SELECT ------ Select ------
+ASSET_CORRS_NO= Asset Correspondence with No.
+FAMILY_DTLS Family Member's Details Not Found
+IF_FILL_FAMILY_DTLS= If You Want To Select Any Family Member, Please Enter Details Through HRMS > E-Profile > Family Details
+ANY_PUR_ASSET_NOT_FOUND Any Purchased Asset Not Found
+ASSET_ADD= Add
+ASSET_UPDATE= Update
+ASSET_SUBMIT= Submit
+ASSET_CLOSE Close
+ASSET_OK Ok
+OWNER_ADDRESS= Address of owner
+PARTY_ADDRESS= Address of party
+MAX_LIMIT=(Max price
+SELECT=Select
+SPACE= 
+SUBMITTED_ALLREADY=has been submitted already
+ASSET_OBTAIN_TYPE=How asset was obtained?
+ASSET_INHERITED_DATE=Date when asset obtained/inherited 
+ASSET_INHERITED_PRICE=Price when asset obtained/inherited 
+ASSET_RELATION_INHERITED Any relation with that person
+NAME_OF_PERSON= Name of person
+PERSON_ADDRESS= Address of person
+PRICE_FROM_PERTICULAR_SRC=Invested price from this source
+PREV_YEAR_ASSET_DECL=Previous Year's Asset Declarations
+ASSET_YEAR_DECL=Asset Declarations for
+ASSET_DECL_OF_YEAR_REQ=Your Annual Declaration of Movable Assets Request for Year
+ANNUAL_INCOME_OF_EMPLOYEE=Annual Income of employee
+ASSET_OBTAIN_FROM=obtained/inherited from
+ASSET_DECL_ON_JOINING_SUB_ALLREADY=Asset Declaration on Joining Request has been submitted already
+STATUS=Status
+PENDING=Pending
+APPROVED=Approved
+REJECTED=Rejected
+CANCELLED_REQ Cancelled Request
+SHOW_JOINING_DECL_DTLS=Show Joining Declared Details
+ADD_EMPLOYEES=Click here to add Employees
+ASSET_SEARCH=Search
+ASSET_ADMINSCREEN_SAVED=Asset has been Added sucessfully
+# for ASSET application
+
+
+#Modify screen
+MODIFY_ASSET=Modify Asset Request
+FROM_DATE From date
+TO_DATE=To date
+PAYMENT_DETAIL=Payment Details
+BACK=Back
+ASSET_AREA=Area(Sq.Ft.)
+ASSET_SURWAY=Surway No

@@ -1,0 +1,1144 @@
+#-- Broken Period --#
+CMN.CADREMASTER=Post Master
+CMN.SEARCHWITHNAME=Search With Name
+CMN.GPFNO=G.P.F No / DCPS No
+
+#--DDO Information--#
+BTN.CHANGEOFFICEDETAILS=Change Office Details
+CMN.DESCRIPTION = Description 
+#CMN.DDOCODE=DDO Code
+CMN.ADMNDEPT = Admin Department
+CMN.FIELDDEPT = Field Department
+CMN.IFSCODE=IFS Code
+CMN.PARENTDEPARTMENT=Parent Department
+CMN.ADMINDEPT=Administrative Department
+CMN.FIELDHODDEPT=Field Department/HOD Department
+CMN.SIGNINGAUTHO=Signing Authority
+CMN.DDONAME=Name of DDO (Signing Authority)
+CMN.WEFDATE=With Effect From Date
+CMN.TANNO= Tan No.
+CMN.OFFICEEMAILID=Institute Email ID
+CMN.ITOWARDCIR=ITO/Ward/Circle
+CMN.BANKDETAILS=Bank Details
+CMN.BANKDCPSGPFDETAILS=Bank/DCPS/GPF Details
+CMN.GISDETAILS=GIS Details
+CMN.GISAPPLICABLE=GIS Applicable
+CMN.GISGROUP=GIS Group
+CMN.MEMBERSHIPDATE=Membership Date
+CMN.EMPNO=Employee No
+CMN.SUPERANNUATIONAGE=Super Annuation Age
+CMN.DATEFORMAT=(DD/MM/YYYY)
+CMN.DCPS?=DCPS?
+CMN.PFDETAILS= PF Details
+CMN.PFACNO=PF A/C No
+CMN.ACMAINTENEDBY=A/C maintained by
+CMN.PFSERIES=PF Series
+CMN.PFSERIESDESC=PF Series Description
+CMN.BANKNAME=Bank Name
+CMN.BRANCHNAME=Branch Name
+CNM.ACCNO=Bank Acc. No.
+CMN.REMARKS=Remarks (If Any)
+BTN.SAVE=Save
+BTN.CLOSE=Close
+#--End : DDO Information --#
+
+#--DDO Office --#
+CMN.OFFICESADDED=Organization/Institution Added
+CMN.OFFICEDETAILS=Institution Details
+CMN.OFFICENAME=Organization/Institution Name
+CMN.DDOOFFICE=Organization/Institution?
+CMN.OFFADDRESS=Organization/Institution Address
+CMN.NAMEOFOFFICE=Name of the Organization/Institution
+CMN.DDO(Y/N)=DDO Y/N
+CMN.ADDRESSDETAILS=Address Details
+CMN.YES=Yes
+CMN.NO=No
+CMN.STATE=State
+CMN.DISTRICT=District
+CMN.TALUKA=Taluka
+CMN.TOWN=Town
+CMN.GRANT=Percentage Of Grant Applicable  
+CMN.VILLAGE=Village
+CMN.ADDRESS=Address
+CMN.PIN=PIN
+CMN.OFFICECITYCLASS=Organization/Institution City Class
+CMN.CONTACTDETAILS=Contact Details
+CMN.TELNO(1)=Tel No(1)
+CMN.TELNO(2)=Tel No(2)
+CMN.TELNO(2)MOBILE=Tel No(2) Mobile
+CMN.FAX=Fax
+CMN.DESIGNATIONFIRSTAPNTMNT=Name Of Post/Designation at First Appointment
+CMN.CITYCLASS=City Class
+CMN.EMAIL=Email
+CMN.EMAILFOROFFICIALCMTN = Email for Official Communication
+CMN.WHETHEROFFICEIN=Whether organization/Institution in
+CMN.TRIBLEAREA=Tribal Area?
+CMN.HILLYAREA=Hilly Area?
+CMN.NAXALITEAREA=Naxalite Area?
+CMN.Dice=Institution Number 
+#--End : DDO Office --#
+
+
+
+CMN.FIRSTNAME=First Name
+CMN.MIDDLENAME=Middle Name
+CMN.LASTNAME=Last Name
+
+CMN.GENDER=Gender
+CMN.GENDERWOCOLON=Gender
+CMN.MALE=Male
+CMN.AND=AND
+CMN.FEMALE=Female
+CMN.TRANSGENDER=Transgender
+CMN.FULLNAME=Full Name
+CMN.FULLNAMEDEV=Full Name in Devanagari
+CMN.FATHERHUSBANDNAME=Father/Husband Name
+CMN.SALUTATION=Salutation
+CMN.DOB=Date of Birth
+CMN.DOJ=Date of Joining Service
+CMN.SUPERANNUATIONDATE=Super Annuation (Retiring)  Date
+CMN.DOJCADRE=Date of joining current Post
+CMN.DOJPOST=Date of Joining current Post(in the current Institution)
+CMN.ADDRESSBUILDING=Address Building
+CMN.ADDRESSSTREET=Address Street
+CMN.LANDMARK=LandMark
+CMN.LOCALITY=Locality
+CMN.PINCODE=Pin Code
+CMN.DOJPARENTDEPT=Date of initial appointment in parent Institute
+CMN.MOBILENO=Mobile Number
+CMN.CADREINPARENTDEPT=Current Post in parent dept
+CMN.OFFICEDETAILS=Organization/Institution Details
+CMN.EMPDETAILS=Employee Details
+CMN.OFFDETAILS=Institution Details
+CMN.NOMINEEDETAILS=DCPS Nominee Details
+CMN.PHOTOSIGNDETAILS=Photo/Signature
+CMN.PARENTFIELDDEPT=Parent field department / HOD 
+CMN.CADRE=Post
+CMN.CHANGEPARENTDEPT=Change Parent Dept.
+CMN.GROUP=Group
+CMN.CURRENTOFFICE=Current Institute  
+CMN.DESIGNATION=Designation
+CMN.DESIGNATIONWOCOLON=Designation
+CMN.RESIDENTIALADDRESS=Residential Address 1
+CMN.ADDRESS2=Address 2
+CMN.CONTACTTELNO=Contact Tel. No.
+CMN.PAYSCALE=Payscale
+CMN.OFFICECONTACTNO=Institute Contact No.
+CMN.CELLNO=Cell No.
+CMN.OFFICEADDRESS=Institute Address
+CMN.Office CONTACTNO1=Institution  Contact Details 1
+CMN.Office CONTACTNO2=Institution  Contact Details 2
+
+CMN.TELEPHONE1=Telephone 1
+CMN.TELEPHONE2=Telephone 2
+CMN.MOBILE=Mobile
+CMN.Office EMAILID=Institution  Email Id
+
+CMN.Office MOBILE=Institution  Mobile
+CMN.PAYCOMMISSION=Pay Commission
+CMN.REMARKS=Remarks
+CMN.UIDNO=UID No.
+CMN.PANNO=PAN No.
+CMN.EIDNO=EID No.
+CMN.REASONFORCHANGEINPFD=Reason For Change in Parent Field Dept.
+CMN.DCPSACNTMNTBY=DCPS Account Maintained By
+CMN.ONLINEFORMRCVDDATE=Online Form Received Date
+CMN.PHYSICALFORMRCVDDATE=Physical Form Received Date
+CMN.UIDEIDMSG=(Either UID No. or EID No. needs to be entered.)
+CMN.NAMEMSG= (Space should be entered in between each word.  e.g. Sachin Ramesh Tendulkar and not SachinRameshTendulkar)
+CMN.NAMEMSGFINAL1= (You should keep space between two words e.g. AJAY RAMESH PATIL
+CMN.NAMEMSGFINAL2= (correct) and e.g. AJAYRAMESHPATIL
+CMN.NAMEMSGFINAL3= (wrong))
+CMN.FATHERNAMEMSG= (If not entered, will be saved as 'Not Provided')
+MSG.CHANGEPFD= (If you want to change the parent department enter the reason.)
+MSG.POST=(Kindly type the first 3 Characters of the Post, it will populate the post for selection.)
+MSG.QUALIFICATION=(Kindly press the control key when you select multiple qualifications)
+MSG.QUALIFICATION1=(You can remove the qualification from multiple qualifications if it is necessary)
+MSG.APPROVAL=(Kindly enter the individual approval order number only numeric field)
+CMN.BRANCHNAME=Branch Name
+CMN.BANKACNO=Bank A/C No.
+CMN.INVESTMENTDETIALS=Investment Details
+CMN.CHOICEOFPENSIONFUNDMNGR=Choice of Pension Fund Managers
+CMN.CHOICEOFASSETALLOCATION=Choice of Asset Allocation
+CMN.EQUITY=EQUITY (E)
+CMN.CORPORATEDEBT=CORPORATE DEBT(C)
+CMN.GOVTDEBT=GOVERNEMENT DEBT (G)
+
+CMN.NOMNAME=Nominee Name
+CMN.NOMINEESRNO=Nominee Sr. No
+CMN.ADDRESS1=Address 1
+CMN.NAME=Name
+CMN.PERCENTSHARE=Percentage Share(%)
+CMN.RELATIONSHIP=Relationship
+MSG.EQUITYLIMIT=(Should not exceed 50%)
+CMN.SAVEDDOINFO=Save DDO Info
+
+CMN.HANDICAPPED=Physically Handicapped?
+CMN.CURRENTPOST=Current Post
+CMN.POST=Post
+CMN.BASICPAY=Basic Pay
+CMN.PAYINPAYBAND=Pay In Pay Band
+CMN.GRADEPAY=Grade Pay
+
+BTN.ADD=Add
+BTN.VIEW=View Form
+BTN.SENTBACK=Send Back
+BTN.APPROVE=Approve
+BTN.FORWARD=Forward
+BTN.PRINT=Print Form
+BTN.REJECT=Reject
+BTN.SUBMIT=Submit
+BTN.BACK=Back
+BTN.EDIT=Edit
+BTN.UPDATE=Update
+BTN.UPDATEREGFORM=Save
+BTN.SAVEASDRAFT=Save as Draft
+BTN.VIEWUPDATEDRAFT=View/Update Draft
+BTN.DELETEDRAFT=Delete Draft
+BTN.SAVENMN=Save Details
+
+CMN.DCPSID=DCPS ID
+CMN.SEVARTHID=HTESevaarth ID
+CMN.TO=To
+CMN.FROM=From
+CMN.SRNO=Sr. No
+CMN.NAMEOFEMPLOYEE=Name Of Employee
+CMN.STATUS=Status
+
+BTN.NOMINEEDTLS=DCPS Nominee Details
+
+CMN.EMPSRNO=Sr. No.
+CMN.EMPLOYEENAME=Employee Name
+CMN.EMPOFFICE =Institution 
+CMN.RLVEMPDESELECT = Relieving of an Employee
+CMN.EMPDESIG=Designation
+CMN.PHYFORMRCVD=Physical Form Received
+MSG.FORMRCVD=* Click on DDO to enter Physical Form Received Status
+MSG.FORMRCVDTO=* DCPS forms for red-colored names are long pending.
+
+CMN.ParentDept=Parent Field Department
+CMN.Cadre=Post
+BTN.SAVENMN=Save Nominee
+CMN.DDOVERIFTIME=DDO Verification Time
+BTN.VIEWDETAILS=View Details
+NEWLINE=
+
+
+
+
+CMN.EmployeeId= Employee ID
+CMN.EmployeeName= Employee Name
+
+BTN.SEARCH=Search
+CMN.AUTHORITYDETAILS=Authority Details
+
+
+#----------------for tier I-----------
+
+CMN.TYPESOFARREARS=Types Of Arrears
+CMN.PARENTFIELDDEPARTMENT=Parent Field Department
+CMN.DATE=Date
+CMN.FROM=From
+CMN.TO=To
+CMN.TOTALAMOUNT=Total Amount
+CMN.NOOFINSTALLMENTS=No Of Installments
+CMN.WHOLEMONTHINSTALLMENTS=Whole Month Installments
+CMN.FIRSTODDINSTALLMENTAMOUNT=First Odd Installment Amount
+CMN.LASTODDINSTALLMENTAMOUNT=Last Odd Installment Amount
+CMN.FORALLEMPLOYEES=For All Employees
+CMN.EMPLOYEEID=Employee Id
+BTN.SEARCH=Search
+BTN.FORWARDTODDO=Forward To DDO
+CMN.ARREARSONACCOUNTOF=Arrears on Account of
+CMN.SRNO=Sr.No
+CMN.FINANCIALYEAR=Financial Year
+CMN.EMPLOYEEPENSIONID=Employee Pension ID
+CMN.EMPLOYEENAME=Employee Name
+CMN.AMOUNT=Amount
+CMN.DELETE=Delete
+CMN.ADDROW=Add
+CMN.SRNO=Sr. No
+CMN.FINANCIALYR=Finacial Year
+CMN.EMPPNSNID=Employee Pension Id
+CMN.EMPNAME=Employee Name
+CMN.AMOUNT=Amount
+CMN.FROM=From Date
+CMN.TO=To Date
+CMN.SAVE=Save
+CMN.FORWARDTODDO=Forward To DDO
+BTN.CANCEL=Cancel
+
+
+
+COMMON.DROPDOWN.SELECT= --------------------------------- Select -----------------------------------
+COMMON.DROPDOWN.SELECT_1= ------------------------ Select ---------------------------
+
+CMN.OR=Or
+BTN.CLEAR=Clear
+NEWLINE=
+
+CMN.SAVE=Save
+
+CMN.SCHEMENAME=Scheme Name
+CMN.SCHEMECODE=Scheme Code
+CMN.SUBSCHEMENAME=Sub Scheme Name
+CMN.SUBSCHEMECODE=Sub Scheme Code
+CMN.ADDSCHEMESTODDO= Add Schemes to DDO
+
+BTN.ATTACH=Attach
+
+
+
+
+CMN.PHOTOORSIGN=Photo Or Sign
+
+
+
+BTN.UpdateDdoOffice =Save
+
+CMN.AllEmployeeDetails=All Employee Details
+
+CMN.StatusFlag=Status Flag
+
+CMN.CREATBILLGROUP=Create Defaul Bill Group-One Bill Group For One Screen
+CMN.BILLGROUPID=Bill Group Id 
+CMN.DESCRIPTION=Description
+CMN.SCHEMENAME=Scheme Name
+CMN.CODE=Code
+CMN.TYPEOFPOST=Type of Post
+CMN.SELECTDDOOffice =Select Ddo Institution (s)
+CMN.ALL=All
+CMN.Office 1=Institution 
+CMN.Office =Institution 
+
+MSG.SEARCH=(Either HTESevaarth ID or Employee Name should be filled)
+MSG.TEL=(Use only numbers. Do not provide space between STD Code and Phone number.eg. 02227485961 and not 022 27485961)
+
+MSG.TEL1=(Use only numbers. Do not provide space between STD Code and Phone number.eg. 02227485961
+MSG.TEL2=and not 022 27485961
+MSG.TEL3=)
+
+CMN.ADDSCHEMESTODDO=Add Schemes to DDO
+CMN.SCHEMECODE=Scheme Code
+CMN.SCHEMENAME=Scheme Name
+BTN.ADDSCHEME=Add Schemes
+CMN.SCHEMESOPERATED=Schemes Operated by DDO
+
+CMN.BILLGROUPHEADER=Create Default Bill Group
+CMN.PERMANENT=Permanent
+CMN.TEMPORARY=Temporary
+CMN.BOTH=Both
+CMN.GROUPNA=NA
+CMN.GROUPA=A
+CMN.GROUPB=B
+CMN.GROUPBNZ=B N GZ
+CMN.GROUPC=C
+CMN.GROUPD=D
+
+CMN.ATTACHLIST=List of Employees attached with Bill Group
+CMN.ATTACHEMPLOYEE=Attach Employee to a Bill Group
+
+CMN.DETAILS=Details to be Changed
+CMN.CHANGES=Changes
+CMN.SELECTEMPLOYEE=Select the Employee
+
+CMN.EXISTINGDETAILS=Existing Details
+CMN.CHANGEDETAILS=Change Details
+CMN.PERSONALDETAILS=Personal Details
+CMN.Office DETAILS=Institution Details
+CMN.OTHERDETAILS=Other Details
+CMN.NOMINEEDETAILS=DCPS Nominee Details
+CMN.PHOTODETAILS=Photo And Signature Details
+
+CMN.DDOPROFILEINFO=DDO Profile Information
+#-----ADDED BY BHARGAV FOR SRKADDOINFO.JSP----STARTS-----#
+
+CMN.DDONAME = DDO Name
+
+CMN.DDOPROFILEINFO = DDO Profile Information
+#-----ADDED BY BHARGAV FOR SRKADDOINFO.JSP----ENDS-----#
+
+
+
+#-----ADDED BY BHARGAV FOR DdoEmpSelection.jsp.JSP----STARTS-----#
+CMN.DDOEMPSELECTBTN = Attach Employee
+CMN.DDOEMPSELECT = Selection of an Employee
+CMN.CHKBXEMPSELECT = Select
+CMN.DDOEMPSELECTSEARCH = Search an Employee for attaching to DDO
+CMN.DDOEMPDESELECTSEARCH = Search an Employee for detaching to DDO
+CMN.SEARCH = Search
+#-----ADDED BY BHARGAV FOR DdoEmpSelection.jsp.JSP----ENDS-----#
+
+
+
+#-----ADDED BY BHARGAV FOR DdoEmpDeselection.jsp.JSP----STARTS-----#
+CMN.DDOEMPDESELECTBTN = Detach Employee
+CMN.DDOEMPDESELECT = Deselection of an Employee
+CMN.CHKBXEMPDESELECT = Deselect
+CMN.DATEOFSELECTION= Date Of Joining
+CMN.DATEOFDESELECTION= Date Of Relieving
+CMN.RSNFRDESELECTION = Reason For Relief
+CMN.REMARKS = Remarks
+CMN.DCPSACNO = Pension A/C No.
+
+
+
+#-----ADDED BY BHARGAV FOR DdoEmpDeselection.jsp.JSP----ENDS-----#
+
+
+
+#-------ADDED BY BHARGAV FOR dcpsDesignInfo.jsp------Starts----------------#
+CMN.DESIGNATIONMST=Designation Master
+CMN.FIELDDEPARTMENT=Field Department
+CMN.DESIGNATIONCODE=Designation Code
+CMN.PAYCOMMISSION=Pay Commission
+CMN.SAVE=Save
+CMN.REORGCADREHIR=Reorganise Post Hierarchy
+CMN.CODE=Code
+#-------ADDED BY BHARGAV FOR dcpsDesignInfo.jsp------Ends----------------#
+
+
+#-------ADDED BY BHARGAV FOR dcpsCadreInfo.jsp------Starts----------------#
+CMN.CADREMASTER=Post Master
+CMN.CADRECODE=Post Code
+CMN.WHETHERMINISTERIAL=Whether Ministerial
+CMN.SUPERANNUATIONAGE=Super Annuation Age
+CMN.CADRECONTROLLEDBYOWNDEPARTMENT=Post Controlled By Own Department
+CMN.IFNOCONTROLLEDBYFIELDDEPARTMENT=If No, Controlled By Field Department
+CMN.YES=Yes
+CMN.NO=No
+CMN.REORGCADREHIR=ReOrganize Post Hierarchy
+#-------ADDED BY BHARGAV FOR dcpsCadreInfo.jsp------Ends----------------#
+
+#-------ADDED BY BHARGAV FOR dcpsEmpDeputatiaon.jsp------Starts----------------#
+
+CMN.ATTACHDEPEMP=Attach Deputation Employee
+CMN.DETACHDEPEMP=Detach Deputation Employee
+CMN.BIRTHDATE=Birth Date
+CMN.NAME=Name
+CMN.EMPLOYEEID=EmployeeId
+CMN.CHKBXEMPSELECT=Chk
+CMN.Office CODE=Institution  Code
+CMN.PENSIONNUMBER=Pension No
+CMN.EMPLOYEENAME=Employee Name
+CMN.ATTACHDATE=Attach Date
+##########----------added by poonam for city class mapping
+CMN.REASON=Reason
+CMN.REMARKS=Remarks
+CMN.SEARCH=Search
+BTN.ATTACH=Attach
+BTN.DETACH=Detach
+#-------ADDED BY BHARGAV FOR dcpsEmpDeputatiaon.jsp------Ends----------------#
+
+
+#-------ADDED BY BHARGAV FOR dcpsTierForms.jsp------Starts----------------#
+CMN.SAVEDON = Saved On
+CMN.TIER = Tier Type
+CMN.FROMDATECNTRBTN = Contribution From Date
+CMN.TODATECNTRBTN = Contribution To Date 
+#-------ADDED BY BHARGAV FOR dcpsTierForms.jsp------Ends----------------#
+
+CMN.ORGANIZATIONMST = Organization Master
+CMN.ORGANIZATIONTYPE= Organization 	Type
+CMN.ORGANIZATIONALDESC= Organizational Description
+CMN.EMPLOYEEHEADACC = Employee Head Account
+CMN.EMPLOYEESCHEMECODE = Employee Scheme Code
+CMN.EMPLOYERHEADACC = Employer Head Account
+CMN.EMPLOYERSCHEMECODE = Employer Scheme Code
+CMN.DEPTEMPLOYEEHEADACC = Deputation Employee Head Account
+CMN.DEPTEMPLOYEESCHEMECODE = Deputation Employee Scheme Code
+CMN.DEPTEMPLOYERHEADACC = Deputation Employer Head Account
+CMN.DEPTEMPLOYERSCHEMECODE = Deputation Employer Scheme Code
+CMN.ORGEMPSRNO = Sr. No 
+
+#----------------OfflineDCPS-----------Starts -------------------
+CMN.TreasuryName=Treasury Name
+CMN.DDOName=DDO Name
+CMN.BillGroup=Bill Group
+CMN.Scheme=Scheme
+CMN.SubScheme=Sub Scheme
+CMN.Month=Pay Month
+CMN.Year=Pay year
+CMN.NAMEANDID=Name and Id
+CMN.CONTRISTARTDATE=Contribution Start Date
+CMN.CONTRIENDDATE=Contribution End Date
+CMN.PAYCOMIMISSION=Pay Commission
+CMN.PAYMENTTYPE=Payment Type
+CMN.BASIC=Basic
+CMN.DP=DP
+CMN.DA=DA
+CMN.CONTRIBUTION=Contribution
+# Added by naveen for employer contribution
+CMN.NPS_CONTRIBUTION_EMPR=Employer Contribution
+CMN.CHECKBOX= Select All
+CMN.ADDROW=Add Row
+CMN.DELETEROW=Delete Row
+CMN.VOUCHER=Voucher
+CMN.CHALLAN=Challan
+CMN.VCNO=Voucher No./ Challan No.
+CMN.VCDATE=Voucher Date/ Challan Date
+CMN.BILLNO=Bill no
+CMN.INPUTDETAILSFORCONTRI=Input Details For Contribution
+CMN.OUTPUTDETAILSFORCONTRI=Contribution Details For Selected Year
+BTN.DELETECONTRI=Delete Contribution
+
+#----------------OfflineDCPS-----------Ends ------------------
+
+DCPS.SELECTDDOOffice SFORBG=Select DDO Institution s
+CMN.CADREDESCRIPTION=Post Description
+
+CMN.DAYSCALCULATION=Days Calculation
+CMN.APPROVALOFFORM=Approval of Form
+CMN.TREASURYCODE=Treasury Code
+CMN.SELECTTREASURY=Select Treasury
+CMN.SELECTDDO=Select DDO
+CMN.CONFIRMPASSWORD=Confirm Password
+CMN.NEWPASSWORD=New Password
+CMN.OLDPASSWORD=Old Password
+CMN.USERNAME=User Name
+BTN.VIEWREPORT=View Report
+BTN.PROCESS=Process
+BTN.REVERTREQUEST=Revert Request
+
+CMN.REVERTDATA=Revert Data
+CMN.TREASURYNAME=Treasury Name
+CMN.PAYMONTH=Pay Month
+CMN.PAYYEAR=Pay Year
+CMN.VOUCHERNO=Voucher No.
+CMN.REASONFORREVERT=Reason for Revert
+CMN.BILLGROUP=Bill Group
+CMN.SCHEMEDESCRIPTION=Scheme Description
+CMN.VOUCHERDATE=Voucher Date
+CMN.MONTH=Month
+CMN.YEAR=Year
+CMN.SCHEME=Scheme
+CMN.VOUCHERDATE=Voucher Date
+CMN.INTERSTCALCULATION=Interest Calculation
+DCPS.CREDIT=Credit
+DCPS.DEBIT=Debit
+DCPS.ORGTYPE=Org Type
+DCPS.SCHEMECODE=Scheme Code
+DCPS.FINYEAR=Fin Year
+DCPS.SANCDATE=sanctioned Date
+DCPS.SANCBUDGET=Sanctioned Budget
+DCPS.VOUCHERNO=Voucher No
+DCPS.VOUCHERDATE=Voucher Date
+DCPS.INTERESTENTRY=Interest Entry
+DCPS.EFD=Effective From Date
+DCPS.ATD=Applicable to Date
+DCPS.PAYCOMMISSION=Pay Commission
+DCPS.DARATE=DA Rate
+
+#-----ADDED BY BHARGAV FOR DdoEmpSelection.jsp.JSP----STARTS-----#
+CMN.DDOEMPSELECTBTN = Select Employee
+CMN.DDOEMPSELECT = Selection of an Employee
+CMN.CHKBXEMPSELECT = Select
+CMN.DDOEMPSELECTSEARCH = Search an Employee for attaching to DDO
+CMN.SEARCH = Search
+#-----ADDED BY BHARGAV FOR DdoEmpSelection.jsp.JSP----ENDS-----#
+
+
+
+#-----ADDED BY BHARGAV FOR DdoEmpDeselection.jsp.JSP----STARTS-----#
+CMN.DDOEMPDESELECTBTN = Deselect Employee
+CMN.DDOEMPDESELECT = Deselection of an Employee
+CMN.CHKBXEMPDESELECT = Deselect
+
+
+CMN.REMARKS = Remarks
+CMN.DCPSACNO = Pension A/C No.
+
+
+
+#-----ADDED BY BHARGAV FOR DdoEmpDeselection.jsp.JSP----ENDS-----#
+
+
+
+#-------ADDED BY BHARGAV FOR dcpsDesignInfo.jsp------Starts----------------#
+CMN.DESIGNATIONMST=Designation Master
+CMN.FIELDDEPARTMENT=Field Department
+CMN.DESIGNATIONCODE=Designation Code
+CMN.PAYCOMMISSION=Pay Commission
+CMN.SAVE=Save
+CMN.REORGCADREHIR=Reorganise Post Hierarchy
+CMN.CODE=Code
+#-------ADDED BY BHARGAV FOR dcpsDesignInfo.jsp------Ends----------------#
+
+
+#-------ADDED BY BHARGAV FOR dcpsCadreInfo.jsp------Starts----------------#
+CMN.CADREMASTER=Post Master
+CMN.CADRECODE=Post Code
+CMN.WHETHERMINISTERIAL=Whether Ministerial
+CMN.SUPERANNUATIONAGE=Super Annuation Age
+CMN.CADRECONTROLLEDBYOWNDEPARTMENT=Post Controlled By Own Department
+CMN.IFNOCONTROLLEDBYFIELDDEPARTMENT=If No, Controlled By Field Department
+CMN.YES=Yes
+CMN.NO=No
+CMN.REORGCADREHIR=ReOrganize Post Hierarchy
+#-------ADDED BY BHARGAV FOR dcpsCadreInfo.jsp------Ends----------------#
+
+#-------ADDED BY BHARGAV FOR dcpsEmpDeputatiaon.jsp------Starts----------------#
+
+CMN.ATTACHDEPEMP=Attach Deputation Employee
+CMN.DETACHDEPEMP=Detach Deputation Employee
+CMN.BIRTHDATE=Birth Date
+CMN.NAME=Name
+CMN.EMPLOYEEID=EmployeeId
+CMN.CHKBXEMPSELECT=Chk
+CMN.Office=Institution  Code
+CMN.PENSIONNUMBER=Pension No
+CMN.EMPLOYEENAME=Employee Name
+CMN.ATTACHDATE=Attach Date
+CMN.REASON=Reason
+CMN.REMARKS=Remarks
+CMN.SEARCH=Search
+BTN.ATTACH=Attach
+BTN.DETACH=Detach
+#-------ADDED BY BHARGAV FOR dcpsEmpDeputatiaon.jsp------Ends----------------#
+
+
+#-------ADDED BY BHARGAV FOR dcpsTierForms.jsp------Starts----------------#
+CMN.SAVEDON = Saved On
+CMN.TIER = Tier Type
+CMN.FROMDATECNTRBTN = Contribution From Date
+CMN.TODATECNTRBTN = Contribution To Date 
+#-------ADDED BY BHARGAV FOR dcpsTierForms.jsp------Ends----------------#
+
+
+
+
+#----------------OfflineDCPS-----------Starts -------------------
+CMN.TreasuryName=Treasury Name
+CMN.DDOName=DDO Name
+CMN.BillGroup=Bill Group
+CMN.Scheme=Scheme
+CMN.Month=Pay Month
+CMN.Year=Pay year
+CMN.NAMEANDID=Name and Id
+CMN.CONTRISTARTDATE=Contribution Start Date
+CMN.CONTRIENDDATE=Contribution End Date
+CMN.PAYCOMIMISSION=Pay Commission
+CMN.PAYMENTTYPE=Payment Type
+CMN.NAMEWOCOLON=Name
+CMN.BASICWOCOLON=Basic
+CMN.DPWOCOLON=DP
+CMN.DAWOCOLON=DA
+CMN.CONTRIBUTION=Contribution
+CMN.CHECKBOX= Select All
+CMN.ADDROW=Add Row
+CMN.VOUCHER=Voucher
+CMN.CHALLAN=Challan
+CMN.VCNO=Voucher No./ Challan No.
+CMN.VCDATE=Voucher Date/ Challan Date
+CMN.BILLNO=Bill no
+CMN.INPUTDETAILSFORCONTRI=Input Details For Contribution
+CMN.OUTPUTDETAILSFORCONTRI=Contribution Details For Selected Year
+CMN.YEARLYAMOUNT=Yearly Amount to be deposited
+CMN.FINYEAR=Year
+
+#----------------Arrears-----------
+BTN.SELECTALL=Select All
+BTN.ADDARREARSTOEMPLOYEESACCOUNT= Add Arrears to Employee's Account
+BTN.GO=GO
+BTN.DELETEEMP=Delete Employee
+
+
+BTN.APPROVEALL=Approve All
+BTN.UPDATEREGFORMFORUPDATETOTALLY=Update
+
+DCPS.SELECTDDOOffice SFORBG=Select DDO Institution s For Bill Group
+DCPS.SAVEBG=Save Bill Group
+DCPS.TELNO(1)=Contact Number
+DCPS.TELNO(2)MOBILE=Mobile
+DCPS.FAX=Fax
+CMN.CHANGEPASSWORD=Change Password
+
+CMN.SUBOffice SSEL=Selection Of SubInstitution s
+CMN.BGDETAILS=Input Bill Group Details
+CMN.ATTACHDETACHEMPLOYEE=Attach/Detach Employee
+CMN.SELECTEMPLOYEESFORBG=Select Employees For Bill Group
+CMN.SELECTEMPLOYEES=Select Employees
+CMN.SELECTBILLGROUP=Select Bill Group
+ALREADYADDEDBILLGROUPS=Already Added Bill Groups
+CMN.CREATEBILLGROUP=Create Sub Bill Group
+
+#---------------Form 1 Status Report------------
+CMN.FORMSTATUSOFALLEMPLOYEES=Form Status Of All Employees
+
+
+
+#---------------SanctionBudget------------
+
+DCPS.CREDIT=C-Credit
+DCPS.DEBIT=D-Debit
+DCPS.ORGTYPE=Organisation Type / Description
+DCPS.SCHEMECODE=Scheme Code
+DCPS.FINYEAR=Financial Year
+DCPS.SANCDATE=Sanctioned Date
+DCPS.SANCBUDGET=Sanctioned Budget
+DCPS.VOUCHERNO=Voucher No
+DCPS.VOUCHERDATE=Voucher Date
+
+CMN.SRNO=Sr No
+CMN.ORGTYPE=Organization Type
+CMN.FINANCIALYEAR=Financial Year
+CMN.SANCORDERDATE=Sanction Order Date
+CMN.AMOUNT=Amount
+CMN.STATUS=Status
+CMN.TOTALBUDGET=Total Budget
+
+#----------------InterestRates-----------
+
+DCPS.INTERESTENTRY=Interest Entry
+DCPS.EFD=Effective From Date
+DCPS.ATD=Applicable To Date
+
+CMN.RATE=Rate
+CMN.EFFECTFROM=Effective From
+CMN.APPLICABLETO=Applicable Upto
+
+#-----------------DARates----------------
+DCPS.DARATE=DA Rate
+DCPS.PAYCOMMISSION=Pay Commission
+
+CMN.PAYCOMM=Pay Commission
+
+
+CMN.ACTIVE = Active
+CMN.INACTIVE = Inactive
+CMN.DEPTNOffice MSTENTRY = Deputation Office s Master Entry
+BTN.NEW = New Entry
+BTN.EDIT = Edit
+
+#---------------Changes Drafts------------
+CMN.CHANGESDRFATSINPUTDTLS=Input Details For Drafts Of Changes
+CMN.CHANGESDRFATS=Drafts Of Changes
+CMN.DRAFTSAVEDATE=Saved on
+CMN.CHANGEDETAILS=Change Details
+
+CMN.DETACHDATE=Detach Date
+CMN.ATTACHDATE=Attach Date
+
+CMN.CHALLANENTRYFORM=Challan Entry Form
+CMN.CHALLANNO=Challan No
+CMN.CHALLANDATE=Challan Date
+CMN.EMPLOYEESDUMMY=Employees for this dummy Office 
+
+BTN.GENERATE=Generate Contribution File
+
+#----------added by Meeta for Feedback--------
+CMN.NAME=Name
+CMN.DDO=DDO
+CMN.TREASURY=Treasury
+CMN.DEPARTMENT=Department
+CMN.COMMENTS=Comments
+CMN.FEEDBACKDATE=FeedBack Date
+CMN.ISSUEDETAILS=Enter Issue Details
+
+#----------added by Meeta for Ticker Message--------
+CMN.MESSAGE1=Message1
+CMN.MESSAGE2=Message2
+CMN.MESSAGE3=Message3
+CMN.PREVIEW=Preview
+
+#----------added by Meeta for Notice Board--------
+
+CMN.SUBJECT=Subject
+CMN.ISSUEDBY=Issued By
+CMN.ISSUEDDATE=Issued Date
+CMN.EXPIRYDATE=Expiry Date
+CMN.NOTICETYPE=Notice Type
+CMN.FIELDDEPTCODE=Field Dept Code
+CMN.UPLOADFILE=Upload File
+CMN.GENERALPUBLIC=General/Public
+CMN.FILENAME=File Name
+#-----------added by Meeta for Post Employer Contribution----
+CMN.BILLAMOUNT=Expenditure in Current Bill(Rs)
+CMN.SANCBUDGET=Sanctioned Budget(A)
+CMN.ETD=Expenditure Till Date(B)
+CMN.BUDGET=Available Budget(A-B)
+CMN.EXCESS=Excess Expense
+BTN.GENERATEBILL=Generate Bill
+BTN.ALLOWEXCESS=Allow Excess Expense
+
+#-----------added by Vihan For Match Contribution Entries
+CMN.DESIGNATIONSHORTBTN.FILTER=Filter Data
+CMN.VOUCHERDTLS=Voucher Details
+CMN.FROMDATE=From Date
+CMN.TODATE=To Date
+CMN.DCPSAMOUNT=DCPS Amount 
+BTN.FILTER=Filter Data
+
+CMN.ALLREVERTREQUESTS=All Revert Requests
+
+#----------added by Meeta for ChangeEmpDept.jsp---------#
+CMN.CURRPARENTDEPT=Current Parent Department
+CMN.NEWPARENTDEPT=New Parent Department
+
+CMN.DESIGNATIONSHORT=Designation Short Name
+BTN.DISPLAYALL=Display All
+CMN.CHANGEEMPDPTMNT=Change Employee Department
+
+CMN.ALREADYADDEDBILLGROUPS=Already Added BillGroups
+CMN.REASONSFORSALARYCHANGE=Reasons for Pay Scale Change
+CMN.OTHERREASON=Other Reason
+CMN.WITHEFFECTFROMDATE=With Effect From Date
+
+CMN.APPROVEDFORMS=Approved Forms
+
+
+CMN.ALLDESIGNATIONS=All Designations
+CMN.CHALLANNOEMP=Employee Challan No
+CMN.CHALLANDATEEMP=Employee Challan Date
+CMN.CHALLANNOEMPLR=Employer Challan No
+CMN.CHALLANDATEEMPLR=Employer Challan Date
+CMN.CONTRIBUTIONEMP=Employee Contribution
+CMN.CONTRIBUTIONEMPLR=Employer Contribution
+CMN.REMARKSFORREJECTION=Remarks For Rejection
+CMN.MSGINYEARLY=Yearly Process of 6th PC Installment Amount Deposition to DCPS Verification
+CMN.SELECTOPTION=Select the option
+CMN.FORDDO=FOR DDO
+CMN.FOREMPLOYEE=For Individual Employee
+CMN.CHANGEDDOCODE=Change DDO Code
+CMN.CURRENTDETAILS=Current Details
+CMN.REVISEDDETAILS=Revised Details
+CMN.MATCHCONTRISMANUALLY=Match Contributions Manually
+CMN.UNMATCHEDVOUCHERS=UnMatched Vouchers
+CMN.ACTUALVOUCHERAMOUNT=Actual Voucher Amount
+CMN.TREASURYNETVOUCHERAMOUNT=TreasuryNet Voucher Amount
+BTN.MATCHVOUCHERS=Match Vouchers
+
+BTN.DELETE=Delete
+
+CMN.ALLEMPSUNDERDDO=All Employees under selected DDO
+CMN.ACCOUNTNOFORNONSRKAEMP=Allocated DCPS Account Number
+CMN.ACCOUNTNOFOROTHERS=DCPS Account maintaining Authority
+CMN.DCPSACNTMNTBYOTHERS=Others (Ac Maintained By)
+CMN.DCPSACNTMNTBYOTHERSTATE=Other State (Ac Maintained By)
+
+BTN.CHANGEOffice DETAILS=Change Institution Details
+BTN.CHANGEPAYDETAILS=Change Pay Details
+CMN.PAYDTLSOFSELECTEDEMP=Pay details of Selected Employee
+
+CMN.CALCULATEINTERESTFORTREASURY=Calculate Interest For Treasury
+CMN.CALCULATEINTERESTFORDDO=Calculate Interest For DDO
+CMN.CALCULATEINTERESTFOREMP=Calculate Interest For Employee
+CMN.FORTREASURY=For Treasury
+
+CMN.CHALLANDTLS=Challan Details
+
+CMN.REASONFORDESELECTION=Reason For Deselection
+BTN.DESELECTALL=De-Select All
+CMN.CURRTREASURYCODE=Current Treasury Code
+CMN.CURRDDOCODE=Current DDO Code
+CMN.NEWTREASURYCODE=New Treasury Code
+CMN.NEWDDOCODE=New DDOCode
+
+CMN.SEARCHRESULT=Search Result
+CMN.SEARCHEMPLOYEE=Search Employee
+
+BTN.PRINTFORM1=Print Form 1
+BTN.PRINTFORM1ACKNMNT=Print Form 1 Acknowledgement
+
+#--------DCPS Report-----#
+
+CMN.NPENACLST=New Pension Account List
+CMN.LSTNMSTARTINGWITH=Last Name Starting With
+CMN.ALLEMP=All Employees
+CMN.TREASURYWISE=Treasury Wise
+CMN.ATOZ=(A to Z)
+CMN.GENREP=Generate Report
+CMN.ALLDDO=All DDO
+
+CMN.REMARKSLOCATION=Deputation Location
+CMN.ADDRESSVTC=Village/Town/City
+CMN.FEEDBACK=Feedback
+CMN.FEEDBACKSFROMDDO=Feedbacks from DDO
+
+#--------For GPF Extra Fields----------#
+CMN.REGULARSUBS=Regular Subscription
+CMN.ADVANCEAMOUNT=Refundable Advance Amount
+CMN.OPENBALANCE=Opening Balance
+CMN.INSTALLMENTSLEFT=Installments Left
+
+#-------For Termination Process--------#
+CMN.TERMINATIONDETAILS=Termination Details
+CMN.DATEOFTERMINATION=Date Of Termination
+CMN.REASONFORTERMINATION=Reason For Termination
+CMN.MISSINGCREDITSOFEMP=Missing Credits of the Employee
+CMN.ATTACHMENTS=Attachments
+CMN.APPASPERFORMA=Application As Per Form A
+CMN.DEATHCERTIFICATE=Death Certificate
+CMN.R3OFPRVSFINYEAR=R3 of Previous Financial Year
+CMN.FORMB=Form B
+CMN.FORMD=Form D
+BTN.GENERATEFORMB=Generate Form B
+BTN.GENERATEFORMC=Generate Form C
+BTN.GENERATEFORMD=Generate Form D
+BTN.FORWARDTOTO=Forward To Treasury
+BTN.FORWARDTOTOONLY=Forward To TO
+BTN.FORWARDTOSRKA=Forward To SRKA
+CMN.REMARKS*=Remarks*
+CMN.VOUCHERNO*=Voucher no *
+CMN.VOUCHERDATE*=Voucher Date *
+CMN.AMOUNTTOBEDEDUC=Amount To Be Deducted
+CMN.AMOUNTTOBEDEDUC*=Amount To Be Deducted *
+CMN.TERMINATIONREQUESTLIST=Termination Requests List
+BTN.DELETEREQUEST=Delete Request
+
+CMN.AUTHLETTERNO=Authority Letter No
+CMN.ORDERNO=Order No
+CMN.ORDERDATE=Order Date
+BTN.VIEWATTACHMENTS=View Attachments
+
+CMN.OPENINGBAL=Opening Balance of Empoyee (Financial Year) 
+CMN.EMPTERMINALCONTRI=Employee contribution of current Financial year upto Terminaton date + Missing Credits
+CMN.EMPLRTERMINALCONTRI=Employer contribution of current Financial year upto Terminaton date(Paid)
+CMN.EMPLRTERMINALCONTRIPENDING=Employer contribution of current Financial year upto Terminaton date(Pending)
+CMN.TERMINALINTREST=Interest of current Financial year upto Terminaton date
+CMN.TIER2CONTRITERMINAL=Tier 2 contribution of current Financial Year upto Termination Date 
+CMN.TIER2CONTRIINTTERMINAL=Tier 2 Interest of current Financial Year upto Termination Date 
+CMN.TOTALAMTTERMINAL=Total Amount Payable  to Employee
+BTN.EMPLOYERCONTRI=Employer Contribution
+
+#-------For Offline Contribution--------#
+CMN.DelayedMonth=Delayed Month
+CMN.DelayedYear=Delayed Year
+
+CMN.GRORDER=GR Order
+
+#--------Attach Detach Post------------#
+CMN.ATTACHDETACHPOST = ATTACH/DETACH VACANT POST
+CMN.TYPEOFOPERATION = Type of Attach-Detach
+
+CMN.MAINOffice =Main Organization/Institution
+CMN.SUBORDINATEOffice =Sub-Ordinate Organization/Institution
+CMN.FORMFORWARDTOTOFORDCPSMSG=* Note - Form must be forwarded to TO in case of DCPS employee 
+CMN.PHYFORMSRCVD=Physical Forms Received
+CMN.DDODESIGNATION=DDO Designation
+
+CMN.SEARCHEMPTOMAPAST = Search an Employee to Assign/De-Assign as DDO Assistant
+CMN.EMPSTOMAPASDDOASST=Employees to Assign/De-Assign as DDO Assistant
+CMN.DDOASSTORNOT=DDO Assistant ?
+
+CMN.ASSIGNASDDOASST=Assign as DDO Assistant
+CMN.DEASSIGN=De-Assign
+
+CMN.PTAPPLICABLE=PT Applicable
+BTN.OK=OK
+
+CMN.ORDERNO=Order No
+CMN.ORDERDATE=Order Date
+CMN.Office RELIEVEDFROM=Office  Relieved From
+CMN.BUCKLENO=Biometric Number
+
+#-------Added by Jayraj------
+CMN.DDOPNAME = DDO Personal Name
+CMN.OLDUSRNAME = Old User Name
+CMN.NEWUSRNAME = User Name
+CMN.DDODTLS = DDO Details
+CMN.DDOOFCNAME = DDO Institution Name
+CMN.MAPDDO = Map DDO
+CMN.LOCATIONPIN=Location Pin
+CMN.SERVICEEXPIRE=Service Expire On
+CMN.DCPSORGPF=DCPS or GPF?
+CMN.DOJNEW=Date Of Joining(New) 
+CMN.pers=Percentage of Basic(%)
+CMN.POSTSTATUS = Post Status
+
+#-------------Added By Vivek for ZP--------------
+ZP.DDOOffice =DDO Institution 
+ZP.ADMINOffice MASTER=Admin Institution  Master
+ZP.DISTMSTOFFINAME=District Master Institution  Name
+ZP.DEPTNAME=Department name
+ZP.REPDDOCODEFORPAYBILL=Reporting DDO code for Paybill
+ZP.FINDDOFORDCPS=Final DDO For DCPS
+ZP.SPLDDOFORDCPS=Special DDO For DCPS
+ZP.SUBTREASURYNAME=Sub Treasury Name
+CMN.DIE=Date of Initial Entry in Service
+MSG.DDONAM=Enter Signing Authority i.e. DDO/Organization's Name
+CMN.Qualification=Qualification
+ 
+CMN.pers=Percentage of Basic(%)
+CMN.TYPEEMP=Type of employee
+CMN.INDNO=Individual Approval Order No 
+CMN.INDDATE=Individual Approval Date 
+CMN.MEDICAL=Medical Reimbursement
+CMN.TRAVEL=Travel Allowance
+
+CMN.ZPDDOCODE=DDO
+CMN.REPORTINGDDOCODE=Level 2
+CMN.FINALDDOCODE=Level 3
+BTN.FORWARDTOHIGERAUTH=Forward to Higher Authority
+CMN.ADDMOREQUALIFICATION=Add Qualification
+
+
+
+
+#-------------DCPS Delayed Contributions by Vaibhav Tyagi--------#
+CMN.NOTEFORNEWDCPSSYSTEM=DCPS Delayed, DCPS DA Arrear, DCPS Pay arrear need to be given from this screen if applicable. Monthly DCPS Regular contributions will be automatically calculated in Paybill.
+CMN.NOTEFORSAVECAREFULLY=Save the contributions carefully. Saved contributions will reflect in Paybill on generation.
+CMN.NOTEFORBILLALREADYGENERATED=The bill is already generated/approved. Please delete/unlock the bill first before making changes in this screen.
+CMN.DAARREARSTARTDATE=DA Arrear Start Date
+CMN.DAARREARENDDATE=DA Arrear End Date
+CMN.NOTEFORDAARREARDATES=Note :- DA Arrear Start Date must be greater than employee's joining date else delete DA arrear of those employees. Save contributions carefully with correct dates. Please press Go button first then set dates.
+CMN.NOTEFORPAYARREARDATES=Note :- Pay Arrear Start Date must be greater than employee's joining date else delete Pay arrear of those employees. Save contributions carefully with correct dates. Please press Go button first then set dates.
+CMN.PAYARREARSTARTDATE=Pay Arrear Start Date
+CMN.PAYARREARENDDATE=Pay Arrear End Date
+CMN.NOTEFORPAYARREARDATES=Note :- Pay Arrear Start Date must be greater than employee's joining date else delete Pay arrear of those employees. Save contributions carefully with correct dates. Please press Go button first then set dates.
+
+
+BTN.SETDAARREARDATESONLY=Set DA Arrear Dates For All
+BTN.SETPAYARREARDATESONLY=Set Pay Arrear Dates For All
+
+
+#####-----ADDED BY PUSHPA
+BTN.UPDATEBANKBRANCH=Update Details
+CMN.ACNT=Account No.
+CMN.CURRENTSTATUS= Employee Status
+
+
+#--------------------Added by Kinjal for Ticketing Tool---#
+CMN.TICKETID=Ticket Id
+CMN.TICKETITLE=Title
+CMN.TICKETDESC=Description
+CMN.TICKETCREDENTIALS=Credentials
+CMN.CONTACTNO=Mobile No
+CMN.EMAILID=Email Id
+CMN.USERNAME=User Name
+CMN.TICKETSCREEN=Screen Name
+CMN.TICKETREMARKS=Your Inputs
+CMN.TICKETPRIORITY=Priority
+CMN.TICKETSTATUS=Status
+CMN.TICKETCREATEDATE=Created Date
+CMN.TICKETPENDINGWITH=Pending with
+CMN.TICKETPENDINGFROM=Pending From
+CMN.TICKETCOMMENTS=History
+CMN.USERIDPASSWORD= User ID/Password
+#--------------------Added by Akshay for Ticketing Tool---#
+CMN.TICKETSEVERITY=Severity
+CMN.TICKETRCA=Root Cause
+
+
+#--------------------Added by Abhishek for CHB Calculation---#
+BTN.RESETBASIC=Reset
+CMN.BASICVALUE=Basic Value
+CMN.HOURS=Hours
+CMN.CHBCALCULATIONFORBASIC=Search Employee For Basic Calculation CHB
+CMN.SEVARTHID=Sevarth Id
+CMN.EMPNAME=Employee Name
+CMN.YEAR=Year
+CMN.MONTH=Month
+
+
+#--------------------Added by Abhishek for Ticketing Tool---#
+CMN.TICKETID=Ticket Id
+CMN.TICKETITLE=Title
+CMN.TICKETDESC=Description
+CMN.TICKETCREDENTIALS=Credentials
+CMN.CONTACTNO=Mobile No
+CMN.EMAILID=Email Id
+CMN.USERNAME=User Name
+CMN.TICKETSCREEN=Screen Name
+CMN.TICKETREMARKS=Your Inputs
+CMN.TICKETPRIORITY=Priority
+CMN.TICKETSTATUS=Status
+CMN.TICKETCREATEDATE=Created Date
+CMN.TICKETPENDINGWITH=Pending with
+CMN.TICKETPENDINGFROM=Pending From
+CMN.TICKETCOMMENTS=History
+
+#--------------------Added by Abhishek for Updating Organiozation Institution Name---#
+CMN.ORGANIZATIONINSTITUTION=Update Organization Institution Name
+NGR.RESET=Reset
+CMN.UPDATEINSTITUIONNAME=Update Organization Institution Name
+CMN.DDOCODE=DDO Code
+MSG.SEARCHFORINSTITUTION=(Please Enter the DDO Code for the Search)
+CMN.UPDATENAME=Update Name Of Institution
+CMN.ORGINSNAME=Organization Institution Name
+CMN.ORGINSUPDATIONNAME=Organization Updated Name
+BTN.UpdateBasic=Update Details
+
+
+#------------added by saurabh for Legacy Data entry
+BTN.SAVE=Save
+BTN.RESET=Reset
+BTN.APPROVE=Approve
+BTN.REJECT=Reject
+
+#------------added by poonam for city class updation
+
+CMN.CITYCLASSUPDATION=City Class Updation
+CMN.CITYCLASSCODE=City Class Code
+CMN.BASICSALARY=Basic Salary
+CMN.DIDSTRICT=District
+CMN.TALUKA=Taluka
+CMN.CITYCLASSNAME=City Class 
+#-------------------------added by poonam for Sanction leave
+
+CMN.CHKBXEMPSELECT = Select
+CMN.ALLDDODETAILS=DDO Leave Details for Current Year
+#--CMN.DDOCODE= DDO Code
+CMN.DDOOFFICE=Office Name
+CMN.LEAVEFROMDATE=Leave From date
+CMN.LEAVETODATE=Leave To date
+BTN.UPDATEDEATILS=Update Details
+CMN.7THPAYBASIC = 7Th Pay Basic
+CMN.LEVEL = Level
+#---------------extra----------
+
+
+DDOWISEEXPENDREPO.DDOWISEEXPENDREPORT=DDO Wise Expenditure Report
+EIS.EXPORTOEXCEL=Export to Excel
+
+
+
+PAYROLL.NPSFILEGENERATE=NPS File generation
+
+#------------------------------Added by Naveen for nsdl --------------#
+NPS.VERIFYDCPSLEGACYDATA=Verify DCPS legacy data
+NPS.ENTRYOFDCPSLEGACYDATA=Entry of DCPS legacy data
+NPS.LEGACYFILEVALIDATION=Legacy File Validation
+NPS.LEGACYFILEGENERATION=Legacy File Generation
+CMN.INPUTDETAILSFORNPS=Input Details For NPS
+CMN.GROSSAMT=Gross Amount
+CMN.NETAMT=Net Amount
+CMN.EMPCONTRI=Total Employee Contribution
+CMN.EMPLRCONTRI=Total Employer Contribution
+CMN.TOTALAMT=TOTAL AMOUNT
+BTN.GENERATEFILE=Generate Legacy File
+BTN.SAVEE=Save
+BTN.RESETT=Reset
+BTN.REJECTT=Reject
+CMN.SUBSCHEMENAME=SubScheme 
+CMN.SUBSCHEMECODE=SubScheme Code
+
+BTN.SAVEE=Save
+BTN.RESETT=Reset
+MSG.OR=OR
+BTN.REJECTT=REJECT
+CMN.CONTRIBUTIONEMPLR=Employer Contribution
+LEGACY.YEAR=Legacy Year
+LEGACY.MONTH=Legacy Month
+
+PRAN.DOJ=DOJ
+PRAN.DOB=DOB
+PRAN.PPANNO=PPAN NO
+PRAN.SRNO=SR NO
+PRAN.DCPSID=DCPS ID
+PRAN.DESIG=DESIGNATION
+PRAN.UPDATE=UPDATE
+PRAN.PRANNO=PRAN NO
+MSG.MYSEARCH=SEARCH
+CMN.UPDATEPRAN=UPDATE PRAN NO
+CMN.SEARCHEMP=SEARCH EMPLOYEE
+
+MSG.MYSEARCHACTDEACTIVATE=(Either Pran No should be filled)
+CMN.ACT=Active
+CMN.DEACT=Deactive
+PAYROLL.NPSFILEGENERATE=NPS File generation
+CMN.OFFICERELIEVEDFROM = Office Relieved From
+CMN.CONSOLIDATE_ID =CONSOLIDATED BIll ID
+
+#---Added By Tejashree---#
+CMN.MAJORHEADCODE = Major Head Code

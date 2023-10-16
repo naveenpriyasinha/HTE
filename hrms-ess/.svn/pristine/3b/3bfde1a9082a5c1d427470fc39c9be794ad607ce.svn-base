@@ -1,0 +1,485 @@
+#ADDED BY MEGHA FOR GPF
+#Added by Megha for GPF_APP_FORM
+designation=Designation
+date_of_superann=Date of Superannuation
+address=Address
+salary=Salary
+personal_details=Personal 
+Select=Select
+
+#Added by Megha for GPF_NEW_ACC
+name_of_app=Name of Applicant
+service=Service to which the applicant belongs to
+permanent_temporary=Whether the applicant is permanent, temporary or reemployed. If temporary, give date of commencement of service
+photo=Upload Photo
+designation_off=Designation of the officer
+office=Office to which attatched. If on Deputation, state the parent Dept. Govt. also
+acc_no=Account number to be allotted by the Accounts Officer
+family=Whether the appliant has family or not
+finger_print=Fingerprint
+other_details=Other Details
+remarks=Remarks 
+
+#Added by Megha for GPF_SUBS_CHANGE
+GPF=GENERAL PROVIDENT FUND
+GPF.empty=   
+GPF.gpfReq=GPF Request
+GPF.gpfFun=Type of Request
+GPF.newAcc=gpf.New Account
+GPF.changeSubDetails=gpf.Change Subs Details
+GPF.gpfAdv=gpf.GPF Advance
+GPF.partFinalWithd=gpf.Part/Final Withdrawal
+GPF.changeSubDet=Change Subscription Details
+GPF.effFrom=Change Effective From
+GPF.approveAg=Approved by AG Rajkot
+GPF.rejectAg=Rejected by AG Rajkot
+GPF.subReq=Subscription Request Details
+GPF.apprDet=Approval Details 
+GPF.effDateInvalid=Effective date should not be less than current date
+GPF.currFinYearInvalid=Effective date should be in the current financial year
+GPF.validSubAmt=Please enter valid Subscription Amount
+GPF.newAmtInvalid=New amount cannot be equal to old amount
+GPF.reqPending=You cannot raise another request as previous request is still pending
+GPF.increaseInvalid=You cannot increase the subscription rate more than twice in a financial year
+GPF.decreaseInvalid=You cannot decrease the subscription rate more than once in a financial year
+GPF.greaterThanSalary=New Subscription amount cannot be greater than salary
+
+GPF.subReqInbox=Change Subscription Request - GPF
+
+#Added by Megha for GPF_BALANCE_DET
+GPF.fromDt=From date
+GPF.toDt=To date
+GPF.Rs=In Rupees
+GPF.closingBal=Closing balance as per the statement
+GPF.amtAcc=Amount Accrued based on higher pay scale
+GPF.sub=Subscription Amount
+GPF.refunds=Repayments
+GPF.withd=Withdrawals
+GPF.adv=Advance
+GPF.netBal=Net Balance on 
+
+#Added by Megha for GPF_ADV_DET
+GPF.advDet=Advance Details
+GPF.splAdv=Special Advance
+GPF.appDate=Application Date
+GPF.advamt=Advance Amount
+GPF.noOfIns=No. of Installments
+GPF.purposeCat=Purpose Category
+GPF.purpose=Purpose
+GPF.balanceOut=Balance Outstanding
+GPF.totAdv=Total Advance
+GPF.stuDet=Student Details
+GPF.patientDet=Patient Details
+GPF.vehicleDet=Vehicle Details
+GPF.tricycleDet=Tricycle Details
+GPF.relation=Relation
+GPF.age=Age
+GPF.priceVehicle=Price of Vehicle (INR)
+GPF.class=Class
+GPF.instiName=Institute Name
+GPF.dayScholar=Day Scholar
+GPF.hostelite=Hostelite
+GPF.indoor=Indoor
+GPF.outdoor=Outdoor
+GPF.stuType=Student Type
+GPF.expReimburse=Expenditure reimbursable
+GPF.patientType=Patient Type
+GPF.hospitalName=Hospital/Dispensary/Doctor
+
+GPF.pilgrimageInvalid=Advance for pilgrimage cannot be taken more than once.
+GPF.vehicleTaxInvalid=Advance for Vehicle Tax cannot be taken more than once.
+GPF.elecItemInvalid=Advance for Electronic Item cannot be taken more than once.
+GPF.phyChallenged=Only physically challenged employees can take advance for tricycle.
+GPF.scooterInvalid=For Scooter, basic salary should be greater than or equal to Rs. 4600 <br> Max loan amount is 30000. <br>Advance amount should be less than price of vehicle <br> Advance amount should be less than 6 times the basic pay.
+GPF.motorcycleInvalid=For Motorcycle, basic salary should be greater than or equal to Rs. 4600 <br> Max loan amount is 30000. <br>Advance amount should be less than price of vehicle <br> Advance Amount should be less than 6 times the basic pay.
+GPF.mopedInvalid=For Moped, basic salary should be greater than or equal to Rs. 3000 and max loan amount is Rs. 15000. Advance amount should be less than price of vehicle  and less than 6 times the basic pay.
+GPF.10thInvalid=For 10th class student, max loan amount that can be taken is Rs. 7000.
+GPF.11thInvalid=For 11th class student, max loan amount that can be taken is Rs. 10000.
+GPF.12thInvalid=For 12th class student, max loan amount that can be taken is Rs. 15000.
+GPF.splAdvInvalid=For special advance, number of installments vary from 12 to 36.
+GPF.normalAdvInvalid=For normal advance, number of installments vary from 12 to 24.
+GPF.tricycleInvalid=For Tricycle, max loan amount that can be taken is Rs. 30000. Advance amount should be less than price of vehicle.
+GPF.advInbox=Advance Inbox
+GPF.advReq=Advance Request - GPF
+GPF.dpndtDet=Dependent Details\:
+GPF.TwoWheel=Two Wheeler
+csResponse=Cash Section Officer's Response
+GPF.noDpndt=Withdrawal cannot be done for this purpose as you do not have dependents.
+GPF.advInstallNo=Please enter Number Of installments.
+
+#Added by Megha for gpf_part_final_withdrawal
+GPF.withDet=Part Final Withdrawal Details
+GPF.splCase=Special Case
+GPF.amtWith=Please enter Amount to be withdrawn.
+GPF.purposeWith=Purpose of Withdrawal
+GPF.accOff=Account Officer's Name
+GPF.appOn=Applied on
+GPF.with1=Only after completion of 15 years of service or 10 years before attaining superannuation can you withdraw for this purpose.
+GPF.with2=Only after completion of 25 years of service or 5 years before attaining superannuation can you withdraw for this purpose.
+GPF.with3=Only after completion of 10 years of service can you withdraw for this purpose.
+GPF.withNoDpndt=Withdrawal cannot be done for this purpose as you dont have dependents.
+GPF.withLimit=Withdrawal amount should not exceed 6 months pay or half the amount in the account, whichever is less.
+GPF.withMotorInvalid=Withdrawal for motorcycle can be done if basic salary is equal to or more than Rs. 4600. Withdrawal amount should not exceed Rs. 30000.
+GPF.withScooterInvalid=Withdrawal for scooter can be done if basic salary is equal to or more than Rs. 4600. Withdrawal amount should not exceed Rs. 30000.
+GPF.withMopedInvalid=Withdrawal for moped can be done if basic salary is equal to or more than Rs. 3000. Withdrawal amount should not exceed Rs. 15000.
+GPF.with10thInvalid=The withdrawal amount cannot exceed Rs. 20000 for dependent in 10th standard.
+GPF.with11thInvalid=The withdrawal amount cannot exceed Rs. 30000 for dependent in 11th standard.
+GPF.with12thInvalid=The withdrawal amount cannot exceed Rs. 40000 for dependent in 12th standard.
+GPF.withTriInvalid=The withdrawal amount cannot exceed Rs. 30000 for tricycle.
+GPF.elecInvalid=The withdrawal amount cannot exceed Rs. 15000 for Electronic Item.
+GPF.repairInvalid=The withdrawal amount cannot exceed Rs. 10000 for Repair of Motor car. Withdrawal can be done if basic salary exceeds Rs.4250.
+GPF.withFourWheelerInvalid=The withdrawal amount cannot exceed Rs. 160000 for Four Wheeler. Withdrawal for four wheeler can be done if basic salary exceeds Rs.10000.
+GPF.withHBA1Invalid=Withdrawal for HBA cannot exceed Rs. 6,50,000 if 50 months pay is less than Rs. 3,00,000
+GPF.withHBA2Invalid=Withdrawal for HBA cannot exceed Rs. 11,00,000 if 50 months pay lies between Rs. 3,00,000 and Rs. 5,00,000.
+GPF.withHBA3Invalid=Withdrawal for HBA cannot exceed Rs. 18,00,000 if 50 months pay is more than Rs. 5,00,000
+GPF.withHighEduInvalid=Withdrawal amount cannot exceed Rs. 150000 for Higher Education.
+GPF.withCostEc=Cost of Electronic Item(INR)\: 
+GPF.withPriceRepair=Price Of Repair(INR)\: 
+GPF.select2Wheeler=Select Two Wheeler\:
+GPF.name=Name
+GPF.rel=Relation
+GPF.price=Price
+GPF.withReq=Withdrawal Request - GPF
+GPF.AmtWithn=Amount Withdrawn
+GPF.super=You cannot withdraw more than once one year before attaining superannuation, 6 months in case of voluntary retirement.
+GPF.selectWithSpl=Please select whether withrawal is a special case.
+GPF.selectDependent=Please select one Dependent
+GPF.selPurp=Please select the purpose
+GPF.accOffName=Please enter Account Officer's name
+GPF.selType=Please Select Type
+GPF.selClass=Please select Class
+GPF.enterInsti=Please enter Institute Name
+GPF.selTwoWheeler=Please select Type of Two Wheeler
+GPF.twoWheelerPrice=Please enter price of Two Wheeler
+GPF.amtgtPrice=Withdrawal amount cannot be greater than price of the vehicle
+GPF.enterPriceTri=Please enter price of Tricycle
+GPF.withFouronce=Withdrawal for four Wheeler can be done only once
+GPF.enterPriceFourWheeler=Please enter price of Four Wheeler
+GPF.withMotorOnce=Withdrawal for Repair of Motor car can be done only once
+GPF.enterRepairPrice=Please enter price of Repair
+GPF.pricegtWith=Withdrawal amount cannot be greater than price involved in repair of the vehicle
+GPF.enterElecPrice=Please enter price of Electronic Item
+GPF.ecgtWith=Withdrawal amount cannot be greater than Price of Electronic Item
+GPF.enterDtlPurp=Please enter details about the purpose
+GPF.withPilgOnce=Withdrawal for Pilgrimage cannot be more than once
+GPF.amtZeroInvalid=Amount cannot be zero
+GPF.enterValidNo=Please enter a valid number
+GPF.noSplChar=Special Characters are not allowed
+GPF.noOfInstall=Please enter Number Of installments
+GPF.detPurp=Please enter details about the purpose
+GPF.advGtPrice=Advance amount cannot be greater than price of vehicle
+GPF.selStuType=Please select Student Type
+GPF.advNoDpndt=Advance cannot be taken for this purpose as you do not have dependents
+GPF.advDpndtEdu=Please note that you cannot take Advance for the same dependent more than once in the current academic year.
+GPF.withDpndtEdu=Please note that you cannot withdraw for the same dependent more than once in the current academic year.
+GPF.selAdvSpl=Please select whether Advance is Special.
+GPF.enterAdvAmt=Please enter Advance Amount.
+GPF.enterHospital=Please enter Hostipal/Dispensary/Doctor Name.
+GPF.selPatientType=Please select Patient Type.
+GPF.selExpReimb=Please select whether expenditure reinmursable or not.
+GPF.selHighEduPurp=Please select Higher Education purpose.
+GPF.newSubZero=New Subscription Amount cannot be 0.00
+GPF.reset=Reset
+GPF.selPurpCat=Please select Purpose Category.
+
+#Added by Megha for gpf_Annual_Balance_Details
+GPF.annBal=GPF Annual Balance Upload
+GPF.monBal=GPF Monthly Balance Upload
+higher=Higher Pay Scale
+downloadTemplate=Select the downloaded template to be saved
+GPF.Template=Download Template
+
+GPF.uploadDtls=UPLOAD DETAILS
+GPF.uploadSuccess=Upload was done for the following account numbers successfully.
+GPF.uploadFail=Upload failed for the following account numbers:
+GPF.uploadUpdate=The following accounts were updated:
+GPF.withSamePurpose=You cannot take advance for this purpose as you have already withdrawn for the same.
+GPF.with4=You cannot withdraw for this purpose as you have already taken advance for the same.
+GPF.purpDet=Purpose Details
+GPF.AmtSanc=Amount Sanctioned
+GPF.accOfficer=Account Officer
+GPF.advHistory=Advance History
+GPF.clickAdvHst=Click here to view Advance History
+GPF.clickWithHst=Click here to view Withdrawal History
+GPF.withHst=Withdrawal History
+GPF.noWithReq=No Withdrawal Request has been made so far.
+GPF.noAdvReq=No Advance Request has been made so far.
+GPF.noWithReqHst=No Withdrawal History is available.
+GPF.noAdvReqHst=No Advance History is available.
+GPF.agResponse=Response of AG Rajkot
+GPF.amtSanc=Amount Sanctioned
+GPF.WithType=Withdrawal Type
+GPF.selFile=Please select Excel file to upload data.
+GPF.selExcelFile=Please select the proper Excel file or download the template available before uploading data.
+GPF.finyr=Financial Year
+GPF.mnth=Month
+GPF.instNo=Installment Number
+GPF.refAmt=Repayment Amount
+GPF.accNo=GPF Account Number
+GPF.inter=Interest
+GPF.highAmtPay=Higher Amount Pay
+GPF.advBalOut=Advance Outstanding
+GPF.withdr=Withdrawal
+
+
+GPF.cloBal=Closing Balance
+GPF.illness=gpf.Illness
+GPF.highEdu=gpf.Higher Education
+GPF.custExp=gpf.Customary Expenses
+GPF.twoWheeler=gpf.Two Wheeler
+GPF.tricycle=gpf.Tricycle
+GPF.highSecEdu=gpf.Higher Secondary Edu
+GPF.other=gpf.Other
+GPF.pilgrimage=gpf.Pilgrimage
+GPF.vehicleTax=gpf.Vehicle Tax
+GPF.elecItem=gpf.Electronic Item
+GPF.scooter=gpf.Scooter
+GPF.motorCycle= gpf.Motor Cycle
+GPF.moped=gpf.Moped 
+GPF.class10=gpf.10th
+GPF.class11=gpf.11th
+GPF.class12=gpf.12th
+GPF.otherspecify=gpf.Other
+
+#COMMON LABELS IN GPF APPLICATION
+GPF.Y=Y
+GPF.N=N
+GPF.submit=Submit
+GPF.save=Save
+GPF.close=Close
+GPF.resetConfirm=All values will be reset. Please confirm!
+GPF.approve=Approve
+GPF.dec=Declaration
+GPF.oth=Other Details
+GPF.agree=I agree
+GPF.disagree=I disagree
+GPF.yes=Yes
+GPF.no=No
+GPF.select=-------------Select-------------
+GPF.orderNo=Order Number
+GPF.orderDate=Order Date
+GPF.enterAllFields=Please enter all fields.
+GPF.enterAppAG=Please select whether approved by AG or not.
+GPF.orderDateErr=Order date cannot be greater than today's date.
+GPF.orderDateApp=Order date cannot be less than application date.
+GPF.csApp=Approved by Accounts Officer
+GPF.agApp=Approved by AG Rajkot
+GPF.INR=INR
+GPF.Self=Self
+GPF.decTxt=Full particulars of the pecuniary circumstances of the subscriber, justifying the application for the advance. \tI certify that particular given above are correct and complete to the best of my knowledge and belief and that nothing has been concealed by me.
+GPF.BalDtls=Balance Details
+GPF.approvalDate=Approval Date
+GPF.amtSancError=Please enter a valid number.
+GPF.appDateErr=Approval date cannot be less than request date.
+GPF.appDateErr2=Approval date cannot be greater than today's date.
+GPF.agApprove=Approved by AG Rajkot.
+GPF.agReject=Rejected by AG Rajkot.
+GPF.csApprove= Approved by Accounts Officer.
+GPF.csReject=Rejected by Accounts Officer.
+
+GPF.viewPrevFinStmt=View Previous Financial Year's Statement
+GPF.hidePrevFinStmt=Hide Previous Financial Year's Statement
+GPF.totCreditAmt=Total Credit Amount
+GPF.totWithdrawals=Total Withdrawals
+GPF.advBalOutStanding=Advance Outstanding
+GPF.higherPayAmt=Higher Pay Amount
+GPF.totRef=Total Repayments
+GPF.mandatory=3. Fields marked with a <font color="RED" size="4">*</font> are mandatory.
+GPF.part=Part
+GPF.final=Final
+GPF.advAmtLimit=Advance amount cannot be greater than three times the basic salary or more than half the total balance, whichever is less.
+GPF.withFinal=You cannot withdraw as you have aready done final withdrawal.
+GPF.with5=You can withdraw for Business Premises only once, 6 months before attaining superannuation.
+GPF.noSplCharnoDigit=Special Characters and digits not allowed.
+GPF.amtToWith=Amount to be Withdrawn
+GPF.accNoIsReq=Please enter GPF Account Number
+GPF.empDet=Employee Details
+
+GPF.fileFormatError=File Format Error.<br> Please download the template and save details in that file and then upload the details.
+GPF.unknownError=An unknown Error has occurred. Please try again.
+GPF.backToAnnual=Back to Annual Upload Page
+GPF.backToMonthly=Back to Monthly Upload Page
+GPF.lessThanTenPercent=New Subscription amount cannot be less than 10% of emolument
+GPF.uploadData=Upload Data
+
+GPF.advAmtZero=Advance amount should be greater than 0.
+GPF.withAmtZero=Withdrawal amount should be greater than 0.
+GPF.splcharInvalid=Your text contains numbers or special characters.Please enter text again.
+
+
+#--------new account---------------
+HRMS.orderNo=Order Number
+HRMS.AccountNo=Account Number
+HRMS.RetOrderDate=Return Order Date
+HRMS.MasterScreen=Master Screen For New Account Details
+HRMS.NewGpfAccount=New Gpf Account
+HRMS.isAppByRajkot=Is Approved By Rajkot
+HRMS.workflowStatus=Workflow Status
+HRMS.statusOfSupervisor=STATUS OF SUPERVISOR
+HRMS.statusOfRajkot=STATUS OF RAJKOT
+HRMS.NewAccount=GPF NEW ACCOUNT
+HRMS.EmpSalary=Basic Salary
+HRMS.OtherDetails=Other Details
+HRMS.OfficeAttached=Office of the Employee
+HRMS.service=Service Cadre
+HRMS.AccountNumber=Account number to be alloted<br>by the accounts officer
+HRMS.tempOrPermanent=Type of Employment
+HRMS.Family=Family Exists
+HRMS.Photo=Updated photo
+HRMS.FingerPrints=Finger prints
+HRMS.PersonalDetails=Personal Details
+HRMS.ResponseAgRajkot=Response of AG Rajkot
+HRMS.RequestDetails=Request Details
+HRMS.EmpOtherDetails=Employee Other Details
+HRMS.NomineeDtls=Nominee Details
+HRMS.City=City/town
+HRMS.Village=Village
+HRMS.RelationApplicant=Relationship with applicant
+HRMS.Dob=Date Of Birth
+HRMS.Minor=Minor
+HRMS.FirstName=First Name
+HRMS.MiddleName=Middle Name
+HRMS.LastName=Last Name
+HRMS.ShareDetails=Share Details
+gpf.GPFfunction=GPF Function
+HRMS.Share=Share(in %)
+HRMS.GuardianDetails=Guardian Details
+HRMS.EmpName=Name
+HRMS.Designation=Designation
+HRMS.Address=Address
+HRMS.BasicSalary=Basic Salary(INR)
+HRMS.Age=Age
+HRMS.Name=Name
+HRMS.DateofJoining=Date Of Joining(dd/MM/yyyy)
+COMMON.DROPDOWN.SELECT=----Select-----
+GPF.OrderDateNotValid=Return Order Date cannot be greater than Current Date
+GPF.OrderNo=Order Number is Required
+GPF.OrderDate=Order Date is Required
+emoulmentNotValid=Please note that Subscription amount should be a whole number.
+subsAmtNotVald=Please note that Subscription amount cannot be greater than the basic salary and less than 10% Of basic salary.
+emoulmentRequired=Please enter Subscription Amount. 
+GPF.orderNoNotValid=Order Number is not Valid
+GPF.accNoNotValid=Account Number is not Valid
+
+#----Added for report by kunal
+HRMS.SubscriptionReport=GPF Subscription Report
+HRMS.AdvReport=GPF Advance Report
+HRMS.Withdraw=GPG Withdraw Report
+#-----Ended  report by kunal
+
+GPF.balDtlYr=Balance Details For The Financial Year\:
+GPF.partFinalReqPending=You cannot raise a request for Withdrawal as you have already applied for Final Withdrawal.
+GPF.finalWithDone=You cannot raise a request for Withdrawal as your final withdrawal has already been approved.
+GPF.prevAdvPending=You cannot raise a request for Advance as the previous advance has not been repaid yet.
+
+
+#Added MS 25Apr Onwards
+GPF.SrNo=Sr No.
+GPF.openingBal=Opening Balance
+GPF.balCredit=Balance at the credit of the subscriber from 
+GPF.subRate=Subscription Amount
+GPF.currSubRate=Current Subscription Amount (INR)
+GPF.newSubRate=New Subscription Amount (INR)
+GPF.commonNote=Please note the following:
+GPF.amtFormat=1. All amounts are in INR.
+GPF.dateFormat=2. All dates are in dd/mm/yyyy format.
+GPF.chgEffFromNextMnth=Please note that change will be effective from next month only as payroll processing will have started by the date chosen by you.
+GPF.hbaLabel=HBA Details
+GPF.relationLabel=Relation Details
+GPF.twoWheelerLabel=Two Wheeler Details
+GPF.repairLabel=Vehicle Details
+GPF.studentLabel=Student Details
+GPF.ecLabel=Electronic Item Details
+GPF.vehicleLabel=Vehicle Details
+GPF.amtSancInvalid=Amount sanctioned cannot be greater than amount applied for.
+GPF.newAccReqRaised=You cannot raise another request for creating new account as previous request is still pending.
+GPF.NA=Not Available
+rate_emolument=Subscription Amount(INR)
+GPF.eduDependOnce=Please note that you cannot take advance for Education for the same dependant more than once in the current financial year.
+GPF.subRateAmt=Subscription in terms of:
+GPF.subRt=Rate(in %)
+GPF.subAmt=Amount(INR)
+GPF.newSubRt=New Subscription Rate(in % of basic)
+GPF.currRate=Current Subscription Rate(in % of basic)
+GPF.subsAmtGrossSal=Take home salary should be atleast 40% of the gross salary.
+GPF.effDateNotNull=Please select Effective Date.
+GPF.noRecord=No Records found.
+GPF.fileId=File Id
+GPF.newAccReq=New Account Request - GPF
+GPF.shareNot100=The sum of shares of all nominees should be 100%.
+
+#Added Megha 16May onwards
+GPF.noacc=You do not have a GPF Account.
+GPF.clickForNewacc=Click here to create GPF Account.
+GPF.accNoExists=GPF Account Number already exists.
+GPF.noNominee=Please select Nominee Details. If no nominee details exist, please enter nominee details. 
+
+GPF.pending=Pending
+GPF.numberFormat=GPF account number format incorrect.<br>Please enter valid GPF account number and try again.
+GPF.GPS=GPS
+
+
+# Added for Reports 1st August onwards
+GPF.duration=Duration
+GPF.accounNo=GPF A/c
+GPF.subscripRate=Subscription Amount
+GPF.location=Location
+GPF.debit=Debit
+GPF.credit=Credit
+GPF.monSub=Monthly Subscription Credit
+
+GPF.reqstAmt=Requested Amount
+GPF.appStatus=Application Status
+GPF.appRej=Approved/Rejected/Pending by
+GPF.sanc=Sanctioned
+GPF.repaid=Repaid
+GPF.remaiing=Remaining
+GPF.instll=Installments
+GPF.tot=Total
+GPF.remInst=Remaining Inst
+GPF.apprv=Approved
+GPF.pendng=Pending
+
+GPF.netBalc=Net Balance
+GPF.amtSancDt=Date of Approval
+GPF.reject=Rejected
+GPF.cancel=Cancelled
+GPF.accExists=GPF Account Number already exists.
+
+srv.gpfAcct=GPF Account Details
+srv.gpfAdvance=GPF Advance Details
+srv.gpfWithdraw=GPF Withdrawal Details
+
+# GPF Transfer 
+
+GPF.accTransfer GPF Account Transfer
+GPF.promotedFrmClass Promoted From Class
+GPF.promotedToClass Promoted to Class
+GPF.promotedDsgn Promoted to Designation
+GPF.promoDt Date of Promotion
+GPF.transferFrmDept Transferred From Department/Location
+GPF.transferToDept Transferred to Department/Location
+GPF.transferToDsgn Transferred to Designation
+GPF.transferDt Date of Transfer
+GPF.classEmp Class of Employee
+GPF.doj Date of Joining
+GPF.oldPFNo Old PF A/c Number
+GPF.newPFNo New PF A/c Number
+GPF.transferTreasury Entire amount to be transferred through Treasury/Sub-Treasury
+GPF.lastSub Last Subscription deducted(INR)
+GPF.recoveryAmt Recovery on account of repayment of advance
+GPF.payBillMnth From pay bill for the month
+GPF.amtRecoverd Amount Recovered (INR)
+GPF.amtEncashed Amount encashed on (dd/mm/yyyy)
+GPF.amtEncashTreasury Amount encashed at Treasury/Sub-Treasury
+
+GPF.crtNewAccForTransfer Please note that you cannot apply for GPF Account Transfer unless you have not created a new GPF Account.
+GPF.condnForNewAcc Please note that you can apply for New GPF Account only if you do not have a GPF Account or if you are getting transferred/promoted.
+
+# GPF Transfer ends
+
+
+BUNDLE_BASE_NAME=resources/ess/gpf/gpfLables
+
+
+

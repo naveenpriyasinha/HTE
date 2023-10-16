@@ -1,0 +1,4 @@
+createRequest.attributesCSV= content\=[/WEB-INF/jsp/ess/loans/createRequest.jsp]
+ViewLoans.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/ess/loans/viewLoans.jsp]
+MsgView.attributesCSV=content\=[/WEB-INF/jsp/ess/reimb/msgDisplay.jsp]
+CalculatorView.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/ess/Calculator.jsp]

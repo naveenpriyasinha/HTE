@@ -1,0 +1,211 @@
+/**
+* 
+*/
+<style type="text/css">{  }
+/**
+*	Style sheet for hyper text reference
+*/
+
+a.ln:link {font-family:Verdana; text-decoration: underline; color:blue;font-weight:bold; font-size:10 }
+a.ln:active { font-family:Verdana; text-decoration: none; color:blue;font-weight:bold; font-size:10} 
+a.ln:visited {font-family:Verdana; text-decoration:underline; color:blue; font-weight:bold;font-size:10 }
+a.ln:hover {font-family:Verdana; text-decoration: underline; color:black;font-weight:bold; font-size:10 }
+
+a.Unreadfile:link{font-family:Verdana;text-decoration:underline;color:red;font-weight:bold;size:10}
+a.Unreadfile:active{font-family:Verdana;text-decoration:underline;color:red;font-weight:bold;size:10}
+a.Unreadfile:visited{font-family:Verdana;text-decoration:underline;color:red;font-weight:bold;size:10}
+a.Unreadfile:hover{font-family:Verdana;text-decoration:underline;color:red;font-weight:bold;size:10}
+
+/*Added By Core Ahmedabad*/
+a.sentBack:link {font-family:Verdana; text-decoration:underline; color:BlueViolet;font-weight:bold; font-size:10 }
+a.sentBack:active { font-family:Verdana; text-decoration:underline; color:BlueViolet;font-weight:bold; font-size:10} 
+a.sentBack:visited {font-family:Verdana; text-decoration:underline; color:Blue; font-weight:bold;font-size:10 }
+a.sentBack:hover {font-family:Verdana;  text-decoration:underline; color:black;font-weight:bold; font-size:10 }
+
+a.file:link {font-family:Verdana; text-decoration:underline; color:black;font-weight:normal; font-size:10 }
+a.file:active { font-family:Verdana; text-decoration:underline; color:black;font-weight:normal; font-size:10} 
+a.file:visited {font-family:Verdana; text-decoration:underline; color:blue; font-weight:normal;font-size:10 }
+a.file:hover {font-family:Verdana;  text-decoration:underline; color:black;font-weight:normal; font-size:10 }
+
+a.pagination:link {font-family:Verdana; text-decoration: none; color:navy;font-weight:normal; font-size:10 }
+a.pagination:active { font-family: Verdana; text-decoration: none;color:navy;font-weight:normal; font-size: 10} 
+a.pagination:visited {font-family:Verdana; text-decoration: none; color:blue; font-weight:normal;font-size:12 }
+a.pagination:hover {font-family:Verdana; text-decoration: underline; color:black;font-weight:normal; font-size:10 }
+
+a.PhysicalFile:link{font-family:Verdana;text-decoration:underline;color:Blue;font-weight:bold;size:10}
+a.PhysicalFile:active{font-family:Verdana;text-decoration:underline;color:orange;font-weight:bold;size:10}
+a.PhysicalFile:visited{font-family:Verdana;text-decoration:underline;color:green;font-weight:bold;size:10}
+a.PhysicalFile:hover{font-family:Verdana;text-decoration:underline;color:black;font-weight:bold;size:10}
+
+/**
+* Background color for the title which appears as heading in a page
+* 
+*/
+
+/* TitleBG {background:#FFFFFF;font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;}
+.FileInfoBG {background: #F3F3F3}
+.TablerowBG1 {background: #F7F7F7}
+.TablerowBG2 {background: #FFFFFF}*/
+
+/*.TableHeaderBG { border-top-style : solid ; border-top-color :#B3D3AF; border-top-width: 1px;border-bottom-style : solid ; border-bottom-color :#B3D3AF; border-bottom-width: 1px;border-left-style : solid ; border-left-color :#B3D3AF; border-left-width: 1px;border-right-style : solid ; border-right-color :#B3D3AF; border-right-width: 1px;}*/
+
+
+
+
+/**
+* Background color for the table header, table data row which appears in a page as back ground color
+* 
+*/
+  .TableHeaderBG { background :#CFE2FE; border-style:;border-color:#000000;border-width:0px;font-size:11;font-weight:bold;color:Black }
+ .tabletdbg1 { background :#f7f7f7; border-style:solid;border-color:#000000;border-width:1px;}
+ .tabletdbg2 { background :#edeeef; border-style:solid;border-color:#000000;border-width: 1px;}
+/*rectangle black border*/
+.TableBorderblack{border-style : solid ; border-color :black; border-width: 1px;}
+
+
+
+.HLabel { font-family:Verdana;font-size:10;font-weight:bold;color:black}
+
+.Label { font-family:Verdana;text-decoration: none;font-size:11;font-weight:normal;color:Black}
+
+.Label2 { font-family:Verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black}
+
+.Label3 { font-family:Verdana;text-decoration: none;font-size:11;font-weight:normal;color:Black}
+.Label4 { font-family:Verdana;text-decoration: none;font-size:16;font-weight:normal;color:Black}
+.Label1 { font-family:Verdana;text-decoration: none;font-size:6pt;color:Navy}
+/*.titles{  font-family: Verdana;text-align: center;font-size:8pt;color:black;font-weight: bold;}
+.titles{  font-family: Verdana;text-align: center;font-size:8pt;color:#660000;font-weight: bold;}*/
+.titles{font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #375472;}
+.HeaderLabel { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:#800000}
+.EditableField { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;}
+.EditableField1 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black;}
+.ComputedField { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray}
+.FileInfoBG{background: #F3F3F3}
+/**
+*	Use * for user text fields,means field should be filled in.
+*/
+.UserText { font-family:Verdana;text-decoration: none;font-size:7pt;font-weight:bold;color:Red}
+
+/**
+*	This style sheet for editable text field with 'Navy' color.
+*	BBN - Bottom Bottom Navy
+*	TBN - Top Bottom Navy
+*	LBN	- Left Bottom Navy
+*	RBN - Right Bottom Navy
+*/
+.EditableFieldBBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-bottom-style : solid ; border-bottom-color :navy; border-bottom-width: 1px;}
+.EditableFieldTBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-top-style : solid ; border-top-color :navy; border-top-width: 1px;}
+.EditableFieldLBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-left-style : solid ; border-left-color :navy; border-left-width: 1px;}
+.EditableFieldRBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-right-style : solid ; border-right-color :navy; border-right-width: 1px;}
+/**
+*	This style sheet for Computed text field with 'Navy' color.
+*	BBN - Bottom Bottom Navy
+*	TBN - Top Bottom Navy
+*	LBN	- Left Bottom Navy
+*	RBN - Right Bottom Navy
+*/
+.ComputedFieldBBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-bottom-style : solid ; border-bottom-color :navy; border-bottom-width: 1px;}
+.ComputedFieldTBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-top-style : solid ; border-top-color :navy; border-top-width: 1px;}
+.ComputedFieldLBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-left-style : solid ; border-left-color :navy; border-left-width: 1px;}
+.ComputedFieldRBN { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-right-style : solid ; border-right-color :navy; border-right-width: 1px;}
+/**
+*	This style sheet for editable text fields with 'Gray' color.
+*	BBN - Bottom Bottom Gray
+*	TBN - Top Bottom Gray
+*	LBN	- Left Bottom Gray
+*	RBN - Right Bottom Gray
+*/
+.EditableFieldBBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-bottom-style : solid ; border-bottom-color :Gray; border-bottom-width: 1px;}
+.EditableFieldTBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-top-style : solid ; border-top-color :Gray; border-top-width: 1px;}
+.EditableFieldLBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-left-style : solid ; border-left-color :Gray; border-left-width: 1px;}
+.EditableFieldRBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Black;border-right-style : solid ; border-right-color :Gray; border-right-width: 1px;}
+/**
+*	This style sheet for computed text field with 'Gray' color.
+*	BBN - Bottom Bottom Gray
+*	TBN - Top Bottom Gray
+*	LBN - Left Bottom Gray
+*	RBN - Right Bottom Gray
+*/
+.ComputedFieldBBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-bottom-style : solid ; border-bottom-color :Gray; border-bottom-width: 1px;}
+.ComputedFieldTBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-top-style : solid ; border-top-color :Gray; border-top-width: 1px;}
+.ComputedFieldLBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-left-style : solid ; border-left-color :Gray; border-left-width: 1px;}
+.ComputedFieldRBG { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray;border-right-style : solid ; border-right-color :Gray; border-right-width: 1px;}
+/**	This style sheet for  Text Field with a Look Of a Label 
+	with Font color 
+	M-Maroon
+	B-Black
+	W-White
+  SM-Selected
+*/
+.LabelFieldM{  font-family: Verdana;text-align: left;font-size:8pt;color:#660000;font-weight: bold;border-width:0px;background: #F3F3F3}
+.LabelFieldB{  font-family: Verdana;text-align: left;font-size:8pt;color:black;font-weight:normal;border-width:0px;background: #F3F3F3}
+.LabelFieldW{  font-family: Verdana;text-align: center;font-size:8pt;color:white;font-weight:bold;border-width:0px;background: #FFFFFF}
+.LabelFieldSM{  font-family: Verdana;text-align: center;font-size:8pt;color:#660000;font-weight: bold;border-width:0px;background: #999999}
+.LabelFieldBP{  font-family: Verdana;text-align: left;font-size:8pt;color:black;font-weight:normal;border-width:0px;background: #FFFFFF}
+/**
+*	For Drop Down list box
+*/
+.ListBoxGUI { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black}
+/**
+*	For Home Page list box
+*/
+.ListBoxGUIA { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:navy;width:175;}
+.ListBoxGUI2 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:blue;width:128; }
+.ListBoxGUI1 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Blue;}
+.ListBoxGUI1 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Blue;width:129; }
+.ListBoxGUI3 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Blue;width:300; }
+
+/**
+*	This style sheet for table borders
+*/
+.TableBorderNavy {border-style : solid ; border-color :navy; border-width: 1px;}
+.TableBorderWhite {border-style : solid ; border-color :White; border-width: 1px;}
+.TableBorderGray {border-style : solid ; border-color :Gray; border-width: 1px;}
+/**
+*	This style sheet for Body content
+*/
+
+
+.Body { 
+
+	background-image:url(/IWAS/FMS/images/1page_BG.gif);
+
+	font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;background:#EFEFF8;}
+/**
+*	Style sheet for table definition
+*/
+.TDPlain { font-family:verdana;text-decoration: none;font-size:8pt}
+.ActionButton{ font-size:10;width:60}
+.ActionButton1{ font-size:10;width:80}
+.ActionButtonDt{ font-size:10;width:70};
+.FileActionButton{ font-size:10;width:200}
+.FieldBlack { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black;width:143}
+.FieldGrey { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold;color:Gray}
+.FieldBlack1 { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black;width:175}
+.FieldBlackSrch { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:normal;color:Black;width:300}
+.FldHierarchy{font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #375472;}
+
+/*TD { font-family:verdana;text-decoration: none;font-size:8pt;font-weight:bold}
+TH { color:navy;
+	 font-weight:bold;
+	 font-size:10pt
+   }*/
+.LABLESAFE{background:'#7FFF7F' ; font-family:Arial;text-decoration: none;font-size:8pt;font-weight:bold;color:Navy;}
+.LABLEUNSAFE{background:'#FF0000';font-family:Arial;text-decoration: none;font-size:8pt;font-weight:bold;color:Navy;}
+.LABLEC{font- color:'#000080'}
+.LabelUnRead { font-family:Verdana;text-decoration: none;font-size:11;font-weight:normal;color:Red}
+.LabelPhysicalFile { font-family:Verdana;text-decoration: none;font-size:11;font-weight:normal;color:Blue}
+/*Added By Core Ahmedabad*/
+.LabelsentBack { font-family:Verdana;text-decoration: none;font-size:11;font-weight:normal;color:BlueViolet}
+.HLabel1 { font-family:Verdana;font-size:12;font-weight:bold;color:black}
+.Labelerrormsg { font-family:Verdana;text-decoration: none;font-size:11;font-weight:bold;color:Red;}
+
+/* Added for Button Class */
+.DispButton {font-family:Verdana;font-size:10;font-color:blue;width:100}
+</STYLE>

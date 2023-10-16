@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 7, 2007 10:16:05 AM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrItExemptTypeMst" table="HR_IT_EXEMPT_TYPE_MST">
+        <id name="itexemptTypeId" type="long">
+            <column name="ITEXEMPT_TYPE_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="lang_id">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>        
+        <property name="itexemptName" type="string">
+            <column name="ITEXEMPT_NAME" length="50" not-null="true" />
+        </property>
+        <property name="itexemptDesc" type="string">
+            <column name="ITEXEMPT_DESC" length="1000" />
+        </property>
+        <property name="sectId" type="long">
+            <column name="SECT_ID" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="itexemptTypeCode" type="long">
+            <column name="ITEXEMPT_TYPE_CODE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="activateFlag" type="long">
+            <column name="ACTIVATE_FLAG" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="START_DATE" length="7" not-null="true" />
+        </property>
+        <property name="endDate" type="timestamp">
+            <column name="END_DATE" length="7" />
+        </property>
+       
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

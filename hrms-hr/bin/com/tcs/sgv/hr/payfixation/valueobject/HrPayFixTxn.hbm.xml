@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 19, 2007 5:29:07 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.hr.payfixation.valueobject.HrPayFixTxn" table="hr_payfix_txn">
+        <id name="payFixId" type="long">
+            <column name="PAY_FIX_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+         <many-to-one name="userId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="USER_ID" precision="22" scale="0" />
+        </many-to-one>
+        
+        <many-to-one name="cmnLookupMst" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="REAS_PAY_FIX_ID" precision="22" scale="0" />
+        </many-to-one>
+        <property name="applDate" type="date">
+            <column name="APPL_DATE" length="7" />
+        </property>
+        <many-to-one name="revScaleId" class="com.tcs.sgv.eis.valueobject.HrEisScaleMst" fetch="select">
+            <column name="REV_SCALE_ID" precision="22" scale="0" />
+        </many-to-one>
+        <property name="payFixDate" type="date">
+            <column name="PAY_FIX_DATE" length="7" />
+        </property>
+         <many-to-one name="dbId" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+         <many-to-one name="locId" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+         <many-to-one name="createdBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" precision="22" scale="0" />
+        </many-to-one>
+         <many-to-one name="createdByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" precision="22" scale="0" />
+        </many-to-one>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <many-to-one name="updatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="updatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY_POST" precision="22" scale="0" />
+        </many-to-one>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="payFixation" type="string">
+            <column name="PAY_FIXATION" length="1" />
+        </property>
+        <property name="payFixationAtIncr" type="string">
+            <column name="PAY_FIXATION_AT_INCR" length="1" />
+        </property>
+        <property name="incrDate" type="date">
+            <column name="INCR_DATE" length="7" />
+        </property>
+        <property name="emplResp" type="string">
+            <column name="EMPL_RESP" length="1" />
+        </property>
+        <set name="hrPayfixReqDtles" inverse="true">
+            <key>
+                <column name="PAY_FIX_ID" precision="22" scale="0" />
+            </key>
+            <one-to-many class="com.tcs.sgv.hr.payfixation.valueobject.HrPayfixReqDtl" />
+        </set>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,453 @@
+hrms_html {
+	padding: 0;
+	margin: 0px;
+	/*background-color: rgb(228, 239, 243);*/
+/*	background-color: rgb(228, 239, 248);*/
+	text-align: left;
+	font-family: Arial, Verdana, Helvetica, sans;
+}
+
+hrms_body {
+	width: 99%;
+	margin: 3px;
+	/*background: url(header.gif) no-repeat;*/
+	padding: 0 0 0 0;
+	border: solid 1px #DEDEDE;
+}
+
+hrms_h1 {
+	font-size: 14px;
+	font-weight: normal;
+	color: #90A720;
+	margin: 0 0 0 0;
+}
+
+hrms_h2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: gray;
+	margin: 0 0 0 0;
+}
+
+hrms_h3 {
+	font-size: 13px;
+	font-style: italic;
+	color: #90A720;
+	margin: 0 0;
+}
+
+hrms_h4 {
+	font-size: 13px;
+	font-style: italic;
+	color: gray;
+	margin: 0 0;
+}
+
+hrms_P {
+	margin: 2px 0 0 0;
+	padding: 0;
+}
+
+hrms_img {
+	border: 0;
+}
+
+/*
+hrms_table {
+	width: 100%;
+	border: 0;
+	margin: 0px;
+	cellpadding: 2px;
+	border-collapse: collapse;
+}
+*/
+/*
+thead {
+	background: #C9DFFF;
+	color: black;
+}
+*/
+/*
+a:hover {
+	background: #FDF5E6;
+	color: black;
+}
+*/
+.hrms_headertable
+{
+	cellspacing: 0;
+	cellpadding: 0;
+	border: 0;	
+	
+}
+
+.hrms_uheadertable_tr
+{
+	background: #336699;
+	
+}
+	
+.hrms_uheadertable_td
+{
+	padding: 3px;
+	border-top: solid 1 #ffffff; 
+	border-bottom: outset 1px #888888;
+	
+}
+.hrms_uheadertable_td1
+{
+	padding: 3px; 
+	border-top: solid 1 #ffffff; 
+	border-bottom: outset 1px #888888;
+	color: white;
+}
+.hrms_lheadertable_tr
+{
+		background: #777777;
+		height: 4;
+		
+}
+.hrms_lheadertable_td1
+{
+	padding: 0 3px 0 3px;
+	border-top: solid 1px #999999; 
+	border-bottom: outset 1px #666666;
+	
+	color: #FFFFFF;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: bold; 
+
+}
+.hrms_lheadertable_td2
+{
+	padding: 0 3px 0 3px;
+	border-right: outset 1px #666666;
+	border-top: solid 1px #999999; 
+	border-bottom: outset 1px #666666; 
+	color: white;
+	
+}
+.hrms_lheadertable_td3
+{
+	padding: 0 10px 0 10px;
+	border-left: solid 1px #999999;
+	border-right: outset 1px #666666;
+	border-top: solid 1px #999999; 
+	border-bottom: outset 1px #666666; 
+	color: white;
+}
+.hrms_lheadertable_td4
+{
+	padding: 0 10px 0 10px;
+	border-left: solid 1px #999999; 
+	border-top: solid 1px #999999; 
+	border-bottom: outset 1px #666666; 
+	color: white;	
+}
+
+
+.hrms_datatableheader {
+	border: solid 1px gray;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+	background: #C9DFFF;
+}
+
+.hrms_tablecellnumber {
+	border-bottom: solid 1px #DEDEDE;
+	border-right: dotted 1px #DEDEDE;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: right;
+}
+
+.hrms_tablecelltext {
+	border-bottom: solid 1px #DEDEDE;
+	border-right: dotted 1px #DEDEDE;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left;
+}
+/*
+hrms_td {
+	color: black;
+	font-weight: normal;
+	font-size: 10px;
+	font-style: normal;
+}
+*/
+
+.hrms_odd {
+	background: #F5F5F5;
+}
+
+.hrms_even {
+	background: white;
+}
+
+/*tr.ruled { cursor: pointer; background: #90A720; }*/
+#hrms_pageContent {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	text-align: left;
+}
+
+#hrms_inContent {
+	padding: 0 0 0 0;
+	margin: 0px;
+	text-align: left;
+}
+
+#hrms_header {
+	display: none;
+}
+
+#hrms_toolbar {
+	display: none;
+}
+
+#hrms_nav {
+	display: none;
+}
+
+#hrms_horizontalNav {
+	display: none;
+		
+}
+
+#hrms_content {
+	margin: 0 0 0 0;
+	height: 99%;
+	background: none;
+	font-size: 12px;
+	color: #000000;
+	text-align: left;
+}
+
+#hrms_footer {
+	display: none;
+}
+
+#hrms_footer ul {
+	display: none;
+}
+
+.hrms_datatable {
+	border: solid 1px gray;
+	width: 100%;
+	margin: 0px;
+	cellpadding: 2px;
+	border-collapse: collapse;
+}
+
+
+.hrms_fieldLabel {
+	font-family: Verdana;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+
+}
+
+.hrms_screenLabel {
+	font-family: Verdana;
+	text-decoration: none;
+	font-size: 12px;
+	font-weight: normal;
+	color: Black;
+}
+
+
+.hrms_groupHeaderLabel {
+	background: #EEEEEE;
+/*	background: f0f7ff;*/
+}
+
+.hrms_groupHeaderLabel td {
+	font-size: 13px;
+	font-weight: bold;
+	border: solid 1px #c0c0c0;
+	padding: 0px 2px 0px 2px;
+}
+
+/*.textField{
+	border-top: solid 1px gray;
+	border-left: solid 1px gray;
+	border-right: solid 1px #BCBCBC;
+	border-bottom: solid 1px #BCBCBC;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+}*/
+
+.hrms_groupTable{
+	border: solid 1px gray;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	cellpadding: 2px;
+	border-collapse: collapse;
+}
+
+.hrms_groupTable td{
+	padding: 2px;
+/*	border: solid 1px #DEDEDE;*/
+}
+
+.hrms_tabtable{
+/*	border-right: solid 1px #ffffff;
+	border-bottom: solid 1px #ffffff;
+	border-top: solid 1px #6587a9;
+	border-left: solid 1px #6587a9;*/
+	cellspacing: 0;
+	width: 100%;
+	background: trasnparant;
+}
+	
+.hrms_tabtable td{
+	padding: 3px;
+}
+
+.hrms_mandatory{
+	background: #FFFFE9;
+}
+
+.hrms_button{
+		border-top: solid 1px #FFFFFF;
+	border-left: solid 1px #FFFFFF;
+	border-right: solid 1px gray;
+	border-bottom: solid 1px gray;
+	background: #EFEFEF;
+	width: 80px;
+	
+	}
+#hrms_currentApplication
+{
+	display: none;
+}		
+/*
+#div-body {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(body-background.gif);
+  background-repeat: repeat;
+  background-position: 0% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -3;
+}
+#div-left-top { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url(lt-corner.gif);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-top { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("top-border.gif");
+  background-repeat: repeat-x;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+vertical-align: middle;
+}
+#div-right-top { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("rt-corner.gif");
+  background-repeat: no-repeat;
+  border: none;
+  background-position: 100% 0%;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-left-bottom { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("lb-corner.gif");
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  border: none;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-bottom { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("bottom-border.gif");
+  background-repeat: repeat-x;
+  background-position: 0% 100%;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+}
+#div-right-bottom { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("rb-corner.gif");
+  background-repeat: no-repeat;
+  border: none;
+  background-position: 100% 100%;
+  background-color: transparent;
+  z-index: -1;
+}
+#div-left { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("left-border.gif");
+  background-repeat: repeat-y;
+  background-position: 0% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+}
+#div-right { 
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("right-border.gif");
+  background-repeat: repeat-y;
+  background-position: 100% 0%;
+  border: none;
+  background-color: transparent;
+  z-index: -2;
+}
+*/

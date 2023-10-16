@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16 Jun, 2012 12:05:43 PM by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.payfixation.valueobject.HrPayfixMstHst" table="HR_PAYFIX_MST_HST">
+        <composite-id name="id" class="com.tcs.sgv.payfixation.valueobject.HrPayfixMstHstId">
+            <key-property name="payfixId" type="java.lang.Long">
+                <column name="PAYFIX_PK_ID" />
+            </key-property>
+            <key-property name="trnCounter" type="java.lang.Long">
+                <column name="TRN_COUNTER" precision="22" scale="0"  />
+            </key-property>
+        </composite-id>
+        
+        <many-to-one name="userId" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="USER_ID" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        
+        
+        <property name="payFixDate" type="date">
+            <column name="PAY_FIX_DATE" length="7" not-null="true" />
+        </property>
+        <property name="nxtIncrDate" type="date">
+            <column name="NXT_INCR_DATE" length="7" not-null="true" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="200" />
+        </property>
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="LANG_ID" precision="22" scale="0"  />
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID" precision="22" scale="0" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="orgUserMstCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="orgPostMstCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="orgUserMstUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY" precision="22" scale="0" />
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY_POST" precision="22" scale="0"/>
+        </many-to-one>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="STATUS" length="200"/>
+        </property>
+        <property name="newBasic" type="java.lang.Long">
+            <column name="NEW_BASIC" precision="22" scale="0"  />
+        </property>
+        <property name="incrementOrderNo" type="string">
+            <column name="INCR_CERTI_ORDER_NO" length="60" />
+        </property>
+        <property name="oldBasic" type="java.lang.Long">
+            <column name="OLD_BASIC" precision="22" scale="0"/>
+        </property>
+        <property name="activateFlag" type="java.lang.Integer">
+            <column name="ACTIVATE_FLAG" />
+        </property>
+        <property name="incrementOrderDate" type="date">
+            <column name="INCR_ORDER_DATE" length="7" not-null="true"/>
+        </property>
+        <property name="payCommissionId" type="java.lang.Long">
+            <column name="PAY_COMMISSION_ID" precision="22" scale="0" ></column>
+        </property>
+        
+    </class>
+</hibernate-mapping>

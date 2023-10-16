@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!--
+		Generated Jun 30, 2009 11:53:30 AM by Hibernate Tools 3.2.0.beta8
+	-->
+
+<hibernate-mapping>
+	<class name="com.tcs.sgv.eis.valueobject.HrPayOfficepostMpg" table="HR_PAY_OFFICEPOST_MPG">
+
+		<id name="officePostId" type="long">
+			<column name="OFFICEPOST_ID" precision="20" scale="0" />
+			<generator class="assigned" />
+		</id>
+		<many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst"
+			fetch="select">
+			<column name="updated_by_post">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst"
+			fetch="select">
+			<column name="created_by_post" not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst"
+			fetch="select">
+			<column name="updated_by">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst"
+			fetch="select">
+			<column name="created_by" not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="ddoOffice" class="com.tcs.sgv.dcps.valueobject.DdoOffice" fetch="select">
+			<column name="OFFICE_ID" not-null="true">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="orgPostMstByPostId" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+			<column name="POST_ID" not-null="true">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		
+		<many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" not-null="false">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+		
+		<property name="startDate" type="date">
+			<column name="START_DATE" length="7" not-null="true"/>
+		</property>
+		<property name="endDate" type="date">
+			<column name="END_DATE" length="7" />
+		</property>
+		<property name="createdDate" type="date">
+			<column name="CREATED_DATE" length="7" />
+		</property>
+		<property name="updatedDate" type="date">
+			<column name="UPDATED_DATE" length="7" />
+		</property>
+	</class>
+</hibernate-mapping>

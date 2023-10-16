@@ -1,0 +1,173 @@
+BUNDLE_BASE_NAME=resources/ess/noc/NOC
+#NOCforPassport
+NOC.SecApplnDetails Application Details
+NOC.SecJourneyDetails Tentative Journey Details
+NOC.SecBearerDetails Details of Expenditure Bearer
+NOC.SecPastForeign Details of Past Foreign Visit(s)
+NOC.SecPrevNonAppln Details of Previous NOC for Passport Application(s)
+NOC.NocHeader NOC for Passport
+NOC.NocPast Have you been issued an NOC for passport earlier?
+NOC.NocYes Yes
+NOC.NocNo No
+NOC.NocDate Date of issue of NOC
+NOC.VisitedAnyCountry Visited any country?
+NOC.NocVisitedCountry Country Visited
+NOC.NocPurposeVisit Purpose of Visit
+NOC.Add Add
+NOC.Reset Reset
+NOC.Update Update
+NOC.Purpose Purpose of NOC
+NOC.Select Select
+NOC.Visiting Visiting a country
+NOC.Other Other
+NOC.NocVisitCountry Visiting Country
+NOC.Duration Duration
+NOC.Remark Remarks
+NOC.OtherDetails Other Details 
+NOC.Expense Approximate expenditure to be incurred (INR)
+NOC.HowBearExpense Expenses to be borne by
+NOC.HowBearExpense1 Select
+NOC.HowBearExpense2 Personal Saving
+NOC.HowBearExpense3 Organization
+NOC.HowBearExpense4 Others
+NOC.Organization Organization Name
+NOC.FName First name
+NOC.MName Middle Name
+NOC.LName Last Name
+NOC.Address Address
+NOC.AddOtherDetails Other Details (if any)
+NOC.Occupation Occupation
+NOC.Known Known since
+NOC.OfficialDealing Any official dealing/relation in the past or in near future
+NOC.DealDetail Details
+NOC.NocAbroad Have you been abroad earlier? 
+NOC.FromDate From Date
+NOC.ToDate To Date
+NOC.Action Action
+NOC.AddNew Add New
+NOC.NocRejectMessage This request has already been rejected.
+NOC.NocApproveMessage This request has already been approved.
+NOC.App Approve
+NOC.Rej Reject
+NOC.Fwd Forward
+NOC.SaveDetails Save Details
+
+
+#NOCforForeignVisit
+NOC.TripStart Trip Start Date
+NOC.TripEnd Trip End Date
+NOC.JourneyStart Journey Start Date
+NOC.JourneyEnd Journey End Date
+NOC.NocForeignHeader NOC For Foreign Visit
+NOC.PhoneRes Residence Phone
+NOC.PhoneOff Office Phone
+NOC.Mobile Mobile
+NOC.Email Email
+NOC.Fax Fax
+NOC.SecContact Contact Details
+NOC.SecExpenditureDetails Details of Expenditure
+NOC.SecDetailsOfNOC Details of NOC for Passport Obtained
+NOC.Approved Approved by
+NOC.Designation Designation of the Approver
+NOC.ApprovalDate Date of approval
+NOC.OrderNo Order Number
+NOC.SubmitMsg1 Your NOC for Passport request has been submitted as Request No.
+NOC.ApprovalMsg1 NOC for Passport request no.  
+NOC.ApprovalMsg2 has been
+NOC.FVisitApprovalMsg1 NOC for foreign visit request no.
+NOC.Approve Approved
+NOC.Reject Rejected
+NOC.Forward Forwarded
+NOC.SubmitNocFvisitMsg Your NOC for foreign visit request has been submitted as Request No.
+
+#ForeignVisitReport
+NOC.VisitReportHeader Foreign Visit Report 
+NOC.SecVisitDetails Foreign Visit Related Details
+NOC.SecTripDetails Journey Details
+NOC.StartDate Start Date
+NOC.EndDate End Date
+NOC.FromPlace From Place
+NOC.ToPlace To Place
+NOC.TicketAttachment Ticket Attachment
+NOC.Agency Agency
+NOC.NewAgent Agent Details
+NOC.AgencyName Agency Name
+NOC.AgentName Agent Name
+NOC.AgentDetails Agent Details
+NOC.Payment Payment Details
+NOC.Mode Mode of payment
+NOC.Cash Cash
+NOC.Cheque Cheque
+NOC.Bank Bank Name
+NOC.Acct Account Number
+NOC.ChequeNo Cheque Number
+NOC.Amount Amount (INR)
+NOC.Category Category
+NOC.Food Food
+NOC.Stay Stay
+NOC.Miscellaneous Miscellaneous 
+NOC.Total Total
+NOC.View View Journey Details
+
+# AddNewAgent
+NOC.AddAgent Add Agent
+NOC.Close Close
+NOC.Submit Submit
+NOC.SaveNewAgent Add Agent Details
+NOC.Expenditure Expenditure
+NOC.OrgName Organization Name
+NOC.Dropdown.Select --Select--
+
+# Search country
+CTRY.SearchCtry	Search Country
+CTRY.Ctry Country
+CTRY.Ok	Ok
+CTRY.Close Close
+
+# last added for Expenditure.jsp
+NOC.ExpeBearer Expenditure Bearer Details
+
+CTRY.CtryId Country Id
+CTRY.CtryName Country Name
+
+NOC.Days days
+NOC.Months months
+NOC.Years years
+
+# added for NOC CR (in Expenditure.jsp)
+NOC.SelBank  Name of the Bank
+NOC.BranchName Branch Name
+NOC.AcctType Account Type
+NOC.AcctNo Account Number
+NOC.BankDtls Bank Details
+NOC.BankName Bank Name
+
+# added for NOC CR (in nocForForeignVisitForm.jsp)
+NOC.PPDetails Passport Details
+NOC.PPNo Passport No
+NOC.PPIssueDate Passport Issue Date
+NOC.PPExpiryDate Passport Expiry Date
+NOC.IssuePlace Place of Issue
+NOC.IssueAuth Issuing Authority
+NOC.NoRecords ---  NO RECORDS FOUND ---
+NOC.ViewFullDetail Click below to view complete details
+NOC.DtlOfVisit Details of visit
+
+NOC.HeaderPrevNocFvisit  Details of Previous NOC for Foreign Visit Obtained
+NOC.IfIssuedNocFv Have you been issued an NOC for foreign travel?
+NOC.IsDebarred Whether debarred
+NOC.DebarBy Debarred by
+NOC.DebarDate Debarred Date
+NOC.PastDebar Have you been debarred from Foreign visit in the past?
+NOC.Reason Reason
+
+NOC.DebarDtl Debarred details
+NOC.SelTripDebar Select the trip for which you were debarred 
+NOC.Trip Trip
+NOC.NtAvailable Not Available
+
+NOC.NoRecordFound No Record Found.
+NOC.Salutation Salutation
+NOC.OneTime (These fields are only one time enterable)
+
+NOC.PrevNocDtls Previous NOC Details

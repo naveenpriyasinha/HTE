@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="com.tcs.sgv.eis.valueobject.HrForm16TaxDeducDtls" table="HR_FORM16_TAX_DEDUC_DTLS">
+  		<id name="deducDtlsId" type="long" >
+            <column name="DEDUC_DTLS_ID"  />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="form16DtlId" class="com.tcs.sgv.eis.valueobject.HrForm16Dtls" fetch="select">
+            <column name="FORM16_DTL_ID"  not-null="true"/>
+        </many-to-one>
+        <many-to-one name="deducDtlsBankId" class="com.tcs.sgv.eis.valueobject.HrForm16BankMst" fetch="select">
+            <column name="DEDUC_DTLS_BANK_ID"  not-null="true"/>
+        </many-to-one>
+        
+        <property name="deducDtlsMonth" type="int">
+            <column name="DEDUC_DTLS_MONTH" length="2" not-null="true"/>
+        </property>
+        <property name="deducDtlsDate" type="date">
+            <column name="DEDUC_DTLS_DATE" not-null="true"/>
+        </property>
+        <property name="incomeTax" type="double">
+            <column name="Income_Tax" precision="10"/>
+        </property>
+        
+        
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" not-null="true"/>
+        </property>
+        <many-to-one name="createdBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+   </class>
+</hibernate-mapping>

@@ -1,0 +1,65 @@
+
+.menutable {
+	border: solid 1px #ffffff;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: #CCE6FF; /*menu color*/
+	width: 100%;
+	margin: 0px;
+	cellpadding: 1px;
+	border-collapse: collapse;
+}
+
+.menutd {
+	color: black;
+	padding: 0px;
+	border-bottom: solid 0px #CDCDCD;
+}
+
+.menutd a {
+	font-size: 13px;
+	font-weight: normal;
+	width: 100%;
+	display: block;
+	border: solid 1px #ffffff; /*border horizantal*/
+	padding: 0px;
+	text-decoration: none;
+	color: black;
+}
+
+.menuparent a {
+	background: url(images/go_next.gif);
+	background-repeat: no-repeat;
+	background-position: 95% 50%;
+	text-decoration: none;
+	color: darkblue;
+}
+
+.menutd a:hover {
+	background-color: #BBDDFF;  /*menu hovercolor*/
+/*	border: solid 1px #ABABAB;*/
+	font-weight: normal;
+	text-decoration: none;
+}
+.menutd a:hover,.menuparent a:hover {
+	background-color: #dddddd;
+	text-decoration: none;
+	color: #343434;
+	/*border-top: solid 1px #f0f2f5;
+	border-bottom: solid 1px #f0f2f5;*/
+	border: outset 1px 667788;
+/*	border-color: #88a9df #6687bf #6687bf #88a9df;*/
+	/*border-top: solid 1px #80a1db;
+	border-bottom: solid 1px #80a1db;*/
+}
+.menutd a:visited {
+	color: black; /*font color of menu */
+	text-decoration: none;
+}
+
+#dropmenudiv {
+	position: relative;
+	z-index: 100;
+	visibility: hidden;
+}

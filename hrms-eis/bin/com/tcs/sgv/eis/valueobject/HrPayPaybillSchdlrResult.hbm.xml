@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayPaybillSchdlrResult" table="hr_pay_paybillschdlr_result">
+        <comment></comment>
+        <id name="id" type="long">
+            <column name="paybillschdlr_result_id" length="20" not-null="true"/>
+            <generator class="assigned" />
+        </id>
+        
+        
+        <property name="month" type="long">
+            <column name="month"  >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="successFlag" type="java.lang.Character">
+            <column name="success_flag"  >
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+        
+        <property name="year" type="long">
+            <column name="year"  >
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+        <property name="locid" type="long">
+            <column name="LOC_ID" length="10" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+        
+        
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" >
+                <comment></comment>
+            </column>
+        </property>
+        
+     
+           <property name="ddoCode" type="long">
+            <column name="DDO_CODE" >
+                <comment></comment>
+            </column>
+        </property>
+           <property name="threadId" type="long">
+            <column name="THREAD_ID" >
+                <comment></comment>
+            </column>
+        </property>
+           <property name="billNo" type="long">
+            <column name="BILL_NO" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="errorMessage" type="string">
+            <column name="ERROR" >
+                <comment></comment>
+            </column>
+        </property>
+        
+    </class>
+</hibernate-mapping>

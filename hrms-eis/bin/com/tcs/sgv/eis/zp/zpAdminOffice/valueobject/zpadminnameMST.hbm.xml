@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.tcs.sgv.eis.zp.zpAdminOffice.valueobject.ZpadminnameMST" table="ZP_ADMIN_NAME_MST">
+  	
+  	<id name="Id" type="java.lang.Long">
+            <column name="ID" precision="20" scale="0" />
+            <generator class="assigned" />
+       </id>
+     
+        <property name="adminCode" type="string">
+            <column name="ADMIN_CODE"  />
+  	</property>
+
+       <property name="adminName" type="string">
+            <column name="ADMIN_NAME" />
+  	</property>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,211 @@
+
+#-- Added by Kapil for DCPS --#
+
+BrokenPeriodPay.attributesCSV=content\=[/WEB-INF/jsp/dcps/BrokenPeriodPay.jsp]
+DCPSNomineeDetails.attributesCSV=content\=[/WEB-INF/jsp/dcps/dcpsnomineedtls.jsp]
+DCPSDraftForms.attributesCSV=content\=[/WEB-INF/jsp/dcps/dcpsdraftforms.jsp]
+DCPSApproval.attributesCSV=content\=[/WEB-INF/jsp/dcps/approvalofdcpsform.jsp]
+DCPSform.attributesCSV=content\=[/WEB-INF/jsp/dcps/dcpsform.jsp]
+DCPSUpdate.attributesCSV=content\=[/WEB-INF/jsp/dcps/dcpsupdateform.jsp]
+DCPSPhysicalForm.attributesCSV=content\=[/WEB-INF/jsp/dcps/physicalformreceived.jsp]
+DCPSEmpDtlRpt.attributesCSV=content\=[/WEB-INF/jsp/dcps/DCPSEmpDtlRpt.jsp]
+DCPSEmpSearch.attributesCSV=content\=[/WEB-INF/jsp/dcps/SearchEmp.jsp]
+DCPSDDOOffice.attributesCSV=content\=[/WEB-INF/jsp/dcps/DDOOffice.jsp]
+DCPSDDOInformation.attributesCSV=content\=[/WEB-INF/jsp/dcps/DDOInformation.jsp]
+
+ApproveDDOInformation.attributesCSV=content\=[/WEB-INF/jsp/dcps/ApproveInformationOffice.jsp]
+
+DCPSDdoScheme.attributesCSV=content\=[/WEB-INF/jsp/dcps/DdoScheme.jsp]
+DCPSAttachBillGroup.attributesCSV=content\=[/WEB-INF/jsp/dcps/AttachBillGroup.jsp]
+checkForAccount.attributesCSV=content\=[/WEB-INF/jsp/dcps/checkForAccount.jsp]
+checkForAccountModal.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/dcps/checkForAccountModal.jsp]
+DcpsPhoto.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/dcps/dcpsPhoto.jsp]
+DcpsDdoGroupBill.attributesCSV=content\=[/WEB-INF/jsp/dcps/DdoBillGroup.jsp]
+dcpsPhoto.attributesCSV=css\=[dialogview],content\=[/WEB-INF/jsp/dcps/dcpsPhoto.jsp]
+DCPS6PcArrearEntry.attributesCSV=content\=[/WEB-INF/jsp/dcps/DCPS6PcArrearEntry.jsp]
+DCPS6PcArrearDisplay.attributesCSV=content\=[/WEB-INF/jsp/dcps/DCPS6PcArrearDisplay.jsp]
+dcpsArrearsTierI.attributesCSV=content\=[/WEB-INF/jsp/dcps/dcpsArrearsTierI.jsp]
+ApproveDDOOffice.attributesCSV=content\=[/WEB-INF/jsp/dcps/ApproveDDOOffice.jsp]
+ChangePersonalDetails.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangesPersonalDetails.jsp]
+ChangeOfficeDetails.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangesOfficeDetails.jsp]
+ChangeOtherDetails.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangesOtherDetails.jsp]
+ChangeNomineeDetails.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangesNomineeDetails.jsp]
+ChangePhotoAndSignatureDetails.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangesPhotoAndSignDetails.jsp]
+SrkaDdoInfo.attributesCSV=content\=[/WEB-INF/jsp/dcps/SrkaDdoInfo.jsp]
+DCPSddoEmpSelect.attributesCSV=content\=[/WEB-INF/jsp/dcps/DdoEmpSelection.jsp]
+DCPSddoEmpDeselect.attributesCSV=content\=[/WEB-INF/jsp/dcps/DdoEmpDeselection.jsp]
+DcpsSixPCArrears.attributesCSV=content\=[/WEB-INF/jsp/dcps/DcpsSixPCArrears.jsp]
+DcpsNoticeBoard.attributesCSV=content\=[/WEB-INF/jsp/dcps/NoticeBoard.jsp]
+loadCadreInfo.attributesCSV=content\=[/WEB-INF/jsp/dcps/mstCadreInfo.jsp]
+loadDesigInfo.attributesCSV=content\=[/WEB-INF/jsp/dcps/mstDesigInfo.jsp]
+loadOrgInfo.attributesCSV=content\=[/WEB-INF/jsp/dcps/mstOrgInfo.jsp]
+ApprovalOfForm1.attributesCSV=content\=[/WEB-INF/jsp/dcps/ApprovalOfForm1.jsp]
+RevertAcceptedData.attributesCSV=content\=[/WEB-INF/jsp/dcps/RevertAcceptedData.jsp]
+ChangePassword.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangePassword.jsp]
+DaysCalculation.attributesCSV=content\=[/WEB-INF/jsp/dcps/DaysCalculation.jsp]
+InterestCalculation.attributesCSV=content\=[/WEB-INF/jsp/dcps/InterestCalculation.jsp]
+NoticeBoard.attributesCSV=content\=[/WEB-INF/jsp/dcps/NoticeBoard.jsp]
+ModifyEmpDetails.attributesCSV=content\=[/WEB-INF/jsp/dcps/ModifyEmpDetails.jsp]
+DARateEntry.attributesCSV=content\=[/WEB-INF/jsp/dcps/DARateEntry.jsp]
+DCPSInterestRates.attributesCSV=content\=[/WEB-INF/jsp/dcps/DCPSInterestRates.jsp]
+DCPSMatchedEntries.attributesCSV=content\=[/WEB-INF/jsp/dcps/MatchedContriEntries.jsp]
+DCPSUnMatchedEntries.attributesCSV=content\=[/WEB-INF/jsp/dcps/UnMatchedContriEntries.jsp]
+DCPSRecordsToBeChecked.attributesCSV=content\=[/WEB-INF/jsp/dcps/DCPSRecordsToBeChecked.jsp]
+DCPSSanctionedBudget.attributesCSV=content\=[/WEB-INF/jsp/dcps/DCPSSanctionedBudget.jsp]
+
+
+
+#-- Added by Vihan for DCPS --#
+
+DCPSOfflineEntryForm.attributesCSV=content\=[/WEB-INF/jsp/dcps/OfflineEntry.jsp]
+DCPSOfflineEntryCorrection.attributesCSV=content\=[/WEB-INF/jsp/dcps/OfflineEntryCorrection.jsp]
+DCPSChanges.attributesCSV=content\=[/WEB-INF/jsp/dcps/Changes.jsp]
+DCPSPhyFormRcvdList.attributesCSV=content\=[/WEB-INF/jsp/dcps/PhyFormRcvdDdoList.jsp]
+DCPSPhyFormRcvd.attributesCSV=content\=[/WEB-INF/jsp/dcps/PhyFormRcvdList.jsp]
+DCPSFormStatusList.attributesCSV=content\=[/WEB-INF/jsp/dcps/FormStatusList.jsp]
+DCPSRegistrationForm.attributesCSV=content\=[/WEB-INF/jsp/dcps/NewRegistrationForm.jsp]
+DCPSCompletedForms1.attributesCSV=content\=[/WEB-INF/jsp/dcps/Completedforms.jsp]
+DCPSChangesDrafts.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangesDrafts.jsp]
+DCPSEmpDeputationInfo.attributesCSV=content\=[/WEB-INF/jsp/dcps/empDeputation.jsp]
+DCPSDummyOffice.attributesCSV=content\=[/WEB-INF/jsp/dcps/displayDummyOffice.jsp]
+DCPSDummyOfficeEntry.attributesCSV=content\=[/WEB-INF/jsp/dcps/mstDummyOffice.jsp]
+DCPSChallanEntry.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChallanEntryFromDummy.jsp]
+approveRevertRequests.attributesCSV=content\=[/WEB-INF/jsp/dcps/approveRevertRequests.jsp]
+FormListForDDO.attributesCSV=content\=[/WEB-INF/jsp/dcps/FormListForDDO.jsp]
+NewRegDrafts.attributesCSV=content\=[/WEB-INF/jsp/dcps/NewRegDrafts.jsp]
+NewRegForwardedForms.attributesCSV=content\=[/WEB-INF/jsp/dcps/NewRegForwardedForms.jsp]
+NewRegApprovedForms.attributesCSV=content\=[/WEB-INF/jsp/dcps/NewRegApprovedForms.jsp]
+DCPSChangeParentDept.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangeParentDept.jsp]
+MatchContriManually.attributesCSV=content\=[/WEB-INF/jsp/dcps/MatchContriManually.jsp]
+ChangeParentDeptEmp.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangeParentDeptEmp.jsp]
+ChangeDcpsPayDetails.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangeDcpsPayDetails.jsp]
+DCPSEmpSearchSRKA.attributesCSV=content\=[/WEB-INF/jsp/dcps/SearchEmpSRKA.jsp]
+FeedbacksForSRKA.attributesCSV=content\=[/WEB-INF/jsp/dcps/FeedbacksForSRKA.jsp]
+TerminalRequestList.attributesCSV=content\=[/WEB-INF/jsp/dcps/TerminalRequestList.jsp]
+TerminalRequest.attributesCSV=content\=[/WEB-INF/jsp/dcps/TerminalRequest.jsp]
+MapDDOAsst.attributesCSV=content\=[/WEB-INF/jsp/dcps/MapDDOAsst.jsp]
+
+
+#---Added For Offline Contribution --#
+OfflineEntryFormDDOAsst.attributesCSV=content\=[/WEB-INF/jsp/dcps/OfflineEntryForDDOAsst.jsp]
+uploadContributionFile.attributesCSV=content\=[/WEB-INF/jsp/dcps/uploadContriFile.jsp]
+exportZip.attributesCSV=content\=[/WEB-INF/jsp/dcps/exportZip.jsp]
+																				
+#-- Added by Bhargav for DCPS --#
+
+DCPSTierForms.attributesCSV=content\=[/WEB-INF/jsp/dcps/tierDarftForms.jsp]
+dcpsSixPCArrearAmountSchedule.attributesCSV=content\=[/WEB-INF/jsp/dcps/sixPCArrearAmountSchedule.jsp]
+DCPSOrganizationInfo.attributesCSV=content\=[/WEB-INF/jsp/dcps/mstOrgInfo.jsp]
+DCPSCadreInfo.attributesCSV=content\=[/WEB-INF/jsp/dcps/mstCadreInfo.jsp]
+DCPSDesignationInfo.attributesCSV=content\=[/WEB-INF/jsp/dcps/mstDesigInfo.jsp]
+DCPSSrkaDdoInfo.attributesCSV=content\=[/WEB-INF/jsp/dcps/mstDdoInfo.jsp
+#DcpsSixPCArrears.attributesCSV=content\=[/WEB-INF/jsp/dcps/sixPCArrears.jsp]
+DcpsSixPCArrearsYearly.attributesCSV=content\=[/WEB-INF/jsp/dcps/sixPCArrearsYearly.jsp]
+dcpsArrearsTierI.attributesCSV=content\=[/WEB-INF/jsp/dcps/tierContribution.jsp]
+
+#-- Added by Meeta --#
+DCPSFeedbackForm.attributesCSV=content\=[/WEB-INF/jsp/dcps/FeedbackEntry.jsp]
+DCPSTickerMessageEntry.attributesCSV=content\=[/WEB-INF/jsp/dcps/TickerMessageEntry.jsp]
+DCPSTickerMessage.attributesCSV=content\=[/WEB-INF/jsp/dcps/TickerMessage.jsp]
+DCPSPostEmpContribution.attributesCSV=content\=[/WEB-INF/jsp/dcps/PostEmployerContri.jsp]
+DCPSChangeEmpDept.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangeEmpDept.jsp]
+UploadTreasuryNetData.attributesCSV=content\=[/WEB-INF/jsp/dcps/UploadTreasuryNetData.jsp]
+TerminalRequestSRKA.attributesCSV=content\=[/WEB-INF/jsp/dcps/TerminalRequestSRKA.jsp]
+
+#-- Added by Shivani --#
+newPensionAcListReport.attributesCSV=content\=[/WEB-INF/jsp/dcps/newPensionAcListReport.jsp]
+newPensionActListReportForTreasury.attributesCSV=content\=[/WEB-INF/jsp/dcps/newPensionActListReportForTreasury.jsp]
+
+NewRegFormZP.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/NewRegistrationFormZP.jsp]
+FormListforRepoDDO.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/NewRegForwardedFormsZpRepoDDO.jsp]
+FormListforFinalDDO.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/NewRegForwardedFormsZpFinalDDO.jsp]
+FormListforSpecialDDO.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/NewRegForwardedFormsZpSpecialDDO.jsp]
+faq.attributesCSV=content\=[/WEB-INF/jsp/common/UserManual/FAQ.pdf]
+
+changeUserName.attributesCSV=content\=[/WEB-INF/jsp/common/changeUserName.jsp]
+changePostStatus.attributesCSV=content\=[/WEB-INF/jsp/common/changePostStatus.jsp]
+#####-----ADDED BY PUSHPA
+
+employeeListForBankDetailsUpdate.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/NewRegForwardedFormsForBankUpdate.jsp]
+
+#####-----ENDED BY PUSHPA
+
+
+#####-----ADDED BY Kinjal
+LoadEmpTickets.attributesCSV=content\=[/WEB-INF/jsp/common/LoadEmpTickets.jsp]
+NewTicketEntry.attributesCSV=content\=[/WEB-INF/jsp/common/NewTicketEntry.jsp]
+
+############----Added By Roshan
+approveRejectDDOOfficeView.attributesCSV=content\=[/WEB-INF/jsp/hrms/eis/zp/DDO Office/approveRejectDDOOfficeView.jsp]
+
+
+############----Added By Abhishek 
+basicClaculationForCHB.attributesCSV=content\=[/WEB-INF/jsp/common/basicClaculationForCHB.jsp]
+updateInstitutionName.attributesCSV=content\=[/WEB-INF/jsp/common/updateInstitutionName.jsp]
+
+############----Added By Abhishek  for PR_Tracker
+LoadEmpTickets.attributesCSV=content\=[/WEB-INF/jsp/common/LoadEmpTickets.jsp]
+NewTicketEntry.attributesCSV=content\=[/WEB-INF/jsp/common/NewTicketEntry.jsp]
+
+
+############----Added By Abhishek  for Post Conversion
+ChangePostForm.attributesCSV=content\=[/WEB-INF/jsp/dcps/ChangePostForm.jsp]
+showChangePostDtls.attributesCSV=content\=[/WEB-INF/jsp/dcps/ShowChangePostDtl.jsp]
+
+############----Added By Abhishek  for Post Deletion
+showDeletePostDtls.attributesCSV=content\=[/WEB-INF/jsp/dcps/ShowDeletePostDtl.jsp]
+DeletePostForm.attributesCSV=content\=[/WEB-INF/jsp/dcps/DeletePostForm.jsp]
+
+############----Added By Abhishek  for Post Change Basic Details
+getEmployeeListForBasicUpdate.attributesCSV=content\=[/WEB-INF/jsp/dcps/getEmployeeListForBasicUpdate.jsp]
+BrokenPeriodReport.attributesCSV=content\=[/WEB-INF/jsp/dcps/BrokenPeriodReport.jsp]
+####---------------------added by poonam for city class mapping------
+updateCityClassForEmployee.attributesCSV=content\=[/WEB-INF/jsp/common/updateCityClassForEmployee.jsp]
+
+
+
+####---------------------added by poonam for allow employee configuration and post configuration at MDC------
+AllowDistrcitForIncr.attributesCSV=content\=[/WEB-INF/jsp/dcps/AllowDistrcitForIncr.jsp]
+
+############----Added By Saurabh  for updating GPF head
+updateMajorHead.attributesCSV=content\=[/WEB-INF/jsp/common/updateMajorHead.jsp]
+ 
+
+
+############----Added By Saurabh  for entry of legacy data
+LegacyDataEntry.attributesCSV=content\=[/WEB-INF/jsp/dcps/LegacyDataEntry.jsp]
+approveLegacyDataEntry.attributesCSV=content\=[/WEB-INF/jsp/dcps/ApproveLegacyDataEntry.jsp]
+
+###########-------Added by Saurabh S  for practise
+NEW.attributesCSV=content\=[/WEB-INF/jsp/dcps/NEW.jsp]
+
+
+###########-------Added by Saurabh S  for practise
+DEMOJSP.attributesCSV=content\=[/dcps/web/WEB-INF/DEMOJSP.jsp]
+
+revisionOf6PCTo7PCEmp.attributesCSV=content\=[/WEB-INF/jsp/sevenpc/revisionOf6PCTo7PCEmp.jsp]
+conversionof7pcto6pc.attributesCSV=content\=[/WEB-INF/jsp/dcps/conversionof7pcto6pc.jsp]
+
+########---------Added By Tejashree
+
+getEmployeeListofRateperHours.attributesCSV=content\=[/WEB-INF/jsp/dcps/getEmployeeListofRateperHours.jsp]
+
+##----ADded by Naveen Ref RDD-----##
+ChangeDCPSorGPF.attributesCSV=content\=[/WEB-INF/jsp/common/ChangeDCPSorGPF.jsp]
+
+
+##----Added by Naveen For DDO wise report Expenditure-----##
+DDOWiseExpReport.attributesCSV==content\=[/WEB-INF/jsp/reports/DDOWiseExpenditureReport.jsp] 
+DDOWISEREPORT.attributesCSV=content\=[/WEB-INF/jsp/reports/DDOWiseExpenditureReport.jsp]
+
+##----Added by Swati-----##
+ViewCreatedPostDtls.attributesCSV=content\=[/WEB-INF/jsp/dcps/ViewCreatedPostDtls.jsp]
+
+##----Added by Swati-----##
+VacantPostDtls.attributesCSV=content\=[/WEB-INF/jsp/dcps/VacantPostDtls.jsp]
+
+########---------Added By Tejashree
+
+ddoOutsideSevaarth.attributesCSV=content\=[/WEB-INF/jsp/dcps/ddoOutsideSevaarth.jsp]
+Statistics.attributesCSV=content\=[/WEB-INF/jsp/gpf/Statistics.jsp]
+updateDOB.attributesCSV=content\=[/WEB-INF/jsp/common/UpdateDOB.jsp]

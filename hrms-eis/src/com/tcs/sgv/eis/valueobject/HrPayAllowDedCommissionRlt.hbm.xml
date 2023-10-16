@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.tcs.sgv.eis.valueobject.HrPayAllowDedCommissionRlt"
+		table="HR_PAY_ALLOWDED_COMSN_RLT">
+		<id name="rltId" type="long">
+			<column name="RLT_ID" precision="10" scale="0" not-null="true" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="allwDedCode" type="long">
+			<column name="ALLWDED_CODE" precision="10" scale="0" not-null="true" />
+		</property>
+		<property name="status" type="int">
+			<column name="STATUS" precision="1" scale="0" not-null="true" />
+		</property>
+
+		<property name="commissionId" type="long">
+			<column name="COMMISSION_ID" precision="10" scale="0" not-null="true" />
+		</property> 	
+		
+		<many-to-one name="orgUserMstBycrtdBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst"
+			fetch="select">
+			<column name="CRTD_BY" precision="20" scale="0" not-null="true">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		<many-to-one name="orgPostMstBycrtdByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst"
+			fetch="select">
+			<column name="CRTD_BY_POST" precision="20" scale="0"
+				not-null="true">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		
+		<property name="crtdDate" type="date">
+			<column name="CRTD_DATE" length="7" not-null="true" />
+		</property>
+
+		<many-to-one name="orgUserMstByupdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst"
+			fetch="select">
+			<column name="UPD_BY" precision="20" scale="0" not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+
+		<many-to-one name="orgPostMstByupdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst"
+			fetch="select">
+			<column name="UPD_BY_POST" precision="20" scale="0"
+				not-null="false">
+				<comment></comment>
+			</column>
+		</many-to-one>
+		
+		<property name="updDate" type="date">
+			<column name="UPD_DATE" length="7" />
+		</property>
+		<property name="trnCounter" type="java.lang.Integer">
+			<column name="TRN_COUNTER" precision="10" scale="0" not-null="true"/>
+		</property>
+
+	</class>
+</hibernate-mapping>

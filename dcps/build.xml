@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<!-- 
+File Description: Build file to compile the IFMS application source code, create 2 war files
+				  for Integration server and UAT server. This build file will also stop the 
+				  running apache tomcat server, deploy the Integration WAR file and start the 
+				  tomcat server.
+				  
+Date			: 01-July-2011
+
+Author			: Vrajesh Raval
+
+Pre-Condition	: This file is executed preferably from  'CreateWAR.bat' batch file. Latest source 
+				  files of the application (src and web folders) are taken latest from the VSS
+				  preferably from the 'CreateWAR.bat' batch file, which also supplies all the
+				  environment variables to this file.
+
+Revision History:
+
+Date			Author				Description
+01-Jul-2011		Vrajesh Raval		Added tasks for deploying the WAR file and server stop start
+
+-->
+
+<project name="ifms-build" default="start" >
+
+<!-- Clean is not required as it is handled in Parent batch file. If not then 
+following sholud be un commented and its dependency should be given to "init" 
+target-->
+
+	<!--<target name="clean">
+		<delete dir="dist" />
+		<delete dir="build" />
+	</target> -->
+
+	<!-- Properties supplied from the executing batch file -->
+	<property environment="env" />
+	<property name="tomcat.home" value="${env.TOMCAT_HOME}" />
+
+	<!-- Task to create proper directory structure
+	'build/classes' : All the compiled classes will be put in this directory
+	'dist' 			: WAR file for Integration server will be in this directory
+	'dist-prod' 	: WAR file for UAT server will be in this directory
+	 -->
+	<target name="init">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="dist" />
+		<mkdir dir="dist-prod" />
+	</target>
+
+	
+	<!-- Task to compile the source code using 'javac' task. After compilation of java files,
+		 all other files (hbm.xml, properties etc) are also copied.
+		 -->
+	<target name="compile" depends="init" >
+	<javac destdir="build/classes" debug="true" srcdir="src" fork="true"  memoryInitialSize="1024m" memoryMaximumSize="1024m">
+			<classpath refid="compile.classpath"/>
+			   
+		</javac>
+		<!-- Copy application resources -->
+		<copy  todir="build/classes">
+			<fileset dir="src" excludes="**/*.java"/>
+		</copy>
+	</target>
+
+	<!-- Task to put all the required jar files on classpath to complete the 'compile' task 
+		successfully. 'servlet-api.jar' is taken from Tomcat installation directory.
+		-->
+	<path id="compile.classpath">
+		<fileset dir="web/WEB-INF/lib">
+			<include name="*.jar"/>
+		</fileset>
+		<fileset dir="${tomcat.home}/lib/">
+			<include name="servlet-api.jar"/>
+		</fileset>
+	</path>
+
+	<!-- Task to create WAR files-->
+	<target name="war" depends="compile">
+		
+		<!-- copy and replace the staging server config files-->
+		<copy todir="build/classes" overwrite="true">
+			<fileset dir="src/staging_files">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+		
+		<!-- create WAR file for Integration-->
+		<war destfile="dist/IFMS-MAHA.war" webxml="web/WEB-INF/web.xml">
+			<fileset dir="web">
+				<exclude name="**/*.jar"/>
+			</fileset>
+			<lib dir="web/WEB-INF/lib"/>
+			<classes dir="build/classes"/>
+		</war>
+		
+		<!-- copy and replace the UAT server config files-->
+		<copy todir="build/classes" overwrite="true">
+			<fileset dir="src/prod_files">
+				<include name="**/*.*"/>
+			</fileset>
+		</copy>
+
+		<!-- create WAR file for UAT server-->
+		<war destfile="dist-prod/IFMS-MAHA.war" webxml="web/WEB-INF/web.xml">
+			<fileset dir="web">
+				<exclude name="**/*.jar"/>
+			</fileset>
+			<lib dir="web/WEB-INF/lib"/>
+			<classes dir="build/classes"/>
+		</war>
+	</target>
+
+	<!-- Task to stop the Tomcat server -->
+	<target name="stop" depends="war" >
+		<exec dir="${tomcat.home}/bin" executable="cmd" >
+			<arg value="/c net stop Tomcat6"/>
+		</exec>
+	</target> 
+	
+	<!-- Task to uninstall the application and deploy new WAR file -->
+	<target name="deploy" depends="stop">
+		<delete dir="${tomcat.home}/webapps/IFMS-MAHA" />
+		<delete file="${tomcat.home}/webapps/IFMS-MAHA.war" />
+		<delete dir="${tomcat.home}/work/Catalina/localhost/IFMS-MAHA" />
+		<delete file="${tomcat.home}/temp/**/*.*" />
+		<copy file="dist/IFMS-MAHA.war" todir="${tomcat.home}/webapps"/>
+	</target>
+
+	<!-- Task to Start the tomcat server-->
+	<target name="start" depends="deploy">
+		<exec dir="${tomcat.home}/bin" executable="cmd" >
+			<arg value="/c net start Tomcat6"/>
+		</exec>
+	</target>
+
+	
+	<!-- If tomcat is NOT installed as service Un comment following targets and comment the above
+	'start' and 'stop' targets
+	<target name="start" depends="deploy">
+		<echo message="Start Tomcat" />     
+        <java dir="${tomcat.home}/bin/" jar="${tomcat.home}/bin/bootstrap.jar" fork="true">   
+            <arg value="start"/>      
+        </java>
+	</target>
+
+	<target name="stop" depends="war" >
+		<echo message="Stop Tomcat" />     
+        <java dir="${tomcat.home}/bin/" jar="${tomcat.home}/bin/bootstrap.jar" fork="true">   
+            <arg value="stop"/>      
+        </java> 
+	</target>
+	-->
+
+</project>

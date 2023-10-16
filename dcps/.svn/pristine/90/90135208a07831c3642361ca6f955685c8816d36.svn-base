@@ -1,0 +1,157 @@
+html {
+	padding: 0px;
+	margin: 0px;
+	background-color: transparant;
+	text-align: center;
+	font-family: Arial, Verdana, Helvetica, sans;
+	vertical-align: middle;
+}
+
+body {
+	width: 99%;
+	height: 95%;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+img {
+	border: 0;
+}
+
+#pageContent {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	text-align: center;
+}
+
+#inContent {
+	padding: 0 0 0 0;
+	margin: 0px;
+	text-align: center;
+}
+
+#header {
+	display: none;
+}
+
+#toolbar {
+	display: none;
+}
+
+#nav {
+	display: none;
+}
+
+#content {
+	margin: 0 0 0 0;
+	height: 99%;
+	background: none;
+	font-size: 12px;
+	color: #000000;
+	text-align: center;
+}
+
+#footer {
+	display: none;
+}
+
+#footer ul {
+	display: none;
+}
+#currentApplication
+{
+	display: none;
+}
+#tata-logo {
+	src: url(tata_logo.gif);
+}
+
+#hdiits-logo {
+	src: url(./../../common/images/mylogo.jpg);
+}
+
+#login-btn {
+	font-size: 10px;
+	font-weight: bold;
+	color: black;
+}
+
+#headertext {
+	font-size: 18px;
+	font-weight: bold;
+	color: black;
+}
+
+.backdiv {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 60%;
+	height: 60%;
+	background-color: transparent;
+	margin: 20%;
+}
+
+#div-body {
+	background: url(background-body.gif);
+	background-repeat: repeat;
+	background-position: 0% 0%;
+	z-index: -3;
+}
+
+#div-left-top {
+	background: url(corner-left-top.gif);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	z-index: -1;
+}
+
+#div-top {
+	background: url(border-top.gif);
+	background-repeat: repeat-x;
+	z-index: -2;
+	vertical-align: middle;
+}
+
+#div-right-top {
+	background: url(corner-right-top.gif);
+	background-repeat: no-repeat;
+	background-position: 100% 0%;
+	z-index: -1;
+}
+
+#div-left-bottom {
+	background: url(corner-left-bottom.gif);
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	z-index: -1;
+}
+
+#div-bottom {
+	background: url(border-bottom.gif);
+	background-repeat: repeat-x;
+	background-position: 0% 100%;
+	z-index: -2;
+}
+
+#div-right-bottom {
+	background: url(corner-right-bottom.gif);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	z-index: -1;
+}
+
+#div-left {
+	background: url(border-left.gif);
+	background-repeat: repeat-y;
+	background-position: 0% 0%;
+	z-index: -2;
+}
+
+#div-right {
+	background: url(border-right.gif);
+	background-repeat: repeat-y;
+	background-position: 100% 0%;
+	z-index: -2;
+}

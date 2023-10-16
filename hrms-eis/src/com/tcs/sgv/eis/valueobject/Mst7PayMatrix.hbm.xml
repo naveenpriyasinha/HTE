@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2007 4:12:13 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.Mst7PayMatrix" table="MST_7PAY_MATRIX">
+        <comment></comment>
+        <id name="id" type="long">
+            <column name="id" />
+        </id>
+               
+        <many-to-one name="cmnLanguageMst" class="com.tcs.sgv.common.valueobject.CmnLanguageMst" fetch="select">
+            <column name="LANG_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="updated_by">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>  
+		<!-- <many-to-one name="hrPayCommissionMst" class="com.tcs.sgv.common.payroll.valueobject.HrPayCommissionMst" fetch="select">
+			<column name="commission_id"/>
+		</many-to-one> -->
+		<many-to-one name="payBandId" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+			<column name="payband_id"/>
+		</many-to-one>
+         
+        <!--  Added by Muneendra for  payScaleType -->
+        <many-to-one name="payScaleType" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+			<column name="PayScale_Type"/>
+		</many-to-one>   
+        <!-- ended by Muneendra for  payScaleType-->
+        
+        
+        <property name="payScale" type="string">
+            <column name="PAY_SCALE" length="40" >
+                <comment></comment>
+            </column>
+        </property>
+        <property name="gradePay" type="long">
+            <column name="GRADE_PAY" length="100" >
+                <comment></comment>
+            </column>
+        </property>
+                                      
+        <property name="payScaleGradePay" type="string">
+            <column name="PAY_SCALE_GRADE_PAY" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB1" type="long">
+            <column name="PB1" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB2" type="long">
+            <column name="PB2" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="PB3" type="long">
+            <column name="PB3" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB4" type="long">
+            <column name="PB4" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+        <property name="PB5" type="long">
+            <column name="PB5" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB6" type="long">
+            <column name="PB6" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="PB7" type="long">
+            <column name="PB7" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB8" type="long">
+            <column name="PB8" >
+                <comment></comment>
+            </column>
+        </property>
+                        
+         <property name="PB9" type="long">
+            <column name="PB9" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB10" type="long">
+            <column name="PB10" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="PB11" type="long">
+            <column name="PB11" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB12" type="long">
+            <column name="PB12" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="PB13" type="long">
+            <column name="PB13" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB14" type="long">
+            <column name="PB14" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="PB15" type="long">
+            <column name="PB15" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB16" type="long">
+            <column name="PB16" >
+                <comment></comment>
+            </column>
+        </property>
+   
+      
+         <property name="PB17" type="long">
+            <column name="PB17" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB18" type="long">
+            <column name="PB18" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="PB19" type="long">
+            <column name="PB19" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB20" type="long">
+            <column name="PB20" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="PB21" type="long">
+            <column name="PB21" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB22" type="long">
+            <column name="PB22" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="PB23" type="long">
+            <column name="PB23" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB24" type="long">
+            <column name="PB24" >
+                <comment></comment>
+            </column>
+        </property>
+        
+                
+         <property name="PB25" type="long">
+            <column name="PB25" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB26" type="long">
+            <column name="PB26" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="PB27" type="long">
+            <column name="PB27" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB28" type="long">
+            <column name="PB28" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB29" type="long">
+            <column name="PB29" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB30" type="long">
+            <column name="PB30" >
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="PB31" type="long">
+            <column name="PB31" >
+                <comment></comment>
+            </column>
+        </property>
+        
+         <property name="PB32" type="long">
+            <column name="PB32" >
+                <comment></comment>
+            </column>
+        </property>
+      
+            
+        
+    </class>
+</hibernate-mapping>

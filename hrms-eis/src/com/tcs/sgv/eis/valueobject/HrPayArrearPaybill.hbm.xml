@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 13, 2007 3:20:54 PM by Hibernate Tools 3.1.0.beta5 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayArrearPaybill" table="HR_PAY_ARREAR_PAYBILL">
+        <id name="id" type="long">
+            <column name="ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="hrEisEmpMst" class="com.tcs.sgv.eis.valueobject.HrEisEmpMst" fetch="select">
+            <column name="EMP_ID" precision="22" />
+        </many-to-one>
+        <!-- <property name="month" type="long">
+            <column name="PAYBILL_MONTH" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="year" type="long">
+            <column name="PAYBILL_YEAR" precision="22" scale="0" not-null="true" />
+        </property>  -->
+        <property name="psrNo" type="long">
+            <column name="PSR_NO" precision="22" scale="0"  />
+        </property> 
+        <property name="allow0102" type="double">
+            <column name="SPL_PAY" precision="22" scale="0" />
+        </property>
+        <property name="allow0101" type="double">
+            <column name="PER_PAY" precision="22" scale="0" />
+        </property>
+        <property name="basic0101" type="double">
+            <column name="PO" precision="22" scale="0" />
+        </property>
+        <property name="basic0102" type="double">
+            <column name="PE" precision="22" scale="0" />
+        </property>
+        <property name="ls" type="double">
+            <column name="LS" precision="22" scale="0" />
+        </property>
+        <property name="le" type="double">
+            <column name="LE" precision="22" scale="0" />
+        </property>
+        <property name="allow0119" type="double"><!-- DP -->
+            <column name="D_PAY" precision="22" scale="0" />
+        </property>
+        <property name="allow0120" type="double"><!-- DP -->
+            <column name="DP_GAZZETED" precision="22" scale="0" />
+        </property>
+        <property name="allow0103" type="double"><!-- DA -->
+            <column name="DA" precision="22" scale="0" />
+        </property>
+        <property name="allow0110" type="double"><!-- HRA -->
+            <column name="HRA" precision="22" scale="0" />
+        </property>
+        <property name="allow0105" type="double"><!-- LTC -->
+            <column name="LTC" precision="22" scale="0" />
+        </property>
+        
+        <property name="allow0111" type="double"><!-- CLA -->
+            <column name="CLA" precision="22" scale="0" />
+        </property>
+        <property name="allow0104" type="double"><!-- other allowance -->
+            <column name="OTHER_ALLOW" precision="22" scale="0" />
+        </property>
+        <property name="allow0107" type="double"><!-- MA -->
+            <column name="MA" precision="22" scale="0" />
+        </property>
+        <property name="allow0108" type="double"><!-- bonus -->
+            <column name="BONUS" precision="22" scale="0" />
+        </property>
+        
+        <property name="allow1301" type="double"><!-- WA -->
+            <column name="WA" precision="22" scale="0" />
+        </property>
+        <property name="allow5006" type="double"><!-- Other charges -->
+            <column name="OTHER_CHRGS" precision="22" scale="0" />
+        </property>
+        
+        <property name="allow0113" type="double"><!-- TA -->
+            <column name="TRANS_ALL" precision="22" scale="0" />
+        </property>
+        <property name="adv7057" type="double"><!-- Fest Adv -->
+            <column name="FES_ADV" precision="22" scale="0" />
+        </property>
+        <property name="adv7058" type="double"><!-- Food Adv -->
+            <column name="FOOD_ADV" precision="22" scale="0" />
+        </property>
+        <property name="deduc0101" type="double"><!-- Pay Recovery -->
+            <column name="PAY_RECOVER" precision="22" scale="0" />
+        </property>
+        <property name="grossAmt" type="double">
+            <column name="GROSS_AMT" precision="22" scale="0" />
+        </property>
+        <property name="slo" type="double">
+            <column name="SLO" precision="22" scale="0" />
+        </property>
+        <property name="it" type="double">
+            <column name="IT" precision="22" scale="0" />
+        </property>
+        <property name="surcharge" type="double">
+            <column name="SURCHARGE" precision="22" scale="0" />
+        </property>
+        <property name="deduc9550" type="double"><!-- HRR -->
+            <column name="HRR" precision="22" scale="0" />
+        </property>
+        <property name="deduc9560" type="double"><!-- rent b -->
+            <column name="RENT_B" precision="22" scale="0" />
+        </property>
+        <property name="deduc9530" type="double"><!-- PLI -->
+            <column name="PLI" precision="22" scale="0" />
+        </property>
+        <property name="deduc9540" type="double"><!-- BLI -->
+            <column name="BLI" precision="22" scale="0" />
+        </property>
+        <property name="deduc9570" type="double"><!-- PT -->
+            <column name="PT" precision="22" scale="0" />
+        </property>
+        <property name="deduc9580" type="double"><!-- SIS_GIS -->
+            <column name="SIS_GIS_1979" precision="22" scale="0" />
+        </property>
+        <property name="deduc9581" type="double"><!-- SisIF -->
+            <column name="SIS_IF_1981" precision="22" scale="0" />
+        </property>
+        <property name="deduc9582" type="double"><!-- GisSF -->
+            <column name="SIS_SF_1981" precision="22" scale="0" />
+        </property>
+        <property name="deduc9583" type="double"><!-- AisIF -->
+            <column name="AIS_IF_1980" precision="22" scale="0" />
+        </property>
+        <property name="deduc9584" type="double"><!-- AisSF -->
+            <column name="AIS_SF_1980" precision="22" scale="0" />
+        </property>
+        <property name="deduc9670" type="double"><!-- GPF -->
+            <column name="GPF_C" precision="22" scale="0" />
+        </property>
+        <property name="adv9670" type="double"><!-- GPF Adv -->
+            <column name="GPF_ADV" precision="22" scale="0" />
+        </property>
+        <property name="loan9592" type="double">
+            <column name="CAR_SCT_MOPED_ADV" precision="22" scale="0" />
+        </property>
+        <property name="loanInt9592" type="double">
+            <column name="CAR_SCT_MOPED_INT" precision="22" scale="0" />
+        </property>
+        <property name="loan9740" type="double">
+            <column name="OCA_CYCLE_ADV" precision="22" scale="0" />
+        </property>
+        <property name="loanInt9740" type="double">
+            <column name="OCA_CYCLE_INT" precision="22" scale="0" />
+        </property>
+        <property name="loan9591" type="double">
+            <column name="HBA" precision="22" scale="0" />
+        </property>
+        <property name="loanInt9591" type="double">
+            <column name="HBA_INT" precision="22" scale="0" />
+        </property>
+        <property name="loan9720" type="double">
+            <column name="FAN_ADV" precision="22" scale="0" />
+        </property>
+        <property name="loanInt9720" type="double">
+            <column name="FAN_INT" precision="22" scale="0" />
+        </property>
+        <property name="deduc9780" type="double">
+            <column name="JEEP_R" precision="22" scale="0" />
+        </property>
+        <property name="deduc9910" type="double">
+            <column name="MISC_RECOV" precision="22" scale="0" />
+        </property>
+        <!-- Changed by Paurav -->
+        <!-- <property name="gpfIv" type="double"> -->
+        <property name="deduc9531" type="double">
+            <column name="GPF_IV" precision="22" scale="0" />
+        </property>
+        <!-- Ended by Paurav -->
+        <property name="totalDed" type="double">
+            <column name="TOTAL_DED" precision="22" scale="0" />
+        </property>
+        <property name="netTotal" type="double">
+            <column name="NET_TOTAL" precision="22" scale="0" />
+        </property>
+        <property name="gpay0101" type="double">
+            <column name="GPAY" precision="22" scale="0" />
+        </property>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="db_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="loc_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+       <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="created_by" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        
+        <property name="trnCounter" type="java.lang.Integer">
+            <column name="TRN_COUNTER"  >
+                <comment></comment>
+            </column>
+        </property>
+        <!-- Added by Paurav for identifying paybill entries generated at same time -->
+        <property name="paybillGrpId" type="long">
+            <column name="PAYBILL_GRP_ID" length="20" />
+        </property>
+        <!-- Ended By Paurav -->
+        
+        <property name="advIV9670" type="double">
+            <column name="GPF_IV_ADV" precision="22" scale="0" />
+        </property>
+        
+        <many-to-one name="orgPostMst" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select" >
+            <column name="post_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <!-- <property name="approveFlag" type="long">
+            <column name="approve_flag"  />
+        </property>  -->
+
+        <property name="approveRejectDate" type="timestamp">
+            <column name="approve_reject_date" length="7" />
+        </property>
+        
+        <property name="deduc9534" type="double"><!-- cPF Adv -->
+            <column name="CPF" />
+        </property>
+
+        <property name="deduc9620" type="double"><!-- AISPF Adv -->
+            <column name="ais_pf"/>
+        </property>
+		<property name="deduc9999" type="double"><!-- da in gPF -->
+            <column name="da_gpf"/>
+        </property>
+        <property name="deduc9998" type="double"><!-- da in gpf class iv -->
+            <column name="da_gpfiv"/>
+        </property>
+
+		<many-to-one name="paybillId" class="com.tcs.sgv.eis.valueobject.HrPayPaybill" fetch="select">
+            <column name="PAYBILL_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="salRevId" class="com.tcs.sgv.eis.valueobject.HrPaySalRevMst" fetch="select">
+            <column name="SAL_REV_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+
+	<property name="billNo" type="string">
+            <column name="BILL_NO" length="20">
+                <comment></comment>
+            </column>
+        </property>
+        <many-to-one name="hrEisOtherDtls" class="com.tcs.sgv.eis.valueobject.HrEisOtherDtls" fetch="select" >
+            <column name="other_id" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+
+        <property name="otherTrnCntr" type="long"><!-- AISPF Adv -->
+            <column name="other_trn_cntr"/>
+        </property>
+
+
+    </class>
+</hibernate-mapping>

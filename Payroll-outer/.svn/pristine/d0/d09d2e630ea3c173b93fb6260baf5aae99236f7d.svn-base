@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 28, 2007 3:41:57 PM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.common.valueobject.TrnBillMvmnt" table="trn_bill_mvmnt" dynamic-update="true">
+        <comment></comment>
+        <id name="billMvmtId" type="long">
+            <column name="BILL_MVMT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="movemntId" type="java.lang.Long">
+            <column name="MOVEMNT_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="billNo" type="java.lang.Long">
+            <column name="BILL_NO">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="statusUpdtUserid" type="java.lang.Long">
+            <column name="STATUS_UPDT_USERID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="statusUpdtDate" type="timestamp">
+            <column name="STATUS_UPDT_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="mvmntStatus" type="string">
+            <column name="MVMNT_STATUS" length="100">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="receivedFlag" type="java.lang.Short">
+            <column name="RECEIVED_FLAG">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="receivingUserId" type="java.lang.Long">
+            <column name="RECEIVING_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="receivedDate" type="timestamp">
+            <column name="RECEIVED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdUserId" type="java.lang.Long">
+            <column name="CREATED_USER_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdPostId" type="java.lang.Long">
+            <column name="CREATED_POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedUserId" type="java.lang.Long">
+            <column name="UPDATED_USER_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedPostId" type="java.lang.Long">
+            <column name="UPDATED_POST_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" length="19">
+                <comment></comment>
+            </column>
+        </property>       
+        <property name="dbId" type="java.lang.Long">
+            <column name="DB_ID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="statusUpdtPostid" type="java.lang.Long">
+            <column name="STATUS_UPDT_POSTID">
+                <comment></comment>
+            </column>
+        </property>
+        <property name="locationCode" type="string">
+            <column name="LOCATION_CODE" length="10" not-null="true">
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

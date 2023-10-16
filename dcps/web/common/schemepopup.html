@@ -1,0 +1,360 @@
+<html>
+<head>
+
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<title>Select Head Scheme</title>
+</head>
+<style>
+	.trRow
+	{
+		background-Color:#EAEAEA;
+		color: white;
+	}
+	.trHeader
+	{
+		background-Color:#BB739C;
+		color: white;
+		font-size: 14px;
+		font-family: tahoma;
+		font-weight: bold;
+	}
+	input
+	{
+		font-size: 14px;
+		font-family: tahoma;
+	}
+	.tableHeader {
+	background-color: #EBF3FB;
+	padding: 2px;
+	font-family: 'verdana';
+	font-weight: bold;
+	font-size: 11px;
+	BORDER-RIGHT: #ace 1px solid;
+	BORDER-TOP: #ace 1px solid;
+	BORDER-LEFT: #ace 0px solid;
+	BORDER-BOTTOM: #ace 0px solid;
+	color: #066FCC;
+	text-align: center;
+	}
+	.tds,body {
+	background-color: #EBF3FB;
+	padding: 0.5px;
+	font-family: 'verdana';
+	font-weight: 350;
+	font-size: 11px;
+	BORDER-RIGHT: #ace 1px solid;
+	BORDER-TOP: #ace 1px solid;
+	BORDER-LEFT: #ace 0px solid;
+	BORDER-BOTTOM: #ace 0px solid;
+	color: #066FCC;
+	color: black;
+	}
+	.scrollablediv {
+	float: inherit;
+	border: 1px #000000;
+	background-color: transparent;
+	height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scrollbar-3dlight-color:#9FAFDF;
+    scrollbar-arrow-color:#191970;
+    scrollbar-base-color:#729FD8;
+    scrollbar-track-color:#EAF1F8;
+    scrollbar-darkshadow-color:#9FAFDF;
+    scrollbar-face-color:#729FD8;
+    scrollbar-highlight-color:#B0E0E6;
+    scrollbar-shadow-color:#9FAFDF
+	}
+	.bigbutton {
+	padding: 2px;
+	border: 1px solid black;
+	color: #066FCC;
+	font-family: 'verdana';
+	font-weight: bold;
+	font-size: 11px;
+	}
+
+	
+</style>
+<body onkeydown="handleKeyEvent();" bgcolor="#ECF5FF" onunload="okPressed();">
+
+<center>
+<TABLE width="100%" class="tds">
+<tr align="center" class="tableHeader">
+	<td align="center" 
+		style="font-family: 'verdana';
+				font-weight: 325;
+				font-size: 16px;">
+		Scheme Code List
+	</td>
+</tr>
+
+<table width="96%" class="tds">
+<tr class="tableHeader" align="center">
+<td>
+	<input type="text" id="SchemId" name="Id" size="10" onkeyup="" >
+</td>
+<td>
+	<input type="text" id="SchemName" name="Name" size="65" onkeyup="" >
+</td>
+</tr>
+</table>
+
+<TR align="center" class="scrollablediv" >
+	<TD align="center" class="scrollablediv"> 
+	<SELECT onkeydown="closeWin(event);" onclick="" 
+	style="width:95%;font-family: verdana;font-weight: bold;background-color:white"  
+	NAME="plng"  id="mySelect" size="15" > 
+	</SELECT>
+	</TD>	
+</TR>
+
+	<tr align="center">
+		<td> 
+		<input type="button" value="OK" onclick="okPressed();" name="okBtn" class="bigbutton" tabindex="15" size="25" border="true" width="25">
+		</td>
+	</tr>
+
+</TABLE>
+<center>
+</body>
+
+<script language="javascript">
+function closeWinOnClick()
+{
+	 var selindex = 0;
+	 if(document.getElementById("mySelect").selectedIndex != -1)
+	 selindex = document.getElementById("mySelect").selectedIndex;
+	  
+	 window.returnValue = plngs[selindex];
+	 window.close();
+}
+function closeWin(event)
+{
+	
+	if(event.keyCode == 13)
+	{
+		 var selindex = 0;
+		 if(document.getElementById("mySelect").selectedIndex != -1)
+		 selindex = document.getElementById("mySelect").selectedIndex;
+		  
+		 window.returnValue = plngs[selindex];
+		 window.close();
+	}
+
+}
+
+function okPressed()
+{
+		 var selindex = 0;
+		 if(document.getElementById("mySelect").selectedIndex != -1)
+		 selindex = document.getElementById("mySelect").selectedIndex;
+		  
+		 window.returnValue = plngs[selindex];
+		 window.close();
+
+}
+
+var singleLcCodeDescRow=null;
+var lcCodeDesc=null;
+var singleLcCodeDescRowOdd=new Array();
+var singleLcCodeDescRowEven=new Array();
+var trueLength=0;
+var elementOption=null;
+var elementSelect=null;
+var newId=new Array();
+var newName=new Array();
+var indice=0;
+var str=null;
+var x=document.getElementById("mySelect");
+	
+var plngs = window.dialogArguments;
+
+if(plngs.length > 0 )
+ { 
+	if(plngs[0].length == 4)
+	{
+		 for(i = 0 ; i < plngs.length ; i++)
+		 {
+			  var y=document.createElement('option');
+			  y.text=plngs[i][1] + '_|_'  + plngs[i][2]  ;// The array of two
+			  
+			  singleLcCodeDescRowOdd[i]=plngs[i][1];
+			  singleLcCodeDescRowEven[i]=plngs[i][2];			  
+			  
+			  try
+			  {
+			 		   x.add(y); // IE only			 		  
+			  }
+			  catch(ex)
+			  { 
+			 
+			  }
+		 }
+	}else
+	{
+		 for(i = 0 ; i < plngs.length ; i++)
+		 {
+			  var y=document.createElement('option');
+			  if(plngs[i][0] == '0' || plngs[i][0] == '')
+			  	y.text='000000' + '_|_'  + plngs[i][1] + '_|_'  + plngs[i][2] + '_|_' + plngs[i][3] + '_|_' + plngs[i][4]+ '_|_' + plngs[i][5] + '_|';
+			  else
+			  	y.text=plngs[i][0] + '_|_'  + plngs[i][1] + '_|_'  + plngs[i][2] + '_|_' + plngs[i][3] + '_|_' + plngs[i][4]+ '_|_' + plngs[i][5]+ '_|';
+			  
+			  var x=document.getElementById("mySelect");
+			  try
+			  {
+			 		   x.add(y); // IE only
+			  }
+			  catch(ex)
+			  { 
+			 
+			  }
+		 }
+		
+	
+	}
+		
+			  var y1=document.getElementById('mySelect');
+			  if(y1.length > 1)
+			  	y1.selectedIndex = 1;
+			  else
+			  	y1.selectedIndex = 0;
+ }
+
+var singleLcCodeDescRowOddLower=null;
+
+function searchById(event){
+		indice=0;
+		var minIndex=0;
+		document.getElementById("Name").value="";					
+			for(i=0;i<singleLcCodeDescRowOdd.length;i++){
+				singleLcCodeDescRowOddLower=singleLcCodeDescRowOdd[i].toLowerCase();
+				if(singleLcCodeDescRowOddLower.indexOf(event.value.toLowerCase())==0){
+				newId.push(singleLcCodeDescRowOdd[i]);
+				newName.push(singleLcCodeDescRowEven[i]);
+				indice++;
+				
+				}			
+			}
+			indice=0;			
+			fillSelectBoxAfterSearchbyId();
+			for(i=0;i<singleLcCodeDescRowOdd.length;i++){
+				singleLcCodeDescRowOddLower=singleLcCodeDescRowOdd[i].toLowerCase();
+				one=newId.pop();
+				two=newName.pop();
+				indice++;
+						
+			}
+		//alert(newId);
+		
+	}
+
+var singleLcCodeDescRowEvenLower=null;
+	
+function searchByName(event){
+		indice=0;
+		document.getElementById("Id").value="";
+		for(i=0;i<singleLcCodeDescRowEven.length;i++){
+			singleLcCodeDescRowEvenLower=singleLcCodeDescRowEven[i].toLowerCase();
+			if(singleLcCodeDescRowEvenLower.indexOf(event.value.toLowerCase())==0){
+			newId.push(singleLcCodeDescRowOdd[i]);
+			newName.push(singleLcCodeDescRowEven[i]);
+			indice++;
+			}
+		}
+		indice=0;
+		fillSelectBoxAfterSearchbyName();
+		for(i=0;i<singleLcCodeDescRowEven.length;i++){
+			singleLcCodeDescRowEvenLower=singleLcCodeDescRowEven[i].toLowerCase();
+			if(singleLcCodeDescRowEvenLower.indexOf(event.value.toLowerCase())==0){
+			one=newId.pop();
+			two=newName.pop();
+			indice++;
+			}			
+		}
+		//alert(newName);
+	}
+	
+function fillSelectBoxAfterSearchbyId()
+	{
+		//alert("elementOption:"+elementOption);
+		//alert("elementSelect:"+elementSelect);
+		x=document.getElementById("mySelect");
+		x.remove(y);
+		document.getElementById("mySelect").innerHTML=null;
+		
+		for(i = 0 ; i < newId.length ; i++)
+		{
+			  y = document.createElement('option');	
+			  	  		  
+			  y.text = newId[i] + " - " + newName[i];
+			  y.value = newId[i];			  
+				 			  
+				 
+			  x = document.getElementById("mySelect");
+				  try
+				   {
+				 	   x.add(y); // IE only
+				   }
+				  catch(ex)
+				   {
+				 
+				   }
+			 
+		}
+		
+		//var one=newId.pop();
+		//var two=newName.pop();		
+	}
+	
+function fillSelectBoxAfterSearchbyName()
+	{
+		x=document.getElementById("mySelect");
+		x.remove(y);
+		document.getElementById("mySelect").innerHTML=null;
+		
+		for(i = 0 ; i < newName.length ; i++)
+		{
+			  y = document.createElement('option');	
+			  	  		  
+			  y.text = newId[i] + " - " + newName[i];
+			  y.value = newId[i];			  
+				 			  
+				 
+			  x = document.getElementById("mySelect");
+				  try
+				   {
+				 	   x.add(y); // IE only
+				   }
+				  catch(ex)
+				   {
+				 
+				   }
+			 
+		}
+		//newId=new Array();
+		//newName=new Array();		
+	}	
+ 
+ function handleKeyEvent()
+	{
+		if(event.keyCode == 27)
+		{
+			var Return = new Array(1);
+			Return[0]= "";
+			Return[1]= "";
+			Return[2]= "";
+						
+			window.returnValue = Return;
+			window.close();
+		}
+		if(event.keyCode == 40)
+		{
+			document.getElementById("mySelect").focus();			
+		}
+		
+	}
+</script>
+</html>

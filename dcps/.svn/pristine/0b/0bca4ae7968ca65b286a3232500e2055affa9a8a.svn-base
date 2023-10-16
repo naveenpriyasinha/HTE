@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.tcs.sgv.dcps.valueobject.ShDDOOfficeMPG" table="SH_DDO_OFFICE_RQT_MPG">
+
+		<id name="IdPk" type="java.lang.Long">
+			<column name="ID" precision="20" scale="0" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="officeId" type="java.lang.Long">
+			<column name="OFFICE_ID" />
+		</property>
+
+		<property name="reportPostid" type="java.lang.Long">
+			<column name="REP_POST_ID" />
+		</property>
+	</class>
+</hibernate-mapping>

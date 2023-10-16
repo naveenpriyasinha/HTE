@@ -1,0 +1,108 @@
+body {
+	height: 80%;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	border:none;
+	background-color: #EDF1F2;
+}
+
+#header {
+	display: none;
+}
+
+#toolbar {
+	display: none;
+}
+
+#idSplitter1{
+	display: none;
+}
+
+#nav {
+	display: none;
+}
+
+#currentApplication
+{
+	display: none;
+}
+#mandatoryNotes
+{
+	display: none;
+}
+#content {
+	padding: 0;
+	float: none;
+	z-index: 1;
+	margin: 0 0 0 0;
+	width: auto;
+	height: 99%;
+	background: none;
+	font-size: 12px;
+	color: #000000;
+	text-align: center;
+	border:none;
+}
+
+#footer {
+	display: none;
+}
+
+#loginControlsTD{
+	vertical-align: middle;
+	background-color: #EDF1F2;
+	font-size: 14px;
+	PADDING-RIGHT: 2px;
+	PADDING-LEFT: 2px;
+	PADDING-BOTTOM: 2px;
+	PADDING-TOP: 2px;
+	height:10px;
+}
+
+#copyrightTD{
+	height:40px;
+	background-color: #ffffff;
+	BORDER-left: #ffffff 1px solid;
+	BORDER-bottom: #909090 1px solid;
+	BORDER-right: #909090 1px solid; 
+	FONT-SIZE: 12px;
+}
+
+
+.texttagLogin {
+	height: 22px;
+	background: #fefefe; 
+	border-left: groove 2px #bfbfbf;
+	border-top: groove 2px #bfbfbf;
+	border-right: groove 2px #ffffff; 
+	border-bottom: groove 2px #ffffff; 
+	padding: 1px 1px 1px 1px;
+}
+.buttontagLogin {
+	font-size: 15px;
+	height: 24px;
+	border: solid 1px #565656;
+	background: #ffffff url(images/btn-bg-05.gif);
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.tabstyle {
+	border-width: 5px 1px 1px 1px; 
+	border-color: #2065c0;
+	border-style: solid ;
+	background-color:#EEEEEE;
+}
+	
+.legend {
+	padding-left:5px;
+	padding-right:5px;
+	font-weight:normal; 
+	font-family:verdana;
+		
+	border-width: 0px 0px 1px 0px; 
+	border-color: #2065c0;
+	border-style: solid ;
+}	
+

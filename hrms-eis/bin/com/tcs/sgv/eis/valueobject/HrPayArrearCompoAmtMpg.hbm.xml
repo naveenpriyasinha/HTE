@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayArrearCompoAmtMpg" table="hr_pay_arrear_compo_amt_mpg">
+        <id name="compoAmtMpgId" type="long">
+            <column name="COMPO_AMT_MPG_ID"  />
+            <generator class="assigned" />
+        </id>               
+        <many-to-one name="arrearBillpostMpg" class="com.tcs.sgv.eis.valueobject.HrPayArrearBillpostMpg" fetch="select">
+            <column name="ARREAR_BILLPOST_ID" >
+                <comment></comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="rltBillTypeEdp" class="com.tcs.sgv.eis.valueobject.RltBillTypeEdp" fetch="select">
+            <column name="COMPO_ID">
+                <comment></comment>
+            </column>
+        </many-to-one>
+         <property name="amount" type="double">
+            <column name="AMOUNT" precision="22" scale="0" />
+        </property>       
+   </class>
+</hibernate-mapping>

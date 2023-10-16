@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 19, 2007 5:29:07 AM by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.hrModInfo.valueobject.HrModMst" table="HR_MOD_MST">
+        <id name="modId" type="long">
+            <column name="MOD_ID" precision="12" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="modName" type="string">
+            <column name="MOD_NAME" length="50" />
+        </property>
+        <property name="modDesc" type="string">
+            <column name="MOD_DESC" length="100" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="createdBy" type="java.lang.Long">
+            <column name="CREATED_BY" precision="20" scale="0" />
+        </property>
+        <property name="createdByPost" type="java.lang.Long">
+            <column name="CREATED_BY_POST" precision="20" scale="0" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="7" />
+        </property>
+        <property name="updatedBy" type="java.lang.Long">
+            <column name="UPDATED_BY" precision="20" scale="0" />
+        </property>
+        <property name="updatedByPost" type="java.lang.Long">
+            <column name="UPDATED_BY_POST" precision="20" scale="0" />
+        </property>
+        <set name="hrModEmpRlts" inverse="true">
+            <key>
+                <column name="MOD_ID" precision="12" scale="0" />
+            </key>
+            <one-to-many class="com.tcs.sgv.eis.hrModInfo.valueobject.HrModEmpRlt" />
+        </set>
+    </class>
+</hibernate-mapping>

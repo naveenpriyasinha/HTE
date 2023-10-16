@@ -1,0 +1,243 @@
+.projecttitle_top_tr{
+	background: #a58062 url(images/header-top-01.png) repeat-x top;	/*change*/
+}
+
+.projecttitle_top_tr_td1, .projecttitle_top_tr_td2{
+	font-size: 5px;
+}
+
+.projecttitle_top_tr_td1{
+	/*border-bottom: groove 2px #dcdcdc;*/
+}
+
+.projecttitle_tr
+{
+	background: #a58062 url(images/header-bg-02.gif) top repeat-x;
+}
+
+.projecttitle_td{
+	padding: 1px;
+	border-top: solid 1px #e9caa6;	/*change*/
+	/*border-bottom: groove 2px #8083bf; */
+}
+
+.emblem_td
+{
+	padding: 3px; 
+	border-top: solid 1px #ffffff; 
+/*	border-bottom: outset 1px #888888;*/
+	color: blue;
+}
+
+.uheadertable_td
+{
+	padding: 3px;
+	border-top: solid 1px #ffffff; 
+/*	border-bottom: outset 1px #888888;*/
+	
+}
+
+#headertext {
+	font-size: 21px;
+	font-style: normal;
+	font-weight: bold;
+	color: #eeeeee;
+	padding-left: 5px;
+}
+
+.userdetails_tr tr
+{
+	background-color: #cacaca;
+}
+
+.userdetails_tr_td
+{
+	border-bottom: 0px solid #666666;
+}
+
+.userdetails_tl_td
+{
+	background:url(images/user-bg-left-01.gif) repeat-y top left;
+}
+
+.userdetails_l_td
+{
+	/*border-left: 2px groove #8083bf;*/
+}
+
+.userdetails_td
+{
+	border-left: groove 2px #ffffff;
+	border-top: groove 2px #ffffff;
+	/*border-right: groove 2px #cccccc;*/ 
+	border-bottom: ridge 2px #bbbbbb; 
+}
+
+.user_dtl_tbl_td{
+	background: #dcdcdc url(images/header-top-03.png) repeat-x bottom;
+	border-left: groove 2px #dcdcdc;
+	border-top: solid 1px #ededed;
+	border-bottom: solid 1px #787878;
+}
+
+.user_dtl_tbl{
+	/*background: #ffffcc url(images/toolbar-bg-top-01.gif) top repeat-x;*/
+	/*border-left:  solid 1px #fff;
+	border-right: groove 2px #8083bf;
+	border-bottom:  solid 1px #fff;
+	border-top: solid 1px #fff;*/
+	color: #000;
+}
+
+.user_dtl_tbl tr{
+		background: #bbb9b9 url(images/1toolbar-bg-top-01.gif) top repeat-x;
+}
+
+.user_dtl_tbl_bottom_tr{
+	 background: #ffffcc url(images/toolbar-btn-03.gif) repeat-x bottom;
+}
+
+.userdetails_name{
+	font-size: 13px;
+	text-align: right;
+	font-weight: normal;
+	letter-spacing: 0.5px;
+}
+
+.userdetails_desg{
+	font-size: 11px;
+	font-weight: normal;
+}
+
+.userdetails_login{
+	font-size: 10px;
+	text-align: right;
+}
+
+.userdetails_pso{
+	padding: 1px 2px;
+	width: 100%;
+	font-size: 10px;
+	font-family: times-new-roman;
+	font-weight: bold;
+	text-align: right;
+}
+
+.toolbar_tr
+{
+	/*background: #8e7155 url(images/toolbar-bg-top-05.gif) repeat-x top;*/
+	font-weight : normal;
+	font-size: 13px;
+}
+
+.toolbar_tr td
+{
+	background: #8e7155 url(images/toolbar-bg-top-05.gif) repeat-x top;	/*change*/
+	border-left: solid 1px #845d40;	/*change*/
+	/*border-top: groove 2px #7a7eb9;*/
+	border-bottom: 2px outset #8e7155;
+	padding: 0px 6px 0px 0px;
+	font-weight : normal;
+	font-size: 13px;
+}
+
+.toolbar_tr a img
+{
+	margin: 0px;
+	vertical-align: middle;
+}
+
+.toolbar_tr a
+{
+	margin: 0px;
+	padding: 0px;
+	font-weight : normal;
+	font-size: 13px;
+	color: #fff;
+	vertical-align: middle;
+	text-align: left;
+	white-space: nowrap;
+	text-decoration: none;
+}
+
+.toolbar_tr img
+{
+	/*padding: 0 10px 0 0;*/
+	padding: 0px 6px 0px 6px
+}
+
+td.onhovercss:hover
+{
+	background: #eeeeee;
+	color: #000000;
+	border-top: inset 1px #ddddff;
+	border-bottom: outset 1px #ddddff;
+}
+
+.toolbar_tr a:hover
+{
+	color: #000000;
+	font-weight : normal;
+	font-size: 13px;
+}
+
+.toolbar-bottom{
+	background: #cacaca url(images/toolbar-bg-bottom-05.gif) repeat-x bottom;
+}
+
+.toolbar-bottom td
+{
+	border-top: 2px groove #ffffff;
+	border-bottom: 1px solid #454545;
+	padding: 2px 3px 2px 3px;
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal; 
+	text-align: right;
+}
+
+.toolbar-bottom a:hover
+{
+	background: #b8b8b8 url(images/toolbar-bg-bottom-04.gif) repeat-x left bottom;
+}
+
+.threedborder{
+	border-left: ridge 2px #ffffff;
+	border-top: ridge 2px #ffffff;
+	border-right: groove 2px #cccccc; 
+	border-bottom: groove 2px #cccccc; 
+	
+}
+
+.toolbar-left-bar{
+	background:#bbb9b9 url(images/user-bg-left-01.gif) repeat-y top left;
+}
+
+#dbdate{
+	background: url(images/clock-01.gif) no-repeat left 50%;
+	font-size: 13px;
+	width:100%;
+	text-align:left;
+	color:white;
+	padding-left:24px;
+	padding-top: 0px;
+	height:18px;
+	vertical-align: bottom;
+}
+
+#dbdatetd{
+	/*border-left: groove 2px #878ccc;*/
+	height:18px;
+	text-align:left;
+	padding: 0;
+	padding-left: 2px;
+	vertical-align: middle;
+}
+
+#mainTable{
+	font-weight : normal;
+	font-size: 13px;
+}
+
+

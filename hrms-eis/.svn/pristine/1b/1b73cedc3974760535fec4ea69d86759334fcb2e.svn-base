@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.tcs.sgv.eis.valueobject">
+  <class name="com.tcs.sgv.eis.valueobject.HrPaybillActivationStatusMpg" table="hr_paybill_activation_status">
+  <id name="activationId" type="long">
+            <column name="PAYBILL_ACTIVATION_ID" length="20" not-null="true"/>
+            <generator class="assigned" />
+        </id>
+ 
+ 		<property name="activation" type="int">
+            <column name="ACTIVATION" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="startDate" type="timestamp">
+            <column name="START_DATE_DEACTIVATION" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+       
+        <property name="endDate" type="timestamp">
+            <column name="END_DATE_DEACTIVATION" length="19" not-null="true">
+                <comment></comment>
+            </column>
+        </property>
+        
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="false">
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+        
+        <property name="updatedDate" type="timestamp">
+            <column name="updated_date" length="19" not-null="false">
+                <comment></comment>
+            </column>
+        </property>
+        
+        
+  
+  		<many-to-one name="orgPostMpgPostId" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="POST_ID" not-null="true">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+        
+        <many-to-one name="orgPostMpgCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by" not-null="false">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+        <many-to-one name="orgPostMpgCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="created_by_post" not-null="false">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        
+       <many-to-one name="orgPostMpgUpdatededBy" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by" not-null="false">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="orgPostMpgUpdatededByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="updated_by_post" not-null="false">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+        <many-to-one name="cmnLocationMstLocation" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="updated_location_code" not-null="false">
+                <comment></comment>
+            </column>
+        </many-to-one>
+        
+   </class>
+</hibernate-mapping>
+
+

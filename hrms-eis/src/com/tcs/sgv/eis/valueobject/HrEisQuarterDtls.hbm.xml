@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 14, 2011 4:22:07 PM by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrEisQuarterDtls" table="hr_eis_quarter_dtls" >
+        <id name="quarterDtlsId" type="long">
+            <column name="QUARTER_DTLS_ID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="orgUserMstByCreatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="CREATED_BY" />
+        </many-to-one>
+        <many-to-one name="cmnLocationMst" class="com.tcs.sgv.common.valueobject.CmnLocationMst" fetch="select">
+            <column name="LOC_ID" />
+        </many-to-one>
+        <many-to-one name="orgUserMstByUpdatedBy" class="com.tcs.sgv.ess.valueobject.OrgUserMst" fetch="select">
+            <column name="UPDATED_BY" />
+        </many-to-one>
+        <many-to-one name="hrQuaterTypeMst" class="com.tcs.sgv.ess.quarter.valueobject.HrQuaterTypeMst" fetch="select">
+            <column name="QUARTER_TYPE" />
+        </many-to-one>
+        <many-to-one name="cmnDatabaseMst" class="com.tcs.sgv.common.valueobject.CmnDatabaseMst" fetch="select">
+            <column name="DB_ID" />
+        </many-to-one>
+        <many-to-one name="orgPostMstByCreatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="CREATED_BY_POST" />
+        </many-to-one>
+        <many-to-one name="orgEmpMst" class="com.tcs.sgv.ess.valueobject.OrgEmpMst" fetch="select">
+            <column name="EMP_ID" />
+        </many-to-one>
+        <many-to-one name="orgPostMstByUpdatedByPost" class="com.tcs.sgv.ess.valueobject.OrgPostMst" fetch="select">
+            <column name="UPDATED_BY_POST" />
+        </many-to-one>
+        <many-to-one name="cmnAddressMst" class="com.tcs.sgv.hod.common.valueobject.CmnAddressMst" fetch="select">
+            <column name="RENT_ADDRESS_ID" />
+        </many-to-one>
+        <many-to-one name="govtAccomodationTypeLookup" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="GOVT_ACCOMODATION_TYPE" />
+        </many-to-one>
+        <many-to-one name="quarterAllottedToLookup" class="com.tcs.sgv.common.valueobject.CmnLookupMst" fetch="select">
+            <column name="QUARTER_ALLOTTED_TO" />
+        </many-to-one>
+        <property name="rentAmount" type="java.lang.Long">
+            <column name="RENT_AMOUNT" />
+        </property>
+        <property name="rentServiceCharge" type="java.lang.Long">
+            <column name="RENT_SERVICE_CHARGE" />
+        </property>
+        <property name="rentOtherCharge" type="java.lang.Long">
+            <column name="RENT_OTHER_CHARGE" />
+        </property>
+        <property name="isQuarterVacated" type="java.lang.Integer">
+            <column name="IS_QUARTER_VACATED" />
+        </property>
+        <property name="vacatingLetterNo" type="java.lang.Long">
+            <column name="VACATING_LETTER_NO" />
+        </property>
+        <property name="letterDate" type="date">
+            <column name="LETTER_DATE" length="10" />
+        </property>
+        <property name="vacatedDate" type="date">
+            <column name="VACATED_DATE" length="10" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="10" />
+        </property>
+        <property name="updatedDate" type="date">
+            <column name="UPDATED_DATE" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 14, 2007 6:48:37 PM by manoj -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.CMPRecord" table="HR_PAY_CMP_RECORD_MST" >
+       
+       <id name="paymentRefNo" type="string">
+			<column name="PAYMENT_REF_NO"  />
+			
+		</id>
+        <property name="bulkUploadFlag" type="string">
+            <column name="BULK_UPLOAD_FLAG" />
+        </property>
+       
+       <property name="billId" type="string">
+            <column name="BILL_IDENTIFIER" />
+        </property>
+        
+        <property name="treasuryCode" type="string">
+            <column name="TREASURY_CODE" />
+        </property>
+        
+         <property name="ddoCode" type="string">
+            <column name="DDO_CODE" />
+        </property>
+        
+         <property name="benefName" type="string">
+            <column name="BENEF_NAME" />
+        </property>
+        
+        <property name="accNo" type="string">
+            <column name="ACC_NO" />
+        </property>
+        
+         <property name="ifscCode" type="string">
+            <column name="IFSC_CODE" />
+        </property>
+        
+        <property name="micrCode" type="string">
+            <column name="MICR_CODE" />
+        </property>
+        
+          <property name="accType" type="string">
+            <column name="ACC_TYPE" />
+        </property>
+       
+        <property name="amount" type="string">
+            <column name="AMOUNT" />
+        </property>
+        
+      
+       
+       <property name="payBydate" type="string">
+            <column name="PAY_BY_DATE" />
+        </property>
+        
+        <property name="schemeCode" type="string">
+            <column name="SCHEME_CODE" />
+        </property>
+        
+         <property name="ddoBillNo" type="string">
+            <column name="DDO_BILL_NO" />
+        </property>
+        
+         <property name="authNo" type="string">
+            <column name="AUTH_NO" />
+        </property>
+        
+        <property name="toBilNo" type="string">
+            <column name="TO_BILL_NO" />
+        </property>
+        
+        <property name="billDate" type="string">
+            <column name="BILL_DATE" />
+        </property>
+       
+ 		<property name="narration" type="string">
+            <column name="NARRATION" />
+        </property>
+       
+       <property name="noOfPayees" type="string">
+            <column name="NO_OF_PAYEES" />
+        </property>
+        
+        <property name="billNetAmt" type="string">
+            <column name="BILL_NET_AMT" />
+        </property>
+        
+        <property name="emailId" type="string">
+            <column name="EMAIL_ID" />
+        </property>
+        
+        <property name="cellNo" type="string">
+            <column name="CELL_NO" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

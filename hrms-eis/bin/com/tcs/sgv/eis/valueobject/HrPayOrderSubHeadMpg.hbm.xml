@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayOrderSubHeadMpg" table="hr_pay_order_subhead_mpg">
+    <id name="order_subhead_pk" type="long">
+            <column name="order_subhead_pk" />
+            <generator class="assigned" />
+        </id>
+     <property name="finYearId" type="long">
+            <column name="FIN_YR_ID"/>
+     </property>
+     
+     <!--
+     
+     <property name="subheadId" type="long">
+            <column name="BUDSUBHD_ID"/>
+     </property> 
+     
+      -->
+     
+      <many-to-one name="sgvaBudsubhdMst" class="com.tcs.sgv.common.valueobject.SgvaBudsubhdMst" fetch="select">
+           <column name="BUDSUBHD_ID">
+               <comment></comment>
+           </column>
+      </many-to-one>
+      
+     <property name="element_code" type="long">
+            <column name="ELEMENT_CODE"/>
+     </property> 
+     
+    </class>
+</hibernate-mapping>

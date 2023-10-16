@@ -1,0 +1,34 @@
+# For Master
+minSize=2
+maxSize=5
+maxStatements=0
+maxIdleTime=1800
+acquireIncrement=20
+batchSize=50
+idleConnectionTestPeriod=1800
+preferredTestQuery=SELECT 1
+testConnectionOnCheckout=true
+unreturnedConnectionTimeout=360
+debugUnreturnedConnectionStackTraces=true
+numHelperThreads=20
+maxAdministrativeTaskTime=0
+checkoutTimeout=90000
+maxConnectionAge=5400
+
+# For Slave
+slaveMinSize=2
+slaveMaxSize=5
+slaveMaxStatements=0
+slaveMaxIdleTime=1800
+slaveAcquireIncrement=20
+slaveBatchSize=50
+slaveIdleConnectionTestPeriod=1800
+slavePreferredTestQuery=SELECT 1
+testConnectionOnCheckout=true
+slaveUnreturnedConnectionTimeout=360
+slaveDebugUnreturnedConnectionStackTraces=true
+slaveNumHelperThreads=20
+slaveMaxAdministrativeTaskTime=0
+slaveCheckoutTimeout=90000
+slaveMaxConnectionAge=5400
+

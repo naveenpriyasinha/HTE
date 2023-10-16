@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 14, 2007 6:48:37 PM by manoj -->
+<hibernate-mapping>
+    <class name="com.tcs.sgv.eis.valueobject.HrPayCmpDtls" table="HR_PAY_CMP_DTLS" >
+      
+       
+      <id name="paymentRefNo" type="string">
+			<column name="PAYMENT_REF_NO"  />
+			
+		</id>
+        
+         <property name="statusFlag" type="string">
+            <column name="STATUS_FLAG" />
+        </property>
+        
+        <property name="cmpRefNo" type="string">
+            <column name="CMP_REF_NO" />
+        </property>
+        
+        <property name="modeOfPayment" type="string">
+            <column name="MODE_OF_PAYMENT" />
+        </property>
+        
+        <property name="utrRefNo" type="string">
+            <column name="UTR_REF_NO" />
+        </property>
+        
+        <property name="utrDate" type="timestamp">
+            <column name="UTR_DATE" />
+        </property>
+        
+        <property name="scrollNo" type="string">
+            <column name="SCROLL_NO" />
+        </property>
+        
+         <property name="settelmentDate" type="timestamp">
+            <column name="STTELMENT_DATE" />
+        </property>
+        
+        <property name="linkFocalPoint" type="string">
+            <column name="LINK_FOCAL_POINT" />
+        </property>
+        
+        <property name="remarks" type="string">
+            <column name="REMARKS" />
+        </property>
+        
+        <property name="createdDate" type="timestamp">
+            <column name="CREATED_DATE" />
+        </property>
+        
+         <property name="updatedDate" type="timestamp">
+            <column name="UPDATED_DATE" />
+        </property>
+        
+        
+
+
+    </class>
+</hibernate-mapping>
