@@ -1,0 +1,8 @@
+/META-INF/
+/com/
+/.classpath
+/.project
+/.settings/
+/.svn/
+/resources/
+*.class
